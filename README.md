@@ -50,6 +50,7 @@ Yellow-highlighted text on the page is a placeholder waiting for a real figure o
 - Repository: [github.com/SeverinfinanceUk/Mainseverinwebsite](https://github.com/SeverinfinanceUk/Mainseverinwebsite), branch `main`. The whole `Website/` folder is the repository.
 - Remote: `https://github.com/SeverinfinanceUk/Mainseverinwebsite.git` (private). Pushing uses the GitHub CLI login (`gh auth login` as SeverinfinanceUk, or any account with write access); the login is kept in the macOS keychain. No API keys or tokens are stored in this folder.
 - Not committed (`.gitignore`): `node_modules/`, `dist/`, `.astro/`, `.env` files, `.DS_Store`. Run `npm install` after cloning.
+- Hosting: **Vercel** (team `severin-finance`, project `mainseverinwebsite`), connected to this repository. Every push to `main` deploys automatically. The Astro project is in `site/`, so Vercel's Root Directory must be `site`. Deployments are behind Vercel's login until launch.
 - After each work session: add the dated line to `PROGRESS.md`, then commit and push.
 
 ```

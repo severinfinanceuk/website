@@ -30,7 +30,7 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [ ] FCA / regulatory strip on the 7 business finance pages once Severin's lending status is known
 - [ ] Templates: country hub, guide, location, team member
 - [ ] Replace yellow placeholders (stats, reviews, team, company number, FCA wording)
-- [ ] Make the contact form work (Cloudflare Pages function or form service)
+- [ ] Make the contact form work (Vercel function or form service)
 - [ ] Phone, tablet and desktop mock-ups
 - [ ] **Gate:** design signed off by Severin
 
@@ -39,7 +39,7 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [ ] Build `/locations/` hub and the location page template (from `locations.js`)
 - [ ] Add a `live` flag to `locations.js` so menus list only published pages
 - [ ] UAE keyword research; merge Australia candidates into the master keyword list
-- [ ] Astro project set up in `/site`, deployed to Cloudflare Pages staging
+- [x] Astro project set up in `/site`, on GitHub and deployed to Vercel (private, behind Vercel login) (13 Oct 2026)
 - [ ] CMS, forms, schema, hreflang, sitemaps
 - [ ] About 180 pages written and expert-reviewed
 - [ ] Google Business Profile, citations, review program
@@ -80,6 +80,7 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | --- | --- |
 | 9 Oct 2026 | Reference design is stoneeg.com, with all of its animation removed |
 | 9 Oct 2026 | Stack: Astro static site on Cloudflare Pages, no WordPress |
+| 13 Oct 2026 | Hosting changed to **Vercel** (in place of Cloudflare Pages), deployed from the GitHub repo `SeverinfinanceUk/Mainseverinwebsite`, branch `main`. Every push to `main` deploys. Deployments stay behind Vercel's login (Deployment Protection) until launch, so the draft cannot be indexed |
 | 9 Oct 2026 | Markets: UK (home), France (French), US, Canada (English first, French for Quebec in phase 2) |
 | 9 Oct 2026 | Markets updated: **UK and France are the top priority**, then the US, Canada, Australia and the UAE (Dubai), each still getting a full country section. Italy not included |
 | 9 Oct 2026 | All project files live in this folder (not in online docs) |
@@ -126,3 +127,4 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | 10 Oct 2026 | Testimonials made site-wide: one file (`site/src/data/reviews.js`) holds the reviews and the Google rating; the home page, every service page, the hero trust lines and the numbers ticker all read from it (`Testimonials.astro` component) |
 | 10 Oct 2026 | Speed test (Lighthouse 12.8, production build): home and self assessment pages score **100 / 100 / 100 / 100** (performance, accessibility, best practices, SEO) on phone and desktop. Phone: first content 0.9 s, largest content 1.6 s, layout shift 0, blocking time 0 ms. Self assessment page loads 200 KB in total on a phone (13 images = 133 KB). Fixes made: 2 photos cropped to the card shape, text contrast on green highlighted cards and team placeholders, country picker label for screen readers |
 | 13 Oct 2026 | **All 33 service pages built** (32 new): Accounting 6, Tax 8, Company services 5, Business finance 7, Cross-border 7. Each has one data file in `site/src/data/service-pages/`, a 3-line route, 8 Unsplash photos (credits in `site/src/assets/services/SOURCES.md`), 4–6 official sources checked on 13 Oct (GOV.UK, HMRC manuals, Companies House, FCA, British Business Bank, IRS, CRA, ATO, impots.gouv.fr, UAE FTA), 8–10 FAQs and full schema. Production build: every page has 1 H1, title ≤ 60, description ≤ 155, answer 48–57 words, valid JSON-LD with no placeholders, 22–24 KB gzipped. Layout now also supports any number of key-facts tables, `areaServed` per page, rate prices ("Rates from X.X%", kept out of schema) and other currencies. Business finance pages say "we arrange" and carry risk warnings until Severin's lending status is known; cross-border pages say local filing is done "with a licensed partner" (yellow) |
+| 13 Oct 2026 | Project put on GitHub (private repo `SeverinfinanceUk/Mainseverinwebsite`) and connected to Vercel by the user; first production deployment succeeded |
