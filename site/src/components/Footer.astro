@@ -1,0 +1,110 @@
+---
+import { Image } from 'astro:assets';
+import crestWhite from '../assets/logos/sf-crest-white.png';
+
+const cols = [
+  {
+    title: 'Accounting & tax',
+    links: [
+      ['/uk/tax/self-assessment-accountant/', 'Self assessment'],
+      ['/uk/accounting/limited-company-accountant/', 'Company accounts'],
+      ['/uk/tax/vat-accountant/', 'VAT returns'],
+      ['/uk/accounting/bookkeeping-services/', 'Bookkeeping'],
+      ['/uk/tax/hmrc-tax-investigation/', 'HMRC disputes'],
+    ],
+  },
+  {
+    title: 'Business finance',
+    links: [
+      ['/uk/business-finance/business-loans/', 'Business loans'],
+      ['/uk/business-finance/tax-bill-funding/', 'Tax bill funding'],
+      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+    ],
+  },
+  {
+    title: 'Countries',
+    links: [
+      ['/uk/', 'United Kingdom'],
+      ['/fr/', 'France'],
+      ['/us/', 'United States'],
+      ['/ca/', 'Canada'],
+      ['/au/', 'Australia'],
+      ['/uae/', 'UAE (Dubai)'],
+      ['/cross-border/', 'Cross-border'],
+    ],
+  },
+  {
+    title: 'Top locations',
+    links: [
+      ['/uk/london/', 'London'],
+      ['/uk/manchester/', 'Manchester'],
+      ['/uk/birmingham/', 'Birmingham'],
+      ['/fr/paris/', 'Paris'],
+      ['/us/new-york/', 'New York'],
+      ['/ca/toronto/', 'Toronto'],
+      ['/au/sydney/', 'Sydney'],
+      ['/uae/dubai/', 'Dubai'],
+      ['/locations/', 'All locations'],
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      ['/about/', 'About us'],
+      ['/team/', 'Our team'],
+      ['/resources/', 'Guides'],
+      ['/uk/pricing/', 'Pricing'],
+      ['/contact/', 'Contact'],
+    ],
+  },
+];
+const year = new Date().getFullYear();
+---
+<footer class="inverse">
+  <div class="container legal">
+    <p>
+      Severin Finance Ltd is a company registered in England and Wales, company number <span class="tbc">XXXXXXXX</span>.
+      Registered office: <span class="tbc">registered address</span>.
+      Severin Finance is a Chartered Management Accountant practice.
+    </p>
+    <p>
+      <span class="tbc">FCA wording for business finance: authorised/regulated status, FRN, and whether Severin is a lender or a credit broker. Finance is subject to status. Your assets may be at risk if you do not keep up repayments on a secured loan.</span>
+    </p>
+  </div>
+  <div class="container footer">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="/" aria-label="Severin Finance, home">
+          <Image class="logo-crest" src={crestWhite} alt="" width={96} densities={[1, 2]} quality={90} loading="lazy" />
+          <span>Severin Finance</span>
+        </a>
+        <p class="footer-about">Accounting, tax and business finance from London, for clients in the UK and France, the US, Canada, Australia and the UAE.</p>
+        <address class="footer-contact">
+          <span>London, United Kingdom</span>
+          <a href="tel:+442045422488">020 4542 2488</a>
+          <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a>
+        </address>
+      </div>
+      <div class="footer-cols">
+        {cols.map((c) => (
+          <div class="footer-col">
+            <h2>{c.title}</h2>
+            <ul role="list">
+              {c.links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} Severin Finance Ltd</span>
+      <ul role="list">
+        <li><a href="/privacy-policy/">Privacy</a></li>
+        <li><a href="/cookie-policy/">Cookies</a></li>
+        <li><a href="/terms/">Terms</a></li>
+        <li><a href="/complaints/">Complaints</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

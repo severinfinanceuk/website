@@ -1,0 +1,668 @@
+market,cluster,keyword,intent,target_page,priority,monthly_volume,difficulty,cpc,current_rank,source,notes
+UK,Accountant – general,accountant London,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,accountants in London,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,accountancy firm London,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,chartered accountant London,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,small business accountant London,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,accountant near me,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,online accountant UK,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Accountant – general,affordable accountant London,Transactional,/uk/ hub + /uk/london/,P1,,,,,seed v1 (9 Oct),
+UK,Limited companies,accountant for limited company,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,seed v1 (9 Oct),
+UK,Limited companies,limited company accounts,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,seed v1 (9 Oct),
+UK,Limited companies,year end accounts,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,seed v1 (9 Oct),
+UK,Limited companies,annual accounts Companies House,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,seed v1 (9 Oct),
+UK,Limited companies,dormant company accounts,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,seed v1 (9 Oct),
+UK,Limited companies,confirmation statement filing,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,seed v1 (9 Oct),
+UK,Sole traders & self assessment,self assessment accountant,Transactional,/uk/tax/self-assessment/,P1,,,,,seed v1 (9 Oct),
+UK,Sole traders & self assessment,self assessment tax return help,Transactional,/uk/tax/self-assessment/,P1,,,,,seed v1 (9 Oct),
+UK,Sole traders & self assessment,sole trader accountant,Transactional,/uk/tax/self-assessment/,P1,,,,,seed v1 (9 Oct),
+UK,Sole traders & self assessment,tax return accountant London,Transactional,/uk/tax/self-assessment/,P1,,,,,seed v1 (9 Oct),
+UK,Sole traders & self assessment,late self assessment,Transactional,/uk/tax/self-assessment/,P1,,,,,seed v1 (9 Oct),
+UK,Sole traders & self assessment,HMRC late filing penalty help,Transactional,/uk/tax/self-assessment/,P1,,,,,seed v1 (9 Oct),
+UK,Making Tax Digital,Making Tax Digital accountant,Transactional + info,/uk/tax/making-tax-digital/,P1,,,,,seed v1 (9 Oct),
+UK,Making Tax Digital,MTD for income tax,Transactional + info,/uk/tax/making-tax-digital/,P1,,,,,seed v1 (9 Oct),
+UK,Making Tax Digital,MTD software help,Transactional + info,/uk/tax/making-tax-digital/,P1,,,,,seed v1 (9 Oct),
+UK,Making Tax Digital,MTD for landlords,Transactional + info,/uk/tax/making-tax-digital/,P1,,,,,seed v1 (9 Oct),
+UK,Making Tax Digital,quarterly updates HMRC,Transactional + info,/uk/tax/making-tax-digital/,P1,,,,,seed v1 (9 Oct),
+UK,Corporation tax,corporation tax accountant,Transactional,/uk/tax/corporation-tax/,P1,,,,,seed v1 (9 Oct),
+UK,Corporation tax,corporation tax return CT600,Transactional,/uk/tax/corporation-tax/,P1,,,,,seed v1 (9 Oct),
+UK,Corporation tax,corporation tax planning,Transactional,/uk/tax/corporation-tax/,P1,,,,,seed v1 (9 Oct),
+UK,Corporation tax,R&D tax credits accountant,Transactional,/uk/tax/corporation-tax/,P1,,,,,seed v1 (9 Oct),
+UK,VAT,VAT accountant,Transactional,/uk/tax/vat/,P1,,,,,seed v1 (9 Oct),
+UK,VAT,VAT return services,Transactional,/uk/tax/vat/,P1,,,,,seed v1 (9 Oct),
+UK,VAT,VAT registration,Transactional,/uk/tax/vat/,P1,,,,,seed v1 (9 Oct),
+UK,VAT,VAT threshold,Transactional,/uk/tax/vat/,P1,,,,,seed v1 (9 Oct),
+UK,VAT,flat rate VAT scheme,Transactional,/uk/tax/vat/,P1,,,,,seed v1 (9 Oct),
+UK,VAT,VAT for e-commerce,Transactional,/uk/tax/vat/,P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,bookkeeping services London,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,bookkeeper London,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,online bookkeeping UK,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,Xero bookkeeper,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,QuickBooks bookkeeper,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,payroll services London,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,payroll bureau,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Bookkeeping & payroll,auto enrolment pension,Transactional,"/uk/accounting/bookkeeping/, /uk/accounting/payroll/",P1,,,,,seed v1 (9 Oct),
+UK,Management & FD,management accounts,Transactional,/uk/accounting/virtual-fd/,P2,,,,,seed v1 (9 Oct),
+UK,Management & FD,outsourced finance director,Transactional,/uk/accounting/virtual-fd/,P2,,,,,seed v1 (9 Oct),
+UK,Management & FD,virtual FD London,Transactional,/uk/accounting/virtual-fd/,P2,,,,,seed v1 (9 Oct),
+UK,Management & FD,part-time CFO UK,Transactional,/uk/accounting/virtual-fd/,P2,,,,,seed v1 (9 Oct),
+UK,Management & FD,cash flow forecasting,Transactional,/uk/accounting/virtual-fd/,P2,,,,,seed v1 (9 Oct),
+UK,Personal tax,capital gains tax accountant,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Personal tax,CGT on property sale,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Personal tax,inheritance tax planning,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Personal tax,inheritance tax accountant London,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Personal tax,tax refund UK,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Personal tax,tax rebate,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Personal tax,prior year tax returns,Transactional,"/uk/tax/capital-gains-tax/, /uk/tax/inheritance-tax/, /uk/tax/tax-refunds/",P1,,,,,seed v1 (9 Oct),
+UK,Property,landlord accountant,Transactional,/uk/accounting/landlords/,P2,,,,,seed v1 (9 Oct),
+UK,Property,property tax accountant London,Transactional,/uk/accounting/landlords/,P2,,,,,seed v1 (9 Oct),
+UK,Property,buy-to-let tax,Transactional,/uk/accounting/landlords/,P2,,,,,seed v1 (9 Oct),
+UK,Property,non-resident landlord scheme,Transactional,/uk/accounting/landlords/,P2,,,,,seed v1 (9 Oct),
+UK,Property,property company (SPV) accounts,Transactional,/uk/accounting/landlords/,P2,,,,,seed v1 (9 Oct),
+UK,Contractors,contractor accountant,Transactional,/uk/accounting/contractors/,P2,,,,,seed v1 (9 Oct),
+UK,Contractors,IR35 accountant,Transactional,/uk/accounting/contractors/,P2,,,,,seed v1 (9 Oct),
+UK,Contractors,umbrella vs limited company,Transactional,/uk/accounting/contractors/,P2,,,,,seed v1 (9 Oct),
+UK,Tax disputes,HMRC tax investigation help,Transactional,/uk/tax/hmrc-investigations/,P1,,,,,seed v1 (9 Oct),
+UK,Tax disputes,HMRC enquiry accountant,Transactional,/uk/tax/hmrc-investigations/,P1,,,,,seed v1 (9 Oct),
+UK,Tax disputes,tax dispute resolution,Transactional,/uk/tax/hmrc-investigations/,P1,,,,,seed v1 (9 Oct),
+UK,Tax disputes,HMRC penalty appeal,Transactional,/uk/tax/hmrc-investigations/,P1,,,,,seed v1 (9 Oct),
+UK,Tax disputes,voluntary disclosure HMRC,Transactional,/uk/tax/hmrc-investigations/,P1,,,,,seed v1 (9 Oct),
+UK,Company services,company formation London,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Company services,register a limited company,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Company services,company secretarial services,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Company services,business valuation UK,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Company services,management buy-out advice,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Company services,business succession planning,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Company services,EIS/SEIS advice,Transactional,/uk/company-services/...,P2,,,,,seed v1 (9 Oct),
+UK,Business lending,business loans UK,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,small business loans London,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,start-up business loans,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,secured business loan,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,unsecured business loan,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,business loan broker,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,working capital loan,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Business lending,business line of credit,Transactional,/uk/business-finance/business-loans/,P1,,,,,seed v1 (9 Oct),
+UK,Specialist finance,bridging loans,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,commercial mortgage,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,development finance,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,asset finance,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,equipment finance,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,invoice finance,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,invoice factoring,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Specialist finance,merchant cash advance,Transactional,one page each under /uk/business-finance/,P2,,,,,seed v1 (9 Oct),
+UK,Tax-bill funding,VAT loan,Transactional,"/uk/business-finance/tax-funding/ (pairs accounting with lending, a rare angle)",P1,,,,,seed v1 (9 Oct),
+UK,Tax-bill funding,corporation tax loan,Transactional,"/uk/business-finance/tax-funding/ (pairs accounting with lending, a rare angle)",P1,,,,,seed v1 (9 Oct),
+UK,Tax-bill funding,tax bill funding,Transactional,"/uk/business-finance/tax-funding/ (pairs accounting with lending, a rare angle)",P1,,,,,seed v1 (9 Oct),
+UK,Tax-bill funding,pay HMRC in instalments,Transactional,"/uk/business-finance/tax-funding/ (pairs accounting with lending, a rare angle)",P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,UK France tax accountant,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,French accountant in London,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,US expat tax accountant UK,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,Canadian tax accountant UK,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,double taxation UK France,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,non-resident tax return UK,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,set up UK company from abroad,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Cross-border,UK company for non-residents,Transactional,/cross-border/...,P1,,,,,seed v1 (9 Oct),
+UK,Pricing,how much does an accountant cost UK,Commercial,/uk/pricing/,P1,,,,,seed v1 (9 Oct),
+UK,Pricing,accountant fees for limited company,Commercial,/uk/pricing/,P1,,,,,seed v1 (9 Oct),
+UK,Pricing,self assessment accountant fees,Commercial,/uk/pricing/,P1,,,,,seed v1 (9 Oct),
+UK,Pricing,bookkeeping prices,Commercial,/uk/pricing/,P1,,,,,seed v1 (9 Oct),
+UK,Guides (informational),self assessment deadline,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),how to file a tax return,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),corporation tax rates,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),dividend tax rates,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),VAT threshold UK,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),sole trader vs limited company,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),how to pay yourself from a limited company,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),IR35 explained,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),what expenses can I claim,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),HMRC payment on account,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),how to get a business loan,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,Guides (informational),business loan interest rates UK,Informational,"/resources/... guides, each linking to its service",P1–P3,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant City of London,Local,/uk/london/city-of-london/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in City of London,Local,/uk/london/city-of-london/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Canary Wharf,Local,/uk/london/canary-wharf/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Canary Wharf,Local,/uk/london/canary-wharf/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Westminster,Local,/uk/london/westminster/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Westminster,Local,/uk/london/westminster/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Kensington,Local,/uk/london/kensington/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Kensington,Local,/uk/london/kensington/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Camden,Local,/uk/london/camden/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Camden,Local,/uk/london/camden/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Islington,Local,/uk/london/islington/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Islington,Local,/uk/london/islington/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Shoreditch,Local,/uk/london/shoreditch/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Shoreditch,Local,/uk/london/shoreditch/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Croydon,Local,/uk/london/croydon/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Croydon,Local,/uk/london/croydon/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Wimbledon,Local,/uk/london/wimbledon/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Wimbledon,Local,/uk/london/wimbledon/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Richmond,Local,/uk/london/richmond/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Richmond,Local,/uk/london/richmond/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountant Stratford,Local,/uk/london/stratford/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – London areas,accountants in Stratford,Local,/uk/london/stratford/,P2,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Manchester,Local,/uk/manchester/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Manchester,Local,/uk/manchester/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Manchester,Local,/uk/manchester/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Birmingham,Local,/uk/birmingham/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Birmingham,Local,/uk/birmingham/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Birmingham,Local,/uk/birmingham/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Leeds,Local,/uk/leeds/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Leeds,Local,/uk/leeds/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Leeds,Local,/uk/leeds/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Bristol,Local,/uk/bristol/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Bristol,Local,/uk/bristol/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Bristol,Local,/uk/bristol/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Liverpool,Local,/uk/liverpool/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Liverpool,Local,/uk/liverpool/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Liverpool,Local,/uk/liverpool/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Reading,Local,/uk/reading/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Reading,Local,/uk/reading/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Reading,Local,/uk/reading/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Cambridge,Local,/uk/cambridge/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Cambridge,Local,/uk/cambridge/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Cambridge,Local,/uk/cambridge/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Oxford,Local,/uk/oxford/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Oxford,Local,/uk/oxford/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Oxford,Local,/uk/oxford/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Brighton,Local,/uk/brighton/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Brighton,Local,/uk/brighton/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Brighton,Local,/uk/brighton/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,accountant Milton Keynes,Local,/uk/milton-keynes/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,small business accountant Milton Keynes,Local,/uk/milton-keynes/,P3,,,,,seed v1 (9 Oct),
+UK,City pages – UK cities,bookkeeping services Milton Keynes,Local,/uk/milton-keynes/,P3,,,,,seed v1 (9 Oct),
+UK,Accountant – general,accounting firm,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting services,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting company,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accountant,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting agency,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,professional accountants,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting consultants,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting office,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,certified accountant,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,chartered accountants,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accountancy firm,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting services UK,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,small business accountants,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,full-service accounting firm,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Accountant – general,accounting firm for startups,Transactional,/uk/ hub + home,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,outsourced accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,outsourced accounting company,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,outsourced accounting firm,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,accounting outsourcing services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,accounting outsourcing company,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,business accounting outsourcing,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,remote accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,virtual accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,online accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,accounting services for small businesses,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,small business accounting company,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,outsourced finance department,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,finance and accounting outsourcing,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,external accounting department,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,managed accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,monthly accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,accounting support services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,accounting services for growing businesses,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,international accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,multi-entity accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,cross-border accounting services,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,virtual finance department,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,finance function outsourcing,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Outsourced accounting,fractional finance team,Transactional,/uk/accounting/outsourced-accounting/ (new page),P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping company,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping firm,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,outsourced bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,online bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,virtual bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,remote bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,small business bookkeeping,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping services for small business,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,monthly bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,affordable bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping packages,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,hire a bookkeeper,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,dedicated bookkeeper for small business,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,cloud bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,catch up bookkeeping services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping cleanup services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bank reconciliation services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,accounts payable services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,accounts receivable services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping and accounting services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping and payroll services,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping for self employed,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping for startups,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping for limited companies,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,bookkeeping services UK,Transactional,/uk/accounting/bookkeeping/,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,outsourced payroll services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll outsourcing company,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll processing services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll services UK,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll services for small business,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll accounting services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll compliance services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,PAYE payroll services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll setup services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll reconciliation services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,contractor payroll services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,international payroll services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Bookkeeping & payroll,payroll and bookkeeping services,Transactional,/uk/accounting/payroll/,P1–P2,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax accountant,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax accountant near me,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax accounting firm,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax accounting services,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax preparation services,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax return preparation services,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,business tax accountant,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,small business tax accountant,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax planning services,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax compliance services,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax advisory services,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax consultant for small business,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,online tax accountant,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,business tax advisory,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,year end tax planning,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Tax – general,tax return accountant,Transactional,/uk/tax/ hub,P1,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada"
+UK,Corporation tax,corporate tax services,Transactional,/uk/tax/corporation-tax/,P1,,,,,pasted research (9 Oct),
+UK,Corporation tax,corporate tax accountant,Transactional,/uk/tax/corporation-tax/,P1,,,,,pasted research (9 Oct),
+UK,Corporation tax,company tax return preparation,Transactional,/uk/tax/corporation-tax/,P1,,,,,pasted research (9 Oct),
+UK,Corporation tax,R&D tax relief accountant,Transactional,/uk/tax/corporation-tax/,P1,,,,,pasted research (9 Oct),
+UK,Sole traders & self assessment,self employed accountant,Transactional,/uk/tax/self-assessment/,P1,,,,,pasted research (9 Oct),
+UK,Sole traders & self assessment,self employed tax accountant,Transactional,/uk/tax/self-assessment/,P1,,,,,pasted research (9 Oct),
+UK,Sole traders & self assessment,freelancer tax services,Transactional,/uk/tax/self-assessment/,P1,,,,,pasted research (9 Oct),
+UK,Sole traders & self assessment,HMRC tax return accountant,Transactional,/uk/tax/self-assessment/,P1,,,,,pasted research (9 Oct),
+UK,VAT,VAT accounting services,Transactional,/uk/tax/vat/,P1,,,,,pasted research (9 Oct),
+UK,VAT,VAT return preparation,Transactional,/uk/tax/vat/,P1,,,,,pasted research (9 Oct),
+UK,VAT,VAT return filing,Transactional,/uk/tax/vat/,P1,,,,,pasted research (9 Oct),
+UK,VAT,Making Tax Digital VAT,Transactional,/uk/tax/vat/,P1,,,,,pasted research (9 Oct),
+UK,Cross-border,international tax accountant,Transactional,/cross-border/...,P1,,,,,pasted research (9 Oct),
+UK,Cross-border,cross border tax services,Transactional,/cross-border/...,P1,,,,,pasted research (9 Oct),
+UK,Cross-border,expat tax services,Transactional,/cross-border/...,P1,,,,,pasted research (9 Oct),
+UK,Cross-border,international tax services,Transactional,/cross-border/...,P1,,,,,pasted research (9 Oct),
+UK,Management & FD,virtual CFO services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,virtual CFO UK,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,virtual CFO for small business,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,virtual CFO for startups,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,outsourced CFO services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,fractional CFO services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,fractional finance director,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,part time CFO services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,CFO as a service,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,financial controller services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,outsourced controller services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,management accounting services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,management reporting services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,monthly management accounts,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,financial reporting services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,cash flow forecasting services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,budgeting and forecasting services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,financial modeling services,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,financial KPI reporting,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,financial strategy consulting,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Management & FD,financial planning for growing businesses,Transactional,/uk/accounting/virtual-fd/,P1,,,,,pasted research (9 Oct),"UK searchers often say FD (finance director) rather than CFO, so target both"
+UK,Limited companies,business accounting services,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,small business accounting,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,limited company accountant,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,company accounts preparation,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,annual accounts filing,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,year end accounts preparation,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,annual financial statements,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,financial statement preparation,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,balance sheet preparation,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,profit and loss statement preparation,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,month end closing services,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,accounting cleanup services,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,consolidated financial statements,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Limited companies,intercompany accounting services,Transactional,/uk/accounting/limited-company-accounts/,P1,,,,,pasted research (9 Oct),
+UK,Company services,company formation services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,company registration services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,company formation and accounting,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,Companies House filing support,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,new company accountant,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,accounting for newly incorporated companies,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,registered office services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,startup accounting services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,business valuation services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,financial due diligence services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,merger and acquisition accounting,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,transaction advisory services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,business restructuring advisory,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,financial advisory services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,business financial advisory,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Company services,cash flow advisory services,Transactional,/uk/company-services/...,P2,,,,,pasted research (9 Oct),Company registration and registered office terms only if Severin provides them
+UK,Contractors,CIS tax accountant,Transactional,/uk/accounting/contractors/,P2,,,,,pasted research (9 Oct),
+UK,Contractors,contractor bookkeeping services,Transactional,/uk/accounting/contractors/,P2,,,,,pasted research (9 Oct),
+UK,Property,landlord tax accountant,Transactional,/uk/accounting/landlords/,P2,,,,,pasted research (9 Oct),
+UK,Property,property investor accountant,Transactional,/uk/accounting/landlords/,P2,,,,,pasted research (9 Oct),
+UK,Property,rental property accounting,Transactional,/uk/accounting/landlords/,P2,,,,,pasted research (9 Oct),
+UK,Property,property management accounting,Transactional,/uk/accounting/landlords/,P2,,,,,pasted research (9 Oct),
+UK,Industries,ecommerce accountant UK,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,ecommerce accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,Amazon seller accountant,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,Shopify accountant,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,SaaS accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,startup accountant,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,marketing agency accounting,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,construction accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,restaurant accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,hospitality accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,medical practice accounting,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,dental practice accounting,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,law firm accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,charity accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,nonprofit accounting services,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Industries,holding company accounting,Transactional,"/uk/industries/<sector>/ (new, only for sectors Severin serves)",P2–P3,,,,,pasted research (9 Oct),Build a sector page only where Severin has real clients and case studies
+UK,Software,Xero accountant UK,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Software,Xero setup and migration,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Software,QuickBooks accountant,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Software,QuickBooks cleanup services,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Software,Sage accounting services,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Software,accounting software migration,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Software,cloud accounting implementation,Transactional,/uk/accounting/bookkeeping/ (software section),P2,,,,,pasted research (9 Oct),"Use only if Severin works in these tools, ideally with partner certification"
+UK,Audit & assurance,audit services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,statutory audit services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,external audit services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,internal audit services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,audit preparation services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,audit readiness services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,forensic accounting services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Audit & assurance,charity audit services,Transactional,/uk/accounting/audit-support/ (only if offered),Hold,,,,,pasted research (9 Oct),Statutory audit needs a registered auditor (RSB-registered firm). Hold until Severin confirms. Audit preparation can be offered without registration
+UK,Pricing,accountant fees for small business,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,bookkeeping services cost,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,bookkeeping services pricing,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,accounting services pricing,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,payroll services pricing,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,hire an accountant,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,best accounting firm,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Pricing,accounting consultation,Commercial,/uk/pricing/,P1,,,,,pasted research (9 Oct),
+UK,Guides (informational),what does an accountant do,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),accountant vs bookkeeper,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),how much does an accountant cost,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),do I need an accountant for my small business,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),when should a business hire an accountant,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),how to choose an accounting firm,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),benefits of outsourcing accounting,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),bookkeeping vs accounting,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),how much do bookkeeping services cost,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),signs your business needs a bookkeeper,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),best bookkeeping software for small business,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),how to reconcile business bank accounts,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),monthly bookkeeping checklist,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),in-house accountant vs outsourced accounting,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),how much does outsourced accounting cost,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),when should a startup hire a CFO,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),best accounting software for startups,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),how to improve cash flow,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),what documents does an accountant need,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,Guides (informational),common tax filing mistakes,Informational,"/resources/... guides, each linking to its service",P2–P3,,,,,pasted research (9 Oct),"English term, also check volume in US and Canada; write a local version per market"
+UK,City pages – UK cities,accountant Sheffield,Local,/uk/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,accountant Nottingham,Local,/uk/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,accountant Leicester,Local,/uk/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,accountant Newcastle,Local,/uk/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,accountant Glasgow,Local,/uk/<city>/ (only with unique local content),Hold,,,,,pasted research (9 Oct),"Outside England. The brief says England, so confirm before targeting"
+UK,City pages – UK cities,accountant Edinburgh,Local,/uk/<city>/ (only with unique local content),Hold,,,,,pasted research (9 Oct),"Outside England. The brief says England, so confirm before targeting"
+UK,City pages – UK cities,accountant Cardiff,Local,/uk/<city>/ (only with unique local content),Hold,,,,,pasted research (9 Oct),"Outside England. The brief says England, so confirm before targeting"
+UK,City pages – UK cities,outsourced accounting services London,Local,/uk/london/ + matching service page,P1–P2,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,virtual CFO London,Local,/uk/london/ + matching service page,P1–P2,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,payroll services Manchester,Local,/uk/london/ + matching service page,P1–P2,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,VAT accountant Birmingham,Local,/uk/london/ + matching service page,P1–P2,,,,,pasted research (9 Oct),
+UK,City pages – UK cities,payroll services Birmingham,Local,/uk/london/ + matching service page,P1–P2,,,,,pasted research (9 Oct),
+France,Comptable France–UK (main edge),expert-comptable Londres,Transactional,"/fr/londres/, /fr/expatries-royaume-uni/",P1,,,,,seed v1 (9 Oct),
+France,Comptable France–UK (main edge),comptable français à Londres,Transactional,"/fr/londres/, /fr/expatries-royaume-uni/",P1,,,,,seed v1 (9 Oct),
+France,Comptable France–UK (main edge),cabinet comptable franco-britannique,Transactional,"/fr/londres/, /fr/expatries-royaume-uni/",P1,,,,,seed v1 (9 Oct),
+France,Comptable France–UK (main edge),comptable pour expatriés Royaume-Uni,Transactional,"/fr/londres/, /fr/expatries-royaume-uni/",P1,,,,,seed v1 (9 Oct),
+France,Comptable France–UK (main edge),déclaration d'impôts expatrié Angleterre,Transactional,"/fr/londres/, /fr/expatries-royaume-uni/",P1,,,,,seed v1 (9 Oct),
+France,UK company for French founders,créer une LTD en Angleterre,Transactional,/fr/creer-societe-royaume-uni/,P1,,,,,seed v1 (9 Oct),
+France,UK company for French founders,créer une société au Royaume-Uni,Transactional,/fr/creer-societe-royaume-uni/,P1,,,,,seed v1 (9 Oct),
+France,UK company for French founders,comptabilité LTD anglaise,Transactional,/fr/creer-societe-royaume-uni/,P1,,,,,seed v1 (9 Oct),
+France,UK company for French founders,domiciliation Londres,Transactional,/fr/creer-societe-royaume-uni/,P1,,,,,seed v1 (9 Oct),
+France,UK company for French founders,fiscalité LTD résident français,Transactional,/fr/creer-societe-royaume-uni/,P1,,,,,seed v1 (9 Oct),
+France,Comptabilité core,expert-comptable en ligne,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,cabinet comptable Paris,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,expert-comptable Paris,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,comptable pour TPE/PME,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,bilan comptable,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,liasse fiscale,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,comptabilité SASU,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,comptabilité SARL,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Comptabilité core,comptable auto-entrepreneur / micro-entrepreneur,Transactional,/fr/comptabilite/...,P2 (check the title rules first),,,,,seed v1 (9 Oct),
+France,Fiscalité,déclaration TVA,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Fiscalité,conseil fiscal entreprise,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Fiscalité,impôt sur les sociétés,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Fiscalité,convention fiscale France Royaume-Uni,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Fiscalité,non-résident impôt sur le revenu,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Fiscalité,plus-value immobilière non-résident,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Fiscalité,succession internationale,Transactional + info,/fr/fiscalite/...,P1–P2,,,,,seed v1 (9 Oct),
+France,Financement,prêt professionnel,Transactional,/fr/financement/...,P2,,,,,seed v1 (9 Oct),
+France,Financement,financement entreprise,Transactional,/fr/financement/...,P2,,,,,seed v1 (9 Oct),
+France,Financement,prêt création entreprise,Transactional,/fr/financement/...,P2,,,,,seed v1 (9 Oct),
+France,Financement,crédit-bail,Transactional,/fr/financement/...,P2,,,,,seed v1 (9 Oct),
+France,Financement,affacturage,Transactional,/fr/financement/...,P2,,,,,seed v1 (9 Oct),
+France,Financement,prêt de trésorerie,Transactional,/fr/financement/...,P2,,,,,seed v1 (9 Oct),
+France,Tarifs,tarif expert-comptable,Commercial,/fr/tarifs/,P1,,,,,seed v1 (9 Oct),
+France,Tarifs,prix comptable SASU,Commercial,/fr/tarifs/,P1,,,,,seed v1 (9 Oct),
+France,Tarifs,combien coûte un expert-comptable,Commercial,/fr/tarifs/,P1,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Lyon,Local,/fr/<ville>/ (only with unique local content),P3,,,,,seed v1 (9 Oct),
+France,Guides,taux IS,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Guides,date déclaration impôts,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Guides,SASU ou EURL,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Guides,rémunération dirigeant SASU,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Guides,TVA intracommunautaire,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Guides,quitter la France fiscalité,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Guides,impôts expatrié Londres,Informational,/fr/ressources/...,P1–P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Lyon,Local,/fr/lyon/,P3,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Marseille,Local,/fr/marseille/,P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Marseille,Local,/fr/marseille/,P3,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Toulouse,Local,/fr/toulouse/,P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Toulouse,Local,/fr/toulouse/,P3,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Bordeaux,Local,/fr/bordeaux/,P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Bordeaux,Local,/fr/bordeaux/,P3,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Nice,Local,/fr/nice/,P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Nice,Local,/fr/nice/,P3,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Lille,Local,/fr/lille/,P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Lille,Local,/fr/lille/,P3,,,,,seed v1 (9 Oct),
+France,Villes,expert-comptable Nantes,Local,/fr/nantes/,P3,,,,,seed v1 (9 Oct),
+France,Villes,cabinet comptable Nantes,Local,/fr/nantes/,P3,,,,,seed v1 (9 Oct),
+France,Comptabilité core,expert-comptable,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,cabinet comptable,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,cabinet d'expertise comptable,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,cabinet comptable pour PME,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,comptabilité entreprise,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,services comptables,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,externalisation comptable,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,comptabilité externalisée,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,comptabilité en ligne,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,tenue de comptabilité,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,saisie comptable,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,gestion comptable PME,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,accompagnement comptable PME,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,comptable indépendant,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,comptabilité pour startups,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,expert-comptable startup,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,expert-comptable e-commerce,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Comptabilité core,comptabilité immobilier,Transactional,/fr/comptabilite/...,P1,,,,,pasted research (9 Oct),Expert-comptable is a protected title (Ordre des experts-comptables). Use only with a registered expert-comptable
+France,Paie,gestion de la paie,Transactional,/fr/comptabilite/paie/ (new page),P2,,,,,pasted research (9 Oct),
+France,Paie,externalisation de la paie,Transactional,/fr/comptabilite/paie/ (new page),P2,,,,,pasted research (9 Oct),
+France,Paie,cabinet de paie,Transactional,/fr/comptabilite/paie/ (new page),P2,,,,,pasted research (9 Oct),
+France,DAF externalisé,directeur financier externalisé,Transactional,/fr/comptabilite/daf-externalise/ (new page),P2,,,,,pasted research (9 Oct),
+France,DAF externalisé,DAF externalisé,Transactional,/fr/comptabilite/daf-externalise/ (new page),P2,,,,,pasted research (9 Oct),
+France,DAF externalisé,DAF à temps partagé,Transactional,/fr/comptabilite/daf-externalise/ (new page),P2,,,,,pasted research (9 Oct),
+France,Fiscalité,déclaration fiscale,Transactional,/fr/fiscalite/...,P1,,,,,pasted research (9 Oct),
+France,Fiscalité,déclaration de TVA,Transactional,/fr/fiscalite/...,P1,,,,,pasted research (9 Oct),
+France,Création d'entreprise,création d'entreprise comptabilité,Transactional,/fr/creation-entreprise/ (new page),P2,,,,,pasted research (9 Oct),
+France,Création d'entreprise,accompagnement comptable création entreprise,Transactional,/fr/creation-entreprise/ (new page),P2,,,,,pasted research (9 Oct),
+France,Création d'entreprise,comptabilité SAS,Transactional,/fr/creation-entreprise/ (new page),P2,,,,,pasted research (9 Oct),
+France,Villes,externalisation comptable Paris,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,gestion de la paie Lyon,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,expert-comptable PME Bordeaux,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,conseil fiscal Bordeaux,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,expert-comptable Strasbourg,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,expert-comptable Montpellier,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,expert-comptable Rennes,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+France,Villes,expert-comptable Grenoble,Local,/fr/<ville>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Expat & cross-border (main edge),US expat tax UK,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Expat & cross-border (main edge),US tax return for Americans in London,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Expat & cross-border (main edge),FBAR filing,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Expat & cross-border (main edge),FATCA reporting,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Expat & cross-border (main edge),foreign earned income exclusion,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Expat & cross-border (main edge),US UK tax treaty,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Expat & cross-border (main edge),dual citizen taxes,Transactional,/us/expat-tax/,P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,form a US LLC from the UK,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,Form 5472 filing,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,foreign-owned LLC tax,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,ITIN application,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,EIN for non-residents,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,1040-NR filing,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Foreign-owned US companies,US company for non-residents,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,seed v1 (9 Oct),
+US,Small business accounting,small business accountant,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,bookkeeping services for small business,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,outsourced bookkeeping,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,virtual accountant,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,accountant near me,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,business tax preparation,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,Form 1120 / 1120-S / 1065 filing,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,S corp election,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Small business accounting,sales tax compliance,Transactional,"/us/accounting/..., /us/tax/...",P2,,,,,seed v1 (9 Oct),
+US,Lending,small business loans,Transactional,/us/business-finance/...,P2,,,,,seed v1 (9 Oct),
+US,Lending,SBA loan help,Transactional,/us/business-finance/...,P2,,,,,seed v1 (9 Oct),
+US,Lending,equipment financing,Transactional,/us/business-finance/...,P2,,,,,seed v1 (9 Oct),
+US,Lending,business line of credit,Transactional,/us/business-finance/...,P2,,,,,seed v1 (9 Oct),
+US,Lending,invoice factoring,Transactional,/us/business-finance/...,P2,,,,,seed v1 (9 Oct),
+US,Lending,working capital loan,Transactional,/us/business-finance/...,P2,,,,,seed v1 (9 Oct),
+US,Cities,accountant New York,Local,/us/<city>/,P3,,,,,seed v1 (9 Oct),
+US,Cities,NYC small business accountant,Local,/us/<city>/,P3,,,,,seed v1 (9 Oct),
+US,Guides,tax deadline,Informational,/us/resources/...,P1–P3,,,,,seed v1 (9 Oct),
+US,Guides,quarterly estimated taxes,Informational,/us/resources/...,P1–P3,,,,,seed v1 (9 Oct),
+US,Guides,LLC vs S corp,Informational,/us/resources/...,P1–P3,,,,,seed v1 (9 Oct),
+US,Guides,how to file FBAR,Informational,/us/resources/...,P1–P3,,,,,seed v1 (9 Oct),
+US,Guides,Americans abroad taxes,Informational,/us/resources/...,P1–P3,,,,,seed v1 (9 Oct),
+US,Guides,US UK totalization agreement,Informational,/us/resources/...,P1–P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant New York,Local,/us/new-york/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant New York,Local,/us/new-york/,P3,,,,,seed v1 (9 Oct),
+US,Cities,accountant Los Angeles,Local,/us/los-angeles/,P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant Los Angeles,Local,/us/los-angeles/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant Los Angeles,Local,/us/los-angeles/,P3,,,,,seed v1 (9 Oct),
+US,Cities,accountant Miami,Local,/us/miami/,P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant Miami,Local,/us/miami/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant Miami,Local,/us/miami/,P3,,,,,seed v1 (9 Oct),
+US,Cities,accountant Chicago,Local,/us/chicago/,P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant Chicago,Local,/us/chicago/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant Chicago,Local,/us/chicago/,P3,,,,,seed v1 (9 Oct),
+US,Cities,accountant Houston,Local,/us/houston/,P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant Houston,Local,/us/houston/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant Houston,Local,/us/houston/,P3,,,,,seed v1 (9 Oct),
+US,Cities,accountant San Francisco,Local,/us/san-francisco/,P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant San Francisco,Local,/us/san-francisco/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant San Francisco,Local,/us/san-francisco/,P3,,,,,seed v1 (9 Oct),
+US,Cities,accountant Boston,Local,/us/boston/,P3,,,,,seed v1 (9 Oct),
+US,Cities,small business accountant Boston,Local,/us/boston/,P3,,,,,seed v1 (9 Oct),
+US,Cities,expat tax accountant Boston,Local,/us/boston/,P3,,,,,seed v1 (9 Oct),
+US,Small business accounting,accounting firm USA,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,outsourced accounting services USA,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,bookkeeping services for small business USA,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,QuickBooks bookkeeper,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,QuickBooks accountant,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,payroll services for small business,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,payroll tax services,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,virtual CFO services,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,fractional CFO for startups,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,outsourced controller,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,LLC accounting services,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,LLC tax accountant,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,S corporation tax services,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,multi-state tax services,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,1099 contractor bookkeeping,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,IRS tax preparation services,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,sales tax accountant,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,ecommerce CPA,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,startup CPA,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,Small business accounting,real estate CPA,Transactional,"/us/accounting/..., /us/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a state-licensed title. Use CPA terms only if a licensed CPA signs off the work
+US,CPA terms,CPA near me,Transactional,/us/ hub,P2 (check the title rules first),,,,,pasted research (9 Oct),Only with a state-licensed CPA on the team
+US,CPA terms,CPA firm,Transactional,/us/ hub,P2 (check the title rules first),,,,,pasted research (9 Oct),Only with a state-licensed CPA on the team
+US,CPA terms,certified public accountant,Transactional,/us/ hub,P2 (check the title rules first),,,,,pasted research (9 Oct),Only with a state-licensed CPA on the team
+US,Foreign-owned US companies,LLC formation services,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,pasted research (9 Oct),
+US,Foreign-owned US companies,business formation and accounting,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,pasted research (9 Oct),
+US,Foreign-owned US companies,accounting for new LLCs,Transactional,"/us/company-formation/, /us/non-resident-tax/",P1,,,,,pasted research (9 Oct),
+US,Cities,outsourced accounting services New York,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,bookkeeping services New York,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,business tax accountant Miami,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,virtual CFO Austin,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,startup accounting Austin,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,accountant Dallas,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,accountant Austin,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,accountant Atlanta,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+US,Cities,accountant Seattle,Local,/us/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cross-border (main edge),Canadian tax accountant UK,Transactional,/ca/cross-border/,P1,,,,,seed v1 (9 Oct),
+Canada,Cross-border (main edge),Canada UK tax treaty,Transactional,/ca/cross-border/,P1,,,,,seed v1 (9 Oct),
+Canada,Cross-border (main edge),non-resident Canada tax return,Transactional,/ca/cross-border/,P1,,,,,seed v1 (9 Oct),
+Canada,Cross-border (main edge),leaving Canada departure tax,Transactional,/ca/cross-border/,P1,,,,,seed v1 (9 Oct),
+Canada,Cross-border (main edge),Canadians living in London taxes,Transactional,/ca/cross-border/,P1,,,,,seed v1 (9 Oct),
+Canada,Cross-border (main edge),NR4 / Section 216 return,Transactional,/ca/cross-border/,P1,,,,,seed v1 (9 Oct),
+Canada,Corporate,corporate tax return T2,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,small business accountant Toronto,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,incorporate a business in Ontario,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,GST/HST return filing,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,payroll services Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,bookkeeping services Toronto,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,bookkeeping services Vancouver,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Corporate,bookkeeping services Calgary,Transactional,"/ca/accounting/..., /ca/tax/...",P2,,,,,seed v1 (9 Oct),
+Canada,Quebec (fr-CA),comptable Montréal,Transactional,/ca/fr/...,P3,,,,,seed v1 (9 Oct),
+Canada,Quebec (fr-CA),déclaration TPS/TVQ,Transactional,/ca/fr/...,P3,,,,,seed v1 (9 Oct),
+Canada,Quebec (fr-CA),impôt des sociétés Québec,Transactional,/ca/fr/...,P3,,,,,seed v1 (9 Oct),
+Canada,Quebec (fr-CA),comptable pour travailleur autonome,Transactional,/ca/fr/...,P3,,,,,seed v1 (9 Oct),
+Canada,Lending,business loan Canada,Transactional,/ca/business-finance/...,P2,,,,,seed v1 (9 Oct),
+Canada,Lending,equipment financing Canada,Transactional,/ca/business-finance/...,P2,,,,,seed v1 (9 Oct),
+Canada,Lending,invoice factoring Canada,Transactional,/ca/business-finance/...,P2,,,,,seed v1 (9 Oct),
+Canada,Lending,working capital loan Canada,Transactional,/ca/business-finance/...,P2,,,,,seed v1 (9 Oct),
+Canada,Guides,CRA tax deadline,Informational,/ca/resources/...,P2–P3,,,,,seed v1 (9 Oct),
+Canada,Guides,small business deduction,Informational,/ca/resources/...,P2–P3,,,,,seed v1 (9 Oct),
+Canada,Guides,GST registration threshold,Informational,/ca/resources/...,P2–P3,,,,,seed v1 (9 Oct),
+Canada,Guides,sole proprietor vs corporation Canada,Informational,/ca/resources/...,P2–P3,,,,,seed v1 (9 Oct),
+Canada,Cities,accountant Toronto,Local,/ca/toronto/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,corporate tax accountant Toronto,Local,/ca/toronto/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,accountant Vancouver,Local,/ca/vancouver/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,small business accountant Vancouver,Local,/ca/vancouver/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,corporate tax accountant Vancouver,Local,/ca/vancouver/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,accountant Calgary,Local,/ca/calgary/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,small business accountant Calgary,Local,/ca/calgary/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,corporate tax accountant Calgary,Local,/ca/calgary/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,accountant Ottawa,Local,/ca/ottawa/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,small business accountant Ottawa,Local,/ca/ottawa/,P3,,,,,seed v1 (9 Oct),
+Canada,Cities,corporate tax accountant Ottawa,Local,/ca/ottawa/,P3,,,,,seed v1 (9 Oct),
+Canada,Quebec (fr-CA),expert-comptable Montréal,Local,/ca/fr/montreal/,P3,,,,,seed v1 (9 Oct),
+Canada,Quebec (fr-CA),comptable Québec,Local,/ca/fr/montreal/,P3,,,,,seed v1 (9 Oct),
+Canada,Corporate,CPA firm Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,chartered professional accountant,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,small business accountant Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,accounting firm Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,corporate tax accountant,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,personal tax accountant,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,CRA tax accountant,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,bookkeeping services Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,virtual bookkeeping Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,outsourced bookkeeping Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,outsourced accounting Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,GST HST filing services,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,GST HST accountant,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,T2 corporate tax return,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,T1 personal tax return,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,Canadian tax preparation,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,incorporated business accountant,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,incorporation accounting services,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,startup accountant Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,QuickBooks accountant Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,payroll outsourcing Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,virtual CFO Canada,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Corporate,Canadian nonprofit accounting,Transactional,"/ca/accounting/..., /ca/tax/...",P1–P2,,,,,pasted research (9 Oct),CPA is a provincially regulated title. Use only with a licensed CPA
+Canada,Cross-border (main edge),cross-border tax accountant Canada US,Transactional,/ca/cross-border/,P1,,,,,pasted research (9 Oct),
+Canada,Cities,outsourced bookkeeping Toronto,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,CPA firm Toronto,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,fractional CFO Toronto,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,virtual CFO Vancouver,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,accountant Montreal,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,accountant Edmonton,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,accountant Mississauga,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,accountant Winnipeg,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),
+Canada,Cities,accountant Halifax,Local,/ca/<city>/ (only with unique local content),P3,,,,,pasted research (9 Oct),

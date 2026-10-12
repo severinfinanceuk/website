@@ -1,0 +1,56 @@
+---
+// Testimonials section, shared by the home page and every service page. Reviews, rating and heading
+// come from src/data/reviews.js.
+// Without a slot: up to 3 cards with the rotating green highlight (home page).
+// With a slot: the first 2 reviews plus the slot content, e.g. the "Reviewed by" box (service pages).
+import { reviews, rating, reviewsHead } from '../data/reviews.js';
+
+interface Props { style?: string }
+const { style } = Astro.props;
+const withSlot = Astro.slots.has('default');
+const items = reviews.slice(0, withSlot ? 2 : 3);
+const quoteMark = '<svg viewBox="0 0 40 24" aria-hidden="true"><path fill="currentColor" d="M0 24V14.4C0 6.4 4.3 1.6 12 0l1.4 3.2C9 4.6 7 7.4 6.8 11.2H12V24H0Zm22 0V14.4C22 6.4 26.3 1.6 34 0l1.4 3.2c-4.4 1.4-6.4 4.2-6.6 8H34V24H22Z"/></svg>';
+---
+<section class="section" style={style} aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="section-head split">
+      <div>
+        <span class="eyebrow">{reviewsHead.eyebrow}</span>
+        <h2 id="reviews-title">{reviewsHead.h2}</h2>
+      </div>
+      <p>{rating.tbc ? <span class="tbc">{rating.text}</span> : rating.text}</p>
+    </div>
+    {withSlot ? (
+      <div class="proof">
+        {items.map((r) => (
+          <figure class="quote">
+            <Fragment set:html={quoteMark} />
+            <blockquote><p>{r.tbc ? <span class="tbc">{r.text}</span> : r.text}</p></blockquote>
+            <div class="quote-rule"></div>
+            <figcaption>
+              <span class="avatar" aria-hidden="true">{r.initials}</span>
+              <span><span class="quote-name">{r.name}</span><br /><span class="quote-src">{r.source}</span></span>
+            </figcaption>
+          </figure>
+        ))}
+        <slot />
+      </div>
+    ) : (
+      <ul class={`quotes hl-group hl-${items.length}`} role="list">
+        {items.map((r, i) => (
+          <li style={`display:grid;--i:${i}`}>
+            <figure class="quote hl-card">
+              <Fragment set:html={quoteMark} />
+              <blockquote><p>{r.tbc ? <span class="tbc">{r.text}</span> : r.text}</p></blockquote>
+              <div class="quote-rule"></div>
+              <figcaption>
+                <span class="avatar" aria-hidden="true">{r.initials}</span>
+                <span><span class="quote-name">{r.name}</span><br /><span class="quote-src">{r.source}</span></span>
+              </figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</section>

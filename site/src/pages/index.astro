@@ -1,0 +1,417 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { rating } from '../data/reviews.js';
+import { Image, Picture } from 'astro:assets';
+import london from '../assets/places/london.jpg';
+import paris from '../assets/places/paris.jpg';
+import newYork from '../assets/places/new-york.jpg';
+import toronto from '../assets/places/toronto.jpg';
+import sydney from '../assets/places/sydney.jpg';
+import dubai from '../assets/places/dubai.jpg';
+import cima from '../assets/logos/cima.png';
+import ciot from '../assets/logos/ciot.png';
+import icpa from '../assets/logos/icpa.png';
+import xero from '../assets/logos/xero.png';
+import intuit from '../assets/logos/intuit.png';
+import acom from '../assets/logos/acom-pluriel-conseils.png';
+
+// Yellow-highlighted values (class "tbc") are placeholders until Severin confirms them.
+const stats = [
+  { label: 'Countries', value: '6', text: 'UK and France, plus the US, Canada, Australia and the UAE' },
+  { label: 'Services', value: '3', text: 'Accounting, tax and business finance under one roof' },
+  { label: 'Experience', value: 'XX', text: 'Years in practice', tbc: true },
+  { label: 'Clients', value: 'XXX+', text: 'Individuals and companies served', tbc: true },
+  { label: 'Rating', value: rating.value, text: 'Average Google rating', tbc: rating.tbc },
+  { label: 'Response', value: 'XXh', text: 'Typical reply time on working days', tbc: true },
+];
+
+const pillars = [
+  {
+    title: 'Accounting & tax',
+    text: 'A dedicated team from start to finish. We prepare, you approve, we file with HMRC and Companies House.',
+    links: [
+      ['/uk/tax/self-assessment-accountant/', 'Self assessment'],
+      ['/uk/accounting/limited-company-accountant/', 'Company accounts'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax'],
+      ['/uk/tax/vat-accountant/', 'VAT returns'],
+      ['/uk/tax/making-tax-digital-accountant/', 'Making Tax Digital'],
+      ['/uk/accounting/bookkeeping-services/', 'Bookkeeping & payroll'],
+      ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax'],
+      ['/uk/tax/inheritance-tax-planning/', 'Inheritance tax'],
+      ['/uk/tax/hmrc-tax-investigation/', 'HMRC disputes'],
+    ],
+    href: '/uk/accounting/',
+  },
+  {
+    title: 'Business finance',
+    text: 'Arranged by the people who already know your numbers, so applications are faster and better prepared.',
+    links: [
+      ['/uk/business-finance/business-loans/', 'Business loans'],
+      ['/uk/business-finance/tax-bill-funding/', 'Tax bill funding'],
+      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+      ['/uk/business-finance/commercial-mortgages/', 'Commercial mortgages'],
+    ],
+    href: '/uk/business-finance/',
+  },
+  {
+    title: 'Cross-border',
+    text: 'For people and companies with a foot in two countries: the UK and France, the US, Canada, Australia or the UAE.',
+    links: [
+      ['/cross-border/uk-france-tax/', 'UK ↔ France'],
+      ['/us/expat-tax/', 'US expat tax'],
+      ['/ca/canada-uk-tax/', 'Canada ↔ UK'],
+      ['/au/australia-uk-tax/', 'Australia ↔ UK'],
+      ['/uae/moving-to-dubai/', 'UK to Dubai'],
+      ['/cross-border/non-resident-uk-tax/', 'Non-resident UK tax'],
+      ['/cross-border/uk-company-from-abroad/', 'UK company from abroad'],
+    ],
+    href: '/cross-border/',
+  },
+];
+
+// Logo strip under the hero. h = display height in px (balances wide and tall logos).
+const logoGroups = [
+  { title: 'Professional bodies', items: [
+    { img: cima, name: 'CIMA, Chartered Institute of Management Accountants', h: 56 },
+    { img: ciot, name: 'Chartered Institute of Taxation', h: 76 },
+    { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 52 },
+  ] },
+  { title: 'Software we work in', items: [
+    { img: xero, name: 'Xero', h: 64 },
+    { img: intuit, name: 'Intuit QuickBooks', h: 40 },
+  ] },
+  { title: 'Partners', items: [
+    { img: acom, name: '@com Pluriel Conseils', h: 56 },
+  ] },
+];
+
+// UK and France are the main markets: they get the bigger cards (featured).
+const markets = [
+  { code: 'UK', name: 'United Kingdom', href: '/uk/', img: london, alt: 'Palace of Westminster and Big Ben, London', text: 'Self assessment, company accounts, VAT, tax disputes and business finance.', meta: 'English · HMRC · Companies House', featured: true },
+  { code: 'FR', name: 'France', href: '/fr/', img: paris, alt: 'The Seine and Notre-Dame, Paris', text: 'Comptabilité, fiscalité et création de société au Royaume-Uni, en français.', meta: 'Français · DGFiP · URSSAF', featured: true },
+  { code: 'US', name: 'United States', href: '/us/', img: newYork, alt: 'Lower Manhattan from the air, New York', text: 'US expat returns, FBAR, US companies for non-residents and small business accounts.', meta: 'English · IRS · State filings' },
+  { code: 'CA', name: 'Canada', href: '/ca/', img: toronto, alt: 'Downtown Toronto from the air', text: 'Non-resident returns, Canada–UK tax and corporate filings.', meta: 'English & français · CRA' },
+  { code: 'AU', name: 'Australia', href: '/au/', img: sydney, alt: 'Sydney Opera House and the harbour', text: 'Australians in the UK, Brits moving to Australia, and the Australia–UK tax treaty.', meta: 'English · ATO' },
+  { code: 'UAE', name: 'United Arab Emirates', href: '/uae/', img: dubai, alt: 'Burj Khalifa and the Dubai Fountain', text: 'Moving from the UK to Dubai, UK non-residence, UAE corporate tax and VAT.', meta: 'English · FTA · Dubai' },
+];
+
+const steps = [
+  { title: 'Book a free consultation', text: 'Tell us what you need. We confirm the work, the price and the deadline before anything starts.' },
+  { title: 'We prepare everything', text: 'Our team collects the documents, prepares the return or accounts and checks every relief you can claim.' },
+  { title: 'You approve, we file', text: 'You review and sign off online. We file with HMRC or the relevant authority and confirm when it is done.' },
+];
+
+const team = [
+  { initials: 'AD', name: 'Alain Dastros', role: 'Managing Director', bio: 'Qualifications and short bio to confirm.', tbcBio: true },
+  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications (ACCA, CIMA, CPA, expert-comptable) and LinkedIn.', tbcAll: true },
+  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications and LinkedIn.', tbcAll: true },
+];
+
+const guides = [
+  { tag: 'UK · Tax', title: 'Self assessment deadlines for 2026/27, and what happens if you miss one', href: '/resources/self-assessment-deadlines/', meta: '6 min read' },
+  { tag: 'UK · Companies', title: 'Sole trader or limited company: which saves more tax?', href: '/resources/sole-trader-vs-limited-company/', meta: '8 min read' },
+  { tag: 'France · UK', title: 'Créer une LTD en Angleterre quand on réside en France', href: '/fr/ressources/creer-ltd-angleterre/', meta: '7 min' },
+  { tag: 'US · Expat', title: 'US taxes for Americans in London: FBAR, FATCA and the treaty', href: '/us/resources/americans-in-london-taxes/', meta: '9 min read' },
+  { tag: 'UK · Finance', title: 'How to pay a VAT or corporation tax bill in instalments', href: '/resources/pay-hmrc-in-instalments/', meta: '5 min read' },
+];
+
+const faqs = [
+  { q: 'Do you only work with clients in London?', a: 'No. We are based in London and work online with clients across England, and with individuals and companies in France, the United States, Canada, Australia and the UAE. Most clients never need to visit the office.' },
+  { q: 'What does an accountant cost?', a: 'It depends on the work. A personal tax return costs less than a full set of company accounts. We give you a fixed price in writing after the free consultation, before any work starts.' },
+  { q: 'Can you file late or previous years’ tax returns?', a: 'Yes. We prepare late and amended returns, bring prior years up to date, and deal with HMRC about any penalties.' },
+  { q: 'Can you help with an HMRC enquiry or investigation?', a: 'Yes. We handle HMRC enquiries, disputes and penalty appeals, and talk to HMRC on your behalf so you do not have to.' },
+  { q: 'I am French, American, Canadian or Australian and live in the UK. Can you help?', a: 'Yes. Cross-border clients are a large part of our work. We look at both countries’ rules and the tax treaty between them, so income is not taxed twice.' },
+  { q: 'I am moving from the UK to Dubai. Do I still pay UK tax?', a: 'It depends on whether you remain UK tax resident under the statutory residence test, and on any UK income or property you keep. We work out your position, file your final UK return and look after UK tax on anything you leave behind.' },
+  { q: 'Do you lend money yourselves?', a: 'Placeholder answer: to confirm whether Severin lends directly or arranges finance through lenders, and its FCA status.' , tbc: true },
+  { q: 'Which accounting software do you use?', a: 'We work in Xero and QuickBooks, and can work with the system you already use.' },
+  { q: 'How do I get started?', a: 'Book a free consultation online or call 020 4542 2488. We will tell you what we need, what it costs and when it will be done.' },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AccountingService',
+    '@id': 'https://severinfinance.com/#org',
+    name: 'Severin Finance',
+    url: 'https://severinfinance.com/',
+    telephone: '+44 20 4542 2488',
+    email: 'enquiries@severinfinance.com',
+    logo: 'https://severinfinance.com/logo.png',
+    slogan: 'Simplifying the complex, so that everything is just black and white.',
+    address: { '@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB' },
+    areaServed: ['GB', 'FR', 'US', 'CA', 'AU', 'AE'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.filter((f) => !f.tbc).map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+
+const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.3 2.3 8.2 3.4l3.8 3.8H1.5v1.6H12l-3.8 3.8 1.1 1.1L15 8z"/></svg>';
+---
+<Base
+  title="London Accountants for the UK, France & Expats | Severin Finance"
+  description="London accountants for the UK and France, and for clients in the US, Canada, Australia and the UAE: tax returns, company accounts, VAT, cross-border tax and business finance."
+  schema={schema}
+>
+  <!-- 1. Hero: copy and photo side by side from 1000px -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-title">
+          <span class="eyebrow">London accountants · UK, France &amp; international</span>
+          <span class="hero-title">Simplifying the complex, so everything is just black and white.</span>
+        </h1>
+        <p class="hero-text">Tax returns, company accounts, cross-border tax and business finance, with a dedicated team that looks after you from first call to final filing.</p>
+        <div class="hero-actions">
+          <a class="btn btn-fill" href="/contact/">Book a free consultation</a>
+          <a class="btn" href="tel:+442045422488">Call 020 4542 2488</a>
+        </div>
+        <ul class="hero-trust" role="list">
+          <li>Chartered Management Accountant practice</li>
+          <li>{rating.tbc ? <span class="tbc">{rating.short}</span> : rating.short}</li>
+          <li>Fixed price agreed before work starts</li>
+        </ul>
+      </div>
+      <figure class="media hero-media">
+        <!-- When the video is ready, replace .media-ph with:
+        <video controls preload="none" playsinline poster="/media/hero-poster.webp" width="1920" height="1080">
+          <source src="/media/hero.mp4" type="video/mp4" />
+        </video>
+        preload="none": nothing downloads until the visitor presses play. -->
+        <div class="media-ph"><span><span class="play" aria-hidden="true"></span>16:9 video goes here<br /><small>Loads only when the visitor presses play</small></span></div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 1b. Memberships, software and partners -->
+  <section class="logos-band" aria-labelledby="logos-title">
+    <div class="container">
+      <h2 id="logos-title" class="eyebrow">Memberships, software and partners</h2>
+      <div class="logo-groups">
+        {logoGroups.map((g) => (
+          <div class="logo-group">
+            <h3>{g.title}</h3>
+            <ul class="logo-row" role="list">
+              {g.items.map((l) => (
+                <li><Image src={l.img} alt={l.name} title={l.name} height={l.h} style={`--h:${l.h}px`} densities={[1, 2]} quality={85} loading="lazy" decoding="async" /></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. By the numbers -->
+  <section class="section" aria-labelledby="numbers-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">By the numbers</span>
+          <h2 id="numbers-title">Severin in numbers</h2>
+        </div>
+        <p>A London firm with clients in six countries.</p>
+      </div>
+    </div>
+    <!-- Ticker: the list is drawn twice so the loop is seamless; the copy is hidden from screen readers -->
+    <div class="marquee">
+      <ul class="tiles" role="list">
+        {stats.map((s) => (
+          <li class="tile hl-card">
+            <span class="tile-label">{s.label}</span>
+            <span>
+              <span class="tile-value">{s.tbc ? <span class="tbc">{s.value}</span> : s.value}</span>
+              <span class="tile-text">{s.text}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+      <ul class="tiles" role="list" aria-hidden="true">
+        {stats.map((s) => (
+          <li class="tile hl-card">
+            <span class="tile-label">{s.label}</span>
+            <span>
+              <span class="tile-value">{s.tbc ? <span class="tbc">{s.value}</span> : s.value}</span>
+              <span class="tile-text">{s.text}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="container">
+      <p class="note">Yellow figures are placeholders until Severin confirms them.</p>
+    </div>
+  </section>
+
+  <!-- 3. Three pillars: black highlight rotates card to card (CSS only) -->
+  <section class="section" style="padding-top:0" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">What we do</span>
+          <h2 id="services-title">Accounting and finance under one roof</h2>
+        </div>
+        <p>Three services, one team. Every service below is handled in-house.</p>
+      </div>
+    </div>
+    <div class="container">
+      <ol class="svc-list hl-group hl-3" role="list">
+        {pillars.map((p, i) => (
+          <li class="svc hl-card" style={`--i:${i}`}>
+            <div class="svc-top">
+              <span>{String(i + 1).padStart(2, '0')} / 03</span>
+              <span>{p.links.length} services</span>
+            </div>
+            <h3>{p.title}</h3>
+            <p class="svc-text">{p.text}</p>
+            <ul class="svc-items" role="list">
+              {p.links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}
+            </ul>
+            <a class="more" href={p.href}>
+              <span class="more-icon" set:html={arrow} />
+              <span class="more-label">Explore {p.title.toLowerCase()}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- 4. Countries -->
+  <section class="section" style="padding-top:0" aria-labelledby="countries-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Where we work</span>
+          <h2 id="countries-title">Six countries, one firm</h2>
+        </div>
+        <p>Local rules, local language, and one team that sees the whole picture.</p>
+      </div>
+      <ul class="cards cards-places hl-group hl-6" role="list">
+        {markets.map((m, i) => (
+          <li class={m.featured ? 'place-featured' : undefined} style={`display:grid;--i:${i}`}>
+            <a class="card card-place hl-card" href={m.href} hreflang={m.code === 'FR' ? 'fr-FR' : undefined}>
+              <Picture class="card-img" src={m.img} alt={m.alt} formats={['avif', 'webp']} fallbackFormat="jpg" width={m.featured ? 1080 : 720} widths={m.featured ? [360, 540, 720, 1080] : [360, 540, 720]} sizes={m.featured ? '(min-width: 1200px) 200px, (min-width: 1000px) 620px, (min-width: 768px) 45vw, 92vw' : '(min-width: 1200px) 200px, (min-width: 1000px) 300px, (min-width: 768px) 45vw, 92vw'} quality={40} loading="lazy" decoding="async" />
+              <span class="card-code" aria-hidden="true">{m.code}</span>
+              <h3>{m.name}</h3>
+              <p lang={m.code === 'FR' ? 'fr' : undefined}>{m.text}</p>
+              <span class="card-meta">{m.meta}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. How it works -->
+  <section class="section" style="padding-top:0" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2 id="how-title">Three steps, no surprises</h2>
+      </div>
+      <ol class="steps" role="list">
+        {steps.map((s) => (
+          <li class="step"><h3>{s.title}</h3><p>{s.text}</p></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- 6. Team + guides (black band) -->
+  <section class="band section" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Leadership</span>
+          <h2 id="team-title">The people behind your numbers</h2>
+        </div>
+        <p>Qualified accountants who answer the phone themselves.</p>
+      </div>
+      <ul class="cards cards-3 hl-group hl-3" role="list">
+        {team.map((t, i) => (
+          <li class="person hl-card" style={`--i:${i}`}>
+            <div class="person-media" aria-hidden="true">{t.initials}</div>
+            <div class="person-body">
+              <span class="person-role">{t.tbcAll ? <span class="tbc">{t.role}</span> : t.role}</span>
+              <h3 class="person-name">{t.tbcAll ? <span class="tbc">{t.name}</span> : t.name}</h3>
+              <p class="person-bio">{(t.tbcAll || t.tbcBio) ? <span class="tbc">{t.bio}</span> : t.bio}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="inverse section" style="padding-top:0" aria-labelledby="guides-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Guides</span>
+          <h2 id="guides-title">Straight answers</h2>
+        </div>
+        <a class="btn" href="/resources/">All guides</a>
+      </div>
+      <ol class="guides" role="list">
+        {guides.map((g, i) => (
+          <li>
+            <a class="guide" href={g.href}>
+              <span class="guide-num">{String(i + 1).padStart(2, '0')}</span>
+              <span class="guide-tag">{g.tag}</span>
+              <span class="guide-title">{g.title}</span>
+              <span class="guide-meta">{g.meta}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials (shared: src/data/reviews.js) -->
+  <Testimonials />
+
+  <!-- 8. FAQ (black band) -->
+  <section class="band section" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">Questions</h2>
+      </div>
+      <div class="faq">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>{f.tbc ? <span class="tbc">{f.a}</span> : f.a}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Closing CTA + form -->
+  <section class="inverse section outro" style="padding-top:0" aria-labelledby="cta-title">
+    <div class="container outro-grid">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2 id="cta-title" class="outro-title" style="margin-top:16px">Ready to make your finances <em>black and white?</em></h2>
+        <ul class="pills" role="list">
+          <li class="pill">Free first consultation</li>
+          <li class="pill">Fixed price in writing</li>
+          <li class="pill">UK · FR · US · CA · AU · UAE</li>
+        </ul>
+        <a class="outro-phone" href="tel:+442045422488">020 4542 2488</a>
+        <p style="margin-top:12px"><a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a></p>
+      </div>
+      <LeadForm source="/" />
+    </div>
+  </section>
+</Base>

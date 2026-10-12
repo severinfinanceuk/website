@@ -1,0 +1,357 @@
+---
+// Service page template. Every service page is this layout plus one data file
+// (src/data/service-pages/*.js). Section order is the sales funnel, top to bottom:
+// hero (attention + CTA) → trust logos → who it's for → prices (CTA) → deadlines (urgency + CTA)
+// → how it works (less friction, CTA) → comparison (objections) → reviews + reviewed by (proof)
+// → FAQ → form → related links. Full rules: docs/03-service-page-template.md.
+import Base from './Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { Image, Picture, getImage } from 'astro:assets';
+import cima from '../assets/logos/cima.png';
+import ciot from '../assets/logos/ciot.png';
+import icpa from '../assets/logos/icpa.png';
+import xero from '../assets/logos/xero.png';
+import intuit from '../assets/logos/intuit.png';
+import '../styles/service.css';
+
+const { page: p } = Astro.props;
+const site = Astro.site.href.replace(/\/$/, '');
+const pageUrl = site + p.url;
+
+const logos = [
+  { img: cima, name: 'CIMA, Chartered Institute of Management Accountants', h: 44 },
+  { img: ciot, name: 'Chartered Institute of Taxation', h: 60 },
+  { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 40 },
+  { img: xero, name: 'Xero', h: 48 },
+  { img: intuit, name: 'Intuit QuickBooks', h: 30 },
+];
+
+// Social share image: the hero photo cropped to 1200×630
+const og = await getImage({ src: p.hero.image, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 70 });
+const ogImage = new URL(og.src, Astro.site).href;
+
+// Structured data: one @graph so the nodes reference each other by @id.
+// Placeholders (tbc) never go into schema.
+const org = { '@type': 'AccountingService', '@id': `${site}/#org`, name: 'Severin Finance', url: `${site}/`, telephone: '+44 20 4542 2488' };
+// Offers only for real fixed fees (not tbc, not rates like "6.9%")
+const currency = p.currency ?? 'GBP';
+const offers = p.pricing.plans.filter((x) => !x.tbc && !x.price.includes('%')).map((x) => ({
+  '@type': 'Offer', name: x.name, priceCurrency: currency, price: x.price.replace(/[^\d.]/g, ''),
+  priceSpecification: { '@type': 'PriceSpecification', minPrice: x.price.replace(/[^\d.]/g, ''), priceCurrency: currency },
+}));
+// areaServed: [['Country', 'United Kingdom'], ['City', 'London']] in the data file
+const areaServed = (p.service.areaServed ?? [['Country', 'United Kingdom'], ['City', 'London']])
+  .map(([type, name]) => ({ '@type': type, name }));
+// Key-facts tables: `tables` (any number) or the older dates + penalties pair
+const factTables = p.deadlines.tables ?? [p.deadlines.dates, p.deadlines.penalties].filter(Boolean);
+const schema = [{
+  '@context': 'https://schema.org',
+  '@graph': [
+    org,
+    {
+      '@type': 'Service', '@id': `${pageUrl}#service`, name: p.service.name, serviceType: p.service.serviceType,
+      description: p.hero.answer, url: pageUrl, provider: { '@id': org['@id'] },
+      areaServed,
+      ...(offers.length && { offers }),
+    },
+    {
+      '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: p.title, description: p.description, inLanguage: 'en-GB',
+      about: { '@id': `${pageUrl}#service` }, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+      primaryImageOfPage: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
+      dateModified: p.reviewed.date, lastReviewed: p.reviewed.date,
+      reviewedBy: { '@type': 'Person', name: p.reviewer.name, jobTitle: p.reviewer.role, worksFor: { '@id': org['@id'] } },
+      citation: p.sources.map(([url]) => url),
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.sp-answer'] },
+    },
+    {
+      '@type': 'BreadcrumbList', '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: p.breadcrumb.map(([name, href], i) => ({ '@type': 'ListItem', position: i + 1, name, item: site + href })),
+    },
+    {
+      '@type': 'FAQPage', '@id': `${pageUrl}#faq`,
+      mainEntity: p.faqs.filter((f) => !f.tbc).map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+}];
+
+const tbc = (o) => o.tbc;
+const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.3 2.3 8.2 3.4l3.8 3.8H1.5v1.6H12l-3.8 3.8 1.1 1.1L15 8z"/></svg>';
+const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="m6.4 11.6-3.5-3.5 1.1-1.1 2.4 2.4 5.6-5.6 1.1 1.1z"/></svg>';
+const cross = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M12.2 4.9 11.1 3.8 8 6.9 4.9 3.8 3.8 4.9 6.9 8l-3.1 3.1 1.1 1.1L8 9.1l3.1 3.1 1.1-1.1L9.1 8z"/></svg>';
+---
+<Base title={p.title} description={p.description} schema={schema} ogImage={ogImage}>
+<div class="sp">
+
+  <!-- 1. Hero: keyword H1, answer-first summary, CTAs, photo with the next deadline -->
+  <section class="sp-hero" aria-labelledby="sp-h1">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol role="list">
+          {p.breadcrumb.map(([name, href], i) => (
+            <li>{i === p.breadcrumb.length - 1 ? <span aria-current="page">{name}</span> : <a href={href}>{name}</a>}</li>
+          ))}
+        </ol>
+      </nav>
+      <div class="sp-hero-grid">
+        <div>
+          <h1 id="sp-h1">
+            <span class="eyebrow">{p.hero.eyebrow}</span>
+            <span class="sp-title">{p.hero.h1}</span>
+          </h1>
+          <p class="sp-answer">{p.hero.answer}</p>
+          <div class="hero-actions">
+            <a class="btn btn-fill" href="#quote">{p.hero.cta}</a>
+            <a class="btn" href="tel:+442045422488">Call 020 4542 2488</a>
+          </div>
+          <ul class="hero-trust" role="list">
+            {p.hero.trust.map((t) => <li>{tbc(t) ? <span class="tbc">{t.text}</span> : t.text}</li>)}
+          </ul>
+        </div>
+        <figure class="sp-hero-media">
+          <Picture src={p.hero.image} alt={p.hero.imageAlt} formats={['avif', 'webp']} fallbackFormat="jpg" widths={[480, 720, 960, 1280]} sizes="(min-width: 1000px) 620px, 92vw" quality={50} loading="eager" fetchpriority="high" decoding="async" />
+          <p class="sp-price">{p.hero.price.prefix ?? 'From'} {tbc(p.hero.price) ? <span class="tbc">{p.hero.price.from}</span> : p.hero.price.from} · {p.hero.price.note}</p>
+          <p class="sp-deadline">
+            <span class="sp-deadline-label">{p.hero.deadline.label}</span>
+            <strong>{p.hero.deadline.date}</strong>
+            <span>{p.hero.deadline.note}</span>
+          </p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Trust logos (one slim row) -->
+  <div class="container sp-logos">
+    <p class="eyebrow">Memberships and software</p>
+    <ul class="logo-row" role="list">
+      {logos.map((l) => <li><Image src={l.img} alt={l.name} title={l.name} height={l.h} style={`--h:${l.h}px`} densities={[1, 2]} quality={85} loading="lazy" decoding="async" /></li>)}
+    </ul>
+  </div>
+
+  <!-- On-page jump links (sticky on desktop) -->
+  <nav class="jump" aria-label="On this page">
+    <ul class="container" role="list">
+      {p.jump.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+      <li class="jump-cta"><a class="btn btn-fill btn-sm" href="#quote">{p.hero.cta}</a></li>
+    </ul>
+  </nav>
+
+  <!-- 3. Who it's for: colourful photo cards. Phones: one swipeable row -->
+  <section id="who" class="section" aria-labelledby="who-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.who.eyebrow}</span>
+          <h2 id="who-title">{p.who.h2}</h2>
+        </div>
+        <p>{p.who.intro}</p>
+      </div>
+      <ul class="rail who hl-group hl-6" role="list">
+        {p.who.cards.map((c, i) => (
+          <li class="card card-place who-card hl-card" style={`--i:${i}`}>
+            <Picture src={c.img} alt={c.alt} formats={['avif', 'webp']} fallbackFormat="jpg" widths={[320, 480, 640]} sizes="(min-width: 1000px) 400px, (min-width: 768px) 45vw, 80vw" quality={45} loading="lazy" decoding="async" />
+            <span class="who-tag">{c.tag}</span>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+            {c.link && <a class="card-link" href={c.link[0]}>{c.link[1]} →</a>}
+          </li>
+        ))}
+      </ul>
+      <p class="swipe" aria-hidden="true">Swipe for more →</p>
+    </div>
+  </section>
+
+  <!-- 4. Prices: three fixed-fee packages, the middle one featured -->
+  <section id="prices" class="section sp-tint" aria-labelledby="prices-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.pricing.eyebrow}</span>
+          <h2 id="prices-title">{p.pricing.h2}</h2>
+        </div>
+        <p>{p.pricing.intro}</p>
+      </div>
+      <ul class="rail plans" role="list">
+        {p.pricing.plans.map((x) => (
+          <li class:list={['plan', { 'plan-featured inverse': x.featured }]}>
+            {x.badge && <span class="plan-badge">{x.badge}</span>}
+            <h3>{x.name}</h3>
+            <p class="plan-for">{x.for}</p>
+            <p class="plan-price">{x.prefix ?? 'from'} <strong>{x.tbc ? <span class="tbc">{x.price}</span> : x.price}</strong></p>
+            <ul class="ticks" role="list">
+              {x.items.map((it) => <li><Fragment set:html={check} />{it}</li>)}
+            </ul>
+            <a class:list={['btn', { 'btn-fill': x.featured }]} href="#quote">Get a quote</a>
+          </li>
+        ))}
+      </ul>
+      <div class="included">
+        <h3>Every package includes</h3>
+        <ul class="ticks ticks-row" role="list">
+          {p.pricing.included.map((it) => <li><Fragment set:html={check} />{it}</li>)}
+        </ul>
+        {p.pricing.note && <p class="note">{tbc(p.pricing.note) ? <span class="tbc">{p.pricing.note.text}</span> : p.pricing.note.text}</p>}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Deadlines + penalties: tables (featured-snippet targets), then an urgent CTA -->
+  <section id="deadlines" class="section" aria-labelledby="deadlines-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.deadlines.eyebrow}</span>
+          <h2 id="deadlines-title">{p.deadlines.h2}</h2>
+        </div>
+        <p>{p.deadlines.intro}</p>
+      </div>
+      <div class="tables">
+        {factTables.map((t) => (
+          <div class="table-card">
+            <table class="data-table">
+              <caption>{t.caption}</caption>
+              <thead><tr>{t.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+              <tbody>{t.rows.map(([a, b]) => <tr><th scope="row">{a}</th><td>{b}</td></tr>)}</tbody>
+            </table>
+            {t.after && <p class="table-after">{t.after}</p>}
+          </div>
+        ))}
+      </div>
+      <div class="urgent">
+        <div>
+          <h3>{p.deadlines.urgent.title}</h3>
+          <p>{p.deadlines.urgent.text}</p>
+        </div>
+        <a class="btn" href="#quote">{p.deadlines.urgent.cta}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. How it works + what we need: photo, three steps, document checklist -->
+  <section id="how" class="section sp-tint" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{p.how.eyebrow}</span>
+        <h2 id="how-title">{p.how.h2}</h2>
+      </div>
+      <div class="how-grid">
+        <Picture class="how-img" src={p.how.image} alt={p.how.imageAlt} formats={['avif', 'webp']} fallbackFormat="jpg" widths={[480, 720, 960]} sizes="(min-width: 1000px) 560px, 92vw" quality={45} loading="lazy" decoding="async" />
+        <div class="how-body">
+          <ol class="mini-steps" role="list">
+            {p.how.steps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+          </ol>
+          <div class="checklist">
+            <h3>{p.how.checklistTitle}</h3>
+            <ul class="ticks ticks-2" role="list">
+              {p.how.checklist.map((it) => <li><Fragment set:html={check} />{it}</li>)}
+            </ul>
+          </div>
+          <a class="more" href="#quote"><span class="more-icon" set:html={arrow} /><span class="more-label">Book your free consultation</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Comparison: answers "do I need an accountant?" -->
+  <section id="compare" class="section" aria-labelledby="compare-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{p.compare.eyebrow}</span>
+        <h2 id="compare-title">{p.compare.h2}</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr><td></td>{p.compare.cols.map((c, i) => <th scope="col" class:list={{ us: i === 0 }}>{c}</th>)}</tr>
+          </thead>
+          <tbody>
+            {p.compare.rows.map(([label, ...cells]) => (
+              <tr>
+                <th scope="row">{label}</th>
+                {cells.map((v, i) => (
+                  <td class:list={{ us: i === 0 }}>
+                    {v === true ? <><Fragment set:html={check} /><span class="sr-only">Yes</span></>
+                      : v === false ? <><Fragment set:html={cross} /><span class="sr-only">No</span></>
+                      : v}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Proof: shared reviews (src/data/reviews.js) + who checked this page (E-E-A-T) -->
+  <Testimonials style="padding-top:0">
+        <aside class="reviewer inverse" aria-label="Who reviewed this page">
+          <span class="eyebrow">Reviewed by</span>
+          <div class="reviewer-who">
+            <span class="avatar" aria-hidden="true">{p.reviewer.initials}</span>
+            <span><strong>{p.reviewer.name}</strong><br /><span class="reviewer-role">{p.reviewer.role}</span></span>
+          </div>
+          <p class="reviewer-cred">{tbc(p.reviewer.credentials) ? <span class="tbc">{p.reviewer.credentials.text}</span> : p.reviewer.credentials.text}</p>
+          <p>{p.reviewer.text}</p>
+          <p class="reviewer-date">Last reviewed <time datetime={p.reviewed.date}>{p.reviewed.label}</time></p>
+          <h3>Sources</h3>
+          <ul role="list" class="sources">
+            {p.sources.map(([href, label]) => <li><a href={href} rel="noopener">{label}</a></li>)}
+          </ul>
+        </aside>
+  </Testimonials>
+
+  <!-- 9. FAQ (black band). Same questions go into FAQPage schema -->
+  <section id="faq" class="band section" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">{p.faqTitle}</h2>
+      </div>
+      <div class="faq">
+        {p.faqs.map((f) => (
+          <details>
+            <summary>{f.q}<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>{f.tbc ? <span class="tbc">{f.a}</span> : f.a}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Closing CTA + form, topic pre-selected -->
+  <section id="quote" class="inverse section outro" style="padding-top:0" aria-labelledby="cta-title">
+    <div class="container outro-grid">
+      <div>
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title" class="outro-title" style="margin-top:16px">{p.outro.h2} <em>{p.outro.em}</em></h2>
+        <ul class="pills" role="list">
+          {p.outro.pills.map((x) => <li class="pill">{x}</li>)}
+        </ul>
+        <a class="outro-phone" href="tel:+442045422488">020 4542 2488</a>
+        <p style="margin-top:12px"><a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a></p>
+      </div>
+      <LeadForm title={p.outro.formTitle} button={p.outro.button} topic={p.formTopic} source={p.url} />
+    </div>
+  </section>
+
+  <!-- 11. Related links: services, places, guides (internal linking) -->
+  <section class="section related-wrap" aria-labelledby="related-title">
+    <div class="container">
+      <h2 id="related-title" class="eyebrow">Keep exploring</h2>
+      <div class="related">
+        {p.related.map((g) => (
+          <div>
+            <h3>{g.title}</h3>
+            <ul role="list">
+              {g.links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</div>
+</Base>

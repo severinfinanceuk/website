@@ -1,0 +1,152 @@
+---
+import { Image } from 'astro:assets';
+import crest from '../assets/logos/sf-crest.png';
+import { locations } from '../data/locations.js';
+import { services } from '../data/services.js';
+
+// Main nav: Services and Locations are mega-menus (below); these plain links follow them
+const navAfter = [
+  { href: '/uk/pricing/', label: 'Pricing' },
+  { href: '/resources/', label: 'Guides' },
+  { href: '/about/', label: 'About' },
+];
+const markets = [
+  { href: '/uk/', code: 'UK', name: 'United Kingdom', current: true },
+  { href: '/fr/', code: 'FR', name: 'France (français)' },
+  { href: '/us/', code: 'US', name: 'United States' },
+  { href: '/ca/', code: 'CA', name: 'Canada' },
+  { href: '/au/', code: 'AU', name: 'Australia' },
+  { href: '/uae/', code: 'UAE', name: 'United Arab Emirates' },
+];
+const current = markets.find((m) => m.current) ?? markets[0];
+const chevron = '<svg viewBox="0 0 10 6" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="m1 1 4 4 4-4"/></svg>';
+---
+<header class="site-header">
+  <div class="container header-row">
+    <a class="logo" href="/" aria-label="Severin Finance, home">
+      <Image class="logo-crest" src={crest} alt="" width={68} densities={[1, 2]} quality={90} loading="eager" />
+      <span>Severin Finance</span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <!-- Services mega-menu: one column per category, sub-services below -->
+      <details class="mega" name="header-pop">
+        <summary>Services<Fragment set:html={chevron} /></summary>
+        <div class="mega-panel">
+          <div class="container mega-grid mega-grid-svc">
+            {services.map((c) => (
+              <div class="mega-col">
+                <a class="mega-country" href={c.href}>{c.title}</a>
+                <div class="mega-group">
+                  <ul role="list">
+                    {c.items.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="container mega-foot">
+            <a href="/uk/pricing/">See our prices<span aria-hidden="true">→</span></a>
+            <a href="/contact/">Not sure what you need? Book a free consultation<span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </details>
+      <!-- Locations mega-menu: native <details>; the shared name closes the other header pop-ups -->
+      <details class="mega" name="header-pop">
+        <summary>Locations<Fragment set:html={chevron} /></summary>
+        <div class="mega-panel">
+          <div class="container mega-grid">
+            {locations.map((c) => (
+              <div class={c.code === 'UK' ? 'mega-col mega-uk' : 'mega-col'}>
+                <a class="mega-country" href={c.href} hreflang={c.lang}><span class="cc">{c.code}</span>{c.country}</a>
+                {c.groups.map((g) => (
+                  <div class="mega-group">
+                    {g.title && (g.href ? <a class="mega-sub" href={g.href}>{g.title}</a> : <span class="mega-sub">{g.title}</span>)}
+                    <ul role="list">
+                      {g.items.map(([label, href, lang]) => (
+                        <li><a href={href} hreflang={lang ?? c.lang} lang={label === 'Français à Londres' ? 'fr' : undefined}>{label}</a></li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div class="container mega-foot"><a href="/locations/">All locations<span aria-hidden="true">→</span></a></div>
+        </div>
+      </details>
+      {navAfter.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <div class="header-actions">
+      <!-- Country picker: native <details>, no JavaScript -->
+      <details class="country" name="header-pop">
+        <summary aria-label={`${current.code}: change country (now ${current.name})`}>{current.code}<Fragment set:html={chevron} /></summary>
+        <nav class="country-panel" aria-label="Country">
+          <ul role="list">
+            {markets.map((m) => (
+              <li><a href={m.href} hreflang={m.code === 'FR' ? 'fr-FR' : undefined} aria-current={m.current ? 'true' : undefined}><span class="cc">{m.code}</span>{m.name}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </details>
+      <a class="btn btn-fill btn-sm header-cta" href="/contact/">Book a free consultation</a>
+
+      <details class="menu">
+        <summary aria-label="Menu"><span class="menu-icon" aria-hidden="true"></span></summary>
+        <div class="menu-panel">
+          <ul role="list">
+            <li>
+              <details class="m-loc">
+                <summary>Services<span class="m-plus" aria-hidden="true"></span></summary>
+                <div class="m-loc-body">
+                  {services.map((c) => (
+                    <div class="m-loc-country">
+                      <a class="mega-country" href={c.href}>{c.title}</a>
+                      <ul class="m-chips" role="list">
+                        {c.items.map(([label, href]) => <li><a href={href}>{label}</a></li>)}
+                      </ul>
+                    </div>
+                  ))}
+                  <a class="m-loc-all" href="/uk/pricing/">See our prices →</a>
+                </div>
+              </details>
+            </li>
+            <li>
+              <details class="m-loc">
+                <summary>Locations<span class="m-plus" aria-hidden="true"></span></summary>
+                <div class="m-loc-body">
+                  {locations.map((c) => (
+                    <div class="m-loc-country">
+                      <a class="mega-country" href={c.href} hreflang={c.lang}><span class="cc">{c.code}</span>{c.country}</a>
+                      <ul class="m-chips" role="list">
+                        {c.groups.flatMap((g) => [
+                          ...(g.href ? [[g.title, g.href]] : []),
+                          ...g.items,
+                        ]).map(([label, href, lang]) => (
+                          <li><a href={href} hreflang={lang ?? c.lang} lang={label === 'Français à Londres' ? 'fr' : undefined}>{label}</a></li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  <a class="m-loc-all" href="/locations/">All locations →</a>
+                </div>
+              </details>
+            </li>
+            {navAfter.map((item) => <li><a href={item.href}>{item.label}<span aria-hidden="true">→</span></a></li>)}
+            <li><a href="/contact/">Contact<span aria-hidden="true">→</span></a></li>
+          </ul>
+          <div class="menu-foot">
+            <nav class="lang" aria-label="Country (mobile)">
+              {markets.map((m) => (
+                <a href={m.href} aria-current={m.current ? 'true' : undefined}>{m.code}</a>
+              ))}
+            </nav>
+            <a class="btn btn-fill" href="/contact/">Book a free consultation</a>
+            <a class="btn" href="tel:+442045422488">020 4542 2488</a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

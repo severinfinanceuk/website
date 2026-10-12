@@ -1,0 +1,39 @@
+---
+// Consultation form, shared by the home page and every service page.
+// topic: the option selected on load. source: the page URL, sent with the lead so we know which
+// page converts (the form handler is still to build).
+interface Props { title?: string; button?: string; topic?: string; source?: string }
+const { title = 'Book a free consultation', button = 'Send request', topic = '', source = '' } = Astro.props;
+const topics = ['Personal tax / self assessment', 'Company accounts', 'VAT or bookkeeping', 'Business finance', 'Cross-border tax', 'Something else'];
+const options = topics.includes(topic) ? topics : topic ? [topic, ...topics] : topics;
+---
+<form class="form" action="#" method="post" aria-labelledby="form-title">
+  <h3 id="form-title" style="font-size:1.5rem">{title}</h3>
+  {source && <input type="hidden" name="source" value={source} />}
+  <div class="form-row">
+    <div class="field">
+      <label for="f-name">Name</label>
+      <input id="f-name" name="name" type="text" autocomplete="name" required />
+    </div>
+    <div class="field">
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+    </div>
+  </div>
+  <div class="field">
+    <label for="f-email">Email</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required />
+  </div>
+  <div class="field">
+    <label for="f-topic">What do you need help with?</label>
+    <select id="f-topic" name="topic">
+      {options.map((o) => <option selected={o === topic}>{o}</option>)}
+    </select>
+  </div>
+  <div class="field">
+    <label for="f-msg">Message</label>
+    <textarea id="f-msg" name="message" rows="4"></textarea>
+  </div>
+  <button class="btn btn-fill" type="submit">{button}</button>
+  <p class="form-small">We reply within <span class="tbc">XX hours</span> on working days. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+</form>
