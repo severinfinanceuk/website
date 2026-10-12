@@ -48,7 +48,7 @@ Yellow-highlighted text on the page is a placeholder waiting for a real figure o
 ## Git and GitHub
 
 - Repository: [github.com/SeverinfinanceUk/Mainseverinwebsite](https://github.com/SeverinfinanceUk/Mainseverinwebsite), branch `main`. The whole `Website/` folder is the repository.
-- Remote: `git@github.com:SeverinfinanceUk/Mainseverinwebsite.git` (SSH). Pushing needs a GitHub account with write access to the repository and an SSH key on that account. No API keys or tokens are needed, and none are stored in this folder.
+- Remote: `https://github.com/SeverinfinanceUk/Mainseverinwebsite.git` (private). Pushing uses the GitHub CLI login (`gh auth login` as SeverinfinanceUk, or any account with write access); the login is kept in the macOS keychain. No API keys or tokens are stored in this folder.
 - Not committed (`.gitignore`): `node_modules/`, `dist/`, `.astro/`, `.env` files, `.DS_Store`. Run `npm install` after cloning.
 - After each work session: add the dated line to `PROGRESS.md`, then commit and push.
 
