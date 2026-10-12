@@ -25,8 +25,8 @@ export default {
     'business valuation services', 'business valuation UK', 'business valuation London', 'share valuation',
     'EMI valuation', 'VAL231', 'company valuation for divorce', 'how much is my business worth',
   ],
-  title: 'Business Valuation Services London | Severin Finance',
-  description: 'Business valuation in London for sales, shareholder exits, divorce and HMRC (EMI, CGT). Clear written report, fixed fee, free consultation.',
+  title: 'Business Valuation London & France | Severin Finance',
+  description: 'Business valuation for London and France: sales, shareholder exits, divorce and HMRC (EMI, CGT). Clear written report, fixed fee, free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -37,15 +37,15 @@ export default {
   service: {
     name: 'Business valuation service',
     serviceType: 'Business and share valuation',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Business valuation',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Company services · Business valuation',
-    h1: 'Business valuation in London',
-    answer: 'Our business valuation service tells you what your company or your shares are worth, in a written report you can use for a sale, a shareholder exit, a divorce or HMRC. We test the value with earnings, cash flow and asset methods, and explain it plainly. For EMI options, we prepare form VAL231 for HMRC.',
+    h1: 'Business valuation for London and France',
+    answer: 'Our business valuation service tells you what your UK company or your shares are worth, in a written report for a sale, a shareholder exit, a divorce or HMRC, whether you are in London, elsewhere in the UK or in France. We test the value with earnings, cash flow and asset methods. For EMI options, we prepare form VAL231.',
     image: hero,
     imageAlt: 'Four colleagues around a wooden table reviewing printed pie charts and bar graphs, seen from above',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -204,7 +204,8 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/kensington/', 'Kensington'],
       ['/uk/cambridge/', 'Cambridge'],
-      ['/uk/oxford/', 'Oxford'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/how-to-value-a-business/', 'How to value a business'],

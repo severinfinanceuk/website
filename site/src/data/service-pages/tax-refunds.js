@@ -28,8 +28,8 @@ export default {
     'tax rebate', 'HMRC tax refund', 'tax refund UK', 'emergency tax refund',
     'uniform tax rebate', 'marriage allowance backdate', 'overpaid tax refund', 'prior year tax returns',
   ],
-  title: 'Tax Refunds and Tax Rebates in London | Severin Finance',
-  description: 'Tax refunds in London: we check if you overpaid through PAYE, emergency tax or self assessment and claim it back from HMRC. Book a free refund check.',
+  title: 'Tax Refunds and Rebates London & France | Severin Finance',
+  description: 'UK tax refunds for London and France: we check if you overpaid through PAYE, emergency tax or self assessment and claim it back. Free refund check.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -40,15 +40,15 @@ export default {
   service: {
     name: 'Tax refund service',
     serviceType: 'HMRC tax refund and rebate claims',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France'], ['Country', 'United States'], ['Country', 'Canada'], ['Country', 'Australia']],
   },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · Tax refunds',
-    h1: 'Tax refunds and rebates in London',
-    answer: 'Tax refunds are due when you paid HMRC more than you owed, often through emergency tax, a mid-year job change, work expenses or an unclaimed allowance. Our team checks your records, works out what is due and makes the claim with HMRC. You can usually claim for the last 4 tax years.',
+    h1: 'Tax refunds and rebates for London and France',
+    answer: 'Tax refunds are due when you paid HMRC more than you owed, often through emergency tax, a job change, work expenses or an unclaimed allowance. Our team checks your records and makes the claim, whether you live in London or elsewhere in the UK, or have moved to France. You can usually claim for the last 4 tax years.',
     image: hero,
     imageAlt: 'Smiling young woman checking her phone over a cup of coffee in a cafe',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -207,6 +207,7 @@ export default {
       ['/uk/london/croydon/', 'Croydon'],
       ['/uk/london/camden/', 'Camden'],
       ['/uk/birmingham/', 'Birmingham'],
+      ['/fr/', 'France'],
       ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [

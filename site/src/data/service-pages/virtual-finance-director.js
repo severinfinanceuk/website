@@ -25,8 +25,8 @@ export default {
     'part-time finance director', 'outsourced finance director', 'fractional CFO',
     'virtual CFO London', 'financial controller services',
   ],
-  title: 'Virtual Finance Director in London | Severin Finance',
-  description: 'Virtual finance director in London: monthly management accounts, cash flow forecasts and board reporting for a fixed monthly fee. Book a free call.',
+  title: 'Virtual Finance Director London & France | Severin Finance',
+  description: 'Virtual finance director for London and France: monthly management accounts, cash flow forecasts and board reporting for a fixed monthly fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -37,15 +37,15 @@ export default {
   service: {
     name: 'Virtual finance director service',
     serviceType: 'Part-time finance director, management accounts and cash flow forecasting',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Virtual finance director',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK accounting · Virtual FD',
-    h1: 'Virtual finance director in London',
-    answer: 'A virtual finance director gives your business senior finance support part time, for a fixed monthly fee. Our team prepares monthly management accounts, cash flow forecasts and budgets, then meets you to explain the numbers and agree next steps. You get finance director input without the salary, employer National Insurance and pension of a full-time hire.',
+    h1: 'Virtual finance director for London and France',
+    answer: 'A virtual finance director gives your business senior finance support part time, for a fixed monthly fee, whether you are in London, elsewhere in the UK or in France. Our team prepares monthly management accounts, cash flow forecasts and budgets, then meets you to explain the numbers and agree next steps.',
     image: hero,
     imageAlt: 'Woman presenting sales charts on a large screen to colleagues in a meeting room',
     price: { from: '£XXX', note: 'a month', tbc: true },
@@ -187,7 +187,7 @@ export default {
     { q: 'When does a business need a finance director?', a: 'When decisions are being made without timely numbers. Common triggers are raising investment or a loan, fast growth, cash pressure, new investors on the board, or planning a sale. A part-time finance director often makes sense long before a full-time one is affordable.' },
     { q: 'Is a virtual finance director the same as an accountant?', a: 'No. An accountant mostly looks back: year-end accounts and tax returns. A virtual finance director looks forward: forecasts, budgets and decisions. Our team does both, so your year-end accounts and corporation tax return come from the same numbers.' },
     { q: 'Can a virtual finance director help me raise finance?', a: 'Yes. Lenders and investors usually ask for management accounts, a cash flow forecast and a financial model. We prepare them, check the business can afford the repayments and join meetings with you. No one can promise a lender or investor will say yes.' },
-    { q: 'Do you work with companies outside London?', a: 'Yes. Our team is based in London and works online with companies across the UK, and with overseas groups that own a UK company.' },
+    { q: 'Do you work with companies outside London?', a: 'Yes. Our team is based in London and works online with companies across the UK and in France, and with overseas groups that own a UK company.' },
   ],
 
   // ---------- 9. Related links (internal linking) ----------
@@ -206,6 +206,7 @@ export default {
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/manchester/', 'Manchester'],
+      ['/fr/', 'France'],
       ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [

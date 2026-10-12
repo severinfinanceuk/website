@@ -25,8 +25,8 @@ export default {
     'QuickBooks bookkeeper', 'monthly bookkeeping services', 'catch up bookkeeping',
     'bank reconciliation services', 'how much do bookkeeping services cost',
   ],
-  title: 'Bookkeeping Services in London | Severin Finance',
-  description: 'Bookkeeping services in London: Xero and QuickBooks books kept up to date weekly or monthly, MTD ready. Fixed monthly fee. Get a free quote.',
+  title: 'Bookkeeping Services London & France | Severin Finance',
+  description: 'Bookkeeping services for London and France: Xero and QuickBooks books kept up to date weekly or monthly, MTD ready. Fixed monthly fee. Free quote.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -37,15 +37,15 @@ export default {
   service: {
     name: 'Bookkeeping service',
     serviceType: 'Weekly and monthly bookkeeping in Xero and QuickBooks',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Bookkeeping',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK accounting · Bookkeeping',
-    h1: 'Bookkeeping services in London',
-    answer: 'Our bookkeeping services keep your records up to date in Xero or QuickBooks every week or month, for a fixed fee based on your number of transactions. We reconcile your bank, record sales and costs, and keep you ready for VAT returns and Making Tax Digital. You see your figures without doing the bookkeeping yourself.',
+    h1: 'Bookkeeping services for London and France',
+    answer: 'Our bookkeeping services keep your UK business records up to date in Xero or QuickBooks every week or month, for a fixed fee. We work with owners in London, across the UK and in France. We reconcile your bank, record sales and costs, and keep you ready for VAT returns and Making Tax Digital.',
     image: hero,
     imageAlt: 'Small business owner in a red top working on her laptop at home',
     price: { from: '£XXX', note: 'a month, fixed fee', tbc: true },
@@ -186,7 +186,7 @@ export default {
     { q: 'What is catch-up bookkeeping?', a: 'Catch-up bookkeeping brings your records up to date when you have fallen behind. We collect your bank statements, invoices and receipts, record every transaction and reconcile each account, so your accounts, VAT return or tax return can be filed.' },
     { q: 'How often should bookkeeping be done?', a: 'At least monthly for most small businesses. Weekly suits businesses with lots of transactions or tight cash flow. Leaving it until the VAT return or year end makes mistakes harder to find and fix.' },
     { q: 'What happens if I do not keep proper records?', a: 'You can be fined. HMRC can fine a limited company £3,000 for not keeping accounting records, and its directors can be disqualified. Poor records also make it harder to claim expenses and to answer HMRC’s questions.' },
-    { q: 'Do I need a bookkeeper based in London?', a: 'No. We are based in London and keep books online for businesses across the UK. Everything runs through your cloud software, so there is no paperwork to post.' },
+    { q: 'Do I need a bookkeeper based in London?', a: 'No. We are based in London and keep books online for UK businesses across the UK, including businesses run from France. Everything runs through your cloud software, so there is no paperwork to post.' },
   ],
 
   // ---------- 9. Related links (internal linking) ----------
@@ -205,6 +205,7 @@ export default {
       ['/uk/london/islington/', 'Islington'],
       ['/uk/london/camden/', 'Camden'],
       ['/uk/leeds/', 'Leeds'],
+      ['/fr/', 'France'],
       ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [

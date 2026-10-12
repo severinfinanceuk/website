@@ -29,8 +29,8 @@ export default {
     'secured business loan', 'unsecured business loan', 'business loan broker',
     'working capital loan', 'Growth Guarantee Scheme', 'business loan interest rates UK',
   ],
-  title: 'Business Loans in London | Severin Finance',
-  description: 'Business loans in London: secured, unsecured and government-backed. We prepare your figures, compare lenders and run the application. Free review.',
+  title: 'Business Loans London & UK-wide | Severin Finance',
+  description: 'Business loans in London and across the UK: secured, unsecured and government-backed. We prepare your figures, compare lenders and apply. Free review.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -48,8 +48,8 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Loans',
-    h1: 'Business loans in London',
-    answer: 'Our team arranges business loans in London for limited companies, sole traders and partnerships. We prepare the accounts and forecasts lenders ask for, compare secured, unsecured and government-backed options, and manage the application. Finance is subject to status and lender approval, and you stay responsible for repaying the loan.',
+    h1: 'Business loans in London and across the UK',
+    answer: 'Our team arranges business loans in London and across the UK for limited companies, sole traders and partnerships. We prepare the accounts and forecasts lenders ask for, compare secured, unsecured and government-backed options, and manage the application. Finance is subject to status and lender approval, and you stay responsible for repaying the loan.',
     image: hero,
     imageAlt: 'Smiling garden centre owner holding a crate of flowers in his greenhouse',
     price: { prefix: 'Rates from', from: 'X.X%', note: 'a year, example', tbc: true },

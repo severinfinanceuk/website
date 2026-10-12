@@ -23,8 +23,8 @@ export default {
     'MTD for income tax', 'MTD for landlords', 'MTD software help', 'quarterly updates HMRC',
     'Making Tax Digital for VAT', 'MTD accountant London', 'Making Tax Digital sole traders',
   ],
-  title: 'Making Tax Digital Accountant in London | Severin Finance',
-  description: 'Making Tax Digital accountant in London: we set up your software and send your quarterly updates and tax return to HMRC. Fixed fee, free consultation.',
+  title: 'Making Tax Digital Accountant London & France',
+  description: 'Making Tax Digital accountant for London and France: we set up your software and send your quarterly updates and tax return to HMRC. Fixed fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -35,15 +35,15 @@ export default {
   service: {
     name: 'Making Tax Digital service',
     serviceType: 'Making Tax Digital for Income Tax and VAT: software set-up, quarterly updates and tax returns',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Making Tax Digital',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · Making Tax Digital',
-    h1: 'Making Tax Digital accountant in London',
-    answer: 'Our Making Tax Digital accountants set up compatible software, keep your records digital and send your quarterly updates and tax return to HMRC for a fixed fee. Sole traders and landlords with qualifying income over £50,000 must already use it. The threshold falls to £30,000 in April 2027 and £20,000 in April 2028.',
+    h1: 'Making Tax Digital accountant for London and France',
+    answer: 'Our Making Tax Digital accountants set up compatible software and send your quarterly updates and tax return to HMRC for a fixed fee, for sole traders and landlords in London, across the UK and in France. It applies above £50,000 of qualifying income now, £30,000 from April 2027 and £20,000 from April 2028.',
     image: hero,
     imageAlt: 'Woman working on her laptop at the kitchen table at home',
     price: { from: '£XXX', note: 'a quarter', tbc: true },
@@ -204,7 +204,8 @@ export default {
       ['/uk/london/stratford/', 'Stratford'],
       ['/uk/london/wimbledon/', 'Wimbledon'],
       ['/uk/leeds/', 'Leeds'],
-      ['/uk/bristol/', 'Bristol'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/making-tax-digital-income-tax/', 'MTD for Income Tax explained'],

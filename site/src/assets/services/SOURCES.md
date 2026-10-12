@@ -291,19 +291,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | making-tax-digital-accountant-bakery-owner.jpg | 1000 × 625 | QingYu | https://unsplash.com/photos/1645342867031-267d2ad63733 |
 | making-tax-digital-accountant-laptop-meeting.jpg | 1400 × 788 | Headway | https://unsplash.com/photos/1517245386807-bb43f82c33c4 |
 
-## moving-to-dubai/ (page: /uae/moving-to-dubai/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| moving-to-dubai-woman-marina-skyline.jpg | 1800 × 1200 | Kate Trysh | https://unsplash.com/photos/1726108954011-aa0aa69c79c4 |
-| moving-to-dubai-professional-downtown.jpg | 1000 × 625 | Demid Druz | https://unsplash.com/photos/1694377161652-8cda0aeb3d0b |
-| moving-to-dubai-business-owner-tablet.jpg | 1000 × 625 | Amina Atar | https://unsplash.com/photos/1681505546695-682d6c1e2c3a |
-| moving-to-dubai-house-model-coins.jpg | 1000 × 625 | Jakub Żerdzicki | https://unsplash.com/photos/1742318592061-15c5f19e1e47 |
-| moving-to-dubai-family-luggage.jpg | 1000 × 625 | krakenimages | https://unsplash.com/photos/1603792835233-f4f7c2497d4f |
-| moving-to-dubai-entrepreneur-phone.jpg | 1000 × 625 | 86 media | https://unsplash.com/photos/1733065108435-3789ed8faf55 |
-| moving-to-dubai-retired-couple-coast.jpg | 1000 × 625 | Gene Giromini | https://unsplash.com/photos/1775344215117-ce3b044f69cf |
-| moving-to-dubai-video-call-adviser.jpg | 1400 × 788 | Chris Montgomery | https://unsplash.com/photos/1588196749597-9ff075ee6b5b |
-
 ## non-resident/ (page: /cross-border/non-resident-uk-tax/)
 
 | File | Size | Photographer | Source |

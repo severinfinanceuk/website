@@ -26,8 +26,8 @@ export default {
     'company formation services', 'company registration services', 'company formation and accounting',
     'new company accountant', 'Companies House identity verification',
   ],
-  title: 'Company Formation in London | Severin Finance',
-  description: 'Company formation in London: we form your limited company, file at Companies House and set it up with HMRC. Fixed fee, free consultation.',
+  title: 'Company Formation London & France | Severin Finance',
+  description: 'UK company formation for London and France: we form your limited company, file at Companies House and register it with HMRC. Fixed fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -38,15 +38,15 @@ export default {
   service: {
     name: 'Company formation service',
     serviceType: 'Limited company formation and HMRC registration',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Company formation',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Company services · Company formation',
-    h1: 'Company formation in London',
-    answer: 'Our company formation service sets up your limited company at Companies House and registers it with HMRC for a fixed fee. We check the name, SIC codes and share structure, and guide each director through identity verification. Companies House charges £100 to register online, and most companies are registered within 24 hours.',
+    h1: 'Company formation for London and France',
+    answer: 'Our company formation service sets up your UK limited company at Companies House and registers it with HMRC for a fixed fee, whether you live in London, elsewhere in the UK or in France. We check the name and share structure and guide each director through identity verification. Most companies are registered within 24 hours.',
     image: hero,
     imageAlt: 'Young woman working on a laptop in her fashion design studio, with sketches on the wall and coats on a rail',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -207,7 +207,8 @@ export default {
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/manchester/', 'Manchester'],
-      ['/uk/birmingham/', 'Birmingham'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/sole-trader-vs-limited-company/', 'Sole trader or limited company?'],

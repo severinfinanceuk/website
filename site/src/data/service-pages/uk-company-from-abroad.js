@@ -39,7 +39,7 @@ export default {
     serviceType: 'UK company formation, tax registration and accounting for overseas founders',
     areaServed: [
       ['Country', 'United Kingdom'], ['Country', 'France'], ['Country', 'United States'],
-      ['Country', 'Canada'], ['Country', 'Australia'], ['Country', 'United Arab Emirates'],
+      ['Country', 'Canada'], ['Country', 'Australia'],
     ],
   },
   formTopic: 'Set up a UK company from abroad',
@@ -209,7 +209,7 @@ export default {
       ['/us/', 'United States'],
       ['/ca/', 'Canada'],
       ['/au/', 'Australia'],
-      ['/uae/dubai/', 'Dubai'],
+      ['/fr/paris/', 'Paris'],
     ] },
     { title: 'Guides', links: [
       ['/resources/uk-company-for-non-residents/', 'UK companies for non-residents'],

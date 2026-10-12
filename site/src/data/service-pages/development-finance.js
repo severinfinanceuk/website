@@ -29,8 +29,8 @@ export default {
     'development finance for first time developers', 'loan to GDV', 'development finance rates',
     'monitoring surveyor',
   ],
-  title: 'Development Finance in London | Severin Finance',
-  description: 'Development finance in London for ground-up builds, conversions and refurbishments. We find lenders and check your costs and VAT. Free consultation.',
+  title: 'Development Finance London & UK-wide | Severin Finance',
+  description: 'Development finance in London and across the UK for ground-up builds, conversions and refurbishments. We find lenders and check costs and VAT.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -48,8 +48,8 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Property development',
-    h1: 'Development finance in London',
-    answer: 'Our team arranges development finance in London for ground-up builds, conversions and heavy refurbishments. Lenders release the loan in stages as work progresses, checked by a monitoring surveyor. Our accountants review your build costs, VAT and exit first. Finance is subject to lender approval, and your property may be repossessed if you do not repay.',
+    h1: 'Development finance in London and across the UK',
+    answer: 'Our team arranges development finance in London and across the UK for ground-up builds, conversions and heavy refurbishments. Lenders release the loan in stages as work progresses, checked by a monitoring surveyor. Our accountants review your build costs, VAT and exit first. Finance is subject to lender approval, and your property may be repossessed if you do not repay.',
     image: hero,
     imageAlt: 'Two construction workers in hard hats and orange vests fixing steel reinforcement on a building site',
     price: { prefix: 'Rates from', from: 'X.XX%', note: 'a month, example', tbc: true },

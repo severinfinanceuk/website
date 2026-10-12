@@ -29,8 +29,8 @@ export default {
     'COP9 investigation', 'Worldwide Disclosure Facility', 'HMRC voluntary disclosure',
     'HMRC penalties', 'Let Property Campaign',
   ],
-  title: 'HMRC Tax Investigation Help in London | Severin Finance',
-  description: 'HMRC tax investigation help in London: we answer HMRC, handle compliance checks and disclosures, and work to reduce penalties. Free first call.',
+  title: 'HMRC Tax Investigations London & France | Severin Finance',
+  description: 'HMRC tax investigation help for London and France: we answer HMRC, handle compliance checks and disclosures, and work to reduce penalties. Free call.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -41,15 +41,15 @@ export default {
   service: {
     name: 'HMRC tax investigation support',
     serviceType: 'HMRC compliance check, enquiry and disclosure support',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'HMRC tax investigation',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · HMRC investigations',
-    h1: 'HMRC tax investigation help in London',
-    answer: 'An HMRC tax investigation, or compliance check, is HMRC checking that your tax return, VAT return or records are right. Our team answers HMRC’s letters, gathers your records and deals with the officer for you. We explain your options early and work to keep any penalty as low as the rules allow.',
+    h1: 'HMRC tax investigation help for London and France',
+    answer: 'An HMRC tax investigation, or compliance check, is HMRC checking that your tax return, VAT return or records are right. Our team answers HMRC’s letters and deals with the officer for you, whether you are in London, elsewhere in the UK or in France. We explain your options early and work to keep penalties as low as the rules allow.',
     image: hero,
     imageAlt: 'Man in a blue shirt reading a letter at his kitchen table',
     price: { from: '£XXX', note: 'first letter review', tbc: true },
@@ -210,6 +210,7 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/manchester/', 'Manchester'],
+      ['/fr/', 'France'],
       ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [

@@ -28,7 +28,7 @@ export default {
     'VAT loan', 'corporation tax loan', 'pay HMRC in instalments', 'HMRC Time to Pay',
     'VAT bill funding', 'tax loan for business', 'HMRC payment plan', 'self assessment payment plan',
   ],
-  title: 'Tax Bill Funding & VAT Loans in London | Severin Finance',
+  title: 'Tax Bill Funding & VAT Loans, London & UK | Severin Finance',
   description: 'Tax bill funding for VAT, corporation tax and self assessment. We compare a loan with HMRC Time to Pay and arrange funding if it fits. Free review.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
@@ -47,7 +47,7 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Tax bills',
-    h1: 'Tax bill funding in London',
+    h1: 'Tax bill funding in London and across the UK',
     answer: 'Tax bill funding is a short-term loan that pays your VAT, corporation tax or self assessment bill to HMRC on time, which you then repay in monthly instalments. Our team compares it with an HMRC payment plan first and arranges funding only when it fits. Finance is subject to status and lender approval.',
     image: hero,
     imageAlt: 'Business owner reading a document on a clipboard at her desk with a laptop',

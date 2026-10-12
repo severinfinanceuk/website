@@ -27,7 +27,7 @@ export default {
     'company purchase of own shares', 'employee ownership trust', 'business asset disposal relief', 'family business succession',
   ],
   title: 'Succession Planning & Management Buy-Outs | Severin Finance',
-  description: 'Succession planning and management buy-outs in London. Exit routes, share buy-backs, EOTs and the tax on each, planned early. Free consultation.',
+  description: 'Succession planning and management buy-outs for London and France. Exit routes, share buy-backs, EOTs and the tax on each, planned early.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -38,15 +38,15 @@ export default {
   service: {
     name: 'Business succession planning and management buy-out service',
     serviceType: 'Succession planning and management buy-outs',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Succession planning',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Company services · Succession planning',
-    h1: 'Succession planning and management buy-outs in London',
-    answer: 'Succession planning decides who takes over your company and how you get paid for it: a family member, your managers through a management buy-out, an employee ownership trust or an outside buyer. We compare each route, the tax you would pay and how the deal is funded, so you can plan years ahead.',
+    h1: 'Succession planning and management buy-outs for London and France',
+    answer: 'Succession planning decides who takes over your company and how you get paid for it: a family member, your managers through a management buy-out, an employee ownership trust or an outside buyer. We compare each route, its tax and its funding for UK company owners in London, across the UK and in France.',
     image: hero,
     imageAlt: 'Older potter with a white beard working alongside a young woman at a pottery wheel in a workshop lined with ceramics',
     price: { from: '£XXX', note: 'fixed fee for a succession plan', tbc: true },
@@ -208,7 +208,8 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/richmond/', 'Richmond'],
       ['/uk/london/wimbledon/', 'Wimbledon'],
-      ['/uk/reading/', 'Reading'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/business-asset-disposal-relief/', 'Business Asset Disposal Relief'],

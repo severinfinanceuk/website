@@ -20,7 +20,7 @@ The last part of the URL is the page's **main commercial keyword**: the term a b
 
 - `self-assessment-accountant`, not `self-assessment`. The topic word alone brings people who want to file their own return; "accountant" brings people who want to pay for help.
 - Use the same keyword in the slug, the title tag (first words), the H1, the first sentence, one H2, the main image file name and its alt text.
-- Use singular "accountant" in the slug. The title and H1 can use the plural ("Self assessment accountants in London"), and Google treats the two forms as the same term.
+- Use singular "accountant" in the slug. The title and H1 can use the plural ("Self assessment accountants for London and France"), and Google treats the two forms as the same term.
 - Keep slugs short (2–4 words), lowercase and hyphenated, with no city name. City variants live under the location pages, e.g. `/uk/london/self-assessment-accountant/`.
 - **Before launch:** check volume for every slug in Semrush or Ahrefs (the keyword CSV has no volume data yet). If a close variant has clearly more buyer volume, switch the slug before the page goes live. After launch, a slug change needs a 301.
 
@@ -75,11 +75,11 @@ Twelve sections, in this order. The order follows the buyer: "is this for me?", 
 | SEO type | What the template does |
 |---|---|
 | **Technical** | Lighthouse 100/100/100/100 on phone and desktop (10 Oct 2026). Static HTML, zero JavaScript, CSS inlined, 1 web font. Images are AVIF/WebP with a JPG fallback, sized per screen, and lazy-loaded except the hero (`fetchpriority="high"`). Canonical URL, trailing slash, one H1. Target: under 30 KB gzipped HTML (self assessment page: 23 KB) |
-| **On-page** | Keyword in slug, title (≤60 characters, keyword first, brand last), meta description (≤155 characters, keyword plus offer plus CTA), H1, first sentence, H2s, image file names and alt text. Secondary keywords go in H2s, card titles and FAQ questions |
+| **On-page** | Keyword in slug, title (≤60 characters, keyword first, brand last; drop "| Severin Finance" when keyword plus place would pass 60), meta description (≤155 characters, keyword plus offer plus CTA), H1, first sentence, H2s, image file names and alt text. Secondary keywords go in H2s, card titles and FAQ questions |
 | **Content / E-E-A-T** | "Reviewed by" box: named expert, role, credentials, last-reviewed date and official sources. Facts (dates, penalties, thresholds) come from GOV.UK and are linked. The firm is always presented as a team, never "one accountant" |
 | **GEO / AEO (AI answers)** | The first paragraph answers the query in 40–60 words, stands alone and is quotable. Clear tables and question-style H2s. `speakable` schema points to the answer. FAQ answers start with the answer ("Yes.", "£100.") |
 | **Structured data** | One JSON-LD `@graph`: AccountingService (the firm), Service (with Offers only when the price is real), WebPage (reviewedBy, lastReviewed, dateModified, citation, speakable, primaryImageOfPage), BreadcrumbList, FAQPage. Placeholders never go into schema |
-| **Local** | "London" in the title, H1 and answer. `areaServed` in the schema. Links to London and area pages. City variants come later under `/uk/<city>/` |
+| **Local** | Two targets, London and France. UK accounting, tax and company pages: title "<keyword> London & France", H1 "<keyword> for London and France", and the answer names London, the UK and France; `areaServed` lists United Kingdom, London and France (plus the US, Canada and Australia on expat-relevant pages). Lending pages: "London & UK-wide" / "in London and across the UK" only, because arranging credit for France needs ORIAS registration. Bookkeeping copy says "UK business records" (French books are an expert-comptable monopoly). English pages cannot win google.fr for French searches: the `/fr/` pages, in French, with hreflang, do that. `areaServed` in the schema. Links to London and area pages. City variants come later under `/uk/<city>/` |
 | **Internal linking** | Breadcrumbs, links in the who-cards to sub-services, a "Keep exploring" block (3 services, 3 places, 3 guides), the mega-menu and the footer. Anchor text uses the target page's keyword |
 | **Image SEO** | Descriptive keyword file names, real alt text, a 1200×630 OG image built from the hero photo (`og:image`, `twitter:card summary_large_image`) |
 | **International** | `hreflang` alternates supported by `Base.astro` (`alternates` prop). Used when a French or other country version exists |
@@ -140,5 +140,5 @@ Copy `site/src/data/service-pages/self-assessment-accountant.js` and change the 
 - Linked pages (related services, locations, guides) do not exist yet, so those links 404 for now.
 - The form has no handler yet (Phase 2 task).
 - Business finance pages: Severin's role (lender, broker or introducer) and FCA status are unknown, so the copy says "we arrange" and the status is yellow. Add an FCA / regulatory strip to these pages once known.
-- Cross-border pages: filing in France, the US, Canada, Australia and the UAE needs a local licence, so the copy says "with a licensed partner" (yellow) until Severin names its partners.
+- Cross-border pages: filing in France, the US, Canada and Australia needs a local licence, so the copy says "with a licensed partner" (yellow) until Severin names its partners.
 - Australian facts were checked through search results because ato.gov.au blocks automated fetching: check them by hand before launch.

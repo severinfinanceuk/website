@@ -24,8 +24,8 @@ export default {
     'Company Tax Return CT600', 'confirmation statement filing', 'dormant company accounts',
     'how to pay yourself from a limited company', 'accountant fees for limited company',
   ],
-  title: 'Limited Company Accountants in London | Severin Finance',
-  description: 'London limited company accountants: annual accounts, Company Tax Return, confirmation statement and salary and dividend planning. Fixed fee. Get a quote.',
+  title: 'Limited Company Accountant London & France | Severin Finance',
+  description: 'Limited company accountants for London and France: annual accounts, Company Tax Return, confirmation statement and dividend planning. Fixed fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -36,15 +36,15 @@ export default {
   service: {
     name: 'Limited company accounting service',
     serviceType: 'Limited company annual accounts and Company Tax Return',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Limited company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK accounting · Limited companies',
-    h1: 'Limited company accountants in London',
-    answer: 'Our limited company accountants prepare your annual accounts, file them at Companies House and send your Company Tax Return to HMRC for a fixed fee agreed upfront. We also plan directors’ salary and dividends and file your confirmation statement. Accounts are due 9 months after your company’s year end.',
+    h1: 'Limited company accountants for London and France',
+    answer: 'Our limited company accountants prepare your annual accounts, file them at Companies House and send your Company Tax Return to HMRC for a fixed fee. We work with UK companies run from London, across the UK and from France, and plan directors’ salary and dividends. Accounts are due 9 months after your year end.',
     image: hero,
     imageAlt: 'Company director in a denim shirt on the phone at her laptop in a fashion studio',
     price: { from: '£XXX', note: 'a month, fixed fee', tbc: true },
@@ -210,6 +210,7 @@ export default {
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/manchester/', 'Manchester'],
+      ['/fr/', 'France'],
       ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [

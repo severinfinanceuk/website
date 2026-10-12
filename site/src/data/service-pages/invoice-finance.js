@@ -30,8 +30,8 @@ export default {
     'invoice factoring', 'invoice discounting', 'single invoice finance', 'selective invoice finance',
     'recourse factoring', 'non-recourse factoring', 'invoice finance vs overdraft', 'late payment interest',
   ],
-  title: 'Invoice Finance in London | Severin Finance',
-  description: 'Invoice finance in London: factoring, invoice discounting and single invoice finance. We compare providers and run the application. Free finance review.',
+  title: 'Invoice Finance London & UK-wide | Severin Finance',
+  description: 'Invoice finance in London and across the UK: factoring, invoice discounting and single invoice finance. We compare providers and apply. Free review.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -49,7 +49,7 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Cash flow',
-    h1: 'Invoice finance in London',
+    h1: 'Invoice finance in London and across the UK',
     answer: 'Invoice finance releases cash tied up in unpaid invoices. A provider usually advances up to 80 or 90% of an invoice’s value, often within 24 hours, and pays you the rest, less fees, when your customer pays. Our team compares factoring, invoice discounting and single invoice finance, then manages the application.',
     image: hero,
     imageAlt: 'Staff working among stacked cardboard boxes on a busy warehouse floor',

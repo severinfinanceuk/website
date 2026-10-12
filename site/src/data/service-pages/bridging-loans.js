@@ -30,8 +30,8 @@ export default {
     'closed bridging loan', 'second charge bridging loan', 'regulated bridging loan',
     'bridging loan rates', 'chain break bridging loan', 'bridging loan exit strategy',
   ],
-  title: 'Bridging Loans in London | Severin Finance',
-  description: 'Bridging loans in London for auction purchases, chain breaks and refurbishments. We find lenders and plan your exit with you. Free consultation.',
+  title: 'Bridging Loans London & UK-wide | Severin Finance',
+  description: 'Bridging loans in London and across the UK for auction purchases, chain breaks and refurbishments. We find lenders and plan your exit. Free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -49,8 +49,8 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Short-term property finance',
-    h1: 'Bridging loans in London',
-    answer: 'Our team arranges bridging loans in London: short-term loans secured on property that cover the gap until a sale or a longer-term mortgage. We use them for auction purchases, broken chains and refurbishments, and agree your exit strategy first. Finance is subject to lender approval, and your property may be repossessed if you do not repay.',
+    h1: 'Bridging loans in London and across the UK',
+    answer: 'Our team arranges bridging loans in London and across the UK: short-term loans secured on property that cover the gap until a sale or a longer-term mortgage. They suit auction purchases, broken chains and refurbishments, and we agree your exit first. Finance is subject to lender approval, and your property may be repossessed if you do not repay.',
     image: hero,
     imageAlt: 'Pastel-painted terraced houses with white bay windows behind leafy green trees',
     price: { prefix: 'Rates from', from: 'X.XX%', note: 'a month, example', tbc: true },

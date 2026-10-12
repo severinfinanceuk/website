@@ -9,7 +9,6 @@ import paris from '../assets/places/paris.jpg';
 import newYork from '../assets/places/new-york.jpg';
 import toronto from '../assets/places/toronto.jpg';
 import sydney from '../assets/places/sydney.jpg';
-import dubai from '../assets/places/dubai.jpg';
 import cima from '../assets/logos/cima.png';
 import ciot from '../assets/logos/ciot.png';
 import icpa from '../assets/logos/icpa.png';
@@ -19,7 +18,7 @@ import acom from '../assets/logos/acom-pluriel-conseils.png';
 
 // Yellow-highlighted values (class "tbc") are placeholders until Severin confirms them.
 const stats = [
-  { label: 'Countries', value: '6', text: 'UK and France, plus the US, Canada, Australia and the UAE' },
+  { label: 'Countries', value: '5', text: 'UK and France, plus the US, Canada and Australia' },
   { label: 'Services', value: '3', text: 'Accounting, tax and business finance under one roof' },
   { label: 'Experience', value: 'XX', text: 'Years in practice', tbc: true },
   { label: 'Clients', value: 'XXX+', text: 'Individuals and companies served', tbc: true },
@@ -58,13 +57,12 @@ const pillars = [
   },
   {
     title: 'Cross-border',
-    text: 'For people and companies with a foot in two countries: the UK and France, the US, Canada, Australia or the UAE.',
+    text: 'For people and companies with a foot in two countries: the UK and France, the US, Canada or Australia.',
     links: [
       ['/cross-border/uk-france-tax/', 'UK ↔ France'],
       ['/us/expat-tax/', 'US expat tax'],
       ['/ca/canada-uk-tax/', 'Canada ↔ UK'],
       ['/au/australia-uk-tax/', 'Australia ↔ UK'],
-      ['/uae/moving-to-dubai/', 'UK to Dubai'],
       ['/cross-border/non-resident-uk-tax/', 'Non-resident UK tax'],
       ['/cross-border/uk-company-from-abroad/', 'UK company from abroad'],
     ],
@@ -95,7 +93,6 @@ const markets = [
   { code: 'US', name: 'United States', href: '/us/', img: newYork, alt: 'Lower Manhattan from the air, New York', text: 'US expat returns, FBAR, US companies for non-residents and small business accounts.', meta: 'English · IRS · State filings' },
   { code: 'CA', name: 'Canada', href: '/ca/', img: toronto, alt: 'Downtown Toronto from the air', text: 'Non-resident returns, Canada–UK tax and corporate filings.', meta: 'English & français · CRA' },
   { code: 'AU', name: 'Australia', href: '/au/', img: sydney, alt: 'Sydney Opera House and the harbour', text: 'Australians in the UK, Brits moving to Australia, and the Australia–UK tax treaty.', meta: 'English · ATO' },
-  { code: 'UAE', name: 'United Arab Emirates', href: '/uae/', img: dubai, alt: 'Burj Khalifa and the Dubai Fountain', text: 'Moving from the UK to Dubai, UK non-residence, UAE corporate tax and VAT.', meta: 'English · FTA · Dubai' },
 ];
 
 const steps = [
@@ -119,12 +116,12 @@ const guides = [
 ];
 
 const faqs = [
-  { q: 'Do you only work with clients in London?', a: 'No. We are based in London and work online with clients across England, and with individuals and companies in France, the United States, Canada, Australia and the UAE. Most clients never need to visit the office.' },
+  { q: 'Do you only work with clients in London?', a: 'No. We are based in London and work online with clients across the UK and in France, and with individuals and companies in the United States, Canada and Australia. Most clients never need to visit the office.' },
   { q: 'What does an accountant cost?', a: 'It depends on the work. A personal tax return costs less than a full set of company accounts. We give you a fixed price in writing after the free consultation, before any work starts.' },
   { q: 'Can you file late or previous years’ tax returns?', a: 'Yes. We prepare late and amended returns, bring prior years up to date, and deal with HMRC about any penalties.' },
   { q: 'Can you help with an HMRC enquiry or investigation?', a: 'Yes. We handle HMRC enquiries, disputes and penalty appeals, and talk to HMRC on your behalf so you do not have to.' },
   { q: 'I am French, American, Canadian or Australian and live in the UK. Can you help?', a: 'Yes. Cross-border clients are a large part of our work. We look at both countries’ rules and the tax treaty between them, so income is not taxed twice.' },
-  { q: 'I am moving from the UK to Dubai. Do I still pay UK tax?', a: 'It depends on whether you remain UK tax resident under the statutory residence test, and on any UK income or property you keep. We work out your position, file your final UK return and look after UK tax on anything you leave behind.' },
+  { q: 'I live in France. Can you help with my UK tax or my UK company?', a: 'Yes. We work online with clients in France: UK tax returns for UK income or property, UK companies run from France, and tax across both countries under the UK-France tax treaty, so the same income is not taxed twice.' },
   { q: 'Do you lend money yourselves?', a: 'Placeholder answer: to confirm whether Severin lends directly or arranges finance through lenders, and its FCA status.' , tbc: true },
   { q: 'Which accounting software do you use?', a: 'We work in Xero and QuickBooks, and can work with the system you already use.' },
   { q: 'How do I get started?', a: 'Book a free consultation online or call 020 4542 2488. We will tell you what we need, what it costs and when it will be done.' },
@@ -142,7 +139,7 @@ const schema = [
     logo: 'https://severinfinance.com/logo.png',
     slogan: 'Simplifying the complex, so that everything is just black and white.',
     address: { '@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB' },
-    areaServed: ['GB', 'FR', 'US', 'CA', 'AU', 'AE'],
+    areaServed: ['GB', 'FR', 'US', 'CA', 'AU'],
   },
   {
     '@context': 'https://schema.org',
@@ -159,7 +156,7 @@ const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentCo
 ---
 <Base
   title="London Accountants for the UK, France & Expats | Severin Finance"
-  description="London accountants for the UK and France, and for clients in the US, Canada, Australia and the UAE: tax returns, company accounts, VAT, cross-border tax and business finance."
+  description="London accountants for the UK and France, and for expats in the US, Canada and Australia: tax returns, company accounts, VAT and business finance."
   schema={schema}
 >
   <!-- 1. Hero: copy and photo side by side from 1000px -->
@@ -219,7 +216,7 @@ const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentCo
           <span class="eyebrow">By the numbers</span>
           <h2 id="numbers-title">Severin in numbers</h2>
         </div>
-        <p>A London firm with clients in six countries.</p>
+        <p>A London firm with clients in five countries.</p>
       </div>
     </div>
     <!-- Ticker: the list is drawn twice so the loop is seamless; the copy is hidden from screen readers -->
@@ -292,11 +289,11 @@ const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentCo
       <div class="section-head split">
         <div>
           <span class="eyebrow">Where we work</span>
-          <h2 id="countries-title">Six countries, one firm</h2>
+          <h2 id="countries-title">Five countries, one firm</h2>
         </div>
         <p>Local rules, local language, and one team that sees the whole picture.</p>
       </div>
-      <ul class="cards cards-places hl-group hl-6" role="list">
+      <ul class="cards cards-places hl-group hl-5" role="list">
         {markets.map((m, i) => (
           <li class={m.featured ? 'place-featured' : undefined} style={`display:grid;--i:${i}`}>
             <a class="card card-place hl-card" href={m.href} hreflang={m.code === 'FR' ? 'fr-FR' : undefined}>
@@ -406,7 +403,7 @@ const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentCo
         <ul class="pills" role="list">
           <li class="pill">Free first consultation</li>
           <li class="pill">Fixed price in writing</li>
-          <li class="pill">UK · FR · US · CA · AU · UAE</li>
+          <li class="pill">UK · FR · US · CA · AU</li>
         </ul>
         <a class="outro-phone" href="tel:+442045422488">020 4542 2488</a>
         <p style="margin-top:12px"><a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a></p>

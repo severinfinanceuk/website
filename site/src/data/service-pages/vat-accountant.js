@@ -24,8 +24,8 @@ export default {
     'VAT threshold UK', 'flat rate VAT scheme', 'VAT for e-commerce', 'VAT accounting services',
     'Making Tax Digital VAT', 'VAT loan', 'VAT accountant Birmingham',
   ],
-  title: 'VAT Accountant in London | Severin Finance',
-  description: 'VAT accountant in London: we register you, file your VAT returns through Making Tax Digital and pick the right scheme. Fixed fee, free consultation.',
+  title: 'VAT Accountant London & France | Severin Finance',
+  description: 'UK VAT accountant for London and France: we register you, file your VAT returns through Making Tax Digital and pick the right scheme. Fixed fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -36,15 +36,15 @@ export default {
   service: {
     name: 'VAT return and registration service',
     serviceType: 'VAT registration, VAT return preparation and filing',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'VAT returns and registration',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · VAT',
-    h1: 'VAT accountant in London',
-    answer: 'Our VAT accountants register your business, prepare your VAT returns and file them with HMRC through Making Tax Digital software for a fixed fee. We check you use the right rates and the right scheme. You must register once your taxable turnover goes over £90,000 in any rolling 12 months.',
+    h1: 'VAT accountant for London and France',
+    answer: 'Our VAT accountants register your business for UK VAT, prepare your VAT returns and file them with HMRC through Making Tax Digital software for a fixed fee. We work with businesses in London and across the UK, and with French firms selling into the UK. UK businesses must register once taxable turnover passes £90,000.',
     image: hero,
     imageAlt: 'Smiling café owner holding up an open sign inside her café',
     price: { from: '£XXX', note: 'a quarter', tbc: true },
@@ -212,7 +212,8 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/birmingham/', 'VAT accountant Birmingham'],
-      ['/uk/manchester/', 'Manchester'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/vat-registration/', 'VAT registration explained'],

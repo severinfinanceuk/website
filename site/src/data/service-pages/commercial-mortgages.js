@@ -27,8 +27,8 @@ export default {
     'semi-commercial mortgage', 'owner occupier commercial mortgage', 'commercial investment mortgage',
     'commercial mortgage rates', 'commercial mortgage deposit', 'stamp duty on commercial property',
   ],
-  title: 'Commercial Mortgages in London | Severin Finance',
-  description: 'Commercial mortgages in London for owner-occupiers, investors and semi-commercial property. We compare lenders and run the application. Free consultation.',
+  title: 'Commercial Mortgages London & UK-wide | Severin Finance',
+  description: 'Commercial mortgages in London and across the UK for owner-occupiers, investors and semi-commercial property. We compare lenders and apply.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -46,8 +46,8 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Commercial property',
-    h1: 'Commercial mortgages in London',
-    answer: 'Our team arranges commercial mortgages in London for businesses buying their own premises and for investors buying let commercial or semi-commercial property. We prepare the figures lenders ask for, compare suitable lenders and manage the application to completion. Finance is subject to status and lender approval, and your property may be repossessed if you miss repayments.',
+    h1: 'Commercial mortgages in London and across the UK',
+    answer: 'Our team arranges commercial mortgages in London and across the UK for businesses buying their own premises and for investors buying let commercial or semi-commercial property. We prepare the figures lenders ask for, compare suitable lenders and manage the application. Finance is subject to status and lender approval, and your property may be repossessed if you miss repayments.',
     image: hero,
     imageAlt: 'Baker shaping loaves in his bakery, with fresh bread on the counter and a brick oven behind him',
     price: { prefix: 'Rates from', from: 'X.X%', note: 'a year, example', tbc: true },

@@ -1,6 +1,6 @@
 # Severin Finance — Website Rebuild & SEO/GEO Master Plan
 
-Version 1.1 · 9 Oct 2026 (1.1: Australia and the UAE added as markets; UK and France are the priority)
+Version 1.2 · 13 Oct 2026 (1.1: Australia added as a market; UK and France are the priority. 1.2: UAE dropped; service pages target London and France together)
 
 ## Executive summary
 
@@ -18,7 +18,7 @@ We will rebuild the Severin Finance site as a static, near-zero-JavaScript websi
 
 **Scope**
 
-- Six country hubs. **Priority markets:** UK (`/uk/`) and France (`/fr/`, in French). **Further markets, each with a full section:** US (`/us/`), Canada (`/ca/`, English, plus French for Quebec in phase 2), Australia (`/au/`) and the UAE (`/uae/`, focused on Dubai).
+- Five country hubs. **Priority markets:** UK (`/uk/`) and France (`/fr/`, in French). **Further markets, each with a full section:** US (`/us/`), Canada (`/ca/`, English, plus French for Quebec in phase 2) and Australia (`/au/`).
 - Every service gets a page in every country it is offered in. Major cities also get location pages: London, Manchester, Birmingham, Paris, Lyon, New York, Toronto, Montreal and others.
 - A resource hub with guides, tax calendars, calculators and glossaries. This is the traffic engine and the main source of AI citations.
 - A backlink, digital PR and local SEO program that runs every month from launch.
@@ -131,12 +131,11 @@ Each country needs its own pages, its own vocabulary and its own regulator refer
 | United States | English (en-US), `/us/` | IRS + state tax agencies, Secretary of State | CPA, tax preparer, bookkeeping services, LLC formation, Form 5472, FBAR, small business loan | "CPA" is a licensed title by state. Use "accountants" or "tax advisers" unless a licensed CPA is on staff. Lending rules vary by state |
 | Canada | English (en-CA) `/ca/`, French (fr-CA) `/ca/fr/` in phase 2 | CRA, Revenu Québec, provincial registries | accountant, T2 corporate tax return, GST/HST filing, bookkeeping, incorporate in Ontario, business loan | "CPA" is a protected title by province. Quebec law requires French for commercial content aimed at Quebec |
 | Australia | English (en-AU), `/au/` | ATO, ASIC | accountant, tax agent, tax return, Australia UK tax treaty, moving to Australia tax, non-resident tax return Australia | Preparing Australian returns for a fee needs Tax Practitioners Board registration, or a registered partner. Confirm Severin's status |
-| UAE (Dubai) | English (en-AE), `/uae/` | Federal Tax Authority (FTA), free-zone authorities | accountant Dubai, UAE corporate tax, VAT registration UAE, moving to Dubai from UK tax, UK tax non-resident Dubai | No personal income tax. 9% corporate tax and 5% VAT. Acting with the FTA for clients needs registration as a tax agent, or a registered partner |
 
 **Who we are writing for (priority order)**
 
 1. **UK small businesses and sole traders:** limited companies, contractors, landlords, start-ups. The biggest volume and the home market.
-2. **Cross-border clients**, Severin's real edge with one team across countries: French nationals in London, UK firms expanding to France, the US, Canada, Australia or the UAE, US, Canadian and Australian expats in the UK, Britons moving to Dubai, and non-resident landlords.
+2. **Cross-border clients**, Severin's real edge with one team across countries: French nationals in London, UK firms expanding to France, the US, Canada or Australia, US, Canadian and Australian expats in the UK, Britons living in France, and non-resident landlords.
 3. **SMEs needing finance:** business loans, cash-flow funding, asset finance, alongside their accounts.
 4. **French, US and Canadian domestic SMEs:** compete on niche, high-intent and city terms first, not the broadest national ones.
 
@@ -292,7 +291,7 @@ The whole site is built from 9 templates and about 20 reusable sections from the
 **Service page anatomy (top to bottom)**
 
 1. Breadcrumb + uppercase eyebrow label ("TAX · UNITED KINGDOM").
-2. **H1 with the main keyword**, e.g. "Self Assessment Accountant in London".
+2. **H1 with the main keyword**, e.g. "Self Assessment Accountants for London and France" (UK accounting and tax pages) or "Business Loans in London and across the UK" (lending pages, which do not target France).
 3. **Answer-first summary (40–60 words):** what we do, for whom, the price "from", and turnaround. This is the paragraph AI engines quote.
 4. Primary call to action (book / call), plus trust row: rating, reviews count, accreditations.
 5. "Who this is for": 4–6 client types as cards.

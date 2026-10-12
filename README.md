@@ -1,6 +1,6 @@
 # Severin Finance: new website
 
-The rebuild of [severinfinance.com](https://severinfinance.com/) is a fast, static and SEO/GEO-focused site for an accounting and lending firm in London. It serves England, France, the United States and Canada. The design reference is [stoneeg.com](https://stoneeg.com/), with no animations.
+The rebuild of [severinfinance.com](https://severinfinance.com/) is a fast, static and SEO/GEO-focused site for an accounting and lending firm in London. It targets London and France first, then the rest of the UK, the United States, Canada and Australia. The design reference is [stoneeg.com](https://stoneeg.com/), with no animations.
 
 **Start here:** [PROGRESS.md](PROGRESS.md) shows what is done, what is next and what we are waiting for.
 
@@ -11,7 +11,7 @@ Website/
 ├── README.md                     ← this file
 ├── PROGRESS.md                   ← status, open inputs, decisions, dated log
 ├── docs/
-│   ├── 01-master-plan.md         ← the full plan (v1.0, 9 Oct 2026)
+│   ├── 01-master-plan.md         ← the full plan (v1.2, 13 Oct 2026)
 │   └── diagrams/
 │       ├── site-architecture.png
 │       └── roadmap.png

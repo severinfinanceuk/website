@@ -37,7 +37,7 @@ export default {
     name: 'Non-resident UK tax return service',
     serviceType: 'UK tax returns and residence advice for non-residents',
     areaServed: [
-      ['Country', 'United Kingdom'], ['Country', 'France'], ['Country', 'United Arab Emirates'],
+      ['Country', 'United Kingdom'], ['Country', 'France'],
       ['Country', 'United States'], ['Country', 'Canada'], ['Country', 'Australia'],
     ],
   },
@@ -56,7 +56,7 @@ export default {
     trust: [
       { text: 'Fixed fee agreed before we start' },
       { text: rating.short, tbc: rating.tbc },
-      { text: 'Clients in France, the UAE, the US, Canada and Australia' },
+      { text: 'Clients in France, the US, Canada and Australia' },
     ],
   },
 
@@ -202,13 +202,13 @@ export default {
       ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
       ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'],
       ['/cross-border/uk-france-tax/', 'UK France tax'],
-      ['/uae/moving-to-dubai/', 'Moving to Dubai from the UK'],
+      ['/cross-border/uk-france-tax/', 'UK France tax'],
       ['/us/expat-tax/', 'US expat tax'],
     ] },
     { title: 'Where we work', links: [
       ['/uk/london/', 'Accountants in London'],
       ['/fr/paris/', 'Paris'],
-      ['/uae/dubai/', 'Dubai'],
+      ['/fr/londres/', 'Français à Londres'],
       ['/us/', 'United States'],
       ['/ca/', 'Canada'],
       ['/au/', 'Australia'],

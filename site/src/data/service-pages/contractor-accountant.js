@@ -24,8 +24,8 @@ export default {
     'off-payroll working', 'flat rate VAT scheme', 'dividend tax rates',
     'CIS tax accountant', 'contractor payroll services',
   ],
-  title: 'Contractor Accountants in London | Severin Finance',
-  description: 'Contractor accountants in London: limited company accounts, IR35 reviews, payroll, VAT and tax returns for one fixed monthly fee. Book a free call.',
+  title: 'Contractor Accountants London & France | Severin Finance',
+  description: 'Contractor accountants for London and France: limited company accounts, IR35 reviews, payroll, VAT and tax returns for one fixed monthly fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -36,15 +36,15 @@ export default {
   service: {
     name: 'Contractor accounting service',
     serviceType: 'Accounting, tax and IR35 advice for limited company contractors',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Contractor accountant',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK accounting · Contractors',
-    h1: 'Contractor accountants in London',
-    answer: 'Our contractor accountants run the finance side of your limited company for a fixed monthly fee: accounts, corporation tax, VAT, payroll and your personal tax return. We review your contracts for IR35, plan salary and dividends, and claim the expenses you are allowed. Working through an umbrella? We compare it with a limited company.',
+    h1: 'Contractor accountants for London and France',
+    answer: 'Our contractor accountants run the finance side of your UK limited company for a fixed monthly fee, whether you contract in London, across the UK or from France: accounts, corporation tax, VAT, payroll and your personal tax return. We review your contracts for IR35, plan salary and dividends, and claim allowed expenses.',
     image: hero,
     imageAlt: 'Red-haired woman writing code at a desk with two monitors',
     price: { from: '£XXX', note: 'a month', tbc: true },
@@ -206,7 +206,8 @@ export default {
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/reading/', 'Reading'],
-      ['/uk/manchester/', 'Manchester'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/ir35-explained/', 'IR35 explained'],

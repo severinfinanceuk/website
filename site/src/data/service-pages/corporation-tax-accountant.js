@@ -24,8 +24,8 @@ export default {
     'corporate tax accountant', 'corporate tax services', 'corporation tax rates',
     'R&D tax credits accountant', 'R&D tax relief accountant', 'corporation tax loan',
   ],
-  title: 'Corporation Tax Accountant in London | Severin Finance',
-  description: 'Corporation tax accountant in London: we prepare and file your CT600, plan your tax and claim every relief. Fixed fee, free consultation.',
+  title: 'Corporation Tax Accountant London & France | Severin Finance',
+  description: 'Corporation tax accountant for London and France: we prepare and file your CT600, plan your tax and claim every relief. Fixed fee, free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -36,15 +36,15 @@ export default {
   service: {
     name: 'Corporation tax return service',
     serviceType: 'Corporation tax return (CT600) preparation, filing and planning',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
   },
   formTopic: 'Corporation tax return',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · Corporation tax',
-    h1: 'Corporation tax accountant in London',
-    answer: 'Our corporation tax accountants prepare your company’s CT600 return and file it with HMRC for a fixed fee. We work out the tax, claim capital allowances and R&D relief where they apply, and tell you what to pay. Most companies pay 9 months and 1 day after their year end.',
+    h1: 'Corporation tax accountant for London and France',
+    answer: 'Our corporation tax accountants prepare your company’s CT600 and file it with HMRC for a fixed fee, for UK companies run from London, across the UK or from France. We work out the tax, claim capital allowances and R&D relief where they apply, and tell you what to pay. Most pay 9 months and 1 day after year end.',
     image: hero,
     imageAlt: 'Diverse business team working together around a table in a bright modern office',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -187,7 +187,7 @@ export default {
     { q: 'Can my company claim R&D tax relief?', a: 'Yes, if it works on projects that seek an advance in science or technology. For periods starting on or after 1 April 2024, most companies claim the merged scheme, a 20% expenditure credit. Loss-making SMEs that are R&D intensive can claim enhanced support instead.' },
     { q: 'What is full expensing?', a: 'Full expensing lets a company deduct 100% of the cost of new, unused plant and machinery from its profits in the year of purchase. It covers spending from 1 April 2023 with no end date, but not cars. The Annual Investment Allowance also covers up to £1 million a year.' },
     { q: 'Can you deal with HMRC for my company?', a: 'Yes. Once you authorise us as your agent, we file the CT600, see your company’s HMRC records and answer HMRC letters and enquiries about the return for you.' },
-    { q: 'Do you only work with London companies?', a: 'No. We are based in London and work online with limited companies across the UK, including UK companies owned by people living abroad.' },
+    { q: 'Do you only work with London companies?', a: 'No. We are based in London and work online with limited companies across the UK, including UK companies owned or run from France and other countries.' },
   ],
 
   // ---------- 9. Related links (internal linking) ----------
@@ -205,8 +205,9 @@ export default {
       ['/uk/london/city-of-london/', 'City of London'],
       ['/uk/london/shoreditch/', 'Shoreditch'],
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
-      ['/uk/manchester/', 'Manchester'],
       ['/cross-border/uk-company-from-abroad/', 'Run a UK company from abroad'],
+      ['/fr/', 'France'],
+      ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [
       ['/resources/corporation-tax-rates/', 'Corporation tax rates explained'],

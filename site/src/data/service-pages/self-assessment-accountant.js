@@ -24,8 +24,8 @@ export default {
     'self employed accountant', 'late self assessment', 'HMRC late filing penalty',
     'self assessment accountant fees', 'self assessment deadline',
   ],
-  title: 'Self Assessment Accountants in London | Severin Finance',
-  description: 'London self assessment accountants: we prepare and file your tax return, claim every allowance and deal with HMRC. Fixed fee, free consultation.',
+  title: 'Self Assessment Accountant London & France | Severin Finance',
+  description: 'Self assessment accountants for London, the UK and France: we prepare and file your UK tax return and deal with HMRC. Fixed fee, free consultation.',
   reviewed: { date: '2026-10-09', label: '9 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -36,15 +36,15 @@ export default {
   service: {
     name: 'Self assessment tax return service',
     serviceType: 'Self assessment tax return preparation and filing',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France'], ['Country', 'United States'], ['Country', 'Canada'], ['Country', 'Australia']],
   },
   formTopic: 'Self assessment tax return',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · Self assessment',
-    h1: 'Self assessment accountants in London',
-    answer: 'Our self assessment accountants prepare and file your tax return with HMRC for a fixed fee agreed upfront. We check every allowance and expense, work out your payments on account and deal with HMRC for you. For the 2025/26 tax year, the online deadline is 31 January 2027.',
+    h1: 'Self assessment accountants for London and France',
+    answer: 'Our self assessment accountants prepare and file your UK tax return with HMRC for a fixed fee, for clients in London, across the UK and in France. We check every allowance and expense, work out your payments on account and deal with HMRC for you. For 2025/26, the online deadline is 31 January 2027.',
     image: hero,
     imageAlt: 'Self-employed woman in a colourful cardigan working on her laptop by a window',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -183,7 +183,7 @@ export default {
     { q: 'What are payments on account?', a: 'Payments on account are two advance payments towards next year’s tax, each half of last year’s bill, due by 31 January and 31 July. You do not make them if last year’s bill was under £1,000 or more than 80% of your tax was collected at source, such as through PAYE. If your income has fallen, we can ask HMRC to reduce them.' },
     { q: 'How does Making Tax Digital change self assessment?', a: 'Sole traders and landlords with qualifying income over £50,000 must use Making Tax Digital for Income Tax from 6 April 2026. The threshold falls to £30,000 from 6 April 2027 and £20,000 from 6 April 2028. You keep digital records and send quarterly updates through compatible software. We set this up for you.' },
     { q: 'Can an accountant deal with HMRC for me?', a: 'Yes. Once you authorise us as your agent, we file your return, see your HMRC records and answer HMRC’s letters and calls about your tax for you.' },
-    { q: 'Do I need to live in London to use you?', a: 'No. We are based in London and work online with clients across the UK, and with UK landlords and expats living in France, the United States, Canada, Australia and the UAE.' },
+    { q: 'Do I need to live in London to use you?', a: 'No. We are based in London and work online with clients across the UK and in France, and with UK landlords and expats in the United States, Canada and Australia.' },
   ],
 
   // ---------- 9. Related links (internal linking) ----------
@@ -202,6 +202,7 @@ export default {
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/manchester/', 'Manchester'],
       ['/uk/birmingham/', 'Birmingham'],
+      ['/fr/', 'France'],
       ['/fr/londres/', 'Français à Londres'],
     ] },
     { title: 'Guides', links: [

@@ -58,7 +58,6 @@ export const services = [
       ['US expat tax', '/us/expat-tax/'],
       ['Canada ↔ UK', '/ca/canada-uk-tax/'],
       ['Australia ↔ UK', '/au/australia-uk-tax/'],
-      ['UK to Dubai', '/uae/moving-to-dubai/'],
       ['Non-resident UK tax', '/cross-border/non-resident-uk-tax/'],
       ['UK company from abroad', '/cross-border/uk-company-from-abroad/'],
     ],

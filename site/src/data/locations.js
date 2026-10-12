@@ -1,7 +1,6 @@
 // Every location landing page we target, by country. One source for the header mega-menu,
 // the /locations/ hub, the footer and (later) the location page template.
-// Cities come from research/keywords/keyword-master.csv; Australia from keyword-candidates-it-au.csv;
-// UAE is provisional until its keyword research is done.
+// Cities come from research/keywords/keyword-master.csv; Australia from keyword-candidates-it-au.csv.
 // Order = priority: UK and France first.
 
 export const locations = [
@@ -100,21 +99,6 @@ export const locations = [
           ['Perth', '/au/perth/'],
           ['Adelaide', '/au/adelaide/'],
           ['Canberra', '/au/canberra/'],
-        ],
-      },
-    ],
-  },
-  {
-    code: 'UAE', country: 'United Arab Emirates', href: '/uae/',
-    groups: [
-      {
-        items: [
-          ['Dubai', '/uae/dubai/'],
-          ['DIFC', '/uae/dubai/difc/'],
-          ['DMCC (JLT)', '/uae/dubai/dmcc/'],
-          ['Business Bay', '/uae/dubai/business-bay/'],
-          ['Abu Dhabi', '/uae/abu-dhabi/'],
-          ['Sharjah', '/uae/sharjah/'],
         ],
       },
     ],

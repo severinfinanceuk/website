@@ -16,7 +16,6 @@ Priority follows the market decision: UK and France first, then the others, each
 | 2 | United States | New York, Los Angeles, San Francisco, Chicago, Houston, Miami, Boston | 7 |
 | 2 | Canada | Toronto, Vancouver, Montréal (in French, `/ca/fr/montreal/`), Calgary, Ottawa | 5 |
 | 2 | Australia | Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra | 6 |
-| 2 | UAE | Dubai, DIFC, DMCC (JLT), Business Bay, Abu Dhabi, Sharjah. **Provisional until UAE keyword research is done** | 6 |
 
 Later, **service × city pages** (e.g. "Self assessment accountant Manchester") are added only where keyword data shows real demand, starting with London.
 
@@ -33,8 +32,7 @@ Each page needs at least **5 of these 8 local elements**, written for that place
    - US: state and city tax (New York City income tax; no state income tax in Texas or Florida; California FTB rules).
    - Canada: provincial tax and GST/HST/QST rate (Ontario HST 13%, Quebec QST, Alberta GST only).
    - Australia: state payroll tax thresholds.
-   - UAE: free-zone versus mainland company rules (DIFC, DMCC) and qualifying free-zone income for corporate tax.
-2. **Who we help there:** the real local client mix, such as fintech in Shoreditch, finance professionals in Canary Wharf, French families in Kensington, oil and gas in Calgary, or expats in Dubai Marina.
+2. **Who we help there:** the real local client mix, such as fintech in Shoreditch, finance professionals in Canary Wharf, French families in Kensington, or oil and gas in Calgary.
 3. **A local case study or client story** with a real number (needs Severin's input).
 4. **Local reviews**, filtered by client location where possible.
 5. **How we serve the area:** an office address only if real, otherwise "online, with meetings in London". **Never invent addresses**; that breaks Google Business Profile rules and can get the profile suspended.
@@ -78,11 +76,11 @@ Pages are written by people with local research, not generated from a template s
 ## Off-page support per location
 
 - **Google Business Profile:** only at real addresses. A London profile exists or will be created; others only if Severin has a real office there.
-- **Citations:** consistent name, address and phone on Yell, Thomson Local, Bing Places and Apple Business Connect (UK); PagesJaunes (France); Yelp (US and Canada); Yellow Pages Australia (Australia); and local directories in Dubai.
-- **Local links:** chambers of commerce (French Chamber of Great Britain, British Chamber of Commerce in France and Dubai, ANZ and Canada UK chambers), expat forums and associations, local press for data stories.
+- **Citations:** consistent name, address and phone on Yell, Thomson Local, Bing Places and Apple Business Connect (UK); PagesJaunes (France); Yelp (US and Canada); and Yellow Pages Australia (Australia).
+- **Local links:** chambers of commerce (French Chamber of Great Britain, British Chamber of Commerce in France, ANZ and Canada UK chambers), expat forums and associations, local press for data stories.
 
 ## Open questions for Severin
 
 - Real office or meeting addresses in any of these places?
 - Client stories or reviews from specific cities?
-- Which services are actually offered in Australia and the UAE (see PROGRESS inputs)?
+- Which services are actually offered in Australia (see PROGRESS inputs)?

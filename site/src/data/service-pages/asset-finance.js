@@ -27,8 +27,8 @@ export default {
     'equipment finance', 'hire purchase business', 'equipment leasing', 'finance lease',
     'operating lease', 'asset refinance', 'van finance for business', 'machinery finance',
   ],
-  title: 'Asset Finance in London | Severin Finance',
-  description: 'Asset finance in London for vans, machinery and equipment: hire purchase, leasing and refinance. We compare lenders and run the application.',
+  title: 'Asset Finance London & UK-wide | Severin Finance',
+  description: 'Asset finance in London and across the UK for vans, machinery and equipment: hire purchase, leasing and refinance. We compare lenders and apply.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -46,7 +46,7 @@ export default {
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Business finance · Equipment',
-    h1: 'Asset finance in London',
+    h1: 'Asset finance in London and across the UK',
     answer: 'Asset finance lets your business spread the cost of vans, machinery and equipment through hire purchase, a finance lease or an operating lease. Our team compares lenders, explains the tax and VAT differences and manages the application. The asset is usually the main security. Finance is subject to status and lender approval.',
     image: hero,
     imageAlt: 'Factory worker operating industrial machinery on a busy production floor',
