@@ -36,16 +36,13 @@ export default {
   service: {
     name: 'Non-resident UK tax return service',
     serviceType: 'UK tax returns and residence advice for non-residents',
-    areaServed: [
-      ['Country', 'United Kingdom'], ['Country', 'France'],
-      ['Country', 'United States'], ['Country', 'Canada'], ['Country', 'Australia'],
-    ],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Non-resident UK tax',
 
   // ---------- 1. Hero ----------
   hero: {
-    eyebrow: 'Cross-border · Non-residents',
+    eyebrow: 'International · Non-residents',
     h1: 'Non-resident UK tax accountants',
     answer: 'Our non-resident UK tax accountants file your UK tax return while you live abroad, covering rent, property sales, pensions and the year you leave. We check your status under the Statutory Residence Test, deal with the Non-Resident Landlord Scheme and report UK property sales to HMRC within 60 days.',
     image: hero,
@@ -56,7 +53,7 @@ export default {
     trust: [
       { text: 'Fixed fee agreed before we start' },
       { text: rating.short, tbc: rating.tbc },
-      { text: 'Clients in France, the US, Canada and Australia' },
+      { text: 'UK tax handled wherever you live' },
     ],
   },
 
@@ -80,7 +77,7 @@ export default {
       { title: 'Leaving the UK this year', img: leaving, alt: 'Woman packing cardboard moving boxes in her living room', tag: 'Split-year treatment', text: 'We check whether you qualify for split-year treatment, so only the UK part of the year is taxed as a resident, and tell HMRC you have left.' },
       { title: 'Working full-time abroad', img: worker, alt: 'Woman in a blue jumper working on a laptop at a desk', tag: 'Full-time work overseas', text: 'Work full-time abroad for a whole tax year, with fewer than 91 days in the UK and no more than 30 UK working days, and you are usually non-resident.' },
       { title: 'Coming back to the UK', img: returning, alt: 'Woman walking with a grey suitcase across a station concourse', tag: 'Temporary non-residence', text: 'Back within 5 years? Gains and some income received while away can be taxed in the year you return. We plan the timing with you.', link: ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'] },
-      { title: 'Retirees living abroad', img: retirees, alt: 'Older couple sitting on a bench looking out over a beach at sunset', tag: 'UK pensions and allowance', text: 'British and EEA citizens can usually keep the UK personal allowance. We claim it, and treaty relief on your pensions.', link: ['/cross-border/uk-france-tax/', 'UK France tax'] },
+      { title: 'Retirees living abroad', img: retirees, alt: 'Older couple sitting on a bench looking out over a beach at sunset', tag: 'UK pensions and allowance', text: 'British and EEA citizens can usually keep the UK personal allowance. We claim it, and treaty relief on your pensions.', link: ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'] },
     ],
   },
 
@@ -201,17 +198,17 @@ export default {
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
       ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
       ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'],
-      ['/cross-border/uk-france-tax/', 'UK France tax'],
-      ['/cross-border/uk-france-tax/', 'UK France tax'],
-      ['/us/expat-tax/', 'US expat tax'],
+      ['/uk/tax/tax-refunds/', 'Tax refunds'],
+      ['/uk/tax/inheritance-tax-planning/', 'Inheritance tax planning'],
+      ['/cross-border/uk-company-from-abroad/', 'UK company from abroad'],
     ] },
     { title: 'Where we work', links: [
       ['/uk/london/', 'Accountants in London'],
-      ['/fr/paris/', 'Paris'],
-      ['/fr/londres/', 'Français à Londres'],
-      ['/us/', 'United States'],
-      ['/ca/', 'Canada'],
-      ['/au/', 'Australia'],
+      ['/uk/manchester/', 'Manchester'],
+      ['/uk/birmingham/', 'Birmingham'],
+      ['/uk/leeds/', 'Leeds'],
+      ['/uk/bristol/', 'Bristol'],
+      ['/uk/london/kensington/', 'Kensington'],
     ] },
     { title: 'Guides', links: [
       ['/resources/statutory-residence-test/', 'The Statutory Residence Test explained'],

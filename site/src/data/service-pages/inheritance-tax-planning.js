@@ -28,8 +28,8 @@ export default {
     '7 year rule inheritance tax', 'gifts out of income', 'business property relief 2026',
     'agricultural property relief', 'pensions inheritance tax 2027',
   ],
-  title: 'Inheritance Tax Planning London & France | Severin Finance',
-  description: 'Inheritance tax planning for London and France: we map your estate, plan gifts, pensions and business relief, and cut the tax your family pays.',
+  title: 'Inheritance Tax Planning London & UK-wide | Severin Finance',
+  description: 'Inheritance tax planning in London and across the UK: we map your estate, plan gifts, pensions and business relief, and cut the tax your family pays.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -40,15 +40,15 @@ export default {
   service: {
     name: 'Inheritance tax planning service',
     serviceType: 'Inheritance tax and estate planning advice',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Inheritance tax planning',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · Inheritance tax',
-    h1: 'Inheritance tax planning for London and France',
-    answer: 'Inheritance tax planning means arranging your estate, gifts and pensions so your family pays less tax, within HMRC rules. Our team values your estate, uses every relief and works with your solicitor, including for families with homes in the UK and France. Estates above £325,000 can pay 40%, and unused pensions count from 6 April 2027.',
+    h1: 'Inheritance tax planning in London and across the UK',
+    answer: 'Inheritance tax planning means arranging your estate, gifts and pensions so your family pays less tax, within HMRC rules. Our team values your estate, uses every relief and works with your solicitor, including for families with homes in the UK and abroad. Estates above £325,000 can pay 40%, and unused pensions count from 6 April 2027.',
     image: hero,
     imageAlt: 'Smiling grandparents hugging their three granddaughters at the window of a red brick house',
     price: { from: '£XXX', note: 'fixed-fee estate review', tbc: true },
@@ -212,8 +212,7 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/richmond/', 'Richmond'],
       ['/uk/london/wimbledon/', 'Wimbledon'],
-      ['/fr/', 'France'],
-      ['/fr/londres/', 'Français à Londres'],
+      ['/uk/manchester/', 'Manchester'],
     ] },
     { title: 'Guides', links: [
       ['/resources/inheritance-tax-7-year-rule/', 'The 7-year rule explained'],

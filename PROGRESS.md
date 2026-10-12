@@ -38,15 +38,14 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 
 - [ ] Build `/locations/` hub and the location page template (from `locations.js`)
 - [ ] Add a `live` flag to `locations.js` so menus list only published pages
-- [ ] Merge Australia candidates into the master keyword list
 - [x] Astro project set up in `/site`, on GitHub and deployed to Vercel (private, behind Vercel login) (13 Oct 2026)
-- [ ] CMS, forms, schema, hreflang, sitemaps
-- [ ] About 180 pages written and expert-reviewed
+- [ ] CMS, forms, schema, sitemaps
+- [ ] About 130 pages written and expert-reviewed
 - [ ] Google Business Profile, citations, review program
 
 ## Phase 4 · QA + migrate (weeks 11–12)
 
-- [ ] Device tests, Lighthouse 95+, link, schema and hreflang checks
+- [ ] Device tests, Lighthouse 95+, link and schema checks
 - [ ] 301 redirects live, sitemaps submitted, IndexNow
 - [ ] **Launch:** every checklist item passed
 
@@ -57,9 +56,9 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 ## Inputs needed from Severin
 
 - [ ] Full list of lending products, and whether Severin lends directly or brokers (the 7 business finance pages say "we arrange", marked yellow), plus lender panel size, rates, fees, LTV limits and turnaround
-- [ ] FCA firm reference number (and France, US, Canada registrations)
-- [ ] Team names, photos and qualifications (CIMA, ACCA, CPA, expert-comptable)
-- [ ] Office or registered addresses in each country
+- [ ] FCA firm reference number
+- [ ] Team names, photos and qualifications (CIMA, ACCA, CTA)
+- [ ] Office or meeting addresses in the UK
 - [ ] Real reviews, testimonials, client logos, case studies
 - [ ] Google Search Console and Analytics access
 - [ ] Prices or "from" prices per service, with 3 packages per service (Basic / Standard / Complex) and whether prices include VAT
@@ -67,12 +66,10 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [ ] Qualifications of each expert who signs off a page (the self assessment page names Alain Dastros)
 - [ ] Promised reply time for the quote form ("We reply within XX hours")
 - [ ] Evidence for "Max refunds guaranteed", or agree to drop it
-- [x] Markets decided (9 Oct): Australia added; Italy not included. UAE dropped (13 Oct)
-- [ ] Partners abroad: what @com Pluriel Conseils covers for French returns; the US enrolled agent/CPA, Canadian accountant, and TPB-registered Australian tax agent Severin works with (the cross-border pages say "with a licensed partner", marked yellow)
-- [ ] Is Severin a Companies House Authorised Corporate Service Provider (can verify directors' identity)? Does it offer a registered office address, fee protection insurance, formal valuations, MBO/EOT deal work? Does the team speak French?
-- [ ] Australia: what Severin actually does there. UK-side advice only, or local filing? Local filing needs Tax Practitioners Board registration or a local partner, like @com Pluriel Conseils in France
+- [x] Markets decided: **UK only** (13 Oct). Severin is registered in the UK only; people abroad are reached through UK services
+- [ ] Is Severin a Companies House Authorised Corporate Service Provider (can verify directors' identity)? Does it offer a registered office address, fee protection insurance, formal valuations, MBO/EOT deal work?
 - [ ] Confirm which of these Severin offers: payroll, virtual CFO/FD, audit (statutory needs registration), industry specialisms, Xero/QuickBooks/Sage
-- [ ] Confirm the Services menu (`site/src/data/services.js`, 33 sub-services in 5 groups). Not yet confirmed by Severin: company services (formation, secretarial, valuation, succession, EIS/SEIS), bridging loans, development finance, tax refunds, landlords, contractors/IR35
+- [ ] Confirm the Services menu (`site/src/data/services.js`, 28 sub-services in 5 groups). Not yet confirmed by Severin: company services (formation, secretarial, valuation, succession, EIS/SEIS), bridging loans, development finance, tax refunds, landlords, contractors/IR35
 
 ## Decisions
 
@@ -84,6 +81,7 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | 9 Oct 2026 | Markets: UK (home), France (French), US, Canada (English first, French for Quebec in phase 2) |
 | 9 Oct 2026 | Markets updated: **UK and France are the top priority**, then the US, Canada, Australia and the UAE (Dubai), each still getting a full country section. Italy not included |
 | 13 Oct 2026 | **UAE dropped** as a market (pages, menus, photos removed). **London and France are joint targets**: UK accounting, tax and company service pages say "London & France" in the title and "for London and France" in the H1, with France in `areaServed`; lending pages say "London & UK-wide" (lending for France needs ORIAS registration). Ranking in google.fr needs the French `/fr/` versions with hreflang |
+| 13 Oct 2026 | **UK only** (replaces the market rows above). Severin is not registered or compliant outside the UK, so the site offers UK work only and names no other country, foreign authority or partner firm. Titles say "London & UK-wide" (or "London & UK"), H1s "in London and across the UK", `areaServed` is United Kingdom plus London, `lang` en-GB, no hreflang. People abroad are reached through UK-side pages (non-resident UK tax, UK company from abroad, non-resident landlords, UK property sales, tax refunds after leaving) written with generic words: abroad, overseas, non-resident, expat |
 | 9 Oct 2026 | All project files live in this folder (not in online docs) |
 | 9 Oct 2026 | Font: Inter Tight (free) for the draft, in place of the reference's licensed Suisse Intl |
 | 9 Oct 2026 | Zero JavaScript: menu and FAQ use native `<details>`; CSS inlined in each page |
@@ -130,3 +128,4 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | 13 Oct 2026 | **All 33 service pages built** (32 new): Accounting 6, Tax 8, Company services 5, Business finance 7, Cross-border 7. Each has one data file in `site/src/data/service-pages/`, a 3-line route, 8 Unsplash photos (credits in `site/src/assets/services/SOURCES.md`), 4–6 official sources checked on 13 Oct (GOV.UK, HMRC manuals, Companies House, FCA, British Business Bank, IRS, CRA, ATO, impots.gouv.fr, UAE FTA), 8–10 FAQs and full schema. Production build: every page has 1 H1, title ≤ 60, description ≤ 155, answer 48–57 words, valid JSON-LD with no placeholders, 22–24 KB gzipped. Layout now also supports any number of key-facts tables, `areaServed` per page, rate prices ("Rates from X.X%", kept out of schema) and other currencies. Business finance pages say "we arrange" and carry risk warnings until Severin's lending status is known; cross-border pages say local filing is done "with a licensed partner" (yellow) |
 | 13 Oct 2026 | Project put on GitHub (private repo `SeverinfinanceUk/Mainseverinwebsite`) and connected to Vercel by the user; first production deployment succeeded |
 | 13 Oct 2026 | Service pages retargeted to **London and France**: 19 accounting/tax/company pages now "London & France" in title, H1, description and answer, with France (and the US, Canada, Australia on expat pages) in `areaServed` and links to `/fr/` and `/fr/londres/`. 7 lending pages say "London & UK-wide". **UAE removed**: `/uae/moving-to-dubai/` page, Dubai photos, UAE menu, footer links and home card deleted; home page now shows 5 countries (UK, France, US, Canada, Australia). Checker: 32 pages, 0 issues |
+| 13 Oct 2026 | **Site made UK-only.** Deleted the 4 country-pair pages (`/cross-border/uk-france-tax/`, `/us/`, `/ca/`, `/au/` pages), their data files and photos, and the Paris, New York, Toronto and Sydney card photos. Removed the header country picker and language links, the @com Pluriel Conseils partner logo, and every France/US/Canada/Australia mention in copy, menus, footer and schema. Cross-border menu group renamed **Clients abroad** (non-resident UK tax, UK company from abroad). Home page: new title and description, "London-based, UK-wide" section with 4 cards (London, Across the UK, Living abroad, UK company from abroad), 2 new FAQs for clients abroad. All 28 service pages pass the checker (0 issues); built site scanned clean of other country names. Master plan v2.0, location plan v2.0 and template v2.0 updated to match |

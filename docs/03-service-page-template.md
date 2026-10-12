@@ -1,6 +1,6 @@
 # Service page template
 
-Version 1.1 · 13 Oct 2026 · First page built: [/uk/tax/self-assessment-accountant/](http://localhost:4321/uk/tax/self-assessment-accountant/). All 33 service pages built on 13 Oct 2026
+Version 2.0 · 13 Oct 2026 (UK only: no other country named) · First page built: [/uk/tax/self-assessment-accountant/](http://localhost:4321/uk/tax/self-assessment-accountant/). 28 service pages live (33 built on 13 Oct 2026; the 4 country pairs and the France page removed the same day)
 
 Every service page follows this template. Each page is a sales funnel: it answers the search, proves we can help, shows the price and asks for the lead. It must also rank, both in Google and in AI answers. The page is built from one data file and one shared layout, so new pages need copy, not code.
 
@@ -20,7 +20,7 @@ The last part of the URL is the page's **main commercial keyword**: the term a b
 
 - `self-assessment-accountant`, not `self-assessment`. The topic word alone brings people who want to file their own return; "accountant" brings people who want to pay for help.
 - Use the same keyword in the slug, the title tag (first words), the H1, the first sentence, one H2, the main image file name and its alt text.
-- Use singular "accountant" in the slug. The title and H1 can use the plural ("Self assessment accountants for London and France"), and Google treats the two forms as the same term.
+- Use singular "accountant" in the slug. The title and H1 can use the plural ("Self assessment accountants in London and across the UK"), and Google treats the two forms as the same term.
 - Keep slugs short (2–4 words), lowercase and hyphenated, with no city name. City variants live under the location pages, e.g. `/uk/london/self-assessment-accountant/`.
 - **Before launch:** check volume for every slug in Semrush or Ahrefs (the keyword CSV has no volume data yet). If a close variant has clearly more buyer volume, switch the slug before the page goes live. After launch, a slug change needs a 301.
 
@@ -43,9 +43,6 @@ Slugs applied on 9 Oct 2026 (menu, footer, home page and master plan all updated
 | hmrc-investigations | hmrc-tax-investigation |
 | company-secretarial | company-secretarial-services |
 | tax-funding | tax-bill-funding |
-| /cross-border/uk-france/ | /cross-border/uk-france-tax/ |
-| /ca/cross-border/ | /ca/canada-uk-tax/ |
-| /au/cross-border/ | /au/australia-uk-tax/ |
 
 The other slugs (company-formation, business-loans, asset-finance, invoice-finance, commercial-mortgages, bridging-loans, development-finance, tax-refunds, business-valuation, succession-planning, eis-seis) are already the buyer keyword.
 
@@ -79,10 +76,10 @@ Twelve sections, in this order. The order follows the buyer: "is this for me?", 
 | **Content / E-E-A-T** | "Reviewed by" box: named expert, role, credentials, last-reviewed date and official sources. Facts (dates, penalties, thresholds) come from GOV.UK and are linked. The firm is always presented as a team, never "one accountant" |
 | **GEO / AEO (AI answers)** | The first paragraph answers the query in 40–60 words, stands alone and is quotable. Clear tables and question-style H2s. `speakable` schema points to the answer. FAQ answers start with the answer ("Yes.", "£100.") |
 | **Structured data** | One JSON-LD `@graph`: AccountingService (the firm), Service (with Offers only when the price is real), WebPage (reviewedBy, lastReviewed, dateModified, citation, speakable, primaryImageOfPage), BreadcrumbList, FAQPage. Placeholders never go into schema |
-| **Local** | Two targets, London and France. UK accounting, tax and company pages: title "<keyword> London & France", H1 "<keyword> for London and France", and the answer names London, the UK and France; `areaServed` lists United Kingdom, London and France (plus the US, Canada and Australia on expat-relevant pages). Lending pages: "London & UK-wide" / "in London and across the UK" only, because arranging credit for France needs ORIAS registration. Bookkeeping copy says "UK business records" (French books are an expert-comptable monopoly). English pages cannot win google.fr for French searches: the `/fr/` pages, in French, with hreflang, do that. `areaServed` in the schema. Links to London and area pages. City variants come later under `/uk/<city>/` |
+| **Local** | London first, then the whole UK. Title "<keyword> London & UK-wide \| Severin Finance" (or "London & UK" when that would pass 60 characters), H1 "<keyword> in London and across the UK", and the answer names London and the UK. `areaServed` is United Kingdom plus London on every page. Links to London and UK city pages. City variants come later under `/uk/<city>/` |
 | **Internal linking** | Breadcrumbs, links in the who-cards to sub-services, a "Keep exploring" block (3 services, 3 places, 3 guides), the mega-menu and the footer. Anchor text uses the target page's keyword |
 | **Image SEO** | Descriptive keyword file names, real alt text, a 1200×630 OG image built from the hero photo (`og:image`, `twitter:card summary_large_image`) |
-| **International** | `hreflang` alternates supported by `Base.astro` (`alternates` prop). Used when a French or other country version exists |
+| **International** | UK only: Severin is registered in the UK only. Never name another country, foreign tax authority or partner firm, and never offer filing or advice outside the UK. People abroad are reached with UK-side pages and generic words (abroad, overseas, non-resident, expat, leaving the UK); saying UK treaty relief stops double taxation is fine. One en-GB version of each page, no hreflang |
 | **Conversion (CRO)** | Price shown in the hero, a quote button in 4 places, phone in the hero, a pre-filled form topic, "free consultation, no obligation" wording, reviews next to the ask, urgency from real deadlines |
 | **Off-page / linkable assets** | The deadline and penalty tables and the comparison table are worth linking to and citing. They are what we offer in link outreach and digital PR (see master plan, backlinks section) |
 | **Freshness** | `dateModified` and "Last reviewed" date shown on the page. Review every page at least once a year, and straight after any Budget or HMRC rule change |
@@ -96,7 +93,7 @@ Copy `site/src/data/service-pages/self-assessment-accountant.js` and change the 
 | `url`, `primaryKeyword`, `secondaryKeywords` | The page URL (slug = primary keyword) and the terms it targets |
 | `title`, `description` | Title tag (≤60 characters) and meta description (≤155 characters) |
 | `reviewed` | `{ date: 'YYYY-MM-DD', label }`. Update on every review |
-| `breadcrumb`, `service`, `formTopic` | Trail, schema service name/type, form topic chosen in advance. `service.areaServed` is a list of `[type, name]` pairs, e.g. `[['Country', 'United Kingdom'], ['City', 'London']]` (the default); cross-border pages list both countries |
+| `breadcrumb`, `service`, `formTopic` | Trail, schema service name/type, form topic chosen in advance. `service.areaServed` is a list of `[type, name]` pairs, e.g. `[['Country', 'United Kingdom'], ['City', 'London']]` (the default) |
 | `currency` | Optional, default `'GBP'`. Used for schema offers |
 | `hero` | eyebrow, h1, answer (40–60 words), image + alt, price `{ from, note, tbc }`, key date `{ label, date, note }`, cta, trust (3 ticks) |
 | `jump` | Section ids and chip labels |
@@ -124,7 +121,7 @@ Copy `site/src/data/service-pages/self-assessment-accountant.js` and change the 
 ## 6. Checklist for each new page
 
 1. Pick the primary keyword and check its volume. Set the slug.
-2. Collect facts from GOV.UK (or the official source for the country) and add them to `sources`.
+2. Collect facts from GOV.UK and add them to `sources`.
 3. Write the data file. Answer first, short sentences, firm voice ("we", "our team").
 4. Find 8 photos and add the credits.
 5. Add the 3-line route file.
@@ -140,5 +137,4 @@ Copy `site/src/data/service-pages/self-assessment-accountant.js` and change the 
 - Linked pages (related services, locations, guides) do not exist yet, so those links 404 for now.
 - The form has no handler yet (Phase 2 task).
 - Business finance pages: Severin's role (lender, broker or introducer) and FCA status are unknown, so the copy says "we arrange" and the status is yellow. Add an FCA / regulatory strip to these pages once known.
-- Cross-border pages: filing in France, the US, Canada and Australia needs a local licence, so the copy says "with a licensed partner" (yellow) until Severin names its partners.
-- Australian facts were checked through search results because ato.gov.au blocks automated fetching: check them by hand before launch.
+- Clients abroad pages cover the UK side only. If Severin ever registers in another country, add that work then, not before.

@@ -25,8 +25,8 @@ export default {
     'property investor accountant', 'non-resident landlord scheme', 'property company SPV accounts',
     'MTD for landlords', 'Section 24 mortgage interest',
   ],
-  title: 'Landlord Accountants London & France | Severin Finance',
-  description: 'Landlord accountants for London and France: UK property tax returns, Section 24, buy-to-let companies and MTD, including landlords living abroad.',
+  title: 'Landlord Accountants London & UK-wide | Severin Finance',
+  description: 'Landlord accountants in London and across the UK: UK property tax returns, Section 24, buy-to-let companies and MTD, including landlords living abroad.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -37,15 +37,15 @@ export default {
   service: {
     name: 'Landlord accounting and property tax service',
     serviceType: 'Property tax returns and accounts for landlords',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France'], ['Country', 'United States'], ['Country', 'Canada'], ['Country', 'Australia']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Landlord accountant',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK accounting · Landlords',
-    h1: 'Landlord accountants for London and France',
-    answer: 'Our landlord accountants prepare your UK property tax return for a fixed fee, claim every allowable expense and work out your 20% tax credit on mortgage interest, whether you live in London, elsewhere in the UK or in France. From 6 April 2027, Making Tax Digital applies to landlords with qualifying income over £30,000.',
+    h1: 'Landlord accountants in London and across the UK',
+    answer: 'Our landlord accountants prepare your UK property tax return for a fixed fee, claim every allowable expense and work out your 20% tax credit on mortgage interest, whether you live in London, elsewhere in the UK or abroad. From 6 April 2027, Making Tax Digital applies to landlords with qualifying income over £30,000.',
     image: hero,
     imageAlt: 'Row of pastel-painted London terraced houses under a blue sky',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -207,8 +207,7 @@ export default {
       ['/uk/london/islington/', 'Islington'],
       ['/uk/london/croydon/', 'Croydon'],
       ['/uk/manchester/', 'Manchester'],
-      ['/fr/', 'France'],
-      ['/fr/londres/', 'Français à Londres'],
+      ['/uk/birmingham/', 'Birmingham'],
     ] },
     { title: 'Guides', links: [
       ['/resources/section-24-explained/', 'Section 24 explained'],

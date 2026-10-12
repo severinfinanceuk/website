@@ -160,29 +160,6 @@ a:hover { text-decoration-color: transparent; }
 .nav > a { padding: 10px 12px; font-size: 1rem; font-weight: 500; text-decoration: none; white-space: nowrap; border-radius: 999px; }
 .nav > a:hover { background: var(--panel); }
 .header-actions { display: flex; align-items: center; gap: 8px; }
-.lang { display: none; flex-wrap: wrap; gap: 2px; font-size: .875rem; font-weight: 500; }
-.lang a { padding: 8px 8px; text-decoration: none; color: var(--muted); border-radius: 6px; }
-.lang a[aria-current="true"] { color: var(--black); text-decoration: underline; }
-.lang a:hover { color: var(--black); }
-
-/* Country picker (desktop) */
-.country { display: none; position: relative; }
-.country > summary {
-  list-style: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 12px;
-  font-size: .875rem; font-weight: 500; border-radius: 999px; cursor: pointer;
-}
-.country > summary::-webkit-details-marker { display: none; }
-.country > summary:hover, .country[open] > summary { background: var(--panel); }
-.country > summary svg { width: 10px; height: 6px; }
-.country[open] > summary svg { rotate: 180deg; }
-.country-panel {
-  position: absolute; right: 0; top: calc(100% + 8px); min-width: 260px; padding: 8px;
-  background: var(--white); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px rgb(0 0 0 / .08);
-}
-.country-panel a { display: flex; align-items: center; gap: 12px; padding: 10px 12px; font-size: .9375rem; text-decoration: none; border-radius: 8px; }
-.country-panel a:hover { background: var(--panel); }
-.country-panel a[aria-current="true"] { font-weight: 500; }
-.country-panel .cc { width: 32px; font-size: .75rem; font-weight: 500; letter-spacing: .04em; color: var(--muted); }
 
 /* Services and Locations mega-menus (desktop): full-width panel under the header */
 .mega > summary {
@@ -259,7 +236,6 @@ a.mega-sub:hover { color: var(--black); }
   font-size: 1.375rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--line);
 }
 .menu-panel .menu-foot { display: grid; gap: 16px; margin-top: 24px; }
-.menu-panel .lang { display: flex; }
 .header-cta { display: none; }
 
 @media (min-width: 768px) {
@@ -269,7 +245,6 @@ a.mega-sub:hover { color: var(--black); }
 @media (min-width: 1200px) {
   .header-row { height: 80px; }
   .nav { display: flex; gap: 2px; }
-  .country { display: block; }
   .menu { display: none; }
 }
 
@@ -428,18 +403,15 @@ a.mega-sub:hover { color: var(--black); }
 .card-place picture { display: block; margin: 0 calc(-1 * var(--pad)); aspect-ratio: 3 / 2; background: #d9dde6; }
 .card-place picture img { width: 100%; height: 100%; object-fit: cover; }
 .card-place .card-code { margin-top: -40px; position: relative; box-shadow: 0 0 0 4px var(--hl-bg); }
-/* Five countries: UK and France (the main markets) get bigger cards.
-   1000-1199px: UK and FR half-width on row one, the other three below.
-   1200px+: all five in one row, UK and FR first, wider and taller: they reach past the row
-   top and bottom, and their taller photos fill the extra height. */
+/* Where we work: four cards, London (featured) first.
+   1000-1199px: two by two.
+   1200px+: all four in one row; London is wider and taller: it reaches past the row
+   top and bottom, and its taller photo fills the extra height. */
 @media (min-width: 1000px) and (max-width: 1199.98px) {
-  .cards-places { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .cards-places > * { grid-column: span 2; }
-  .cards-places > .place-featured { grid-column: span 3; }
-  .place-featured picture { aspect-ratio: 2 / 1; }
+  .cards-places { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (min-width: 1200px) {
-  .cards-places { grid-template-columns: 1.25fr 1.25fr 1fr 1fr 1fr; gap: 16px; padding-block: 32px; }
+  .cards-places { grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 16px; padding-block: 32px; }
   .cards-places .card-place { --pad: 20px; padding: 0 var(--pad) var(--pad); gap: 12px; }
   .cards-places h3 { font-size: 1.25rem; }
   .cards-places p { font-size: .9375rem; }
@@ -526,7 +498,6 @@ li:nth-child(2n) > .quote { --hl-off: var(--mint); }
 @keyframes hl-scroll { 0%, 100% { --hl: 0; } 8%, 92% { --hl: 1; } }
 @keyframes hl-3 { 0% { --hl: 0; } 3.3%, 30% { --hl: 1; } 33.3%, 100% { --hl: 0; } }
 @keyframes hl-4 { 0% { --hl: 0; } 2.5%, 22.5% { --hl: 1; } 25%, 100% { --hl: 0; } }
-@keyframes hl-5 { 0% { --hl: 0; } 2%, 18% { --hl: 1; } 20%, 100% { --hl: 0; } }
 @keyframes hl-6 { 0% { --hl: 0; } 1.7%, 15% { --hl: 1; } 16.7%, 100% { --hl: 0; } }
 
 .hl-group > :first-child { --hl: 1; }   /* default and fallback */
@@ -543,7 +514,6 @@ li:nth-child(2n) > .quote { --hl-off: var(--mint); }
 @media (min-width: 1000px) and (prefers-reduced-motion: no-preference) {
   .hl-group > * { animation: hl-3 9s ease-in-out infinite; animation-delay: calc((var(--i, 0) - 3) * 3s); transition: --hl .3s ease; }
   .hl-4 > * { animation-name: hl-4; animation-duration: 12s; animation-delay: calc((var(--i, 0) - 4) * 3s); }
-  .hl-5 > * { animation-name: hl-5; animation-duration: 15s; animation-delay: calc((var(--i, 0) - 5) * 3s); }
   .hl-6 > * { animation-name: hl-6; animation-duration: 18s; animation-delay: calc((var(--i, 0) - 6) * 3s); }
 }
 

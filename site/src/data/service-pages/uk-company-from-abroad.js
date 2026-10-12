@@ -37,16 +37,13 @@ export default {
   service: {
     name: 'UK company set-up for non-residents',
     serviceType: 'UK company formation, tax registration and accounting for overseas founders',
-    areaServed: [
-      ['Country', 'United Kingdom'], ['Country', 'France'], ['Country', 'United States'],
-      ['Country', 'Canada'], ['Country', 'Australia'],
-    ],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Set up a UK company from abroad',
 
   // ---------- 1. Hero ----------
   hero: {
-    eyebrow: 'Cross-border · UK companies',
+    eyebrow: 'International · UK companies',
     h1: 'Set up a UK company from abroad',
     answer: 'We help you set up a UK company from abroad, without living in the UK or visiting. We register the company with Companies House, check your registered office, guide each director through identity verification from any country, and register corporation tax, VAT and payroll so the company is ready to trade.',
     image: hero,
@@ -76,9 +73,9 @@ export default {
     h2: 'Who sets up a UK company from abroad?',
     intro: 'A UK limited company can be owned and run from anywhere. These are the founders we help most.',
     cards: [
-      { title: 'French and EU founders', img: euFounders, alt: 'Team of women in a meeting room with laptops around a table', tag: 'Selling into the UK', text: 'A UK company costs £100 to register online. We set it up and explain how UK and home-country tax fit together.', link: ['/cross-border/uk-france-tax/', 'UK France tax'] },
+      { title: 'Founders selling into the UK', img: euFounders, alt: 'Team of women in a meeting room with laptops around a table', tag: 'Selling into the UK', text: 'A UK company costs £100 to register online. We set it up and handle the UK tax side, so you know what the company owes here.', link: ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'] },
       { title: 'Online sellers', img: seller, alt: 'Hands wrapping a parcel in brown paper and twine, with greenery and gift cards', tag: 'VAT from the first UK sale', text: 'A company with only a virtual office may not count as UK-established for VAT, and then there is no threshold. We check and register you.', link: ['/uk/tax/vat-accountant/', 'VAT accountant'] },
-      { title: 'US, Canadian and Australian founders', img: subsidiary, alt: 'Two men in conversation at a table by a sunny window', tag: 'UK subsidiary', text: 'We set up the subsidiary, run the books and corporation tax, and check where it is managed so it is taxed where you expect.', link: ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'] },
+      { title: 'Overseas parent companies', img: subsidiary, alt: 'Two men in conversation at a table by a sunny window', tag: 'UK subsidiary', text: 'We set up the subsidiary, run the books and corporation tax, and check where it is managed so it is taxed where you expect.', link: ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'] },
       { title: 'Consultants with UK clients', img: consultant, alt: 'Woman writing notes next to her laptop at a wooden table', tag: 'Contracting through a UK company', text: 'A UK company lets you invoice UK clients from a UK business. We set it up and handle IR35, accounts and returns.', link: ['/uk/accounting/contractor-accountant/', 'Contractor accountant'] },
       { title: 'Overseas companies opening in the UK', img: branch, alt: 'Two businessmen shaking hands across a desk', tag: 'Branch or subsidiary', text: 'We compare a UK branch with a UK subsidiary, then handle the UK corporation tax for whichever you choose.', link: ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'] },
       { title: 'Property investors', img: property, alt: 'Cobbled London mews lined with white and brick houses', tag: 'UK property in a company', text: 'Some overseas investors hold UK rental property in a UK company. We set it up and handle the accounts and tax each year.', link: ['/uk/accounting/landlord-accountant/', 'Landlord accountant'] },
@@ -166,7 +163,7 @@ export default {
       ['Corporation tax and VAT registration', true, false, false],
       ['Residence and treaty position checked', true, false, false],
       ['Bookkeeping and annual accounts', true, false, false],
-      ['Advice in your home country’s context', true, false, false],
+      ['UK figures ready for your adviser at home', true, false, false],
       ['Price', 'Fixed fee', 'Low formation fee', '£100 Companies House fee'],
     ],
   },
@@ -187,7 +184,7 @@ export default {
     { q: 'Can a non-resident open a UK business bank account?', a: 'It is possible, but each bank sets its own rules on where directors live and what checks it needs, so it can take longer. We prepare the company documents banks usually ask for.' },
     { q: 'Will my UK company pay UK corporation tax?', a: 'Yes. A company incorporated in the UK is UK resident for corporation tax. The rate is 19% on profits of £50,000 or less and 25% over £250,000, with marginal relief in between. If the company is managed from abroad, it may also be resident there and the treaty decides.' },
     { q: 'Does my UK company need to register for VAT?', a: 'It depends on whether it is established in the UK. A UK-established business registers when taxable turnover goes over £90,000. A business not established in the UK has no threshold. A registered, serviced or virtual office alone does not make a company UK-established.' },
-    { q: 'Will I also pay tax in my home country?', a: 'Possibly. It depends where the company is managed and where you live. Salary and dividends you take are usually taxed in your country of residence, with treaty relief where the UK has taxed them too. We check both sides before you start.' },
+    { q: 'Will I also pay tax in my home country?', a: 'Possibly. It depends where the company is managed and where you live. Salary and dividends you take are usually taxed where you live, and UK tax treaties stop the same income being taxed twice. We handle the UK side and give your adviser at home the UK figures they need.' },
     { q: 'How long does it take to set up a UK company?', a: 'Usually 24 hours once the application is sent online and every director has verified their identity. Paper applications take 8 to 10 days.' },
     { q: 'Can you provide a registered office and act as company secretary?', a: 'Yes. We can provide a London registered office address and company secretarial services for an annual fee of £XXX.', tbc: true },
     { q: 'How much does it cost to set up a UK company from abroad?', a: '£XXX plus the £100 Companies House fee for registration. Set-up with a first year of accounts, or a UK subsidiary, costs more. You get the exact fee in writing after a free consultation.', tbc: true },
@@ -204,12 +201,12 @@ export default {
       ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
     ] },
     { title: 'Where we work', links: [
-      ['/fr/londres/', 'Créer une LTD à Londres'],
       ['/uk/london/', 'Accountants in London'],
-      ['/us/', 'United States'],
-      ['/ca/', 'Canada'],
-      ['/au/', 'Australia'],
-      ['/fr/paris/', 'Paris'],
+      ['/uk/manchester/', 'Manchester'],
+      ['/uk/birmingham/', 'Birmingham'],
+      ['/uk/leeds/', 'Leeds'],
+      ['/uk/bristol/', 'Bristol'],
+      ['/uk/london/kensington/', 'Kensington'],
     ] },
     { title: 'Guides', links: [
       ['/resources/uk-company-for-non-residents/', 'UK companies for non-residents'],

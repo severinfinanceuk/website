@@ -1,25 +1,26 @@
 # Severin Finance — Website Rebuild & SEO/GEO Master Plan
 
-Version 1.2 · 13 Oct 2026 (1.1: Australia added as a market; UK and France are the priority. 1.2: UAE dropped; service pages target London and France together)
+Version 2.0 · 13 Oct 2026 (2.0: **UK only.** Severin is registered in the UK only, so the site offers UK work and names no other country. People abroad are reached through the UK services they need: non-resident tax, UK property, UK companies run from abroad. The France, US and Canada keyword lists are kept as research, marked "Out of scope". Earlier: 1.1 added Australia and the UAE; 1.2 dropped the UAE)
 
 ## Executive summary
 
-We will rebuild the Severin Finance site as a static, near-zero-JavaScript website with one page per service × country. It will be designed to rank in Google and Bing and to be cited by AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude). No one can guarantee position 1 for every search. This plan targets the 400+ highest-intent searches across the UK, France, the US and Canada, and builds the authority needed to win them.
+We will rebuild the Severin Finance site as a static, near-zero-JavaScript website with one page per service. It will be designed to rank in Google and Bing and to be cited by AI answer engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude). No one can guarantee position 1 for every search. This plan targets the 400+ highest-intent searches in the UK, plus the UK searches people abroad make (non-resident tax, UK property, UK companies run from abroad), and builds the authority needed to win them.
 
-**Business:** Severin Finance, an accounting and lending firm headquartered in London. It serves clients across England, France, the United States and Canada.
+**Business:** Severin Finance, an accounting and lending firm headquartered in London. It is registered in the UK only and does UK work only: for clients across the UK, and for people and companies abroad with UK tax or a UK company.
 
 **Goals**
 
 1. **Traffic:** grow organic visits to 10,000/month by month 12 and 30,000/month by month 24. These are planning targets, to be re-set after the baseline audit.
 2. **Leads:** a 3–5% visitor-to-enquiry rate on service pages, with a consultation form on every page.
-3. **Visibility:** top 3 in Google for 50+ commercial keywords per country, plus citation in AI answers for core questions ("best accountant in London for small business", "how to set up a UK company from France").
+3. **Visibility:** top 3 in Google for 50+ commercial keywords, plus citation in AI answers for core questions ("best accountant in London for small business", "how to set up a UK company from abroad").
 4. **Speed:** every page passes Core Web Vitals on mobile. LCP under 1.8 s, INP under 100 ms, CLS under 0.05. Home page under 300 KB in total.
 5. **Reliability:** pixel-perfect layout from 320 px phones up to 1920 px desktops. No animations, no layout shift, no pop-ups.
 
 **Scope**
 
-- Five country hubs. **Priority markets:** UK (`/uk/`) and France (`/fr/`, in French). **Further markets, each with a full section:** US (`/us/`), Canada (`/ca/`, English, plus French for Quebec in phase 2) and Australia (`/au/`).
-- Every service gets a page in every country it is offered in. Major cities also get location pages: London, Manchester, Birmingham, Paris, Lyon, New York, Toronto, Montreal and others.
+- One country: the UK (`/uk/`), London first. No other country is named on the site, because Severin is not registered outside the UK.
+- **Clients abroad** (`/cross-border/`): UK services for people and companies outside the UK (non-resident UK tax, UK company from abroad, non-resident landlords, UK property sales). These pages rank for searches made from any country, without naming one.
+- Every service gets one page. London and its areas, then major UK cities, get location pages: London, Manchester, Birmingham, Leeds, Bristol and others.
 - A resource hub with guides, tax calendars, calculators and glossaries. This is the traffic engine and the main source of AI citations.
 - A backlink, digital PR and local SEO program that runs every month from launch.
 
@@ -33,8 +34,8 @@ The current site can't rank at scale. It has 12 indexed pages, no country or len
 | Server speed | Time to first byte is 2.3–2.4 s on 3 tests (Google's "good" is under 0.8 s). Apache, no CDN, `cache-control: must-revalidate` | Fails Core Web Vitals on mobile | Global CDN edge hosting, TTFB under 100 ms |
 | Page weight | 175 KB of HTML alone, 18 script files, 33 stylesheets on the home page | Slow on 4G phones | Under 300 KB total, under 15 KB JS |
 | Pages | 12 URLs in the sitemap: home, `/home/`, `/home-francais/`, about, who-we-are, services + 4 service pages, contact, 2 legal pages | Far too few to rank for 400+ keywords | About 180 pages at launch, 400+ by month 12 |
-| Lending | No lending or loan page anywhere | Zero visibility for business loan searches | Full lending section per country |
-| Countries | The UK, France, the US and Canada are never named. The French version is one `/home-francais/` page with no hreflang | Can't rank outside the UK | Country hubs + hreflang |
+| Lending | No lending or loan page anywhere | Zero visibility for business loan searches | Full UK lending section |
+| Clients abroad | One old `/home-francais/` page, and nothing for clients outside the UK | No visibility for "UK tax from abroad" searches | Clients abroad section: UK services for non-residents, no other country named |
 | Title tags | Home title is just "Severin Finance" | No keyword targeting | Unique, keyword-led title on every page |
 | Meta descriptions | None | Lower click-through | Hand-written for every page |
 | Headings | No clear H1. Slogans and card labels share heading levels | Google can't tell the page topic | One H1 per page, logical H2/H3 |
@@ -54,8 +55,8 @@ The current site can't rank at scale. It has 12 indexed pages, no country or len
 
 - [ ] Reference website URL (the design you like). The design section below is waiting for it
 - [ ] Full list of lending products (business loans, bridging, commercial mortgages, asset or invoice finance?) and whether Severin lends directly or brokers
-- [ ] FCA firm reference number (required on any UK lending page) and equivalent registrations in France, the US and Canada
-- [ ] Team names, photos and qualifications (CIMA, ACCA, ICAEW, CPA, expert-comptable)
+- [ ] FCA firm reference number (required on any UK lending page)
+- [ ] Team names, photos and qualifications (CIMA, ACCA, ICAEW, CTA)
 - [ ] Office or registered addresses in each country (needed for Google Business Profiles)
 - [ ] Real reviews or testimonials, client logos and case studies
 - [ ] Google Search Console and Analytics access (to export current rankings and links before migration)
@@ -99,7 +100,7 @@ We will copy the look of [stoneeg.com](https://stoneeg.com/): oversized Swiss-st
 **Design rules (apply whatever the reference)**
 
 1. **No animation of any kind.** No fade-ins, sliders, carousels, parallax, counters, hover zooms or loading spinners. Hover only changes colour or underline. Nothing moves, so nothing shifts and nothing breaks on low-end phones.
-2. **Fonts:** 1 family and 2 font files in total, self-hosted as WOFF2 and subset to Latin + French accents. `font-display: swap` with size-matched fallbacks, so text never jumps. Following the reference, one sans family (Suisse Intl or Inter Tight) carries headings and body.
+2. **Fonts:** 1 family and 2 font files in total, self-hosted as WOFF2 and subset to Latin. `font-display: swap` with size-matched fallbacks, so text never jumps. Following the reference, one sans family (Suisse Intl or Inter Tight) carries headings and body.
 3. **Colour:** near-black `#111`, white, one brand accent for buttons and links, one muted grey for secondary text. WCAG AA contrast (4.5:1) everywhere.
 4. **Type scale:** body text 17–18 px on mobile and 18 px on desktop, line height 1.6, max line length 70 characters. Headings use fluid `clamp()` sizes, so one design fits every screen.
 5. **Spacing:** an 8 px grid. Section padding is 48 px on mobile, 72 px on tablet and 96 px on desktop.
@@ -122,22 +123,25 @@ We will test on real devices (iPhone SE, iPhone 15, a mid-range Android, iPad, i
 
 ## Markets, audiences and search intent
 
-Each country needs its own pages, its own vocabulary and its own regulator references. A French founder searches "expert-comptable Londres", not "accountant London". A Canadian searches "T2 return", not "corporation tax".
+Severin is registered in the UK only, so the site has one market and names no other country.
 
 | Market | Language and URL | Tax / company authority | Words people search | Rules to respect |
 | --- | --- | --- | --- | --- |
-| England (UK) | English (en-GB), `/uk/` | HMRC, Companies House | accountant, self assessment, corporation tax, VAT return, bookkeeper, business loan | FCA rules on financial promotions and credit broking. Use "chartered" only for the actual body (e.g. CIMA) |
-| France | French (fr-FR), `/fr/` | DGFiP (impots.gouv), URSSAF, INPI / Guichet unique | expert-comptable, cabinet comptable, comptabilité, déclaration TVA, liasse fiscale, création SASU, prêt professionnel | "Expert-comptable" is a protected title (Ordre des experts-comptables). Keeping French companies' books needs a registered partner. Confirm Severin's status |
-| United States | English (en-US), `/us/` | IRS + state tax agencies, Secretary of State | CPA, tax preparer, bookkeeping services, LLC formation, Form 5472, FBAR, small business loan | "CPA" is a licensed title by state. Use "accountants" or "tax advisers" unless a licensed CPA is on staff. Lending rules vary by state |
-| Canada | English (en-CA) `/ca/`, French (fr-CA) `/ca/fr/` in phase 2 | CRA, Revenu Québec, provincial registries | accountant, T2 corporate tax return, GST/HST filing, bookkeeping, incorporate in Ontario, business loan | "CPA" is a protected title by province. Quebec law requires French for commercial content aimed at Quebec |
-| Australia | English (en-AU), `/au/` | ATO, ASIC | accountant, tax agent, tax return, Australia UK tax treaty, moving to Australia tax, non-resident tax return Australia | Preparing Australian returns for a fee needs Tax Practitioners Board registration, or a registered partner. Confirm Severin's status |
+| United Kingdom | English (en-GB), `/uk/` | HMRC, Companies House | accountant, self assessment, corporation tax, VAT return, bookkeeper, business loan | FCA rules on financial promotions and credit broking. Use "chartered" only for the actual body (e.g. CIMA) |
+
+**Reaching people abroad without naming other countries**
+
+- Write for the UK need, not the country: "UK tax return while living abroad", "non-resident landlord", "sell UK property from abroad", "UK company for non-residents", "tax refund after leaving the UK". People search these from every country, and they rank without a country name.
+- Use the words people abroad search for: abroad, overseas, non-resident, expat, leaving the UK, moving back to the UK.
+- Do the UK side only. Never offer advice or filing in another country, never name a foreign tax authority or partner firm, and never promise to sort out "both countries". Saying that UK treaty relief stops the same income being taxed twice is fine: it is a UK claim.
+- One English (en-GB) version of each page: no hreflang, no country pages, no geo-redirects. Google ranks an English .com page anywhere.
+- Schema `areaServed` stays United Kingdom (plus London). It describes where the service is provided, not where clients live.
 
 **Who we are writing for (priority order)**
 
 1. **UK small businesses and sole traders:** limited companies, contractors, landlords, start-ups. The biggest volume and the home market.
-2. **Cross-border clients**, Severin's real edge with one team across countries: French nationals in London, UK firms expanding to France, the US, Canada or Australia, US, Canadian and Australian expats in the UK, Britons living in France, and non-resident landlords.
+2. **Clients abroad with UK affairs:** Britons who have moved abroad, non-resident landlords, people selling UK property from abroad, and founders running a UK company from outside the UK. UK work only.
 3. **SMEs needing finance:** business loans, cash-flow funding, asset finance, alongside their accounts.
-4. **French, US and Canadian domestic SMEs:** compete on niche, high-intent and city terms first, not the broadest national ones.
 
 **Search intent we cover on every topic**
 
@@ -146,8 +150,8 @@ Each country needs its own pages, its own vocabulary and its own regulator refer
 | Transactional ("hire now") | accountant for limited company London | Service × location page with price and form |
 | Commercial ("compare") | best online accountant UK, accountant fees UK | Pricing page, comparison guide |
 | Informational ("learn") | how to file self assessment late | Guide in the resource hub, linking to the service |
-| Navigational / local ("near me") | accountant near me, comptable Londres | Google Business Profile + city page |
-| AI / conversational | "I'm French and moving to London, who can do my taxes in both countries?" | Cross-border pages with clear Q&A blocks |
+| Navigational / local ("near me") | accountant near me, accountant London | Google Business Profile + city page |
+| AI / conversational | "I've moved abroad, who can still do my UK tax return?" | Clients abroad pages with clear Q&A blocks |
 
 ## Master keyword list
 
@@ -177,9 +181,11 @@ The working list, one row per keyword with empty columns for volume, difficulty,
 | Business lending | business loans UK, small business loans London, start-up business loans, secured business loan, unsecured business loan, business loan broker, working capital loan, business line of credit | Transactional | `/uk/business-finance/business-loans/` | P1 |
 | Specialist finance | bridging loans, commercial mortgage, development finance, asset finance, equipment finance, invoice finance, invoice factoring, merchant cash advance | Transactional | one page each under `/uk/business-finance/` | P2 |
 | Tax-bill funding | VAT loan, corporation tax loan, tax bill funding, pay HMRC in instalments | Transactional | `/uk/business-finance/tax-bill-funding/` (pairs accounting with lending, a rare angle) | P1 |
-| Cross-border | UK France tax accountant, French accountant in London, US expat tax accountant UK, Canadian tax accountant UK, double taxation UK France, non-resident tax return UK, set up UK company from abroad, UK company for non-residents | Transactional | `/cross-border/...` | P1 |
+| Clients abroad | non-resident tax return UK, UK tax return from abroad, accountant for UK expats, non-resident landlord scheme, sell UK property as a non-resident, tax refund after leaving the UK, set up UK company from abroad, UK company for non-residents | Transactional | `/cross-border/...` | P1 |
 | Pricing | how much does an accountant cost UK, accountant fees for limited company, self assessment accountant fees, bookkeeping prices | Commercial | `/uk/pricing/` | P1 |
 | Guides (informational) | self assessment deadline, how to file a tax return, corporation tax rates, dividend tax rates, VAT threshold UK, sole trader vs limited company, how to pay yourself from a limited company, IR35 explained, what expenses can I claim, HMRC payment on account, how to get a business loan, business loan interest rates UK | Informational | `/resources/...` guides, each linking to its service | P1–P3 |
+
+> **Out of scope (v2.0):** the France, US and Canada keyword lists below are research only. Severin is registered in the UK only, so these pages are not built.
 
 ### France (fr-FR)
 
@@ -229,24 +235,20 @@ The site is a flat silo: Home → Country hub → Service category → Service �
 
 - Lowercase, hyphenated, no dates, no IDs, trailing slash everywhere: `/uk/tax/self-assessment-accountant/`.
 - The last part of a service URL is the page's main commercial keyword (`self-assessment-accountant`, `vat-accountant`, `bookkeeping-services`). Rules in [03-service-page-template.md](03-service-page-template.md).
-- English slugs on English pages and French slugs on French pages: `/fr/fiscalite/declaration-tva/`.
 - One canonical URL per page. HTTP, `www` and non-slash versions redirect (301) to it.
 - Every old WordPress URL gets a 301 to its closest new page (map below). No old URL is left to 404.
 
-**Launch page count (about 180)**
+**Launch page count (about 130)**
 
 | Section | Pages at launch | By month 12 |
 | --- | --- | --- |
 | Core (home, about, team, each team member, reviews, contact, pricing, careers, legal) | 20 | 25 |
 | UK services (accounting, tax, company services, business finance) | 35 | 45 |
 | UK locations (London + areas + major cities) | 12 | 25 |
-| Cross-border pages (UK↔France, UK↔US, UK↔Canada, by topic) | 12 | 20 |
-| France (fr) services + Paris/London pages | 18 | 35 |
-| US services + expat pages | 15 | 30 |
-| Canada services + cross-border | 12 | 25 |
+| Clients abroad (UK services for non-residents and UK companies run from abroad) | 4 | 10 |
 | Resource hub (guides, glossary, tax calendars, calculators) | 50 | 200+ |
 | Case studies | 6 | 20 |
-| **Total** | **about 180** | **400+** |
+| **Total** | **about 130** | **350+** |
 
 **Redirect map from the current site**
 
@@ -254,7 +256,7 @@ The site is a flat silo: Home → Country hub → Service category → Service �
 | --- | --- |
 | `/` | `/` (new home) |
 | `/home/` | `/` |
-| `/home-francais/` | `/fr/` |
+| `/home-francais/` | `/cross-border/uk-company-from-abroad/` |
 | `/about-us/`, `/who-we-are/` | `/about/`, `/about/team/` |
 | `/services/` | `/uk/` (services overview) |
 | `/services/individual-and-sole-traders/` | `/uk/tax/self-assessment-accountant/` |
@@ -279,8 +281,8 @@ The whole site is built from 9 templates and about 20 reusable sections from the
 | Template | Used for | Count at launch |
 | --- | --- | --- |
 | Home | `/` | 1 |
-| Country hub | `/uk/`, `/fr/`, `/us/`, `/ca/` | 4 |
-| Service | each service × country | about 80 |
+| Hub | `/uk/`, `/cross-border/` | 2 |
+| Service | one per service | about 30 |
 | Location | city and area pages | about 15 |
 | Cross-border | country-pair pages | about 12 |
 | Guide / article | resource hub | about 50 |
@@ -291,7 +293,7 @@ The whole site is built from 9 templates and about 20 reusable sections from the
 **Service page anatomy (top to bottom)**
 
 1. Breadcrumb + uppercase eyebrow label ("TAX · UNITED KINGDOM").
-2. **H1 with the main keyword**, e.g. "Self Assessment Accountants for London and France" (UK accounting and tax pages) or "Business Loans in London and across the UK" (lending pages, which do not target France).
+2. **H1 with the main keyword**, e.g. "Self assessment accountants in London and across the UK".
 3. **Answer-first summary (40–60 words):** what we do, for whom, the price "from", and turnaround. This is the paragraph AI engines quote.
 4. Primary call to action (book / call), plus trust row: rating, reviews count, accreditations.
 5. "Who this is for": 4–6 client types as cards.
@@ -322,14 +324,13 @@ Every item below is built into the templates, so each new page is correct by def
 - [ ] Self-referencing canonical tag on every page
 - [ ] Open Graph + Twitter card tags with a 1200×630 share image per page
 - [ ] Descriptive alt text on every image, and descriptive file names (`self-assessment-accountant-london.avif`)
-- [ ] `lang` attribute set correctly per page (`en-GB`, `fr-FR`, `en-US`, `en-CA`, `fr-CA`)
+- [ ] `lang` attribute set to `en-GB` on every page
 
-**International (hreflang)**
+**International**
 
-- [ ] Each page lists all of its language/country versions, plus itself, plus `x-default` pointing to the UK version
-- [ ] Return tags are reciprocal (A points to B and B to A). Validated in the build
-- [ ] No automatic redirects by IP or browser language. A visible country switcher instead (auto-redirects stop Googlebot, which crawls from the US, from seeing UK pages)
-- [ ] Local formats: £ / € / US$ / CA$, date formats, phone formats, spelling (organisation vs organization)
+- [ ] No hreflang: one language and one version of each page
+- [ ] No automatic redirects by IP or browser language, so visitors and Googlebot (which crawls from the US) see the same page
+- [ ] No other country named in copy, schema, menus or links (Severin is registered in the UK only)
 
 **Structured data (JSON-LD)**
 
@@ -359,7 +360,7 @@ Every item below is built into the templates, so each new page is correct by def
 
 - [ ] HTTPS only, HSTS, modern TLS, security headers (CSP, X-Content-Type-Options, Referrer-Policy)
 - [ ] Cookie banner that is GDPR/PECR compliant and loads no tracking before consent (Google Consent Mode v2)
-- [ ] Accessibility at WCAG 2.2 AA: keyboard navigation, focus states, contrast, form labels. This is good for SEO, and the law in France and the EU
+- [ ] Accessibility at WCAG 2.2 AA: keyboard navigation, focus states, contrast, form labels. This is good for SEO, and expected under the Equality Act 2010
 
 ## GEO: getting cited by AI search
 
@@ -381,14 +382,14 @@ AI engines (ChatGPT, Perplexity, Google AI Overviews and AI Mode, Gemini, Copilo
 
 **3. Become a known entity**
 
-- Use the exact same name, address and phone (NAP) on every profile: Google Business Profile, Bing Places, Apple Business Connect, LinkedIn, Companies House, Crunchbase, Trustpilot, Yell, Clutch, plus French, US and Canadian directories.
+- Use the exact same name, address and phone (NAP) on every profile: Google Business Profile, Bing Places, Apple Business Connect, LinkedIn, Companies House, Crunchbase, Trustpilot, Yell, Clutch.
 - Organization schema with `sameAs` linking every profile. Create a Wikidata item once there is independent press coverage to cite.
 - Get mentioned on the pages AI engines read for "best accountant in London": listicles, comparison sites, Reddit (r/UKPersonalFinance, r/smallbusinessuk, r/expats, r/AmerExit), Quora, and industry press. Answer as a named expert, without spam.
-- **Publish original data once or twice a year.** For example, "UK Small Business Tax Pain Index 2027" or "What French founders in London pay in tax". Unique statistics are what journalists and AI engines cite.
+- **Publish original data once or twice a year.** For example, "UK Small Business Tax Pain Index 2027" or "What it costs to run a UK company from abroad". Unique statistics are what journalists and AI engines cite.
 
 **4. Measure AI visibility monthly**
 
-- A fixed list of 50 prompts per market ("best accountant for French expats in London", "how to set up a UK company from France"), run monthly in ChatGPT, Perplexity, Gemini, Copilot and Google AI Mode. Record whether Severin is cited or mentioned.
+- A fixed list of 50 prompts per market ("best accountant in London for small business", "how to set up a UK company from abroad"), run monthly in ChatGPT, Perplexity, Gemini, Copilot and Google AI Mode. Record whether Severin is cited or mentioned.
 - Tools to automate this: Semrush AI Toolkit, Ahrefs Brand Radar, Profound or Peec AI.
 - In GA4, track AI referral traffic (chatgpt.com, perplexity.ai, gemini.google.com, copilot.microsoft.com, claude.ai) as its own channel.
 
@@ -400,24 +401,24 @@ We will publish 8–12 new pieces a month and refresh 4–6 existing ones. Timin
 
 | Pillar | Formats | Example titles |
 | --- | --- | --- |
-| Deadlines and rates (evergreen, refreshed yearly) | Tax calendars, rate tables, threshold pages | "UK Tax Deadlines 2026/27", "Corporation Tax Rates 2026", "Calendrier fiscal 2027" |
-| How-to guides | Step-by-step guides with screenshots | "How to File a Late Self Assessment", "How to Register for VAT", "How to Form a US LLC from the UK" |
-| Decisions | Comparisons, "X vs Y" | "Sole Trader vs Limited Company", "SASU ou LTD anglaise ?", "LLC vs S Corp" |
-| Cross-border | Country-pair explainers | "UK–France Double Tax Treaty Explained", "Moving from Canada to the UK: Tax Checklist" |
+| Deadlines and rates (evergreen, refreshed yearly) | Tax calendars, rate tables, threshold pages | "UK Tax Deadlines 2026/27", "Corporation Tax Rates 2026" |
+| How-to guides | Step-by-step guides with screenshots | "How to File a Late Self Assessment", "How to Register for VAT", "How to File a UK Tax Return from Abroad" |
+| Decisions | Comparisons, "X vs Y" | "Sole Trader vs Limited Company", "UK Branch or UK Subsidiary?" |
+| Clients abroad | UK-side explainers | "UK Tax When You Move Abroad: Checklist", "Selling UK Property as a Non-Resident" |
 | Finance | Lending explainers, rate guides | "Business Loan Rates UK 2026", "Invoice Finance vs Overdraft" |
 | Tools | Calculators (static HTML + a few lines of JS, only on that page) | Take-home pay, dividend vs salary, VAT, corporation tax, loan repayment |
-| Proof | Case studies, original surveys | "How a French café owner in London cut tax by £12,400" (real numbers, with permission) |
-| Glossary | One short page per term | "What is a UTR?", "What is a CT600?", "Qu'est-ce que la liasse fiscale ?" |
+| Proof | Case studies, original surveys | "How a café owner in London cut tax by £12,400" (real numbers, with permission) |
+| Glossary | One short page per term | "What is a UTR?", "What is a CT600?", "What is the Non-Resident Landlord Scheme?" |
 
 **Seasonal calendar (when to publish and refresh)**
 
-| Month | UK | France | US | Canada |
-| --- | --- | --- | --- | --- |
-| Oct–Nov | Self assessment push (31 Jan deadline), MTD readiness | Year-end tax planning | Year-end planning, Q4 estimates | Year-end planning |
-| Dec–Jan | Self assessment peak, late-filing pages | Préparation bilan | 1099s, W-2s | RRSP season |
-| Feb–Mar | Tax year end (5 April), dividends, ISA, pensions | Déclaration de revenus prep | Filing season, FBAR, extensions | Personal returns (30 April) |
-| Apr–May | New tax year rates, P60s | Déclaration de revenus peak (May–June) | 15 April deadline, extensions | Self-employed (15 June) |
-| Jun–Sep | MTD quarters, payments on account (31 July) | Liasse fiscale, TVA | Expat deadline (15 June), Q2/Q3 estimates | T2 corporate deadlines |
+| Month | UK |
+| --- | --- |
+| Oct–Nov | Self assessment push (31 Jan deadline), MTD readiness |
+| Dec–Jan | Self assessment peak, late-filing pages |
+| Feb–Mar | Tax year end (5 April), dividends, ISA, pensions |
+| Apr–May | New tax year rates, P60s |
+| Jun–Sep | MTD quarters, payments on account (31 July) |
 
 **Quality standards (YMYL: "Your Money or Your Life" topics get extra scrutiny from Google)**
 
@@ -434,18 +435,18 @@ Target 15–30 quality referring domains a month, all earned through relevance. 
 
 | Tactic | Targets | Links per month |
 | --- | --- | --- |
-| Citations and directories | Google Business Profile, Bing Places, Apple Business Connect, Yell, Thomson Local, Scoot, FreeIndex, Clutch, Trustpilot, Crunchbase. France: PagesJaunes. US: Yelp, BBB. Canada: Yellow Pages Canada | 10–20 at setup, then upkeep |
-| Software partner directories | Xero Advisor Directory, QuickBooks ProAdvisor, FreeAgent, Sage, Dext, Pennylane (France) | 4–6 total |
-| Professional bodies and chambers | CIMA member directory, CCI France Grande-Bretagne (French Chamber in the UK), French Tech London, AmCham UK, Canada-UK Chamber of Commerce, British Chambers of Commerce, London Chamber of Commerce | 1–2 |
+| Citations and directories | Google Business Profile, Bing Places, Apple Business Connect, Yell, Thomson Local, Scoot, FreeIndex, Clutch, Trustpilot, Crunchbase | 10–20 at setup, then upkeep |
+| Software partner directories | Xero Advisor Directory, QuickBooks ProAdvisor, FreeAgent, Sage, Dext | 4–6 total |
+| Professional bodies and chambers | CIMA member directory, British Chambers of Commerce, London Chamber of Commerce | 1–2 |
 | Expert commentary | Answer journalist requests via Qwoted, Featured, ResponseSource (UK), #journorequest on X, Source of Sources. Topics: Budget day, deadlines, tax changes | 3–8 |
-| Data-led digital PR | 2 original studies a year (survey of 500 SMEs, regional tax burden map, "cost of an accountant by city") pitched to UK, French and expat press | 20–60 per campaign |
-| Guest articles | Expat sites, French community media in London, start-up blogs, accounting and fintech blogs. One expert article a month, real value, no spun content | 1–2 |
+| Data-led digital PR | 2 original studies a year (survey of 500 SMEs, regional tax burden map, "cost of an accountant by city") pitched to UK and expat press | 20–60 per campaign |
+| Guest articles | Expat sites, start-up blogs, accounting and fintech blogs. One expert article a month, real value, no spun content | 1–2 |
 | Partnerships | Banks, lenders, solicitors, estate agents, relocation firms, co-working spaces and start-up accelerators. Mutual "recommended partners" pages and co-written guides | 1–3 |
 | Linkable tools | Free calculators and the tax calendar. Pitch them to resource pages at universities, business schools and councils | 2–4 |
 | Reclamation | Unlinked brand mentions, broken links pointing to dead competitor pages (replace them with our guide) | 1–3 |
 | Podcasts and events | Guest on founder, expat and finance podcasts. Speak at chamber and co-working events | 1–2 |
 
-**Anchor text mix (natural profile):** about 50% brand or URL, 25% generic ("this guide", "here"), 15% partial match ("accountant for French expats"), and under 10% exact match.
+**Anchor text mix (natural profile):** about 50% brand or URL, 25% generic ("this guide", "here"), 15% partial match ("accountant for UK expats abroad"), and under 10% exact match.
 
 **Local SEO**
 
@@ -457,7 +458,7 @@ Target 15–30 quality referring domains a month, all earned through relevance. 
 
 ## Performance, tech stack and responsiveness
 
-We will build a static site with Astro and serve it from Cloudflare's global edge network. Pages are pre-built HTML with no framework JavaScript, so they load in under a second on 4G in London, Paris, New York or Toronto.
+We will build a static site with Astro and serve it from Cloudflare's global edge network. Pages are pre-built HTML with no framework JavaScript, so they load in under a second on 4G in London, Manchester, Edinburgh or anywhere abroad.
 
 **Stack**
 
@@ -510,14 +511,11 @@ Finance is a "Your Money or Your Life" category. Google ranks it on visible expe
 | Market | Must appear on the site | Watch out for |
 | --- | --- | --- |
 | UK | Registered company name, number and office (Companies Act). FCA firm reference number on lending pages, plus status: direct lender, credit broker or introducer. ICO registration number. AML supervisor (e.g. CIMA or HMRC) | Lending ads must be "clear, fair and not misleading" (FCA). Consumer credit (sole traders, small partnerships) needs representative examples. The current "Max refunds guaranteed" claim needs evidence, or removal, under the ASA advertising code |
-| France | Mentions légales (required by the LCEN law), RGPD privacy notice, cookie consent per CNIL rules | Protected "expert-comptable" title and bookkeeping monopoly: describe services as UK/cross-border advice, or partner with a registered French firm. Credit intermediary rules (ORIAS registration) for lending |
-| US | Privacy policy (CCPA/CPRA for California visitors), disclaimers on tax content | "CPA" only if licensed. FTC rules on testimonials and endorsements. State lending and broker licensing |
-| Canada | Privacy policy (PIPEDA, Quebec Law 25), French content for Quebec | "CPA" protected by province. CASL consent for marketing emails |
 | All | Accessibility statement, terms of use, complaints procedure | Fake or incentivised reviews are illegal in the UK under the DMCC Act 2024. Only genuine reviews, never gated |
 
 **Trust signals on the page**
 
-- Team page with real photos, full names, qualifications (CIMA, ACCA, CPA, etc.), years of experience, LinkedIn, languages spoken (English and French is a selling point).
+- Team page with real photos, full names, qualifications (CIMA, ACCA, CTA, etc.), years of experience, LinkedIn and languages spoken.
 - Author and "reviewed by" boxes on every guide and service page.
 - Accreditation and software partner badges, each linking to the verification page.
 - Reviews with an aggregate rating pulled from Google and Trustpilot. Case studies with permission and real figures.

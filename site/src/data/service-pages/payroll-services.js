@@ -26,8 +26,8 @@ export default {
     'payroll bureau', 'PAYE payroll services', 'auto enrolment pension', 'payroll setup services',
     'payroll services pricing',
   ],
-  title: 'Payroll Services London & France | Severin Finance',
-  description: 'UK payroll services for London and France: RTI, payslips, auto-enrolment pensions, P60s and P11Ds handled for a fixed fee per employee. Free quote.',
+  title: 'Payroll Services London & UK-wide | Severin Finance',
+  description: 'UK payroll services in London and across the UK: RTI, payslips, auto-enrolment pensions, P60s and P11Ds handled for a fixed fee per employee. Free quote.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -38,15 +38,15 @@ export default {
   service: {
     name: 'Payroll service',
     serviceType: 'Outsourced payroll, RTI and auto-enrolment',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Payroll',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK accounting · Payroll',
-    h1: 'Payroll services for London and France',
-    answer: 'Our payroll services run your UK payroll every week or month for a fixed fee per employee, for employers in London and across the UK, and for French companies with UK staff. We calculate pay, tax, National Insurance and pension, send Real Time Information to HMRC on time, and handle payslips, P60s and P11Ds.',
+    h1: 'Payroll services in London and across the UK',
+    answer: 'Our payroll services run your UK payroll every week or month for a fixed fee per employee, for employers in London and across the UK, and for overseas companies with UK staff. We calculate pay, tax, National Insurance and pension, send Real Time Information to HMRC on time, and handle payslips, P60s and P11Ds.',
     image: hero,
     imageAlt: 'Payroll manager in a pink top smiling at her desk in a colourful office',
     price: { from: '£XXX', note: 'per employee a month', tbc: true },
@@ -215,8 +215,7 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/stratford/', 'Stratford'],
       ['/uk/birmingham/', 'Birmingham'],
-      ['/fr/', 'France'],
-      ['/fr/londres/', 'Français à Londres'],
+      ['/uk/manchester/', 'Manchester'],
     ] },
     { title: 'Guides', links: [
       ['/resources/employer-payroll-deadlines/', 'Employer payroll deadlines'],

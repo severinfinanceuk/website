@@ -26,8 +26,8 @@ export default {
     'registered office services', 'statutory registers', 'PSC register', 'change of director Companies House',
     'Companies House identity verification',
   ],
-  title: 'Company Secretarial Services London & France',
-  description: 'Company secretarial services for London and France: confirmation statements, director and PSC changes, registers and ID checks. Fixed fee.',
+  title: 'Company Secretarial Services London & UK | Severin Finance',
+  description: 'Company secretarial services in London and across the UK: confirmation statements, director and PSC changes, registers and ID checks. Fixed fee.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -38,15 +38,15 @@ export default {
   service: {
     name: 'Company secretarial service',
     serviceType: 'Company secretarial and Companies House filing',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Company secretarial',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Company services · Company secretarial',
-    h1: 'Company secretarial services for London and France',
-    answer: 'Our company secretarial services keep your UK company up to date at Companies House, whether its directors are in London, elsewhere in the UK or in France. We file your confirmation statement, report changes to directors, shareholders and people with significant control, and track identity verification. A missed confirmation statement can mean a fine of up to £5,000.',
+    h1: 'Company secretarial services in London and across the UK',
+    answer: 'Our company secretarial services keep your UK company up to date at Companies House, whether its directors are in London, elsewhere in the UK or abroad. We file your confirmation statement, report changes to directors, shareholders and people with significant control, and track identity verification. A missed confirmation statement can mean a fine of up to £5,000.',
     image: hero,
     imageAlt: 'Two company directors giving each other a high five across a desk covered in paperwork in a bright brick-walled office',
     price: { from: '£XXX', note: 'a year', tbc: true },
@@ -206,8 +206,7 @@ export default {
       ['/uk/london/westminster/', 'Westminster'],
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/manchester/', 'Manchester'],
-      ['/fr/', 'France'],
-      ['/fr/londres/', 'Français à Londres'],
+      ['/uk/birmingham/', 'Birmingham'],
     ] },
     { title: 'Guides', links: [
       ['/resources/confirmation-statement-guide/', 'Confirmation statement guide'],

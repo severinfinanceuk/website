@@ -10,14 +10,6 @@ const navAfter = [
   { href: '/resources/', label: 'Guides' },
   { href: '/about/', label: 'About' },
 ];
-const markets = [
-  { href: '/uk/', code: 'UK', name: 'United Kingdom', current: true },
-  { href: '/fr/', code: 'FR', name: 'France (français)' },
-  { href: '/us/', code: 'US', name: 'United States' },
-  { href: '/ca/', code: 'CA', name: 'Canada' },
-  { href: '/au/', code: 'AU', name: 'Australia' },
-];
-const current = markets.find((m) => m.current) ?? markets[0];
 const chevron = '<svg viewBox="0 0 10 6" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" d="m1 1 4 4 4-4"/></svg>';
 ---
 <header class="site-header">
@@ -57,13 +49,13 @@ const chevron = '<svg viewBox="0 0 10 6" aria-hidden="true"><path fill="none" st
           <div class="container mega-grid">
             {locations.map((c) => (
               <div class={c.code === 'UK' ? 'mega-col mega-uk' : 'mega-col'}>
-                <a class="mega-country" href={c.href} hreflang={c.lang}><span class="cc">{c.code}</span>{c.country}</a>
+                <a class="mega-country" href={c.href}><span class="cc">{c.code}</span>{c.country}</a>
                 {c.groups.map((g) => (
                   <div class="mega-group">
                     {g.title && (g.href ? <a class="mega-sub" href={g.href}>{g.title}</a> : <span class="mega-sub">{g.title}</span>)}
                     <ul role="list">
-                      {g.items.map(([label, href, lang]) => (
-                        <li><a href={href} hreflang={lang ?? c.lang} lang={label === 'Français à Londres' ? 'fr' : undefined}>{label}</a></li>
+                      {g.items.map(([label, href]) => (
+                        <li><a href={href}>{label}</a></li>
                       ))}
                     </ul>
                   </div>
@@ -78,17 +70,6 @@ const chevron = '<svg viewBox="0 0 10 6" aria-hidden="true"><path fill="none" st
     </nav>
 
     <div class="header-actions">
-      <!-- Country picker: native <details>, no JavaScript -->
-      <details class="country" name="header-pop">
-        <summary aria-label={`${current.code}: change country (now ${current.name})`}>{current.code}<Fragment set:html={chevron} /></summary>
-        <nav class="country-panel" aria-label="Country">
-          <ul role="list">
-            {markets.map((m) => (
-              <li><a href={m.href} hreflang={m.code === 'FR' ? 'fr-FR' : undefined} aria-current={m.current ? 'true' : undefined}><span class="cc">{m.code}</span>{m.name}</a></li>
-            ))}
-          </ul>
-        </nav>
-      </details>
       <a class="btn btn-fill btn-sm header-cta" href="/contact/">Book a free consultation</a>
 
       <details class="menu">
@@ -117,13 +98,13 @@ const chevron = '<svg viewBox="0 0 10 6" aria-hidden="true"><path fill="none" st
                 <div class="m-loc-body">
                   {locations.map((c) => (
                     <div class="m-loc-country">
-                      <a class="mega-country" href={c.href} hreflang={c.lang}><span class="cc">{c.code}</span>{c.country}</a>
+                      <a class="mega-country" href={c.href}><span class="cc">{c.code}</span>{c.country}</a>
                       <ul class="m-chips" role="list">
                         {c.groups.flatMap((g) => [
                           ...(g.href ? [[g.title, g.href]] : []),
                           ...g.items,
-                        ]).map(([label, href, lang]) => (
-                          <li><a href={href} hreflang={lang ?? c.lang} lang={label === 'Français à Londres' ? 'fr' : undefined}>{label}</a></li>
+                        ]).map(([label, href]) => (
+                          <li><a href={href}>{label}</a></li>
                         ))}
                       </ul>
                     </div>
@@ -136,11 +117,6 @@ const chevron = '<svg viewBox="0 0 10 6" aria-hidden="true"><path fill="none" st
             <li><a href="/contact/">Contact<span aria-hidden="true">→</span></a></li>
           </ul>
           <div class="menu-foot">
-            <nav class="lang" aria-label="Country (mobile)">
-              {markets.map((m) => (
-                <a href={m.href} aria-current={m.current ? 'true' : undefined}>{m.code}</a>
-              ))}
-            </nav>
             <a class="btn btn-fill" href="/contact/">Book a free consultation</a>
             <a class="btn" href="tel:+442045422488">020 4542 2488</a>
           </div>

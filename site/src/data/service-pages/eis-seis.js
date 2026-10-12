@@ -27,7 +27,7 @@ export default {
     'EIS1 compliance statement', 'SEIS1', 'knowledge-intensive company EIS', 'EIS tax relief',
   ],
   title: 'EIS and SEIS Advance Assurance | Severin Finance',
-  description: 'EIS and SEIS advance assurance for startups in London, the UK and France. We check eligibility, apply to HMRC and file your EIS1 or SEIS1.',
+  description: 'EIS and SEIS advance assurance for startups in London and across the UK. We check eligibility, apply to HMRC and file your EIS1 or SEIS1.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -38,15 +38,15 @@ export default {
   service: {
     name: 'EIS and SEIS advance assurance and compliance service',
     serviceType: 'EIS and SEIS tax relief applications',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'EIS and SEIS',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Company services · EIS and SEIS',
-    h1: 'EIS and SEIS advance assurance for London and France',
-    answer: 'EIS and SEIS give your investors income tax relief of 30% or 50% on what they invest in your company. We check your company qualifies, apply to HMRC for advance assurance before you raise and file the EIS1 or SEIS1 afterwards, for founders in London, across the UK and in France.',
+    h1: 'EIS and SEIS advance assurance in London and across the UK',
+    answer: 'EIS and SEIS give your investors income tax relief of 30% or 50% on what they invest in your company. We check your company qualifies, apply to HMRC for advance assurance before you raise and file the EIS1 or SEIS1 afterwards, for founders in London, across the UK and abroad.',
     image: hero,
     imageAlt: 'Three startup founders working with laptops and papers at a shared table in a bright office with a colourful geometric wall',
     price: { from: '£XXX', note: 'fixed fee for advance assurance', tbc: true },
@@ -206,8 +206,7 @@ export default {
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/london/islington/', 'Islington'],
       ['/uk/cambridge/', 'Cambridge'],
-      ['/fr/', 'France'],
-      ['/fr/londres/', 'Français à Londres'],
+      ['/uk/manchester/', 'Manchester'],
     ] },
     { title: 'Guides', links: [
       ['/resources/seis-advance-assurance-guide/', 'SEIS advance assurance guide'],

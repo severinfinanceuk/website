@@ -9,7 +9,7 @@ interface Props {
   lang?: string;
   schema?: object[];
   ogImage?: string;                                  // absolute URL, 1200×630
-  alternates?: { hreflang: string; href: string }[]; // language twins (e.g. the French page)
+  alternates?: { hreflang: string; href: string }[]; // language twins, if a page ever gets one
 }
 
 const { title, description, lang = 'en-GB', schema = [], ogImage, alternates = [] } = Astro.props;

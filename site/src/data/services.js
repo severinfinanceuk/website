@@ -2,7 +2,8 @@
 // mega-menu (desktop and mobile) and, later, the service hub pages.
 // Groups follow docs/01-master-plan.md (UK keyword clusters). Each slug is the page's main
 // commercial keyword (docs/03-service-page-template.md), e.g. /uk/tax/self-assessment-accountant/.
-// UK services for now; country service lists (France, US, Canada...) come with their country hubs.
+// UK services only: Severin is registered in the UK. Clients abroad are served through UK work
+// (non-resident tax, UK companies run from abroad), without naming other countries.
 
 export const services = [
   {
@@ -52,12 +53,8 @@ export const services = [
     ],
   },
   {
-    title: 'Cross-border', href: '/cross-border/',
+    title: 'Clients abroad', href: '/cross-border/',
     items: [
-      ['UK ↔ France', '/cross-border/uk-france-tax/'],
-      ['US expat tax', '/us/expat-tax/'],
-      ['Canada ↔ UK', '/ca/canada-uk-tax/'],
-      ['Australia ↔ UK', '/au/australia-uk-tax/'],
       ['Non-resident UK tax', '/cross-border/non-resident-uk-tax/'],
       ['UK company from abroad', '/cross-border/uk-company-from-abroad/'],
     ],

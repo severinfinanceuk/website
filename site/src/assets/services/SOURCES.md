@@ -31,19 +31,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | asset-finance-dental-chair.jpg | 1000 × 625 | Atikah Akhtar | https://unsplash.com/photos/1598256989800-fe5f95da9787 |
 | asset-finance-reviewing-documents.jpg | 1400 × 788 | Olena Kholina | https://unsplash.com/photos/1775163024488-e88e4a71179f |
 
-## australia-uk/ (page: /au/australia-uk-tax/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| australia-uk-tax-sydney-sunset-couple.jpg | 1800 × 1200 | Henry Chen | https://unsplash.com/photos/1722253803437-a33c1dc66dd3 |
-| australia-uk-tax-moving-beach-couple.jpg | 1000 × 625 | Annie Spratt | https://unsplash.com/photos/1690187256229-e1fe4b82f9f6 |
-| australia-uk-tax-australians-london-tower-bridge.jpg | 1000 × 625 | Marek Rucinski | https://unsplash.com/photos/1559304822-d83aa9ad66da |
-| australia-uk-tax-pension-transfer-retirees.jpg | 1000 × 625 | Hector Reyes | https://unsplash.com/photos/1625690987114-86f5af994b49 |
-| australia-uk-tax-selling-home-keys.jpg | 1000 × 625 | Jakub Żerdzicki | https://unsplash.com/photos/1759428679273-11d914866394 |
-| australia-uk-tax-returning-uk-airport.jpg | 1000 × 625 | Cameron Cox | https://unsplash.com/photos/1687992176093-6417a93fa3d0 |
-| australia-uk-tax-uk-landlord-laptop.jpg | 1000 × 625 | bruce mars | https://unsplash.com/photos/1533229613598-751dc97ec35f |
-| australia-uk-tax-online-meeting-at-home.jpg | 1400 × 788 | Surface | https://unsplash.com/photos/1648737965402-2b9c3f3eaa6f |
-
 ## bookkeeping/ (page: /uk/accounting/bookkeeping-services/)
 
 | File | Size | Photographer | Source |
@@ -95,19 +82,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | gifting-shares-valuation-father-daughter.jpg | 1000 × 625 | The Unmistakables | https://unsplash.com/photos/1653656121092-33a6c3a78973 |
 | raising-investment-company-valuation-boardroom-pitch.jpg | 1000 × 625 | Christina @ wocintechchat.com M | https://unsplash.com/photos/1573167507387-6b4b98cb7c13 |
 | business-valuation-analysts-laptop-review.jpg | 1400 × 788 | Vitaly Gariev | https://unsplash.com/photos/1758876203026-99a024dc43b9 |
-
-## canada-uk/ (page: /ca/canada-uk-tax/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| canada-uk-tax-toronto-waterfront.jpg | 1800 × 1200 | Sandro Schuh | https://unsplash.com/photos/1517090504586-fde19ea6066f |
-| canada-uk-tax-moving-couple-boxes.jpg | 1000 × 625 | Vitaly Gariev | https://unsplash.com/photos/1758523670991-ee93bc48d81d |
-| canada-uk-tax-canadians-london-street.jpg | 1000 × 625 | Tamara Menzi | https://unsplash.com/photos/1470215645605-f2afbb72eedb |
-| canada-uk-tax-leaving-canada-flag.jpg | 1000 × 625 | Devon Hawkins | https://unsplash.com/photos/1593478210686-8ec9852cff87 |
-| canada-uk-tax-retirees-pension-papers.jpg | 1000 × 625 | Vitaly Gariev | https://unsplash.com/photos/1758691031749-607d43c14f63 |
-| canada-uk-tax-rental-property-keys.jpg | 1000 × 625 | Jakub Żerdzicki | https://unsplash.com/photos/1746682975155-ae1cce0853a3 |
-| canada-uk-tax-investors-laptop.jpg | 1000 × 625 | Vitaly Gariev | https://unsplash.com/photos/1713947505013-16bcf315e29f |
-| canada-uk-tax-video-call-consultation.jpg | 1400 × 788 | Vitaly Gariev | https://unsplash.com/photos/1752650733337-cb0189176fb9 |
 
 ## capital-gains-tax/ (page: /uk/tax/capital-gains-tax-accountant/)
 
@@ -368,32 +342,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | uk-company-from-abroad-handshake-uk-branch.jpg | 1000 × 625 | Sebastian Herrmann | https://unsplash.com/photos/1549923746-c502d488b3ea |
 | uk-company-from-abroad-london-mews-property.jpg | 1000 × 625 | Bruno Martins | https://unsplash.com/photos/1510265119258-db115b0e8172 |
 | uk-company-from-abroad-signing-documents.jpg | 1400 × 788 | Carrie Allen | https://unsplash.com/photos/1642522029691-029b5a432954 |
-
-## uk-france/ (page: /cross-border/uk-france-tax/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| uk-france-tax-paris-cafe-terrace.jpg | 1800 × 1200 | Xenia Bunina | https://unsplash.com/photos/1671485429799-249e8acb2ee6 |
-| uk-france-tax-french-woman-london-thames.jpg | 1000 × 625 | Laura Chouette | https://unsplash.com/photos/1588186940539-181b1ba56d2f |
-| uk-france-tax-french-house-bougainvillea.jpg | 1000 × 625 | Noémie Chassé | https://unsplash.com/photos/1779667953966-49969275689a |
-| uk-france-tax-london-colourful-street.jpg | 1000 × 625 | Loris Boulinguez | https://unsplash.com/photos/1694501522675-ceb1ab66b105 |
-| uk-france-tax-traveller-train-platform.jpg | 1000 × 625 | Ali Aksu | https://unsplash.com/photos/1740152564711-81130fc0e248 |
-| uk-france-tax-remote-worker-laptop.jpg | 1000 × 625 | Thought Catalog | https://unsplash.com/photos/1524508762098-fd966ffb6ef9 |
-| uk-france-tax-retired-couple-cafe.jpg | 1000 × 625 | Matt Seymour | https://unsplash.com/photos/1563132164-9868945f2693 |
-| uk-france-tax-adviser-meeting.jpg | 1400 × 788 | Christina @ wocintechchat.com M | https://unsplash.com/photos/1573497620053-ea5300f94f21 |
-
-## us-expat/ (page: /us/expat-tax/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| us-expat-tax-london-thames-woman.jpg | 1800 × 1200 | Collins Lesulie | https://unsplash.com/photos/1520095618436-db56a97990e1 |
-| us-expat-tax-american-working-london.jpg | 1000 × 625 | Marek Mucha | https://unsplash.com/photos/1632321924149-573d07a3b7d5 |
-| us-expat-tax-dual-citizen-passports.jpg | 1000 × 625 | Global Residence Index | https://unsplash.com/photos/1655722724447-2d2a3071e7f8 |
-| us-expat-tax-catch-up-filing-letter.jpg | 1000 × 625 | Vitaly Gariev | https://unsplash.com/photos/1758523419018-b3a112f7f770 |
-| us-expat-tax-isa-pension-couple.jpg | 1000 × 625 | Vitaly Gariev | https://unsplash.com/photos/1758522487963-1b193a2837fd |
-| us-expat-tax-self-employed-laptop.jpg | 1000 × 625 | Kyle Loftus | https://unsplash.com/photos/1545184180-25d471fe75eb |
-| us-expat-tax-moving-suitcase.jpg | 1000 × 625 | Danijela Prijovic | https://unsplash.com/photos/1572358707000-39729872feba |
-| us-expat-tax-accountant-consultation.jpg | 1400 × 788 | Christina @ wocintechchat.com M | https://unsplash.com/photos/1573496267526-08a69e46a409 |
 
 ## vat/ (page: /uk/tax/vat-accountant/)
 

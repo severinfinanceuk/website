@@ -1,12 +1,9 @@
-# Country card photos
+# Place card photos
 
-All five are public domain or CC0 on Wikimedia Commons: free for commercial use, no credit required.
-Stored centre-cropped to 1080 × 720 (3:2); Astro resizes them at build time (AVIF + WebP + JPG fallback; 360/540/720 px, plus 1080 px for the larger UK and France cards).
+Public domain or CC0 on Wikimedia Commons: free for commercial use, no credit required.
+Stored centre-cropped to 1080 × 720 (3:2); Astro resizes them at build time (AVIF + WebP + JPG fallback; 360/540/720/1080 px).
+The home page "Where we work" cards also reuse two service photos (non-resident, UK company from abroad) and one company formation photo; their credits are in `../services/SOURCES.md`.
 
 | File | Source | Licence |
 |---|---|---|
 | london.jpg | https://commons.wikimedia.org/wiki/File:Palace_of_Westminster_as_seen_from_Westminster_Bridge.jpg | CC0 |
-| paris.jpg | https://commons.wikimedia.org/wiki/File:La_Seine_et_Notre-Dame.jpg | CC0 |
-| new-york.jpg | https://commons.wikimedia.org/wiki/File:Lower_Manhattan_Aerial.JPG | Public domain |
-| toronto.jpg | https://commons.wikimedia.org/wiki/File:Skyline_Toronto.JPG | Public domain |
-| sydney.jpg | https://commons.wikimedia.org/wiki/File:Sydney_Australia._(21339175489).jpg | CC0 |

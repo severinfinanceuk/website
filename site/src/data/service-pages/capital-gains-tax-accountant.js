@@ -27,8 +27,8 @@ export default {
     'crypto tax accountant', 'Business Asset Disposal Relief', 'private residence relief',
     'capital gains tax rates 2026/27', 'non-resident capital gains tax',
   ],
-  title: 'Capital Gains Tax Accountants London & France',
-  description: 'Capital gains tax accountants for London and France: we work out your CGT on property, shares, crypto or a business sale and report it to HMRC.',
+  title: 'Capital Gains Tax Accountants London & UK | Severin Finance',
+  description: 'Capital gains tax accountants in London and across the UK: we work out your CGT on property, shares, crypto or a business sale and report it to HMRC.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -39,15 +39,15 @@ export default {
   service: {
     name: 'Capital gains tax service',
     serviceType: 'Capital gains tax calculation, planning and reporting',
-    areaServed: [['Country', 'United Kingdom'], ['City', 'London'], ['Country', 'France'], ['Country', 'United States'], ['Country', 'Canada'], ['Country', 'Australia']],
+    areaServed: [['Country', 'United Kingdom'], ['City', 'London']],
   },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'UK tax · Capital gains tax',
-    h1: 'Capital gains tax accountants for London and France',
-    answer: 'Our capital gains tax accountants work out what you owe when you sell property, shares, crypto or a business, claim every relief and report the gain to HMRC, whether you live in London, elsewhere in the UK or in France. For 2026/27, gains above the £3,000 allowance are taxed at 18% or 24%.',
+    h1: 'Capital gains tax accountants in London and across the UK',
+    answer: 'Our capital gains tax accountants work out what you owe when you sell property, shares, crypto or a business, claim every relief and report the gain to HMRC, whether you live in London, elsewhere in the UK or abroad. For 2026/27, gains above the £3,000 allowance are taxed at 18% or 24%.',
     image: hero,
     imageAlt: 'Excited couple reading a letter together in a bright blue kitchen at home',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -190,7 +190,7 @@ export default {
     { q: 'Do I need to file a self assessment return for capital gains?', a: 'Yes, if you have capital gains tax to pay and do not use HMRC’s real time CGT service. The real time service lets you report by 31 December after the tax year. UK property sales also need the separate 60-day return.' },
     { q: 'How can I reduce capital gains tax legally?', a: 'Use the £3,000 allowance each year, hold shares in an ISA, and check reliefs before you sell. Transfers to a spouse or civil partner are usually tax-free, so couples can use two allowances and two basic rate bands. Business owners may qualify for Business Asset Disposal Relief.' },
     { q: 'How much does a capital gains tax accountant cost?', a: 'Our fixed fees start at £XXX for a few share sales. A property sale with a 60-day return, crypto or a business sale costs more. You get the exact fee in writing after a free consultation, before any work starts.', tbc: true },
-    { q: 'Can you help if I live abroad?', a: 'Yes. We file non-resident capital gains tax returns for UK property and land, and work with UK expats in France, the United States, Canada and Australia.' },
+    { q: 'Can you help if I live abroad?', a: 'Yes. We file non-resident capital gains tax returns for UK property and land, wherever you live now.' },
   ],
 
   // ---------- 9. Related links (internal linking) ----------
@@ -209,8 +209,7 @@ export default {
       ['/uk/london/richmond/', 'Richmond'],
       ['/uk/london/canary-wharf/', 'Canary Wharf'],
       ['/uk/manchester/', 'Manchester'],
-      ['/fr/', 'France'],
-      ['/fr/londres/', 'Français à Londres'],
+      ['/uk/birmingham/', 'Birmingham'],
     ] },
     { title: 'Guides', links: [
       ['/resources/capital-gains-tax-on-property/', 'Capital gains tax on property'],

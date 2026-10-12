@@ -1,6 +1,6 @@
 # Severin Finance: new website
 
-The rebuild of [severinfinance.com](https://severinfinance.com/) is a fast, static and SEO/GEO-focused site for an accounting and lending firm in London. It targets London and France first, then the rest of the UK, the United States, Canada and Australia. The design reference is [stoneeg.com](https://stoneeg.com/), with no animations.
+The rebuild of [severinfinance.com](https://severinfinance.com/) is a fast, static and SEO/GEO-focused site for an accounting and lending firm in London. It targets London first, then the whole UK, plus people and companies abroad with UK tax or a UK company. Severin is registered in the UK only, so the site names no other country. The design reference is [stoneeg.com](https://stoneeg.com/), with no animations.
 
 **Start here:** [PROGRESS.md](PROGRESS.md) shows what is done, what is next and what we are waiting for.
 
@@ -29,8 +29,8 @@ Website/
     │   ├── design-notes.md       ← fonts, colours, sizes, sections to copy
     │   └── raw/                  ← home.html, styles.css as downloaded
     └── keywords/
-        ├── keyword-master.csv    ← 667 keywords (UK, France, US, Canada) by cluster, page, priority, source
-        ├── keyword-candidates-it-au.csv ← 85 Italy/Australia keywords, on hold
+        ├── keyword-master.csv    ← 667 keywords by cluster (non-UK rows are research only, out of scope), page, priority, source
+        ├── keyword-candidates-it-au.csv ← 85 Italy/Australia keywords, out of scope
         └── pasted-research-2026-10-09.md ← what the pasted 6-country research added and changed
 ```
 
