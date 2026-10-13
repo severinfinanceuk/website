@@ -1,0 +1,48 @@
+/* Location page template (src/layouts/LocationPage.astro). Loaded only on location pages,
+   on top of service.css (hero, rails, tables, proof, FAQ, related links come from there). */
+
+/* Who we help here: 4 cards. 1000-1199px two by two, 1200px+ one row of four */
+@media (min-width: 1000px) { .sp .rail.rail-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1200px) { .sp .rail.rail-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* Services here: six link cards on white, over the tinted section */
+.lp-svc { display: grid; gap: 12px; }
+.lp-svc a {
+  display: flex; flex-direction: column; gap: 10px; height: 100%;
+  padding: clamp(20px, 2.2vw, 28px); border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--white); text-decoration: none; color: inherit;
+}
+.lp-svc a:hover { border-color: var(--black); }
+.lp-svc h3 { font-size: clamp(1.25rem, 1.15rem + .4vw, 1.5rem); line-height: 1.15; }
+.lp-svc p { color: var(--muted); line-height: 1.5; }
+.lp-svc-more { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 6px; font-weight: 500; }
+.lp-svc-more svg { width: 14px; height: 14px; }
+.lp-svc a:hover .lp-svc-more { text-decoration: underline; }
+@media (min-width: 768px) { .lp-svc { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+@media (min-width: 1000px) { .lp-svc { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+
+/* Areas we cover (hub pages): text link cards */
+.lp-areas { display: grid; gap: 12px; }
+.lp-areas a {
+  display: flex; flex-direction: column; gap: 8px; height: 100%;
+  padding: 20px 22px; border-radius: var(--radius-sm); background: var(--white);
+  text-decoration: none; color: inherit; border: 1px solid var(--line);
+}
+.lp-areas a:hover { border-color: var(--black); }
+.lp-areas h3 { font-size: 1.25rem; line-height: 1.2; }
+.lp-areas h3::after { content: " \2192"; opacity: .45; }
+.lp-areas a:hover h3::after { opacity: 1; }
+.lp-areas p { font-size: .9375rem; color: var(--muted); line-height: 1.45; }
+.lp-area-meta { margin-top: auto; padding-top: 4px; font-size: .8125rem; font-weight: 500; letter-spacing: .04em; color: var(--accent-ink); }
+@media (min-width: 600px) { .lp-areas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .lp-areas { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
+@media (min-width: 1200px) { .lp-areas { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* How we work with you here: steps, then the "where we meet" box */
+.lp-how { display: grid; gap: 16px; }
+.lp-meet { display: grid; gap: 14px; align-content: start; padding: clamp(20px, 2.4vw, 32px); }
+.lp-meet h3 { margin-bottom: 0; }
+.lp-meet > p { line-height: 1.5; }
+.lp-meet .more { margin-top: 6px; }
+.lp .section:not(.sp-tint) .mini-steps li { background: var(--panel); }
+@media (min-width: 1000px) { .lp-how { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 40px; align-items: start; } }

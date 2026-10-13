@@ -13,6 +13,8 @@ UK only. People abroad are reached through the Clients abroad service pages (non
 | 1 | United Kingdom | London, and 11 London areas: City of London, Canary Wharf, Westminster, Kensington, Camden, Islington, Shoreditch, Stratford, Croydon, Richmond, Wimbledon | 12 |
 | 1 | United Kingdom | Manchester, Birmingham, Leeds, Liverpool, Bristol, Brighton, Cambridge, Oxford, Reading, Milton Keynes | 10 |
 
+**Status, 13 Oct 2026: all 24 pages are built** (`/uk/`, `/locations/`, London, 11 London areas, 10 cities). Copy lives in `site/src/data/location-pages/<slug>.js`, rendered by `site/src/layouts/LocationPage.astro`. Each page uses local elements 1, 2, 5, 6, 7 and 8 (no case studies yet), lists its sources, and marks the meeting place, fees and reviewer credentials as tbc.
+
 Later, **service × city pages** (e.g. "Self assessment accountant Manchester") are added only where keyword data shows real demand, starting with London.
 
 ## The one rule that keeps these pages ranking: no doorway pages
@@ -62,7 +64,8 @@ Pages are written by people with local research, not generated from a template s
 
 ## Rules for launch
 
-- **The menu only lists pages that exist.** Before launch each entry in `locations.js` gets a `live` flag, and the menu, footer and hub show only live pages. Linking to missing pages wastes crawl budget and frustrates visitors.
+- **The menu only lists pages that exist.** Every entry in `locations.js` is now built, so no `live` flag is needed yet. Add one before listing a page that is not built. Linking to missing pages wastes crawl budget and frustrates visitors.
+- **Dated facts to refresh:** BID ballot dates (Islington Angel BID 19 Nov 2026, Croydon BID 21 Oct 2026, Love Wimbledon 5 Nov 2026) and the rates, wages and charges tables each April.
 - Publish in waves (London first), 5–10 pages a week, so each batch gets indexed and checked in Search Console before the next.
 - Track every location page in a rank sheet: target keyword, position, clicks and enquiries.
 

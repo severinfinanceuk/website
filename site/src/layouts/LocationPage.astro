@@ -1,0 +1,335 @@
+---
+// Location page template. Every location page is this layout plus one data file
+// (src/data/location-pages/*.js). Section order, top to bottom:
+// hero (answer + CTA) → trust logos → who we help here (local client mix) → services here
+// → local key facts (tables + urgent CTA) → areas we cover (hubs only) → how we work with you
+// → reviews + reviewed by → FAQ → form → nearby places and related links.
+// Every page needs real local content, never a template sentence with the place swapped
+// (docs/02-location-pages-plan.md). Shares its styles with the service pages (service.css).
+import Base from './Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { Image, Picture, getImage } from 'astro:assets';
+import cima from '../assets/logos/cima.png';
+import ciot from '../assets/logos/ciot.png';
+import icpa from '../assets/logos/icpa.png';
+import xero from '../assets/logos/xero.png';
+import intuit from '../assets/logos/intuit.png';
+import '../styles/service.css';
+import '../styles/location.css';
+
+const { page: p } = Astro.props;
+const site = Astro.site.href.replace(/\/$/, '');
+const pageUrl = site + p.url;
+
+const logos = [
+  { img: cima, name: 'CIMA, Chartered Institute of Management Accountants', h: 44 },
+  { img: ciot, name: 'Chartered Institute of Taxation', h: 60 },
+  { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 40 },
+  { img: xero, name: 'Xero', h: 48 },
+  { img: intuit, name: 'Intuit QuickBooks', h: 30 },
+];
+
+// Social share image: the hero photo cropped to 1200×630
+const og = await getImage({ src: p.hero.image, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 70 });
+const ogImage = new URL(og.src, Astro.site).href;
+
+// Structured data: one @graph. No LocalBusiness address: Severin has no office in most of
+// these places, so the place goes in areaServed (with its Wikidata entry), not in an address.
+const org = { '@type': 'AccountingService', '@id': `${site}/#org`, name: 'Severin Finance', url: `${site}/`, telephone: '+44 20 4542 2488' };
+const place = {
+  '@type': p.place.type, name: p.place.name,
+  ...(p.place.wikidata && { sameAs: `https://www.wikidata.org/wiki/${p.place.wikidata}` }),
+  ...(p.place.containedIn && { containedInPlace: { '@type': p.place.containedIn[0], name: p.place.containedIn[1] } }),
+};
+const schema = [{
+  '@context': 'https://schema.org',
+  '@graph': [
+    org,
+    {
+      '@type': 'Service', '@id': `${pageUrl}#service`, name: p.service.name, serviceType: p.service.serviceType,
+      description: p.hero.answer, url: pageUrl, provider: { '@id': org['@id'] }, areaServed: place,
+    },
+    {
+      '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: p.title, description: p.description, inLanguage: 'en-GB',
+      about: { '@id': `${pageUrl}#service` }, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+      primaryImageOfPage: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
+      dateModified: p.reviewed.date, lastReviewed: p.reviewed.date,
+      reviewedBy: { '@type': 'Person', name: p.reviewer.name, jobTitle: p.reviewer.role, worksFor: { '@id': org['@id'] } },
+      citation: p.sources.map(([url]) => url),
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.sp-answer'] },
+    },
+    {
+      '@type': 'BreadcrumbList', '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: p.breadcrumb.map(([name, href], i) => ({ '@type': 'ListItem', position: i + 1, name, item: site + href })),
+    },
+    {
+      '@type': 'FAQPage', '@id': `${pageUrl}#faq`,
+      mainEntity: p.faqs.filter((f) => !f.tbc).map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+  ],
+}];
+
+const tbc = (o) => o.tbc;
+const txt = (o) => (typeof o === 'string' ? { text: o } : o);
+const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.3 2.3 8.2 3.4l3.8 3.8H1.5v1.6H12l-3.8 3.8 1.1 1.1L15 8z"/></svg>';
+const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="m6.4 11.6-3.5-3.5 1.1-1.1 2.4 2.4 5.6-5.6 1.1 1.1z"/></svg>';
+---
+<Base title={p.title} description={p.description} schema={schema} ogImage={ogImage}>
+<div class="sp lp">
+
+  <!-- 1. Hero: keyword H1, answer-first summary, CTAs, place photo with a local fact -->
+  <section class="sp-hero" aria-labelledby="sp-h1">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol role="list">
+          {p.breadcrumb.map(([name, href], i) => (
+            <li>{i === p.breadcrumb.length - 1 ? <span aria-current="page">{name}</span> : <a href={href}>{name}</a>}</li>
+          ))}
+        </ol>
+      </nav>
+      <div class="sp-hero-grid">
+        <div>
+          <h1 id="sp-h1">
+            <span class="eyebrow">{p.hero.eyebrow}</span>
+            <span class="sp-title">{p.hero.h1}</span>
+          </h1>
+          <p class="sp-answer">{p.hero.answer}</p>
+          <div class="hero-actions">
+            <a class="btn btn-fill" href="#quote">{p.hero.cta}</a>
+            <a class="btn" href="tel:+442045422488">Call 020 4542 2488</a>
+          </div>
+          <ul class="hero-trust" role="list">
+            {p.hero.trust.map((t) => <li>{tbc(t) ? <span class="tbc">{t.text}</span> : t.text}</li>)}
+          </ul>
+        </div>
+        <figure class="sp-hero-media">
+          <Picture src={p.hero.image} alt={p.hero.imageAlt} formats={['avif', 'webp']} fallbackFormat="jpg" widths={[480, 720, 960, 1280]} sizes="(min-width: 1000px) 620px, 92vw" quality={50} loading="eager" fetchpriority="high" decoding="async" />
+          <p class="sp-price">{p.hero.chip}</p>
+          <p class="sp-deadline">
+            <span class="sp-deadline-label">{p.hero.card.label}</span>
+            <strong>{p.hero.card.value}</strong>
+            <span>{p.hero.card.note}</span>
+          </p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Trust logos (one slim row) -->
+  <div class="container sp-logos">
+    <p class="eyebrow">Memberships and software</p>
+    <ul class="logo-row" role="list">
+      {logos.map((l) => <li><Image src={l.img} alt={l.name} title={l.name} height={l.h} style={`--h:${l.h}px`} densities={[1, 2]} quality={85} loading="lazy" decoding="async" /></li>)}
+    </ul>
+  </div>
+
+  <!-- On-page jump links (sticky on desktop) -->
+  <nav class="jump" aria-label="On this page">
+    <ul class="container" role="list">
+      {p.jump.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+      <li class="jump-cta"><a class="btn btn-fill btn-sm" href="#quote">{p.hero.cta}</a></li>
+    </ul>
+  </nav>
+
+  <!-- 3. Who we help here: the real local client mix, 4 photo cards. Phones: one swipeable row -->
+  <section id="who" class="section" aria-labelledby="who-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.who.eyebrow}</span>
+          <h2 id="who-title">{p.who.h2}</h2>
+        </div>
+        <p>{p.who.intro}</p>
+      </div>
+      <ul class="rail rail-4 who hl-group hl-4" role="list">
+        {p.who.cards.map((c, i) => (
+          <li class="card card-place who-card hl-card" style={`--i:${i}`}>
+            <Picture src={c.img} alt={c.alt} formats={['avif', 'webp']} fallbackFormat="jpg" widths={[320, 480, 640]} sizes="(min-width: 1200px) 300px, (min-width: 768px) 45vw, 80vw" quality={45} loading="lazy" decoding="async" />
+            <span class="who-tag">{c.tag}</span>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+            {c.link && <a class="card-link" href={c.link[0]}>{c.link[1]} →</a>}
+          </li>
+        ))}
+      </ul>
+      <p class="swipe" aria-hidden="true">Swipe for more →</p>
+    </div>
+  </section>
+
+  <!-- 4. Services here: the six most searched in this place, each linking to its service page -->
+  <section id="services" class="section sp-tint" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.services.eyebrow}</span>
+          <h2 id="services-title">{p.services.h2}</h2>
+        </div>
+        <p>{p.services.intro}</p>
+      </div>
+      <ul class="lp-svc" role="list">
+        {p.services.items.map((s) => (
+          <li>
+            <a href={s.href}>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+              <span class="lp-svc-more">{s.cta ?? 'See the service'} <Fragment set:html={arrow} /></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Local key facts: what really differs here (council, rates, zones, schemes) + urgent CTA -->
+  <section id="facts" class="section" aria-labelledby="facts-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.facts.eyebrow}</span>
+          <h2 id="facts-title">{p.facts.h2}</h2>
+        </div>
+        <p>{p.facts.intro}</p>
+      </div>
+      <div class="tables">
+        {p.facts.tables.map((t) => (
+          <div class="table-card">
+            <table class="data-table">
+              <caption>{t.caption}</caption>
+              <thead><tr>{t.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+              <tbody>{t.rows.map(([a, b]) => <tr><th scope="row">{a}</th><td>{b}</td></tr>)}</tbody>
+            </table>
+            {t.after && <p class="table-after">{t.after}</p>}
+          </div>
+        ))}
+      </div>
+      <div class="urgent">
+        <div>
+          <h3>{p.facts.urgent.title}</h3>
+          <p>{p.facts.urgent.text}</p>
+        </div>
+        <a class="btn" href={p.facts.urgent.href ?? '#quote'}>{p.facts.urgent.cta}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Areas we cover (hub pages only: London, United Kingdom) -->
+  {p.areas && (
+    <section id="areas" class="section sp-tint" aria-labelledby="areas-title">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <span class="eyebrow">{p.areas.eyebrow}</span>
+            <h2 id="areas-title">{p.areas.h2}</h2>
+          </div>
+          <p>{p.areas.intro}</p>
+        </div>
+        <ul class="lp-areas" role="list">
+          {p.areas.items.map((a) => (
+            <li>
+              <a href={a.href}>
+                <h3>{a.name}</h3>
+                <p>{a.text}</p>
+                {a.meta && <span class="lp-area-meta">{a.meta}</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <!-- 7. How we work with clients here: three steps + where and how we meet -->
+  <section id="how" class:list={['section', { 'sp-tint': !p.areas }]} aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{p.how.eyebrow}</span>
+        <h2 id="how-title">{p.how.h2}</h2>
+      </div>
+      <div class="lp-how">
+        <ol class="mini-steps" role="list">
+          {p.how.steps.map((s) => <li><h3>{s.title}</h3><p>{s.text}</p></li>)}
+        </ol>
+        <div class="checklist lp-meet">
+          <h3>{p.how.meet.title}</h3>
+          <p>{p.how.meet.text}</p>
+          <ul class="ticks" role="list">
+            {p.how.meet.items.map(txt).map((it) => <li><Fragment set:html={check} />{tbc(it) ? <span class="tbc">{it.text}</span> : it.text}</li>)}
+          </ul>
+          <a class="more" href="#quote"><span class="more-icon" set:html={arrow} /><span class="more-label">Book your free consultation</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Proof: shared reviews (src/data/reviews.js) + who checked this page (E-E-A-T) -->
+  <Testimonials style={p.areas ? 'padding-top:0' : undefined}>
+        <aside class="reviewer inverse" aria-label="Who reviewed this page">
+          <span class="eyebrow">Reviewed by</span>
+          <div class="reviewer-who">
+            <span class="avatar" aria-hidden="true">{p.reviewer.initials}</span>
+            <span><strong>{p.reviewer.name}</strong><br /><span class="reviewer-role">{p.reviewer.role}</span></span>
+          </div>
+          <p class="reviewer-cred">{tbc(p.reviewer.credentials) ? <span class="tbc">{p.reviewer.credentials.text}</span> : p.reviewer.credentials.text}</p>
+          <p>{p.reviewer.text}</p>
+          <p class="reviewer-date">Last reviewed <time datetime={p.reviewed.date}>{p.reviewed.label}</time></p>
+          <h3>Sources</h3>
+          <ul role="list" class="sources">
+            {p.sources.map(([href, label]) => <li><a href={href} rel="noopener">{label}</a></li>)}
+          </ul>
+        </aside>
+  </Testimonials>
+
+  <!-- 9. FAQ (black band). Same questions go into FAQPage schema -->
+  <section id="faq" class="band section" aria-labelledby="faq-title">
+    <div class="container faq-wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-title">{p.faqTitle}</h2>
+      </div>
+      <div class="faq">
+        {p.faqs.map((f) => (
+          <details>
+            <summary>{f.q}<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-answer"><p>{f.tbc ? <span class="tbc">{f.a}</span> : f.a}</p></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Closing CTA + form -->
+  <section id="quote" class="inverse section outro" style="padding-top:0" aria-labelledby="cta-title">
+    <div class="container outro-grid">
+      <div>
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title" class="outro-title" style="margin-top:16px">{p.outro.h2} <em>{p.outro.em}</em></h2>
+        <ul class="pills" role="list">
+          {p.outro.pills.map((x) => <li class="pill">{x}</li>)}
+        </ul>
+        <a class="outro-phone" href="tel:+442045422488">020 4542 2488</a>
+        <p style="margin-top:12px"><a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a></p>
+      </div>
+      <LeadForm title={p.outro.formTitle} button={p.outro.button} topic={p.formTopic} source={p.url} />
+    </div>
+  </section>
+
+  <!-- 11. Nearby places, services, guides (internal linking) -->
+  <section class="section related-wrap" aria-labelledby="related-title">
+    <div class="container">
+      <h2 id="related-title" class="eyebrow">Keep exploring</h2>
+      <div class="related">
+        {p.related.map((g) => (
+          <div>
+            <h3>{g.title}</h3>
+            <ul role="list">
+              {g.links.map(([href, label]) => <li><a href={href}>{label}</a></li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</div>
+</Base>

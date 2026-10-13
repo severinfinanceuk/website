@@ -1,0 +1,114 @@
+---
+// URL: /locations/ (every location page on one list: London areas, UK cities, clients abroad).
+// The card text comes from the two hub data files, so each place is described in one place only.
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { getImage } from 'astro:assets';
+import london from '../data/location-pages/london.js';
+import uk from '../data/location-pages/uk.js';
+import '../styles/service.css';
+import '../styles/location.css';
+
+const site = Astro.site.href.replace(/\/$/, '');
+const url = '/locations/';
+const title = 'Our Locations: London and UK Cities | Severin Finance';
+const description = 'Find Severin Finance accountants for your area: London and 11 London areas, 10 UK cities, and UK tax help for clients abroad. Book a free consultation.';
+
+const londonItems = [uk.areas.items.find((a) => a.href === '/uk/london/'), ...london.areas.items];
+const cityItems = uk.areas.items.filter((a) => a.href !== '/uk/london/');
+const abroadItems = [
+  { name: 'Non-resident UK tax', href: '/cross-border/non-resident-uk-tax/', text: 'UK tax returns for people living abroad with UK rent, pensions or other UK income.', meta: 'Clients abroad' },
+  { name: 'UK company from abroad', href: '/cross-border/uk-company-from-abroad/', text: 'Forming and running a UK limited company while you live outside the UK.', meta: 'Clients abroad' },
+];
+const groups = [
+  { id: 'london', eyebrow: 'London', h2: 'London and its areas', intro: 'All 32 boroughs and the City of London. Each area page covers the local council, client mix and costs.', items: londonItems },
+  { id: 'cities', eyebrow: 'Across the UK', h2: 'UK cities', intro: 'City pages with the local council, regional schemes and the businesses we work with there.', items: cityItems },
+  { id: 'abroad', eyebrow: 'Clients abroad', h2: 'Living outside the UK', intro: 'We advise on UK tax only. These pages are for people abroad with UK income, property or a UK company.', items: abroadItems },
+];
+
+const og = await getImage({ src: uk.hero.image, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 70 });
+const ogImage = new URL(og.src, Astro.site).href;
+
+const all = groups.flatMap((g) => g.items);
+const schema = [{
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage', '@id': site + url, url: site + url, name: title, description, inLanguage: 'en-GB',
+      breadcrumb: { '@id': `${site + url}#breadcrumb` },
+      mainEntity: { '@type': 'ItemList', itemListElement: all.map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.name, url: site + a.href })) },
+    },
+    {
+      '@type': 'BreadcrumbList', '@id': `${site + url}#breadcrumb`,
+      itemListElement: [['Home', '/'], ['Locations', url]].map(([name, href], i) => ({ '@type': 'ListItem', position: i + 1, name, item: site + href })),
+    },
+  ],
+}];
+---
+<Base title={title} description={description} schema={schema} ogImage={ogImage}>
+<div class="sp lp">
+
+  <section class="sp-hero" aria-labelledby="sp-h1">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol role="list">
+          <li><a href="/">Home</a></li>
+          <li><span aria-current="page">Locations</span></li>
+        </ol>
+      </nav>
+      <h1 id="sp-h1">
+        <span class="eyebrow">Locations</span>
+        <span class="sp-title">Where we work</span>
+      </h1>
+      <p class="sp-answer">Severin Finance is a UK accountancy firm working with clients in London, in every UK city and abroad. Our work is done online, so the team and the fixed fees are the same wherever you are. Pick your area for local facts, or book a free consultation.</p>
+      <div class="hero-actions">
+        <a class="btn btn-fill" href="#quote">Book a free consultation</a>
+        <a class="btn" href="tel:+442045422488">Call 020 4542 2488</a>
+      </div>
+    </div>
+  </section>
+
+  {groups.map((g, i) => (
+    <section id={g.id} class:list={['section', { 'sp-tint': i % 2 === 0 }]} aria-labelledby={`${g.id}-title`}>
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <span class="eyebrow">{g.eyebrow}</span>
+            <h2 id={`${g.id}-title`}>{g.h2}</h2>
+          </div>
+          <p>{g.intro}</p>
+        </div>
+        <ul class="lp-areas" role="list">
+          {g.items.map((a) => (
+            <li>
+              <a href={a.href}>
+                <h3>{a.name}</h3>
+                <p>{a.text}</p>
+                {a.meta && <span class="lp-area-meta">{a.meta}</span>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  ))}
+
+  <section id="quote" class="inverse section outro" aria-labelledby="cta-title">
+    <div class="container outro-grid">
+      <div>
+        <span class="eyebrow">Get started</span>
+        <h2 id="cta-title" class="outro-title" style="margin-top:16px">Not sure which page fits? <em>Ask us.</em></h2>
+        <ul class="pills" role="list">
+          <li class="pill">Free first consultation</li>
+          <li class="pill">Fixed fee in writing</li>
+          <li class="pill">Anywhere in the UK or abroad</li>
+        </ul>
+        <a class="outro-phone" href="tel:+442045422488">020 4542 2488</a>
+        <p style="margin-top:12px"><a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a></p>
+      </div>
+      <LeadForm title="Book your free consultation" button="Send request" source={url} />
+    </div>
+  </section>
+
+</div>
+</Base>
