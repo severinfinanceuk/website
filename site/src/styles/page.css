@@ -127,3 +127,18 @@
 .price { font-size: clamp(1.5rem, 1.2rem + 1vw, 2.25rem); letter-spacing: -.02em; line-height: 1.1; }
 .price small { font-size: .9375rem; color: var(--muted); letter-spacing: 0; }
 .info-card ul { display: grid; gap: 6px; padding-left: 1.2em; color: var(--muted); line-height: 1.45; }
+
+/* Guide pages: on small screens "On this page" comes before the article */
+.guide-body { padding-top: 0; }
+.guide-sources { font-size: .9375rem; }
+.toc h2 { margin-bottom: 10px; }
+@media (max-width: 999px) {
+  .guide-body .tp-side { display: contents; }
+  .guide-body .toc { order: -1; }
+}
+.guide-body .prose > h2:first-child { margin-top: 0; }
+/* Guide and legal tables hold sentences, so every column reads left to right */
+.prose .data-table td, .prose .data-table thead th { text-align: left; }
+/* Wide tables (4 columns, cookie names) never push the page sideways */
+.prose .table-card { overflow-x: auto; }
+.prose .data-table th[scope="row"] { overflow-wrap: anywhere; }

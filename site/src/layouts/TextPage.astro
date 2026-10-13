@@ -26,10 +26,11 @@ interface Props {
   cta?: boolean;                // closing "book a free consultation" band
   noindex?: boolean;
   ogImage?: string;
+  webPage?: object;             // extra properties for the WebPage node (e.g. reviewedBy on guides)
 }
 const {
   title, description, url, breadcrumb = [['Home', '/'], [Astro.props.eyebrow, url]], eyebrow, h1, answer,
-  pageType = 'WebPage', nodes = [], faqs = [], faqTitle = 'Questions', draft = false, reviewed, cta = true, noindex, ogImage,
+  pageType = 'WebPage', nodes = [], faqs = [], faqTitle = 'Questions', draft = false, reviewed, cta = true, noindex, ogImage, webPage = {},
 } = Astro.props;
 
 const site = Astro.site.href.replace(/\/$/, '');
@@ -43,6 +44,7 @@ const schema = [{
       isPartOf: websiteRef, publisher: orgRef, about: orgRef, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       ...(reviewed && { dateModified: reviewed.date }),
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.sp-answer'] },
+      ...webPage,
     },
     {
       '@type': 'BreadcrumbList', '@id': `${pageUrl}#breadcrumb`,

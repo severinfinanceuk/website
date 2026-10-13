@@ -62,7 +62,7 @@ const schema = [{
       about: { '@id': `${pageUrl}#service` }, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       primaryImageOfPage: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
       dateModified: p.reviewed.date, lastReviewed: p.reviewed.date,
-      reviewedBy: { '@type': 'Person', name: p.reviewer.name, jobTitle: p.reviewer.role, worksFor: { '@id': org['@id'] } },
+      reviewedBy: { '@type': 'Person', '@id': `${site}/team/#alain-dastros`, name: p.reviewer.name, jobTitle: p.reviewer.role, worksFor: { '@id': org['@id'] } },
       citation: p.sources.map(([url]) => url),
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.sp-answer'] },
     },

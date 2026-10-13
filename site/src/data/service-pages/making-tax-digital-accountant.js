@@ -207,8 +207,8 @@ export default {
       ['/uk/manchester/', 'Manchester'],
     ] },
     { title: 'Guides', links: [
-      ['/resources/making-tax-digital-income-tax/', 'MTD for Income Tax explained'],
-      ['/resources/mtd-for-landlords/', 'MTD for landlords'],
+      ['/resources/making-tax-digital-for-income-tax/', 'MTD for Income Tax explained'],
+      ['/resources/making-tax-digital-for-landlords/', 'MTD for landlords'],
       ['/resources/mtd-software/', 'Choosing MTD software'],
     ] },
   ],

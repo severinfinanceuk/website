@@ -1,0 +1,11 @@
+---
+// One page per guide in src/data/guides/*.js. Layout: src/layouts/GuidePage.astro.
+import GuidePage from '../../layouts/GuidePage.astro';
+import { guides } from '../../lib/catalog.js';
+
+export function getStaticPaths() {
+  return guides.map((g) => ({ params: { slug: g.url.split('/')[2] }, props: { guide: g } }));
+}
+const { guide } = Astro.props;
+---
+<GuidePage guide={guide} />

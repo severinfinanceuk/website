@@ -215,8 +215,8 @@ export default {
     ] },
     { title: 'Guides', links: [
       ['/resources/pay-hmrc-in-instalments/', 'Paying HMRC in instalments'],
-      ['/resources/hmrc-time-to-pay/', 'HMRC Time to Pay explained'],
-      ['/resources/vat-late-payment-penalties/', 'VAT late payment penalties'],
+      ['/resources/hmrc-penalties-explained/', 'HMRC penalties and interest'],
+      ['/resources/vat-penalties/', 'VAT late payment penalties'],
     ] },
   ],
 

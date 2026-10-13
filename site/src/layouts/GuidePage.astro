@@ -1,0 +1,135 @@
+---
+// Guide (article) page: /resources/<slug>/. One layout plus one data file (src/data/guides/*.js).
+// Sections: answer-first hero with byline and TL;DR → article (question-shaped H2s, tables,
+// sources) with a sticky "on this page" and service box → related guides → FAQ → call to action.
+// Schema: WebPage (reviewedBy) + Article + BreadcrumbList + FAQPage.
+// The owning service is linked in the first 150 words of the article (checked by scripts/check.mjs).
+import TextPage from './TextPage.astro';
+import { getImage } from 'astro:assets';
+import { guides } from '../lib/catalog.js';
+import { orgRef, websiteRef, reviewer } from '../data/site.js';
+
+const { guide: g } = Astro.props;
+const site = Astro.site.href.replace(/\/$/, '');
+const pageUrl = site + g.url;
+const personId = `${site}/team/#alain-dastros`;
+
+const sectionNames = {
+  tax: ['Tax guide', 'Tax'], accounting: ['Accounting guide', 'Accounting'],
+  'company-services': ['Company guide', 'Companies'], 'business-finance': ['Business finance guide', 'Business finance'],
+  'cross-border': ['Guide for clients abroad', 'Clients abroad'],
+};
+const eyebrow = g.eyebrow ?? sectionNames[g.section][0];
+const breadcrumb = [['Home', '/'], ['Guides', '/resources/'], [g.crumb ?? g.h1, g.url]];
+
+// Reading time from the article text
+const strip = (h) => h.replace(/<[^>]+>/g, ' ');
+const text = g.sections.flatMap((s) => [s.h2, ...s.body.map((b) => typeof b === 'string' ? strip(b) : [b.caption, ...b.rows.flat(), b.after ?? ''].join(' '))]).join(' ');
+const words = text.split(/\s+/).filter(Boolean).length;
+const readMins = Math.max(3, Math.round(words / 220));
+
+// Share image: the owning service page's hero photo
+const servicePages = new Map(Object.values(import.meta.glob('../data/service-pages/*.js', { eager: true })).map((m) => [m.default.url, m.default]));
+const heroImage = servicePages.get(g.service.href)?.hero.image;
+const og = heroImage && await getImage({ src: heroImage, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 70 });
+const ogImage = og ? new URL(og.src, Astro.site).href : undefined;
+
+// Related guides that are published (others appear once they exist)
+const byUrl = new Map(guides.map((x) => [x.url, x]));
+const related = (g.related ?? []).map((u) => byUrl.get(u)).filter(Boolean);
+
+const nodes = [{
+  '@type': 'Article', '@id': `${pageUrl}#article`, headline: g.h1, description: g.description, inLanguage: 'en-GB',
+  mainEntityOfPage: { '@id': pageUrl }, isPartOf: websiteRef, author: orgRef, publisher: orgRef,
+  datePublished: g.published ?? g.reviewed.date, dateModified: g.reviewed.date, wordCount: words,
+  ...(ogImage && { image: ogImage }),
+  about: { '@type': 'Thing', name: g.topic ?? g.h1 },
+  citation: g.sources.map(([url]) => url),
+}, {
+  '@type': 'Person', '@id': personId, name: reviewer.name, jobTitle: 'Managing Director', worksFor: orgRef, url: `${site}/team/`,
+}];
+---
+<TextPage
+  title={g.title}
+  description={g.description}
+  url={g.url}
+  breadcrumb={breadcrumb}
+  eyebrow={eyebrow}
+  h1={g.h1}
+  answer={g.hero.answer}
+  nodes={nodes}
+  faqs={g.faqs}
+  faqTitle={g.faqTitle ?? 'Questions people ask'}
+  reviewed={g.reviewed}
+  ogImage={ogImage}
+  webPage={{ reviewedBy: { '@id': personId }, lastReviewed: g.reviewed.date, mainEntity: { '@id': `${pageUrl}#article` } }}
+>
+  <Fragment slot="hero">
+    <p class="byline">
+      <span class="byline-who"><span class="avatar" aria-hidden="true">SF</span>Written by the Severin Finance team</span>
+      <span>Reviewed by <a href="/team/">{reviewer.name}</a>, Managing Director</span>
+      <span>{readMins} min read</span>
+    </p>
+    <div class="tldr">
+      <h2>In short</h2>
+      <ul>{g.tldr.map((t) => <li set:html={t} />)}</ul>
+    </div>
+  </Fragment>
+
+  <section class="section guide-body" aria-label="Guide">
+    <div class="container tp-body">
+      <article class="prose" data-service={g.service.href}>
+        {g.sections.map((s) => (
+          <>
+            <h2 id={s.id}>{s.h2}</h2>
+            {s.body.map((b) => typeof b === 'string' ? <Fragment set:html={b} /> : (
+              <div class="table-card">
+                <table class="data-table">
+                  <caption>{b.caption}</caption>
+                  <thead><tr>{b.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+                  <tbody>{b.rows.map(([a, ...cells]) => <tr><th scope="row">{a}</th>{cells.map((v) => <td>{v}</td>)}</tr>)}</tbody>
+                </table>
+                {b.after && <p class="table-after">{b.after}</p>}
+              </div>
+            ))}
+          </>
+        ))}
+        <h2 id="sources">Sources</h2>
+        <p>We checked this guide against these official sources on <time datetime={g.reviewed.date}>{g.reviewed.label}</time>. Rates and rules can change, so check the latest position or ask us before you act.</p>
+        <ul class="guide-sources">
+          {g.sources.map(([href, label]) => <li><a href={href} rel="noopener">{label}</a></li>)}
+        </ul>
+      </article>
+
+      <aside class="tp-side" aria-label="On this page and related service">
+        <nav class="side-box toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            {g.sections.map((s) => <li><a href={`#${s.id}`}>{s.toc ?? s.h2}</a></li>)}
+            {g.faqs?.length > 0 && <li><a href="#faq">Questions people ask</a></li>}
+            <li><a href="#sources">Sources</a></li>
+          </ol>
+        </nav>
+        <div class="side-box">
+          <h2>{g.service.boxTitle ?? 'Want us to handle it?'}</h2>
+          <p>{g.service.text ?? 'Our team does this for clients every day, for a fixed fee agreed in writing.'}</p>
+          <a class="btn btn-fill btn-sm" href={g.service.href}>{g.service.label}</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section sp-tint" aria-labelledby="related-title">
+      <div class="container">
+        <div class="cluster-head">
+          <h2 id="related-title">Related guides</h2>
+          <a href="/resources/">All guides →</a>
+        </div>
+        <ul class="guide-list guide-list-3" role="list">
+          {related.map((r) => <li><a href={r.url}><strong>{r.h1}</strong><span>{r.summary}</span></a></li>)}
+        </ul>
+      </div>
+    </section>
+  )}
+</TextPage>

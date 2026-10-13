@@ -67,6 +67,16 @@ for (const f of htmlFiles) {
     const n = decode(ans[1].replace(/<[^>]+>/g, '')).split(/\s+/).filter(Boolean).length;
     if (n < 40 || n > 60) flag(url, `answer-first intro ${n} words (40 to 60)`);
   }
+  // Guides: at least 800 words, owning service linked within the first 150 words
+  const art = raw.match(/<article class="prose" data-service="([^"]+)"[^>]*>(.*?)<\/article>/s);
+  if (art) {
+    const [, service, body] = art;
+    const wordsIn = (h) => decode(h.replace(/<[^>]+>/g, ' ')).split(/\s+/).filter(Boolean).length;
+    const total = wordsIn(body);
+    if (total < 800) flag(url, `guide only ${total} words (800+)`);
+    const at = body.indexOf(`href="${service}"`);
+    if (at < 0 || wordsIn(body.slice(0, at)) > 150) flag(url, `owning service ${service} not linked in the first 150 words`);
+  }
   for (const [, href] of bodyHtml.matchAll(/href="(\/[^"#?]*)/g)) {
     if (href.startsWith('/_astro/') || href.startsWith('/_vercel/')) continue;
     if (/\.[a-z0-9]+$/i.test(href)) { if (!assets.has(href)) broken.set(href, (broken.get(href) || new Set()).add(url)); continue; }
