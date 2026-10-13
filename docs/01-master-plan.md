@@ -423,11 +423,13 @@ We will publish 8–12 new pieces a month and refresh 4–6 existing ones. Timin
 **Quality standards (YMYL: "Your Money or Your Life" topics get extra scrutiny from Google)**
 
 1. Every piece is written or reviewed by a qualified adviser, who is named on the page.
-2. Figures are cited to the official source (gov.uk, HMRC manuals, impots.gouv.fr, service-public.fr, irs.gov, canada.ca), with an "as of" date.
+2. Figures are cited to the official source (GOV.UK, HMRC manuals, legislation.gov.uk, Companies House, the Bank of England), with an "as of" date.
 3. AI tools may help draft, but every page gets a human expert edit, original examples and real client insight. Mass-produced, unedited AI text is an explicit target of Google's spam policies.
 4. Rate and deadline pages are reviewed every Budget and every 6 months. The page's "last updated" date is shown and changed only when the content changes.
 
 ## Backlinks, digital PR and local SEO
+
+Ready-to-use copy, lists and templates for everything in this section: [docs/04-off-page-and-local-seo.md](04-off-page-and-local-seo.md).
 
 Target 15–30 quality referring domains a month, all earned through relevance. No bought links, private blog networks or link exchanges. On a finance site these risk a Google manual penalty that can wipe out rankings for months.
 
@@ -450,7 +452,7 @@ Target 15–30 quality referring domains a month, all earned through relevance. 
 
 **Local SEO**
 
-1. One Google Business Profile per real staffed address only. Category "Accountant" (primary) plus "Tax preparation service", "Bookkeeping service" and "Financial consultant". A virtual office address risks suspension, so for France, the US and Canada use a service-area setup or a real partner office.
+1. One Google Business Profile per real staffed address only. Category "Accountant" (primary) plus "Tax preparation service", "Bookkeeping service" and "Financial consultant". A virtual office address risks suspension, so if clients do not visit the office, use a service-area setup with the address hidden.
 2. Fill every field: services with descriptions, opening hours, photos (team, office, not stock), Q&A, and a weekly post.
 3. **Reviews program:** ask every client after delivery, by email and QR code, with a direct review link. Target 10+ new Google reviews a month and reply to every review within 48 hours. Reviews are a top-3 local ranking factor.
 4. Exactly the same name, address and phone everywhere, audited quarterly with BrightLocal or Whitespark.
@@ -458,7 +460,7 @@ Target 15–30 quality referring domains a month, all earned through relevance. 
 
 ## Performance, tech stack and responsiveness
 
-We will build a static site with Astro and serve it from Cloudflare's global edge network. Pages are pre-built HTML with no framework JavaScript, so they load in under a second on 4G in London, Manchester, Edinburgh or anywhere abroad.
+We will build a static site with Astro and serve it from Vercel's edge network (hosting moved from Cloudflare Pages to Vercel on 13 Oct 2026). Pages are pre-built HTML with no framework JavaScript, so they load in under a second on 4G in London, Manchester, Edinburgh or anywhere abroad.
 
 **Stack**
 
@@ -467,7 +469,7 @@ We will build a static site with Astro and serve it from Cloudflare's global edg
 | Framework | Astro (static output, zero JS by default) | Pure HTML/CSS output, built-in image optimisation, sitemap and i18n routing |
 | Styling | Hand-written CSS with design tokens (no Tailwind runtime, no UI kit) | Under 20 KB of CSS for the whole site, inlined for above-the-fold content |
 | Content | Markdown/MDX in Git + Keystatic or Decap CMS (free, Git-based) for non-developers. Alternative: Storyblok if visual editing is needed | Editors write without touching code, and every change is versioned |
-| Hosting / CDN | Cloudflare Pages (or Netlify) | 300+ edge locations, TTFB under 100 ms, free SSL, HTTP/3, Brotli compression |
+| Hosting / CDN | Vercel (chosen 13 Oct 2026; Cloudflare Pages was the first plan) | Global edge network, deploys on every push to `main`, free SSL, HTTP/3, Brotli compression |
 | Forms | Cloudflare Worker → email + CRM (HubSpot free or Pipedrive), with Turnstile spam protection | No form plugin, no third-party script on load |
 | Search on site | Pagefind (static search index) | Runs only when the search box is used |
 | Analytics | Cloudflare Web Analytics or Plausible (cookieless) + GA4 via Consent Mode, loaded only after consent | Accurate data without slowing first paint |
@@ -521,6 +523,19 @@ Finance is a "Your Money or Your Life" category. Google ranks it on visible expe
 - Reviews with an aggregate rating pulled from Google and Trustpilot. Case studies with permission and real figures.
 - Clear pricing, a clear complaints process and a professional indemnity insurance statement.
 - Contact details on every page: phone, email, address, response time.
+
+## SEO areas that do not apply
+
+The full SEO checklist covers some areas that do not fit a professional services firm. They are skipped on purpose:
+
+| Area | Why it does not apply |
+| --- | --- |
+| E-commerce SEO (product and category pages, product schema, faceted navigation) | Severin sells services, not products online |
+| SaaS SEO (feature, integration and comparison pages for software) | Severin has no software product |
+| App store optimisation | Severin has no app |
+| Video SEO | No videos yet. Add VideoObject schema and a video sitemap if videos are published |
+| News SEO (Google News, NewsArticle schema) | Severin is not a news publisher; guides use Article schema |
+| International SEO (hreflang, country versions) | UK only by decision (13 Oct 2026). People abroad are reached through the UK services they need |
 
 ## Roadmap, tracking and KPIs
 

@@ -1,6 +1,6 @@
 # Progress tracker
 
-Current phase: **1 · Discover** (weeks 1–2), with **2 · Design** started early. Last updated: 9 Oct 2026.
+Current phase: **3 · Build + content**. The site has 147 pages and passes `npm run check`; it now waits on Severin's inputs, design sign-off and the forms. Last updated: 13 Oct 2026.
 
 Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-master-plan.md#roadmap-tracking-and-kpis).
 
@@ -26,9 +26,10 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [x] Service page template, first draft: [/uk/tax/self-assessment-accountant/](http://localhost:4321/uk/tax/self-assessment-accountant/), rules in [docs/03-service-page-template.md](docs/03-service-page-template.md)
 - [x] All 33 service pages built from the same template (13 Oct 2026): every link in the Services menu now opens a page
 - [ ] **Service page feedback** from Severin, then fact sign-off per page (`reviewed` date)
-- [ ] Service hub pages: `/uk/accounting/`, `/uk/tax/`, `/uk/company-services/`, `/uk/business-finance/`, `/cross-border/` and the country hubs
+- [x] Section hub pages: `/uk/accounting/`, `/uk/tax/`, `/uk/company-services/`, `/uk/business-finance/`, `/cross-border/` (13 Oct 2026; country hubs dropped with the UK-only decision)
 - [ ] FCA / regulatory strip on the 7 business finance pages once Severin's lending status is known
-- [ ] Templates: country hub, guide, location, team member
+- [x] Templates: hub, guide, tool, location (13 Oct 2026)
+- [ ] Team member profile template: waits for real names, photos and qualifications
 - [ ] Replace yellow placeholders (stats, reviews, team, company number, FCA wording)
 - [ ] Make the contact form work (Vercel function or form service)
 - [ ] Phone, tablet and desktop mock-ups
@@ -39,14 +40,17 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [x] Build `/locations/` hub and the location page template (from `locations.js`)
 - [ ] Add a `live` flag to `locations.js` so menus list only published pages (not needed while every listed page is built)
 - [x] Astro project set up in `/site`, on GitHub and deployed to Vercel (private, behind Vercel login) (13 Oct 2026)
-- [ ] CMS, forms, schema, sitemaps
-- [ ] About 130 pages written and expert-reviewed
-- [ ] Google Business Profile, citations, review program
+- [x] Schema (site-wide `@id` graph), sitemaps with images, robots.txt, llms.txt, 404, `vercel.json` redirects and headers (13 Oct 2026)
+- [ ] Forms and booking calendar (the user adds these later), then thank-you pages
+- [ ] CMS (only if Severin will edit pages themselves)
+- [x] 147 pages written (13 Oct 2026): 28 service, 24 location, 5 hubs, 12 core and legal, 71 guides, 7 tools and pillars
+- [ ] Expert review and sign-off of every page (`reviewed` date); legal drafts approved and `noindex` removed
+- [ ] Google Business Profile, citations, review program: all copy and steps are ready in [docs/04-off-page-and-local-seo.md](docs/04-off-page-and-local-seo.md); Severin needs to create the accounts
 
 ## Phase 4 · QA + migrate (weeks 11–12)
 
-- [ ] Device tests, Lighthouse 95+, link and schema checks
-- [ ] 301 redirects live, sitemaps submitted, IndexNow
+- [x] Lighthouse 95+, 375 px overflow test, link and schema checks (13 Oct 2026, on the local build; repeat on the live domain)
+- [ ] 301 redirects live (written in `vercel.json`), sitemaps submitted, IndexNow (key file and `site/scripts/indexnow.mjs` ready)
 - [ ] **Launch:** every checklist item passed
 
 ## Phase 5 · Grow (months 4–12)
@@ -60,7 +64,11 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [ ] Team names, photos and qualifications (CIMA, ACCA, CTA)
 - [ ] Office or meeting addresses in the UK
 - [ ] Real reviews, testimonials, client logos, case studies
-- [ ] Google Search Console and Analytics access
+- [ ] Google Search Console and Analytics access, the GA4 measurement ID (goes in `site/src/data/analytics.js`) and the Search Console and Bing verification codes
+- [ ] Turn on Web Analytics in the Vercel dashboard (the script is already on every page)
+- [ ] Company number, ICO registration number, AML supervisor and the professional body for complaints (yellow on the legal pages)
+- [ ] Review and approve the 5 legal drafts (privacy, cookies, terms, complaints, accessibility)
+- [ ] Profile URLs (Google Business Profile, LinkedIn, Companies House) for schema `sameAs`
 - [ ] Prices or "from" prices per service, with 3 packages per service (Basic / Standard / Complex) and whether prices include VAT
 - [ ] Google review rating and count, plus more client reviews per service
 - [ ] Qualifications of each expert who signs off a page (the self assessment page names Alain Dastros)
@@ -82,6 +90,9 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | 9 Oct 2026 | Markets updated: **UK and France are the top priority**, then the US, Canada, Australia and the UAE (Dubai), each still getting a full country section. Italy not included |
 | 13 Oct 2026 | **UAE dropped** as a market (pages, menus, photos removed). **London and France are joint targets**: UK accounting, tax and company service pages say "London & France" in the title and "for London and France" in the H1, with France in `areaServed`; lending pages say "London & UK-wide" (lending for France needs ORIAS registration). Ranking in google.fr needs the French `/fr/` versions with hreflang |
 | 13 Oct 2026 | **UK only** (replaces the market rows above). Severin is not registered or compliant outside the UK, so the site offers UK work only and names no other country, foreign authority or partner firm. Titles say "London & UK-wide" (or "London & UK"), H1s "in London and across the UK", `areaServed` is United Kingdom plus London, `lang` en-GB, no hreflang. People abroad are reached through UK-side pages (non-resident UK tax, UK company from abroad, non-resident landlords, UK property sales, tax refunds after leaving) written with generic words: abroad, overseas, non-resident, expat |
+| 13 Oct 2026 | Exceptions to zero JavaScript: the cookie banner with GA4 Consent Mode v2 (nothing from Google loads before Accept, and nothing GA-related renders while the GA4 ID is empty), the Vercel Web Analytics script (cookieless), one small listener for phone and email clicks, and the 4 calculators (inline on their own pages only, about 3.4 KB at most). Every other page stays script-free apart from analytics |
+| 13 Oct 2026 | Guides at `/resources/<slug>/` from one data file each (`site/src/data/guides/`). Every figure is checked against GOV.UK, HMRC manuals or legislation.gov.uk on the day of writing; no lenders or software brands named; tax years written 2026-27 |
+| 13 Oct 2026 | E-commerce, SaaS, app store, video and news SEO do not apply (see the master plan). International SEO is limited to UK-side pages for people abroad |
 | 9 Oct 2026 | All project files live in this folder (not in online docs) |
 | 9 Oct 2026 | Font: Inter Tight (free) for the draft, in place of the reference's licensed Suisse Intl |
 | 9 Oct 2026 | Zero JavaScript: menu and FAQ use native `<details>`; CSS inlined in each page |
@@ -130,3 +141,11 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | 13 Oct 2026 | Service pages retargeted to **London and France**: 19 accounting/tax/company pages now "London & France" in title, H1, description and answer, with France (and the US, Canada, Australia on expat pages) in `areaServed` and links to `/fr/` and `/fr/londres/`. 7 lending pages say "London & UK-wide". **UAE removed**: `/uae/moving-to-dubai/` page, Dubai photos, UAE menu, footer links and home card deleted; home page now shows 5 countries (UK, France, US, Canada, Australia). Checker: 32 pages, 0 issues |
 | 13 Oct 2026 | **Site made UK-only.** Deleted the 4 country-pair pages (`/cross-border/uk-france-tax/`, `/us/`, `/ca/`, `/au/` pages), their data files and photos, and the Paris, New York, Toronto and Sydney card photos. Removed the header country picker and language links, the @com Pluriel Conseils partner logo, and every France/US/Canada/Australia mention in copy, menus, footer and schema. Cross-border menu group renamed **Clients abroad** (non-resident UK tax, UK company from abroad). Home page: new title and description, "London-based, UK-wide" section with 4 cards (London, Across the UK, Living abroad, UK company from abroad), 2 new FAQs for clients abroad. All 28 service pages pass the checker (0 issues); built site scanned clean of other country names. Master plan v2.0, location plan v2.0 and template v2.0 updated to match |
 | 13 Oct 2026 | **All location pages built (24).** `/uk/` country hub, `/locations/` hub (CollectionPage + ItemList), `/uk/london/`, 11 London areas and 10 UK cities, on one shared template (`LocationPage.astro`, `location.css`) with copy in `src/data/location-pages/`. Each page has real local facts with listed sources (council business rates, BIDs, clean air zones, Investment Zones, Freeports, combined authorities), 4 local client groups, 6 services, local FAQs and nearby links; `areaServed` uses Wikidata IDs; no office addresses. 115 new Unsplash photos, credits in `site/src/assets/locations/SOURCES.md`. Photo credit links in both SOURCES.md files fixed (numeric unsplash.com/photos links returned 404; now point at images.unsplash.com). Checker: 52 pages, 0 issues, 0 duplicate photos; built site clean of other country names and em dashes |
+| 13 Oct 2026 | **Technical SEO foundation** (6218cb3): sitemap index with 4 sitemaps (`lastmod` from each page's `reviewed` date, hero images included), robots.txt allowing search and AI crawlers, llms.txt, 404 page, `vercel.json` (trailing slash, old-site 301s, security headers, long cache on `/_astro/`), site-wide Organization and WebSite schema with `@id` references, `noindex` and verification meta in `Base.astro`, and `site/scripts/check.mjs` as the QA gate (`npm run check`: links, orphans, titles, descriptions, H1, alt text, JSON-LD, placeholders in schema, em dashes, other country names, duplicate photos) |
+| 13 Oct 2026 | **Hubs, core and legal pages** (b9d2119): 5 section hubs, `/resources/`, `/about/`, `/team/`, `/contact/` (slot for the form and calendar), `/uk/pricing/` (prices yellow, no price schema), `/reviews/` (noindex until real reviews), and draft privacy, cookie, terms, complaints and accessibility pages marked "Draft for review" and `noindex` |
+| 13 Oct 2026 | **Measurement** (6218cb3, b25dcb2): Vercel Web Analytics on every page; GA4 with Consent Mode v2 behind a cookie banner (Accept, Reject, Settings; footer link to change settings); phone and email click events; IndexNow key and ping script; `research/tracking/` with rank-tracking.csv (140 URLs), ai-prompts.csv (50 prompts) and kpi-monthly.csv; AI referral channel group documented |
+| 13 Oct 2026 | **Guides: 71 written** (82a87ef, 7aa0733, 0b168de, 1fa0bd9, 070d555, 2715b32, 70dc753) in 6 waves: self assessment and personal tax, limited companies, VAT/payroll/HMRC, property and inheritance, business finance, company services and clients abroad. 900 to 1,600 words each, answer first, question H2s, sourced tables, author box, FAQ, Article and FAQPage schema. Duplicate slugs merged (MTD for income tax, MTD for landlords, VAT penalties, time to pay) |
+| 13 Oct 2026 | **Tools and pillar pages** (3a5e543, 223e1af): take-home pay, salary vs dividends, VAT and marginal relief calculators; UK tax calendar 2026-27; glossary (50 terms, DefinedTermSet); data study "UK city business costs 2026-27" (business rates, BID levies, clean air charges for the places we cover, Dataset schema) |
+| 13 Oct 2026 | **Fact fixes on service pages** found while writing guides (bc16b0c, 2715b32, 70dc753): payrolling of benefits, IHT instalments, late payment interest, asset finance first-year allowance, EIS advance assurance timescale, EMI size limits; 84 tax years changed to the 2026-27 style |
+| 13 Oct 2026 | **Off-page and local SEO pack** (f049e7d): [docs/04-off-page-and-local-seo.md](docs/04-off-page-and-local-seo.md) with the NAP block, Google Business Profile copy (categories, 28 service descriptions, Q&A, 12 weekly posts), citation list, review request and reply templates (DMCC Act compliant), digital PR pitches built on the data study, guest post topics, competitor backlink and log file methods, monthly routine |
+| 13 Oct 2026 | **Lighthouse (phone)** on home, VAT accountant, Manchester, a guide, the tax hub and a calculator: 100 performance, 100 accessibility, 100 SEO, 96 best practices (only because the Vercel Analytics script returns 404 locally). Largest content 1.4 to 1.8 s, layout shift 0. No page is wider than 375 px. Checker: 147 pages, all checks passed |
