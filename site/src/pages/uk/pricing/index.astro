@@ -1,0 +1,88 @@
+---
+// /uk/pricing/: fixed-fee tiers per service group. Every price is a yellow placeholder (£XXX)
+// until Severin confirms it, so there is no Offer / OfferCatalog schema yet: add it only
+// once prices are real (never put a tbc price in schema).
+import TextPage from '../../../layouts/TextPage.astro';
+import { CORE_UPDATED } from '../../../lib/catalog.js';
+
+const groups = [
+  {
+    h2: 'Accounting', href: '/uk/accounting/',
+    tiers: [
+      { name: 'Sole trader or landlord', price: '£XXX', per: 'a year', items: ['Year-end accounts', 'Self assessment tax return', 'Making Tax Digital updates (if you must file them)'] },
+      { name: 'Limited company', price: '£XXX', per: 'a month', items: ['Statutory accounts and CT600', 'Director’s self assessment', 'Confirmation statement'] },
+      { name: 'Bookkeeping and payroll', price: '£XXX', per: 'a month', items: ['Monthly bookkeeping in Xero or QuickBooks', 'Payroll and RTI submissions', 'VAT returns'] },
+    ],
+  },
+  {
+    h2: 'Tax', href: '/uk/tax/',
+    tiers: [
+      { name: 'Simple tax return', price: '£XXX', per: 'a return', items: ['One source of income', 'Allowances and reliefs checked', 'Filed online with HMRC'] },
+      { name: 'Standard tax return', price: '£XXX', per: 'a return', items: ['Several income sources or rental property', 'Payments on account reviewed', 'HMRC correspondence for the year'] },
+      { name: 'Complex tax return', price: '£XXX', per: 'a return', items: ['Capital gains, foreign income or residence issues', 'Non-resident returns', '60-day property returns'] },
+    ],
+  },
+  {
+    h2: 'Company services', href: '/uk/company-services/',
+    tiers: [
+      { name: 'Company formation', price: '£XXX', per: 'one-off', items: ['Companies House registration', 'Corporation tax and PAYE registration', 'Share structure advice'] },
+      { name: 'Company secretarial', price: '£XXX', per: 'a year', items: ['Confirmation statement', 'Statutory registers', 'Director and shareholder changes'] },
+      { name: 'Projects', price: 'From £XXX', per: 'quoted', items: ['EIS and SEIS', 'Business valuation', 'Succession planning'] },
+    ],
+  },
+];
+
+const faqs = [
+  { q: 'Is VAT included in your prices?', a: 'Whether prices include VAT is to be confirmed. Your quote will always show the VAT clearly.', tbc: true },
+  { q: 'Do you charge for phone calls and emails?', a: 'No. Questions about the work we do for you are included in the fixed fee. We tell you in advance if something is outside the agreed scope.' },
+  { q: 'How do you charge for business finance?', a: 'How we are paid for arranging finance, whether by a fee, a lender commission or both, is to be confirmed and is always set out in writing before you apply.', tbc: true },
+  { q: 'Can I pay monthly?', a: 'Yes, for ongoing services such as company accounts, bookkeeping and payroll. One-off work such as a single tax return is usually paid when it is done.' },
+];
+---
+<TextPage
+  title="Accountancy Fees & Pricing | Severin Finance"
+  description="Fixed fees for tax returns, company accounts, bookkeeping, payroll and company services, agreed in writing before work starts. Free consultation."
+  url="/uk/pricing/"
+  breadcrumb={[['Home', '/'], ['United Kingdom', '/uk/'], ['Pricing', '/uk/pricing/']]}
+  eyebrow="Pricing"
+  h1="Fixed fees, agreed before we start"
+  answer="We charge fixed fees, agreed in writing before any work starts, so you know the cost up front. The price depends on what you need: a single tax return, monthly company accounts, payroll or a one-off project. The prices below are starting points. Book a free consultation and we will send a quote for your situation."
+  faqs={faqs}
+  faqTitle="Questions about fees"
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0" aria-label="Prices">
+    <div class="container">
+      {groups.map((g) => (
+        <div class="price-group">
+          <h2><a href={g.href} style="color:inherit">{g.h2}</a></h2>
+          <div class="info-grid info-grid-3">
+            {g.tiers.map((t) => (
+              <div class="info-card">
+                <h3>{t.name}</h3>
+                <p class="price"><span class="tbc">{t.price}</span> <small>{t.per}</small></p>
+                <ul>{t.items.map((i) => <li>{i}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+      <p class="note" style="margin-top:24px"><span class="tbc">All prices to confirm. VAT treatment to confirm.</span> Business finance is quoted case by case: see <a href="/uk/business-finance/">business finance</a>.</p>
+    </div>
+  </section>
+
+  <section class="section sp-tint" aria-labelledby="included-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Every package</span>
+        <h2 id="included-title">Included as standard</h2>
+      </div>
+      <div class="info-grid info-grid-4">
+        <div class="info-card"><h3>One point of contact</h3><p>The same person from first call to final filing.</p></div>
+        <div class="info-card"><h3>Quote in writing</h3><p>The work, the fee and the deadline agreed before we start.</p></div>
+        <div class="info-card"><h3>Questions answered</h3><p>Calls and emails about your work are part of the fee.</p></div>
+        <div class="info-card"><h3>HMRC dealt with</h3><p>We act as your agent and handle HMRC on the work we do.</p></div>
+      </div>
+    </div>
+  </section>
+</TextPage>

@@ -1,0 +1,39 @@
+---
+// /complaints/: complaints procedure. DRAFT for review by Severin Finance (noindex via
+// noindexPaths in site.js until approved). Yellow (tbc): timescales, the professional body
+// complaints can be escalated to, and the Financial Ombudsman Service only if FCA regulated.
+import TextPage from '../layouts/TextPage.astro';
+import { CORE_UPDATED } from '../lib/catalog.js';
+---
+<TextPage
+  title="Complaints Procedure | Severin Finance"
+  description="How to make a complaint to Severin Finance, how we handle it, how long it takes and where to go if you are still unhappy. Free consultation."
+  url="/complaints/"
+  eyebrow="Complaints"
+  h1="Complaints procedure"
+  answer="If you are unhappy with our service, please tell us. We take every complaint seriously, investigate it fairly and reply in writing. This page explains how to complain, how long each step takes and where you can go if you are still not satisfied with our answer."
+  draft
+  cta={false}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0">
+    <div class="container prose">
+      <h2>How to complain</h2>
+      <p>Talk to your point of contact first. Many problems can be put right quickly. If that does not resolve it, or you would rather not raise it with them, write to our Managing Director, Alain Dastros, at <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a> or by post to <span class="tbc">registered office address (to confirm)</span>.</p>
+      <p>Please tell us what went wrong, when, and what you would like us to do to put it right.</p>
+
+      <h2>What happens next</h2>
+      <ol>
+        <li>We acknowledge your complaint within <span class="tbc">5 working days (to confirm)</span>.</li>
+        <li>Someone not involved in the work investigates it.</li>
+        <li>We send a full written reply within <span class="tbc">8 weeks (to confirm)</span>, explaining what we found and what we will do.</li>
+      </ol>
+      <p>Making a complaint does not affect any other rights you have.</p>
+
+      <h2>If you are still not satisfied</h2>
+      <p>You can refer your complaint to our professional body: <span class="tbc">name and complaints contact to confirm</span>.</p>
+      <p><span class="tbc">If our business finance activity is regulated by the FCA, you may also be able to refer a complaint about it to the Financial Ombudsman Service (to confirm).</span></p>
+      <p>Complaints about how we handle personal data can also go to the Information Commissioner’s Office: see our <a href="/privacy-policy/">privacy policy</a>.</p>
+    </div>
+  </section>
+</TextPage>

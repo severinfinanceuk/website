@@ -1,0 +1,58 @@
+---
+// /privacy-policy/: UK GDPR and Data Protection Act 2018 privacy notice. DRAFT for review by
+// Severin Finance (draft banner; noindex via noindexPaths in site.js until approved).
+// Yellow (tbc): registered office, company number, ICO registration number, retention periods.
+import TextPage from '../layouts/TextPage.astro';
+import { CORE_UPDATED } from '../lib/catalog.js';
+---
+<TextPage
+  title="Privacy Policy | Severin Finance"
+  description="How Severin Finance collects, uses and protects your personal data under UK GDPR and the Data Protection Act 2018, and your rights. Free consultation."
+  url="/privacy-policy/"
+  eyebrow="Privacy policy"
+  h1="Privacy policy"
+  answer="This policy explains what personal data Severin Finance Ltd collects, why we use it, who we share it with, how long we keep it and the rights you have under UK data protection law. It covers this website and the services we provide to clients."
+  draft
+  cta={false}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0">
+    <div class="container prose">
+      <h2>Who we are</h2>
+      <p>Severin Finance Ltd (“we”, “us”) is the controller of your personal data. Company number: <span class="tbc">to confirm</span>. Registered office: <span class="tbc">to confirm</span>. ICO registration number: <span class="tbc">to confirm</span>. You can contact us about privacy at <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a> or on <a href="tel:+442045422488">020 4542 2488</a>.</p>
+
+      <h2>The data we collect</h2>
+      <ul>
+        <li><strong>Contact details</strong>: name, email address, phone number and postal address.</li>
+        <li><strong>Identity documents</strong>: passport or driving licence and proof of address, which we must check under the Money Laundering Regulations 2017.</li>
+        <li><strong>Financial and tax information</strong>: income, bank statements, tax records, your Unique Taxpayer Reference and National Insurance number, company records and anything else needed to do the work you ask for.</li>
+        <li><strong>Website data</strong>: pages visited and the device and browser used. Vercel Web Analytics records this without cookies. Google Analytics only runs if you accept analytics cookies (see our <a href="/cookie-policy/">cookie policy</a>).</li>
+        <li><strong>Correspondence</strong>: emails, call notes and messages you send us.</li>
+      </ul>
+
+      <h2>Why we use it and our lawful basis</h2>
+      <ul>
+        <li><strong>To provide our services</strong> (contract): preparing accounts and tax returns, running payroll, company secretarial work and arranging finance.</li>
+        <li><strong>To meet our legal obligations</strong> (legal obligation): anti-money laundering checks, record keeping, and reporting to HMRC and Companies House.</li>
+        <li><strong>To answer enquiries and run our business</strong> (legitimate interests): replying to you, keeping records of our advice, improving our website and protecting it from misuse.</li>
+        <li><strong>Analytics cookies and marketing emails</strong> (consent): only if you agree. You can withdraw consent at any time.</li>
+      </ul>
+
+      <h2>Who we share it with</h2>
+      <p>We only share your data where we need to, and never sell it. Recipients include HMRC, Companies House and other UK authorities; the accounting, payroll and document software we use to do the work; identity verification providers; lenders and finance providers when you ask us to arrange finance; our professional body, insurers and auditors where required; and anyone we must share with by law.</p>
+      <p>Some of our software providers may store data outside the UK. Where they do, we make sure the transfer is protected, for example by UK adequacy regulations or the International Data Transfer Agreement.</p>
+
+      <h2>How long we keep it</h2>
+      <p>We keep client records for <span class="tbc">6 years after our work for you ends (to confirm)</span>, so we can answer questions from HMRC and meet our legal duties. Anti-money laundering records are kept for 5 years after our business relationship ends, as the Money Laundering Regulations 2017 require. Enquiries that do not lead to work are deleted after <span class="tbc">12 months (to confirm)</span>.</p>
+
+      <h2>Your rights</h2>
+      <p>You have the right to ask for a copy of your data, to have it corrected or deleted, to restrict or object to how we use it, to have it moved to another provider and to withdraw consent. Some rights are limited where we must keep records by law. We reply within one month. To use any right, email <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a>.</p>
+
+      <h2>Complaints</h2>
+      <p>If you are unhappy with how we handle your data, please tell us first so we can put it right. You can also complain to the Information Commissioner’s Office at <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">ico.org.uk</a> or on 0303 123 1113.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We update this policy when our services or the law change. The date at the top shows when it last changed.</p>
+    </div>
+  </section>
+</TextPage>

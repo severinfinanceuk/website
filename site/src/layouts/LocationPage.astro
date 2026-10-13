@@ -199,7 +199,7 @@ const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fil
             <table class="data-table">
               <caption>{t.caption}</caption>
               <thead><tr>{t.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
-              <tbody>{t.rows.map(([a, b]) => <tr><th scope="row">{a}</th><td>{b}</td></tr>)}</tbody>
+              <tbody>{t.rows.map(([a, ...cells]) => <tr><th scope="row">{a}</th>{cells.map((v) => <td>{v}</td>)}</tr>)}</tbody>
             </table>
             {t.after && <p class="table-after">{t.after}</p>}
           </div>

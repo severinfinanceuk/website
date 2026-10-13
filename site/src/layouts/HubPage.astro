@@ -1,0 +1,147 @@
+---
+// Section hub (pillar) page: /uk/accounting/, /uk/tax/, /uk/company-services/,
+// /uk/business-finance/ and /cross-border/. One layout plus one data file (src/data/hub-pages/*.js).
+// Sections: answer-first hero → service cards (photo from each service page) → key facts tables
+// → how to choose (short prose) → guides in this section (from src/data/guides, by `section`)
+// → FAQ → call to action. Schema: CollectionPage + ItemList of the services + BreadcrumbList + FAQPage.
+import TextPage from './TextPage.astro';
+import { Picture, getImage } from 'astro:assets';
+import { services } from '../data/services.js';
+import { guides } from '../lib/catalog.js';
+import { orgRef } from '../data/site.js';
+
+const { page: p } = Astro.props;
+const site = Astro.site.href.replace(/\/$/, '');
+const pageUrl = site + p.url;
+
+// Photo and label for each service card come from the service page itself
+const servicePages = new Map(Object.values(import.meta.glob('../data/service-pages/*.js', { eager: true })).map((m) => [m.default.url, m.default]));
+const labels = new Map(services.flatMap((c) => c.items.map(([label, href]) => [href, label])));
+const cards = p.services.items.map((s) => ({ ...s, label: s.label ?? labels.get(s.href), page: servicePages.get(s.href) }));
+const sectionGuides = guides.filter((g) => g.section === p.section);
+
+const og = await getImage({ src: cards[0].page.hero.image, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 70 });
+const ogImage = new URL(og.src, Astro.site).href;
+
+const nodes = [{
+  '@type': 'ItemList', '@id': `${pageUrl}#services`, name: p.services.h2,
+  itemListElement: cards.map((c, i) => ({
+    '@type': 'ListItem', position: i + 1, url: site + c.href,
+    item: { '@type': 'Service', name: c.page.service.name, url: site + c.href, provider: orgRef },
+  })),
+}];
+---
+<TextPage
+  title={p.title}
+  description={p.description}
+  url={p.url}
+  breadcrumb={p.breadcrumb}
+  eyebrow={p.hero.eyebrow}
+  h1={p.hero.h1}
+  answer={p.hero.answer}
+  pageType="CollectionPage"
+  nodes={nodes}
+  faqs={p.faqs}
+  faqTitle={p.faqTitle}
+  reviewed={p.reviewed}
+  ogImage={ogImage}
+>
+  <div slot="hero" class="hero-actions">
+    <a class="btn btn-fill" href="/contact/">Book a free consultation</a>
+    <a class="btn" href="tel:+442045422488">Call 020 4542 2488</a>
+  </div>
+
+  <!-- Services in this section: photo cards, each links to its page -->
+  <section id="services" class="section" style="padding-top:0" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">{p.services.eyebrow}</span>
+          <h2 id="services-title">{p.services.h2}</h2>
+        </div>
+        <p>{p.services.intro}</p>
+      </div>
+      <ul class="hub-cards" role="list">
+        {cards.map((c) => (
+          <li class="card card-place who-card hub-card">
+            <Picture src={c.page.hero.image} alt={c.page.hero.imageAlt} formats={['avif', 'webp']} fallbackFormat="jpg" widths={[320, 480, 640]} sizes="(min-width: 1000px) 400px, (min-width: 768px) 45vw, 92vw" quality={45} loading="lazy" decoding="async" />
+            <h3><a href={c.href}>{c.label}</a></h3>
+            <p>{c.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Key facts: tables reused from the service pages (one checked source of truth) -->
+  {p.facts && (
+    <section id="facts" class="section sp-tint" aria-labelledby="facts-title">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <span class="eyebrow">{p.facts.eyebrow}</span>
+            <h2 id="facts-title">{p.facts.h2}</h2>
+          </div>
+          <p>{p.facts.intro}</p>
+        </div>
+        <div class="tables">
+          {p.facts.tables.map((t) => (
+            <div class="table-card">
+              <table class="data-table">
+                <caption>{t.caption}</caption>
+                <thead><tr>{t.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+                <tbody>{t.rows.map(([a, ...cells]) => <tr><th scope="row">{a}</th>{cells.map((v) => <td>{v}</td>)}</tr>)}</tbody>
+              </table>
+              {t.after && <p class="table-after">{t.after}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- How to choose: short answer-led prose with links into the section -->
+  <section id="choose" class="section" aria-labelledby="choose-title">
+    <div class="container tp-body">
+      <div class="prose">
+        <span class="eyebrow">{p.choose.eyebrow}</span>
+        <h2 id="choose-title" style="margin-top:12px">{p.choose.h2}</h2>
+        {p.choose.blocks.map((b) => (
+          <>
+            {b.h3 && <h3>{b.h3}</h3>}
+            <p set:html={b.html} />
+          </>
+        ))}
+      </div>
+      <aside class="tp-side" aria-label="Sources and review">
+        <div class="side-box">
+          <h3>Checked against</h3>
+          <ul role="list">
+            {p.sources.map(([href, label]) => <li><a href={href} rel="noopener">{label}</a></li>)}
+          </ul>
+          <p>Last reviewed <time datetime={p.reviewed.date}>{p.reviewed.label}</time> by the Severin Finance team.</p>
+        </div>
+        <div class="side-box">
+          <h3>Not sure which you need?</h3>
+          <p>Tell us your situation on a free call and we will point you to the right service and price.</p>
+          <a class="btn btn-fill btn-sm" href="/contact/">Book a free consultation</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Guides in this section (appear as guides are published) -->
+  {sectionGuides.length > 0 && (
+    <section id="guides" class="section sp-tint" aria-labelledby="guides-title">
+      <div class="container">
+        <div class="cluster-head">
+          <h2 id="guides-title">{p.guidesTitle}</h2>
+          <a href="/resources/">All guides →</a>
+        </div>
+        <ul class="guide-list guide-list-3" role="list">
+          {sectionGuides.map((g) => <li><a href={g.url}><strong>{g.h1 ?? g.title.replace(/ \| Severin Finance$/, '')}</strong><span>{g.summary}</span></a></li>)}
+        </ul>
+      </div>
+    </section>
+  )}
+</TextPage>

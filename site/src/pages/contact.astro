@@ -1,0 +1,80 @@
+---
+// /contact/: phone, email and (later) the enquiry form and booking calendar.
+// The form and calendar are added by Severin later: they go in the two .slot-box placeholders.
+// When they arrive, add their origins to form-action / connect-src / frame-src in vercel.json.
+// Office address, opening hours and reply time stay yellow (tbc) and out of schema until confirmed.
+import TextPage from '../layouts/TextPage.astro';
+import { PHONE, EMAIL } from '../data/site.js';
+import { CORE_UPDATED } from '../lib/catalog.js';
+
+const faqs = [
+  { q: 'Is the first consultation really free?', a: 'Yes. The first consultation is free and there is no obligation. We use it to understand what you need and give you a fixed price in writing.' },
+  { q: 'Do I need to visit your office?', a: 'No. Most clients work with us by phone, video call and email, and documents are shared and signed online. Meetings in London are available by appointment.' },
+  { q: 'Can you help if I live outside the UK?', a: 'Yes. We look after UK tax returns, UK property and UK companies for clients who live abroad, working online across time zones.' },
+  { q: 'What should I have ready for the first call?', a: 'A short summary of what you need, any letters from HMRC or Companies House, and your last tax return or accounts if you have them. If you have none of these, call anyway.' },
+];
+---
+<TextPage
+  title="Contact Severin Finance | London Accountants"
+  description="Call 020 4542 2488 or email enquiries@severinfinance.com to book a free consultation with our London accountants, for clients UK-wide and abroad."
+  url="/contact/"
+  eyebrow="Contact"
+  h1="Contact Severin Finance"
+  answer="Call us on 020 4542 2488 or email enquiries@severinfinance.com to book a free consultation. We are based in London and work with clients across the UK and with UK clients living abroad, by phone, video call and email. Tell us what you need and we will reply with a fixed price in writing."
+  pageType="ContactPage"
+  faqs={faqs}
+  faqTitle="Before you get in touch"
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0" aria-labelledby="ways-title">
+    <div class="container">
+      <h2 id="ways-title" class="sr-only">Ways to contact us</h2>
+      <div class="info-grid info-grid-3">
+        <div class="info-card">
+          <h3>Call</h3>
+          <a class="big" href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
+          <p>Opening hours: <span class="tbc">Monday to Friday, 9am to 5.30pm (to confirm)</span></p>
+        </div>
+        <div class="info-card">
+          <h3>Email</h3>
+          <a class="big" style="font-size:1.25rem;word-break:break-all" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <p>We reply within <span class="tbc">1 working day (to confirm)</span>.</p>
+        </div>
+        <div class="info-card">
+          <h3>Visit</h3>
+          <p>London, by appointment. Office address: <span class="tbc">to confirm</span>.</p>
+          <p>Working online with clients across the UK and abroad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sp-tint" aria-labelledby="book-title">
+    <div class="container tp-body">
+      <div>
+        <h2 id="book-title">Book a free consultation</h2>
+        <div class="slot-box" style="margin-top:20px">
+          <p><span class="tbc">Enquiry form and booking calendar go here (to be added).</span><br />Until then, call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</p>
+        </div>
+      </div>
+      <aside class="tp-side" aria-label="What happens next">
+        <div class="side-box">
+          <h2>What happens next</h2>
+          <ol style="display:grid;gap:8px;padding-left:1.2em">
+            <li>We talk through what you need, free of charge.</li>
+            <li>We send a fixed price and a timetable in writing.</li>
+            <li>You approve, and your point of contact gets started.</li>
+          </ol>
+        </div>
+        <div class="side-box">
+          <h2>Looking for something?</h2>
+          <ul>
+            <li><a href="/uk/pricing/">Pricing</a></li>
+            <li><a href="/resources/">Guides</a></li>
+            <li><a href="/complaints/">Complaints</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</TextPage>

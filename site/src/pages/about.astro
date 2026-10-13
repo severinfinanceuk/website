@@ -1,0 +1,113 @@
+---
+// /about/: who Severin Finance is, how we work and the facts that build trust (E-E-A-T).
+// Facts only Severin can give stay yellow (tbc) and out of schema: company number,
+// registered office, years in practice, ICO number, AML supervisor, insurance.
+import TextPage from '../layouts/TextPage.astro';
+import { Image } from 'astro:assets';
+import cima from '../assets/logos/cima.png';
+import ciot from '../assets/logos/ciot.png';
+import icpa from '../assets/logos/icpa.png';
+import xero from '../assets/logos/xero.png';
+import intuit from '../assets/logos/intuit.png';
+import { CORE_UPDATED } from '../lib/catalog.js';
+
+const promises = [
+  { title: 'One point of contact', text: 'You deal with the same person from your first call to your final filing, backed by the whole team.' },
+  { title: 'A fixed price, in writing', text: 'We agree the work, the fee and the deadline before anything starts. No surprise bills.' },
+  { title: 'Plain English', text: 'We explain what you owe, why, and what you can do about it, without jargon.' },
+  { title: 'Integrity and confidentiality', text: 'Your affairs stay private, and we only recommend what is right for you within the rules.' },
+];
+
+const facts = [
+  ['Legal name', 'Severin Finance Ltd'],
+  ['Based in', 'London, working with clients across the UK and abroad'],
+  ['Practice', 'Chartered Management Accountant practice'],
+  ['Company number', 'To confirm', true],
+  ['Registered office', 'To confirm', true],
+  ['Years in practice', 'To confirm', true],
+  ['Anti-money laundering supervisor', 'To confirm', true],
+  ['Professional indemnity insurance', 'To confirm', true],
+  ['ICO registration (data protection)', 'To confirm', true],
+];
+
+const logos = [
+  { img: cima, name: 'CIMA, Chartered Institute of Management Accountants', h: 48 },
+  { img: ciot, name: 'Chartered Institute of Taxation', h: 64 },
+  { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 44 },
+  { img: xero, name: 'Xero', h: 52 },
+  { img: intuit, name: 'Intuit QuickBooks', h: 32 },
+];
+
+const faqs = [
+  { q: 'Where is Severin Finance based?', a: 'We are based in London. We work online with clients across the UK, and with UK clients who live abroad, so most clients never need to visit the office.' },
+  { q: 'What does Severin Finance do?', a: 'We are an independent accountancy firm. We prepare accounts and tax returns, run bookkeeping and payroll, look after UK companies from formation to sale, and arrange business finance.' },
+  { q: 'Who will look after my work?', a: 'One named person is your point of contact, supported by the rest of the team. You will always know who to call.' },
+  { q: 'How do I get started?', a: 'Book a free consultation or call 020 4542 2488. We tell you what we need, what it costs and when it will be done.' },
+];
+---
+<TextPage
+  title="About Severin Finance | London Accountants"
+  description="Severin Finance is an independent Chartered Management Accountant practice in London, working with clients across the UK and abroad. Free consultation."
+  url="/about/"
+  eyebrow="About us"
+  h1="About Severin Finance"
+  answer="Severin Finance is an independent Chartered Management Accountant practice in London. We look after accounts, tax, UK companies and business finance for individuals and businesses across the UK, and for UK clients living abroad. Every client has one point of contact, a fixed price agreed in writing, and a team that explains things in plain English."
+  pageType="AboutPage"
+  faqs={faqs}
+  faqTitle="About us: questions"
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0" aria-labelledby="story-title">
+    <div class="container tp-body">
+      <div class="prose">
+        <span class="eyebrow">Our approach</span>
+        <h2 id="story-title" style="margin-top:12px">Simplifying the complex, so that everything is just black and white</h2>
+        <p>Tax and accounts are complicated. Your experience of them should not be. That idea has shaped Severin Finance from the start: we take on the detail, so you get a clear answer, a clear price and a clear deadline.</p>
+        <p>We work with sole traders, landlords, contractors, owner-managed companies and growing businesses. Some clients need one tax return a year. Others want us to run their whole finance function: <a href="/uk/accounting/bookkeeping-services/">bookkeeping</a>, <a href="/uk/accounting/payroll-services/">payroll</a>, <a href="/uk/accounting/limited-company-accountant/">year-end accounts</a> and a <a href="/uk/accounting/virtual-finance-director/">virtual finance director</a>.</p>
+        <p>Because we also <a href="/uk/business-finance/">arrange business finance</a>, the people preparing your numbers are the people presenting them to lenders. And because we work online, it makes no difference whether you are in <a href="/uk/london/">London</a>, elsewhere in the UK or <a href="/cross-border/">living abroad</a> with UK income or a UK company.</p>
+        <h3>UK work only</h3>
+        <p>We are a UK firm and we do UK work: UK tax returns, UK accounts and UK companies. For clients abroad, we handle the UK side and work alongside your local adviser where you live.</p>
+      </div>
+      <aside class="tp-side" aria-label="Company facts">
+        <div class="side-box">
+          <h2>Company facts</h2>
+          <dl class="facts-list">
+            {facts.map(([k, v, tbc]) => <><dt>{k}</dt><dd>{tbc ? <span class="tbc">{v}</span> : v}</dd></>)}
+          </dl>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section sp-tint" aria-labelledby="promise-title">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How we work</span>
+        <h2 id="promise-title">What every client gets</h2>
+      </div>
+      <div class="info-grid info-grid-4">
+        {promises.map((p) => <div class="info-card"><h3>{p.title}</h3><p>{p.text}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="bodies-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Memberships and software</span>
+          <h2 id="bodies-title">Professional bodies and tools</h2>
+        </div>
+        <p>The professional bodies we belong to and the accounting software we work in.</p>
+      </div>
+      <ul class="logo-row" role="list">
+        {logos.map((l) => <li><Image src={l.img} alt={l.name} title={l.name} height={l.h} style={`--h:${l.h}px`} densities={[1, 2]} quality={85} loading="lazy" decoding="async" /></li>)}
+      </ul>
+      <p class="note" style="margin-top:20px"><span class="tbc">Membership numbers and which team members hold each qualification: to confirm.</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-fill" href="/team/">Meet the team</a>
+        <a class="btn" href="/reviews/">Client reviews</a>
+      </div>
+    </div>
+  </section>
+</TextPage>

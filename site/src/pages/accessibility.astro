@@ -1,0 +1,43 @@
+---
+// /accessibility/: accessibility statement (WCAG 2.2 AA). DRAFT for review by Severin Finance
+// (noindex via noindexPaths in site.js until approved). Update "Known issues" after each audit.
+import TextPage from '../layouts/TextPage.astro';
+import { CORE_UPDATED } from '../lib/catalog.js';
+---
+<TextPage
+  title="Accessibility Statement | Severin Finance"
+  description="How we make the Severin Finance website accessible, the standard we work to (WCAG 2.2 AA), known issues and how to ask for help. Free consultation."
+  url="/accessibility/"
+  eyebrow="Accessibility"
+  h1="Accessibility statement"
+  answer="We want everyone to be able to use the Severin Finance website, whatever device, browser or assistive technology they use. We design and test it to meet the Web Content Accessibility Guidelines 2.2 at level AA. If anything on the site is hard to use, tell us and we will help."
+  draft
+  cta={false}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0">
+    <div class="container prose">
+      <h2>What we do</h2>
+      <ul>
+        <li>Every page has one main heading and a clear heading order, so screen readers can jump between sections.</li>
+        <li>Text has strong colour contrast, and pages still work when you zoom to 400% or enlarge the text.</li>
+        <li>Everything can be used with a keyboard, with a visible focus outline and a skip link.</li>
+        <li>Images have text descriptions, and decorative images are hidden from screen readers.</li>
+        <li>Questions and answers open and close with standard controls that work with assistive technology.</li>
+        <li>Motion is reduced when your device asks for reduced motion.</li>
+      </ul>
+
+      <h2>Known issues</h2>
+      <p><span class="tbc">No known issues at the time of writing. To be updated after an independent accessibility check (to confirm).</span></p>
+
+      <h2>Other formats and help</h2>
+      <p>If you need information from this website in another format, such as large print or a phone call talking you through it, call <a href="tel:+442045422488">020 4542 2488</a> or email <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a>. We will reply within <span class="tbc">5 working days (to confirm)</span>.</p>
+
+      <h2>Reporting a problem</h2>
+      <p>Tell us about any page that is hard to use, with the address of the page and what went wrong. We use the feedback to fix problems and improve the site.</p>
+
+      <h2>Our standard</h2>
+      <p>We aim to meet WCAG 2.2 level AA and to make reasonable adjustments under the Equality Act 2010. This statement was prepared on 13 October 2026 and is reviewed whenever the site changes significantly.</p>
+    </div>
+  </section>
+</TextPage>

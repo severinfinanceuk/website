@@ -1,0 +1,45 @@
+---
+// /terms/: website terms of use. DRAFT for review by Severin Finance (noindex via noindexPaths
+// in site.js until approved). Client work is governed by each client's engagement letter.
+import TextPage from '../layouts/TextPage.astro';
+import { CORE_UPDATED } from '../lib/catalog.js';
+---
+<TextPage
+  title="Website Terms of Use | Severin Finance"
+  description="The terms that apply when you use the Severin Finance website, including how to use our guides and the limits of the information on it. Free consultation."
+  url="/terms/"
+  eyebrow="Terms of use"
+  h1="Website terms of use"
+  answer="These terms apply when you use the Severin Finance website. The information here is general guidance on UK tax, accounts and business finance, not advice for your situation. Our work for clients is governed by a separate engagement letter, which sets out the services, fees and responsibilities agreed with you."
+  draft
+  cta={false}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0">
+    <div class="container prose">
+      <h2>About us</h2>
+      <p>This website is run by Severin Finance Ltd, a company registered in England and Wales. Company number: <span class="tbc">to confirm</span>. Registered office: <span class="tbc">to confirm</span>.</p>
+
+      <h2>Information, not advice</h2>
+      <p>Our guides and pages explain UK rules in general terms and show the date they were last checked. Tax law changes often and the right answer depends on your circumstances, so do not act on the website alone. Speak to us, or another qualified adviser, before making a decision. We only accept responsibility for advice given to clients under an engagement letter.</p>
+
+      <h2>Business finance</h2>
+      <p>Finance is subject to status and lender approval. Information about loans, rates and fees is a general guide and is not an offer of credit. <span class="tbc">Regulatory status for arranging finance (FCA firm reference number, if any) to confirm.</span></p>
+
+      <h2>Using our content</h2>
+      <p>The text, design and images on this site belong to Severin Finance Ltd or are used under licence. You may print or share pages for personal use and link to them. You may not copy them for commercial use without our permission.</p>
+
+      <h2>Links to other websites</h2>
+      <p>We link to GOV.UK, HMRC and other sources so you can check the rules yourself. We are not responsible for the content of other websites.</p>
+
+      <h2>Our liability</h2>
+      <p>We work to keep this website accurate and available, but we cannot promise it will always be error-free or online. To the extent the law allows, we are not liable for loss caused by relying on general information on the website. Nothing in these terms limits liability that cannot be limited by law.</p>
+
+      <h2>Law</h2>
+      <p>These terms are governed by the law of England and Wales, and the courts of England and Wales have jurisdiction.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms: <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a>. See also our <a href="/privacy-policy/">privacy policy</a> and <a href="/cookie-policy/">cookie policy</a>.</p>
+    </div>
+  </section>
+</TextPage>

@@ -1,0 +1,65 @@
+---
+// /resources/: every guide, grouped by section (the same sections as the hubs). Fills itself
+// from src/data/guides/*.js (the "section" field), so a new guide appears here automatically.
+// Tools (calculators, tax calendar, glossary) come from src/data/tool-pages/*.js.
+import TextPage from '../../layouts/TextPage.astro';
+import { guides, CORE_UPDATED } from '../../lib/catalog.js';
+import { SITE } from '../../data/site.js';
+
+const hubs = Object.values(import.meta.glob('../../data/hub-pages/*.js', { eager: true })).map((m) => m.default);
+const order = [['tax', 'Tax'], ['accounting', 'Accounting'], ['company-services', 'Companies'], ['business-finance', 'Business finance'], ['cross-border', 'Clients abroad']];
+const sections = order.map(([key, label]) => {
+  const hub = hubs.find((h) => h.section === key);
+  return { key, label, hub, title: hub.guidesTitle, items: guides.filter((g) => g.section === key) };
+});
+const tools = Object.values(import.meta.glob('../../data/tool-pages/*.js', { eager: true }))
+  .map((m) => m.default).sort((a, b) => a.title.localeCompare(b.title));
+
+const nodes = guides.length ? [{
+  '@type': 'ItemList', '@id': `${SITE}/resources/#guides`, numberOfItems: guides.length,
+  itemListElement: guides.map((g, i) => ({ '@type': 'ListItem', position: i + 1, url: SITE + g.url, name: g.h1 ?? g.title })),
+}] : [];
+---
+<TextPage
+  title="UK Tax & Business Guides 2026/27 | Severin Finance"
+  description="Plain-English guides to UK tax, accounts, payroll, VAT, company law and business finance, with 2026/27 rates and GOV.UK sources. Free consultation."
+  url="/resources/"
+  eyebrow="Guides"
+  h1="UK tax and business guides"
+  answer="Our guides explain UK tax, accounts, payroll, VAT, company law and business finance in plain English. Each one gives the short answer first, shows the 2026/27 rates and deadlines, links to the GOV.UK source and is reviewed by our team. They cover individuals, landlords, limited companies and UK clients living abroad."
+  pageType="CollectionPage"
+  nodes={nodes}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0" aria-label="Guides by topic">
+    <div class="container">
+      <nav class="az" aria-label="Jump to a topic" style="margin-bottom:40px">
+        {sections.map((s) => <a href={`#${s.key}`} style="padding-inline:16px">{s.label}</a>)}
+        {tools.length > 0 && <a href="#tools" style="padding-inline:16px">Tools</a>}
+      </nav>
+      {sections.map((s) => (
+        <div class="cluster" id={s.key} style="scroll-margin-top:100px">
+          <div class="cluster-head">
+            <h2>{s.title}</h2>
+            <a href={s.hub.url}>{s.label} services</a>
+          </div>
+          {s.items.length > 0 ? (
+            <ul class="guide-list guide-list-3" role="list">
+              {s.items.map((g) => <li><a href={g.url}><strong>{g.h1 ?? g.title}</strong><span>{g.summary}</span></a></li>)}
+            </ul>
+          ) : (
+            <p class="note">New guides on this topic are on the way. In the meantime, see our <a href={s.hub.url}>{s.label.toLowerCase()} services</a>.</p>
+          )}
+        </div>
+      ))}
+      {tools.length > 0 && (
+        <div class="cluster" id="tools" style="scroll-margin-top:100px">
+          <div class="cluster-head"><h2>Calculators and reference</h2></div>
+          <ul class="guide-list guide-list-3" role="list">
+            {tools.map((t) => <li><a href={t.url}><strong>{t.h1 ?? t.title}</strong><span>{t.summary}</span></a></li>)}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+</TextPage>

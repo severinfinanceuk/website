@@ -1,0 +1,82 @@
+---
+// /team/: the people behind Severin Finance (E-E-A-T). Only Alain Dastros is confirmed so far;
+// the other cards are yellow placeholders until Severin sends names, photos and qualifications.
+// When real people are added, give each a Person node below (only confirmed facts, never tbc).
+import TextPage from '../layouts/TextPage.astro';
+import { orgRef, SITE } from '../data/site.js';
+import { CORE_UPDATED } from '../lib/catalog.js';
+
+const team = [
+  { initials: 'AD', name: 'Alain Dastros', role: 'Managing Director', bio: 'Leads the firm and reviews our tax and accounting pages. Qualifications, membership number and short bio to confirm.', tbcBio: true },
+  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications (for example ACCA, CIMA or CTA) and LinkedIn to confirm.', tbcAll: true },
+  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications and LinkedIn to confirm.', tbcAll: true },
+];
+
+const nodes = [{
+  '@type': 'Person', '@id': `${SITE}/team/#alain-dastros`, name: 'Alain Dastros',
+  jobTitle: 'Managing Director', worksFor: orgRef,
+}];
+
+const faqs = [
+  { q: 'Will I always speak to the same person?', a: 'Yes. You have one named point of contact for your work, backed by the rest of the team when you need a specialist.' },
+  { q: 'Are your accountants qualified?', a: 'Our team includes qualified accountants and tax advisers. Each person’s qualifications and professional body are shown on their profile once confirmed.', tbc: true },
+  { q: 'Can I meet the team in person?', a: 'Yes, by appointment in London. Most clients work with us by phone, video call and email, which suits clients across the UK and abroad.' },
+];
+---
+<TextPage
+  title="Our Team | Severin Finance Accountants, London"
+  description="Meet the accountants and tax advisers at Severin Finance in London. One point of contact for your accounts, tax and finance. Free consultation."
+  url="/team/"
+  breadcrumb={[['Home', '/'], ['About', '/about/'], ['Our team', '/team/']]}
+  eyebrow="Our team"
+  h1="The people behind your numbers"
+  answer="Severin Finance is led by Managing Director Alain Dastros and a London team of accountants and tax advisers. Every client has one named point of contact who knows their affairs, with specialists in tax, company law and business finance on hand. You speak to the person doing the work, not a call centre."
+  faqs={faqs}
+  faqTitle="Questions about our team"
+  nodes={nodes}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="band section" aria-labelledby="people-title">
+    <div class="container">
+      <div class="section-head split">
+        <div>
+          <span class="eyebrow">Leadership and team</span>
+          <h2 id="people-title">Who you will work with</h2>
+        </div>
+        <p>Qualified accountants who answer the phone themselves.</p>
+      </div>
+      <ul class="cards cards-3" role="list">
+        {team.map((t) => (
+          <li class="person">
+            <div class="person-media" aria-hidden="true">{t.initials}</div>
+            <div class="person-body">
+              <span class="person-role">{t.tbcAll ? <span class="tbc">{t.role}</span> : t.role}</span>
+              <h3 class="person-name">{t.tbcAll ? <span class="tbc">{t.name}</span> : t.name}</h3>
+              <p class="person-bio">{(t.tbcAll || t.tbcBio) ? <span class="tbc">{t.bio}</span> : t.bio}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section sp-tint" aria-labelledby="how-title">
+    <div class="container tp-body">
+      <div class="prose">
+        <h2 id="how-title" style="margin-top:0">A team, not a single accountant</h2>
+        <p>Small firms often rely on one person. We work as a team, so holidays and busy seasons never hold up your return. Your point of contact knows your affairs and brings in a colleague when the work needs it: a <a href="/uk/tax/">tax specialist</a> for a property sale, a <a href="/uk/company-services/">company secretarial</a> expert for a share issue, or our <a href="/uk/business-finance/">business finance</a> team when you need funding.</p>
+        <p>Every tax and accounting page on this site is reviewed by a qualified member of the team, and shows the date it was last checked against GOV.UK.</p>
+      </div>
+      <aside class="tp-side" aria-label="More about us">
+        <div class="side-box">
+          <h2>More about us</h2>
+          <ul>
+            <li><a href="/about/">About Severin Finance</a></li>
+            <li><a href="/reviews/">Client reviews</a></li>
+            <li><a href="/locations/">Where we work</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</TextPage>

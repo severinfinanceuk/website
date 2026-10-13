@@ -1,0 +1,27 @@
+---
+// /reviews/: client reviews from src/data/reviews.js only (genuine, quoted word for word, with
+// permission). noindex (noindexPaths in site.js) until there are enough real reviews and a
+// confirmed Google rating. No Review / AggregateRating schema: Google ignores self-serving
+// review markup for LocalBusiness and Organization, and the rating is still tbc.
+import TextPage from '../layouts/TextPage.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { CORE_UPDATED } from '../lib/catalog.js';
+---
+<TextPage
+  title="Client Reviews | Severin Finance"
+  description="What clients say about Severin Finance, the London accountants for tax, accounts, UK companies and business finance. Free consultation."
+  url="/reviews/"
+  breadcrumb={[['Home', '/'], ['About', '/about/'], ['Reviews', '/reviews/']]}
+  eyebrow="Reviews"
+  h1="What our clients say"
+  answer="These are reviews from Severin Finance clients, quoted word for word and shared with their permission. We never pay for reviews or pick only the good ones. If you are a client, you can leave a review on our Google profile."
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <Testimonials style="padding-top:0" />
+  <section class="section sp-tint" aria-labelledby="leave-title">
+    <div class="container">
+      <h2 id="leave-title">Leave a review</h2>
+      <p style="margin-top:12px;max-width:60ch">Worked with us? A short review helps other people find an accountant they can trust. Google profile link: <span class="tbc">to confirm</span>.</p>
+    </div>
+  </section>
+</TextPage>

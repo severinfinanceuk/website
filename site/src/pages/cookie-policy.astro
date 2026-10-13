@@ -1,0 +1,56 @@
+---
+// /cookie-policy/: PECR cookie policy. DRAFT for review by Severin Finance (noindex via
+// noindexPaths in site.js until approved). Lists the real cookies: Vercel Web Analytics sets
+// none; Google Analytics 4 (_ga, _ga_<ID>) and the consent cookie only exist once GA4_ID is set.
+import TextPage from '../layouts/TextPage.astro';
+import { GA4_ID, CONSENT_COOKIE, CONSENT_DAYS } from '../data/analytics.js';
+import { CORE_UPDATED } from '../lib/catalog.js';
+
+const cookies = [
+  [CONSENT_COOKIE, 'Severin Finance', 'Remembers whether you accepted or rejected analytics cookies. Strictly necessary.', `${CONSENT_DAYS} days`],
+  ['_ga', 'Google Analytics', 'Tells visits apart so we can count visitors. Set only if you accept.', '2 years'],
+  ['_ga_<container ID>', 'Google Analytics', 'Keeps the state of your visit. Set only if you accept.', '2 years'],
+];
+---
+<TextPage
+  title="Cookie Policy | Severin Finance"
+  description="The cookies the Severin Finance website uses, why we use them, how long they last and how to change your choice at any time. Free consultation."
+  url="/cookie-policy/"
+  eyebrow="Cookie policy"
+  h1="Cookie policy"
+  answer="This policy explains the cookies our website uses. We only use analytics cookies if you agree, and you can change your mind at any time. Our main visitor statistics come from Vercel Web Analytics, which does not use cookies or track you across other websites."
+  draft
+  cta={false}
+  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
+>
+  <section class="section" style="padding-top:0">
+    <div class="container prose">
+      <h2>What cookies are</h2>
+      <p>Cookies are small files a website saves on your device. Some are needed for the site to work. Others, such as analytics cookies, are optional, and under the Privacy and Electronic Communications Regulations we must ask before setting them.</p>
+
+      <h2>The cookies we use</h2>
+      <div class="table-card">
+        <table class="data-table">
+          <caption>Cookies on severinfinance.com</caption>
+          <thead><tr><th scope="col">Name</th><th scope="col">Set by</th><th scope="col">Purpose</th><th scope="col">Lasts</th></tr></thead>
+          <tbody>
+            {cookies.map(([n, by, why, life]) => <tr><th scope="row">{n}</th><td>{by}</td><td>{why}</td><td>{life}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+      <p>We use Google Analytics in Consent Mode: until you click Accept, Google’s analytics script does not load and no Google cookies are set. Vercel Web Analytics counts page views without cookies and without identifying you.</p>
+      {!GA4_ID && <p><span class="tbc">Google Analytics is not switched on yet, so at present this site sets no cookies at all.</span></p>}
+
+      <h2>Change your choice</h2>
+      {GA4_ID ? (
+        <p><button class="btn" type="button" data-cookie-settings>Change cookie settings</button></p>
+      ) : (
+        <p>Once analytics cookies are in use, a “Cookie settings” link at the bottom of every page lets you change your choice.</p>
+      )}
+      <p>You can also delete or block cookies in your browser settings. Blocking them will not stop the site from working.</p>
+
+      <h2>More information</h2>
+      <p>See our <a href="/privacy-policy/">privacy policy</a> for how we handle personal data, or email <a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a>.</p>
+    </div>
+  </section>
+</TextPage>

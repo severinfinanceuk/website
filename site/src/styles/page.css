@@ -103,3 +103,27 @@
 .az { display: flex; flex-wrap: wrap; gap: 6px; }
 .az a { display: inline-grid; place-items: center; min-width: 40px; min-height: 40px; border-radius: 999px; background: var(--panel); text-decoration: none; font-weight: 500; }
 .az a:hover { background: var(--black); color: var(--white); }
+
+/* Hub pages: service cards in a plain grid (whole card clickable through the heading link) */
+.hub-cards { display: grid; gap: 12px; }
+.hub-card { position: relative; --hl-off: var(--white); }
+.hub-card h3 a { color: inherit; text-decoration: none; }
+.hub-card h3 a::after { content: ""; position: absolute; inset: 0; }
+.hub-card h3 a::before { content: "\2192"; float: right; margin-left: 8px; opacity: .45; }
+.hub-card:hover { border-color: var(--black); }
+.hub-card:has(a:focus-visible) { outline: 2px solid var(--black); outline-offset: 2px; }
+@media (min-width: 768px) { .hub-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } }
+@media (min-width: 1000px) { .hub-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+
+/* Company facts (about), contact details */
+.facts-list { display: grid; gap: 4px 0; }
+.facts-list dt { margin-top: 10px; font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.facts-list dt:first-child { margin-top: 0; }
+.facts-list dd { line-height: 1.45; }
+
+/* Pricing tiers */
+.price-group + .price-group { margin-top: clamp(40px, 5vw, 64px); }
+.price-group > h2 { margin-bottom: 16px; font-size: clamp(1.625rem, 1.3rem + 1.2vw, 2.375rem); line-height: 1.1; letter-spacing: -.015em; }
+.price { font-size: clamp(1.5rem, 1.2rem + 1vw, 2.25rem); letter-spacing: -.02em; line-height: 1.1; }
+.price small { font-size: .9375rem; color: var(--muted); letter-spacing: 0; }
+.info-card ul { display: grid; gap: 6px; padding-left: 1.2em; color: var(--muted); line-height: 1.45; }
