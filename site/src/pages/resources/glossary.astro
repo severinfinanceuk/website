@@ -1,0 +1,44 @@
+---
+// UK tax and accounting glossary. Copy and every term: src/data/tool-pages/glossary.js. No JavaScript.
+// Terms are grouped by first letter with A to Z jump links; each term is anchored (#id) and
+// listed in a DefinedTermSet so search engines and AI tools can cite a single definition.
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/glossary.js';
+
+const pageUrl = Astro.site.href.replace(/\/$/, '') + tool.url;
+const letterOf = (term) => (/^\d/.test(term) ? '0-9' : term[0].toUpperCase());
+const groups = [];
+const terms = [...tool.terms].sort((a, b) => a[1].localeCompare(b[1], 'en-GB', { sensitivity: 'base' }));
+for (const t of terms) {
+  const l = letterOf(t[1]);
+  if (groups.at(-1)?.letter !== l) groups.push({ letter: l, terms: [] });
+  groups.at(-1).terms.push(t);
+}
+const set = {
+  '@type': 'DefinedTermSet', '@id': `${pageUrl}#terms`, name: tool.h1, url: pageUrl, inLanguage: 'en-GB',
+  hasDefinedTerm: terms.map(([id, term, def]) => ({
+    '@type': 'DefinedTerm', '@id': `${pageUrl}#${id}`, name: term, description: def, url: `${pageUrl}#${id}`,
+    inDefinedTermSet: { '@id': `${pageUrl}#terms` },
+  })),
+};
+---
+<ToolPage tool={tool} nodes={[set]}>
+  <nav class="az" aria-label="Jump to a letter">
+    {groups.map((g) => <a href={`#letter-${g.letter}`}>{g.letter}</a>)}
+  </nav>
+  <div class="glossary prose" style="margin-top:32px">
+    {groups.map((g) => (
+      <>
+        <h2 id={`letter-${g.letter}`} style="scroll-margin-top:100px">{g.letter}</h2>
+        <dl>
+          {g.terms.map(([id, term, def, href]) => (
+            <>
+              <dt id={id}>{term}</dt>
+              <dd>{def} <a href={href}>More on {term.replace(/ \(.*\)$/, '')}</a></dd>
+            </>
+          ))}
+        </dl>
+      </>
+    ))}
+  </div>
+</ToolPage>

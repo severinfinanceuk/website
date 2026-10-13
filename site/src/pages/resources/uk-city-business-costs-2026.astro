@@ -1,0 +1,31 @@
+---
+// UK city business costs 2026-27 (data study). Copy and every figure: src/data/tool-pages/uk-city-business-costs-2026.js.
+// No JavaScript. The slot shows the key findings; the tables are in `sections`. Adds a Dataset node for search.
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/uk-city-business-costs-2026.js';
+import { orgRef } from '../../data/site.js';
+
+const pageUrl = Astro.site.href.replace(/\/$/, '') + tool.url;
+const dataset = {
+  '@type': 'Dataset', '@id': `${pageUrl}#dataset`, name: tool.h1, description: tool.description, url: pageUrl,
+  creator: orgRef, publisher: orgRef, isAccessibleForFree: true, inLanguage: 'en-GB',
+  dateModified: tool.reviewed.date, temporalCoverage: '2026-04-01/2027-03-31',
+  spatialCoverage: { '@type': 'Place', name: 'England, United Kingdom' },
+  variableMeasured: ['Business rates multiplier', 'Business Improvement District levy', 'Crossrail Business Rate Supplement', 'Clean Air Zone daily charge'],
+  citation: tool.sources.map(([href]) => href),
+};
+const sections = tool.sections.filter((s) => s.id !== 'method');
+---
+<ToolPage tool={tool} nodes={[dataset]}>
+  <div class="cal-glance">
+    <h2 class="calc-title">Key findings</h2>
+    <ul class="cal-cards" role="list">
+      {tool.findings.map(([figure, text]) => (
+        <li class="cal-card"><strong class="stat">{figure}</strong><span>{text}</span></li>
+      ))}
+    </ul>
+    <nav class="cal-jump" aria-label="Jump to a table">
+      {sections.map((s) => <a href={`#${s.id}`}>{s.h2.replace(/\?$/, '')}</a>)}
+    </nav>
+  </div>
+</ToolPage>

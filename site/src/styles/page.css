@@ -156,3 +156,4 @@
 .cal-jump { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .cal-jump a { text-decoration: underline; text-underline-offset: 3px; }
 .tp-body > * { min-width: 0; }
+.cal-card .stat { font-size: 1.5rem; font-weight: 500; line-height: 1.2; color: var(--black); }
