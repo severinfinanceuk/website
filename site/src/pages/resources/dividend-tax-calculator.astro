@@ -1,0 +1,52 @@
+---
+// Dividend tax calculator 2026-27. Copy: src/data/tool-pages/dividend-tax-calculator.js. Maths: src/lib/uk-tax.js.
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/dividend-tax-calculator.js';
+import { dividendTax, gbp } from '../../lib/uk-tax.js';
+
+const r = dividendTax({ other: 12570, dividends: 50000 });
+const at = (rate) => r.parts.find((p) => p.rate === rate)?.tax ?? 0;
+---
+<ToolPage tool={tool}>
+  <form class="calc" id="dtc" novalidate>
+    <div class="calc-fields">
+      <div class="field">
+        <label for="dtc-other">Salary and other income for the year (£)</label>
+        <input id="dtc-other" name="other" type="number" inputmode="decimal" min="0" step="100" value="12570" />
+      </div>
+      <div class="field">
+        <label for="dtc-div">Dividends for the year (£)</label>
+        <input id="dtc-div" name="dividends" type="number" inputmode="decimal" min="0" step="100" value="50000" />
+      </div>
+    </div>
+    <div class="calc-out" aria-live="polite">
+      <dl>
+        <dt>Personal allowance</dt><dd data-out="pa">{gbp(r.pa)}</dd>
+        <dt>Dividends covered by the personal allowance</dt><dd data-out="paUsed">{gbp(r.paUsedByDividends)}</dd>
+        <dt>Tax at 10.75%</dt><dd data-out="basic">{gbp(at(0.1075), 2)}</dd>
+        <dt>Tax at 35.75%</dt><dd data-out="higher">{gbp(at(0.3575), 2)}</dd>
+        <dt>Tax at 39.35%</dt><dd data-out="additional">{gbp(at(0.3935), 2)}</dd>
+        <dt class="total">Dividend tax</dt><dd class="total" data-out="tax">{gbp(r.tax, 2)}</dd>
+        <dt>Dividends after tax</dt><dd data-out="net">{gbp(r.net, 2)}</dd>
+      </dl>
+      <p class="calc-note">2026-27 tax year. Shows tax on dividends only, not income tax on your salary. Ignores savings interest. A guide only.</p>
+    </div>
+  </form>
+</ToolPage>
+
+<script>
+  import { dividendTax, gbp } from '../../lib/uk-tax.js';
+  const form = document.getElementById('dtc') as HTMLFormElement;
+  const num = (name: string) => Math.max(0, parseFloat((form.elements.namedItem(name) as HTMLInputElement).value) || 0);
+  const out = (key: string, v: number, dp = 0) => { form.querySelector(`[data-out="${key}"]`)!.textContent = gbp(v, dp); };
+  function run() {
+    const r = dividendTax({ other: num('other'), dividends: num('dividends') });
+    const at = (rate: number) => r.parts.find((p) => p.rate === rate)?.tax ?? 0;
+    out('pa', r.pa); out('paUsed', r.paUsedByDividends);
+    out('basic', at(0.1075), 2); out('higher', at(0.3575), 2); out('additional', at(0.3935), 2);
+    out('tax', r.tax, 2); out('net', r.net, 2);
+  }
+  form.addEventListener('input', run);
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+  run();
+</script>

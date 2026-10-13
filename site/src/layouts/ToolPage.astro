@@ -1,0 +1,75 @@
+---
+// Tool page (calculators, tax calendar, glossary, data study): /resources/<slug>/.
+// Copy and facts live in src/data/tool-pages/<slug>.js; the page file adds the tool itself in the
+// default slot. Below the tool: "how it works" sections (same format as guides), sources, FAQ, CTA.
+// Schema: WebPage + optional WebApplication (calculators) + BreadcrumbList + FAQPage + `nodes`.
+import TextPage from './TextPage.astro';
+import { orgRef } from '../data/site.js';
+
+const { tool: t, nodes = [] } = Astro.props;
+const site = Astro.site.href.replace(/\/$/, '');
+const pageUrl = site + t.url;
+
+const app = t.app ? [{
+  '@type': 'WebApplication', '@id': `${pageUrl}#app`, name: t.h1, url: pageUrl, description: t.description,
+  applicationCategory: 'FinanceApplication', operatingSystem: 'Any', browserRequirements: 'Requires JavaScript',
+  isAccessibleForFree: true, inLanguage: 'en-GB', provider: orgRef,
+}] : [];
+---
+<TextPage
+  title={t.title}
+  description={t.description}
+  url={t.url}
+  breadcrumb={[['Home', '/'], ['Guides', '/resources/'], [t.crumb ?? t.h1, t.url]]}
+  eyebrow={t.eyebrow}
+  h1={t.h1}
+  answer={t.hero.answer}
+  nodes={[...app, ...nodes]}
+  faqs={t.faqs}
+  faqTitle={t.faqTitle ?? 'Questions people ask'}
+  reviewed={t.reviewed}
+>
+  <section class="section" style="padding-top:0" aria-label={t.toolLabel ?? t.h1}>
+    <div class="container">
+      <slot />
+    </div>
+  </section>
+
+  {t.sections?.length > 0 && (
+    <section class="section sp-tint guide-body" style="padding-top:clamp(48px,6vw,96px)" aria-label="How it works">
+      <div class="container tp-body">
+        <article class="prose">
+          {t.sections.map((s) => (
+            <>
+              <h2 id={s.id}>{s.h2}</h2>
+              {s.body.map((b) => typeof b === 'string' ? <Fragment set:html={b} /> : (
+                <div class="table-card">
+                  <table class="data-table">
+                    <caption>{b.caption}</caption>
+                    <thead><tr>{b.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+                    <tbody>{b.rows.map(([a, ...cells]) => <tr><th scope="row">{a}</th>{cells.map((v) => <td>{v}</td>)}</tr>)}</tbody>
+                  </table>
+                  {b.after && <p class="table-after">{b.after}</p>}
+                </div>
+              ))}
+            </>
+          ))}
+        </article>
+        <aside class="tp-side" aria-label="Sources and help">
+          <div class="side-box" style="background:var(--white)">
+            <h2>Checked against</h2>
+            <ul role="list">{t.sources.map(([href, label]) => <li><a href={href} rel="noopener">{label}</a></li>)}</ul>
+            <p>Last checked <time datetime={t.reviewed.date}>{t.reviewed.label}</time>. A guide only, not personal advice.</p>
+          </div>
+          {t.service && (
+            <div class="side-box" style="background:var(--white)">
+              <h2>{t.service.boxTitle}</h2>
+              <p>{t.service.text}</p>
+              <a class="btn btn-fill btn-sm" href={t.service.href}>{t.service.label}</a>
+            </div>
+          )}
+        </aside>
+      </div>
+    </section>
+  )}
+</TextPage>

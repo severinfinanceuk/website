@@ -1,0 +1,22 @@
+---
+// UK tax calendar 2026-27. Copy and every date: src/data/tool-pages/uk-tax-calendar-2026-27.js. No JavaScript.
+// The month tables live in `sections`; the slot shows the next big dates as cards.
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/uk-tax-calendar-2026-27.js';
+
+const months = tool.sections.filter((s) => s.id !== 'rolling');
+---
+<ToolPage tool={tool}>
+  <div class="cal-glance">
+    <h2 class="calc-title">Key dates coming up</h2>
+    <ol class="cal-cards" role="list">
+      {tool.glance.map(([iso, label, text]) => (
+        <li class="cal-card"><time datetime={iso}>{label}</time><span>{text}</span></li>
+      ))}
+    </ol>
+    <nav class="cal-jump" aria-label="Jump to a quarter">
+      {months.map((s) => <a href={`#${s.id}`}>{s.body[0].caption}</a>)}
+      <a href="#rolling">Rolling deadlines</a>
+    </nav>
+  </div>
+</ToolPage>

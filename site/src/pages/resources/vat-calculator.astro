@@ -1,0 +1,104 @@
+---
+// VAT calculator. Copy: src/data/tool-pages/vat-calculator.js. Maths: src/lib/uk-tax.js.
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/vat-calculator.js';
+import { vatAdd, gbp } from '../../lib/uk-tax.js';
+
+const r = vatAdd(1000, 20);
+---
+<ToolPage tool={tool}>
+  <div class="calc-stack">
+    <form class="calc" id="vat" novalidate>
+      <h2 class="calc-title">Add or remove VAT</h2>
+      <div class="calc-fields">
+        <div class="field">
+          <label for="vat-mode">What do you have?</label>
+          <select id="vat-mode" name="mode">
+            <option value="add">A net price: add VAT</option>
+            <option value="remove">A price including VAT: remove VAT</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="vat-amount">Amount (£)</label>
+          <input id="vat-amount" name="amount" type="number" inputmode="decimal" min="0" step="0.01" value="1000" />
+        </div>
+        <div class="field">
+          <label for="vat-rate">VAT rate</label>
+          <select id="vat-rate" name="rate">
+            <option value="20">20% standard rate</option>
+            <option value="5">5% reduced rate</option>
+            <option value="0">0% zero rate</option>
+            <option value="custom">Another rate</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="vat-custom">Other rate (%)</label>
+          <input id="vat-custom" name="custom" type="number" inputmode="decimal" min="0" max="100" step="0.1" value="16.5" />
+        </div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <dl>
+          <dt>Net (excluding VAT)</dt><dd data-out="net">{gbp(r.net, 2)}</dd>
+          <dt>VAT</dt><dd data-out="vat">{gbp(r.vat, 2)}</dd>
+          <dt class="total">Gross (including VAT)</dt><dd class="total" data-out="gross">{gbp(r.gross, 2)}</dd>
+        </dl>
+      </div>
+    </form>
+
+    <form class="calc" id="lcb" novalidate>
+      <h2 class="calc-title">Flat Rate Scheme: are you a limited cost business?</h2>
+      <div class="calc-fields">
+        <div class="field">
+          <label for="lcb-turnover">Turnover including VAT for the period (£)</label>
+          <input id="lcb-turnover" name="turnover" type="number" inputmode="decimal" min="0" step="100" value="60000" />
+        </div>
+        <div class="field">
+          <label for="lcb-goods">Relevant goods bought, including VAT (£)</label>
+          <input id="lcb-goods" name="goods" type="number" inputmode="decimal" min="0" step="10" value="500" />
+        </div>
+        <div class="field">
+          <label for="lcb-months">Length of the period</label>
+          <select id="lcb-months" name="months">
+            <option value="12">A year</option>
+            <option value="3">A quarter</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-out" aria-live="polite">
+        <dl>
+          <dt>Goods needed to avoid 16.5%</dt><dd data-out="min">£1,200.00</dd>
+        </dl>
+        <p class="total" data-out="verdict">You are a limited cost business, so your flat rate is 16.5%.</p>
+        <p class="calc-note">Relevant goods leave out services, capital items, food and drink for you or staff, vehicles and fuel. See the notes below.</p>
+      </div>
+    </form>
+  </div>
+</ToolPage>
+
+<script>
+  import { vatAdd, vatRemove, limitedCost, gbp } from '../../lib/uk-tax.js';
+  const num = (f: HTMLFormElement, name: string) => Math.max(0, parseFloat((f.elements.namedItem(name) as HTMLInputElement).value) || 0);
+  const vat = document.getElementById('vat') as HTMLFormElement;
+  const lcb = document.getElementById('lcb') as HTMLFormElement;
+  const custom = vat.elements.namedItem('custom') as HTMLInputElement;
+  function runVat() {
+    const sel = (vat.elements.namedItem('rate') as HTMLSelectElement).value;
+    custom.disabled = sel !== 'custom';
+    const rate = sel === 'custom' ? Math.min(100, num(vat, 'custom')) : Number(sel);
+    const amount = num(vat, 'amount');
+    const r = (vat.elements.namedItem('mode') as HTMLSelectElement).value === 'add' ? vatAdd(amount, rate) : vatRemove(amount, rate);
+    for (const k of ['net', 'vat', 'gross'] as const) vat.querySelector(`[data-out="${k}"]`)!.textContent = gbp(r[k], 2);
+  }
+  function runLcb() {
+    const r = limitedCost({ turnoverGross: num(lcb, 'turnover'), goods: num(lcb, 'goods'), months: Number((lcb.elements.namedItem('months') as HTMLSelectElement).value) });
+    lcb.querySelector('[data-out="min"]')!.textContent = gbp(r.minGoods, 2);
+    lcb.querySelector('[data-out="verdict"]')!.textContent = r.limited
+      ? 'You are a limited cost business, so your flat rate is 16.5%.'
+      : 'You are not a limited cost business, so you use the flat rate for your trade.';
+  }
+  for (const [f, run] of [[vat, runVat], [lcb, runLcb]] as const) {
+    f.addEventListener('input', run);
+    f.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+    run();
+  }
+</script>

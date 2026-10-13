@@ -1,0 +1,84 @@
+---
+// Take-home pay calculator 2026-27. Copy: src/data/tool-pages/take-home-pay-calculator.js. Maths: src/lib/uk-tax.js.
+// Works without JavaScript as a static example (the £35,000 result is rendered at build time).
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/take-home-pay-calculator.js';
+import { takeHome, gbp } from '../../lib/uk-tax.js';
+
+const r = takeHome({ salary: 35000 });
+const rows = [
+  ['Income tax', 'tax', r.tax], ['National Insurance', 'ni', r.ni], ['Pension', 'pension', r.pension],
+  ['Student loan', 'sl', r.sl + r.pgl],
+];
+---
+<ToolPage tool={tool}>
+  <form class="calc" id="thp" novalidate>
+    <div class="calc-fields">
+      <div class="field">
+        <label for="thp-salary">Yearly salary before tax (£)</label>
+        <input id="thp-salary" name="salary" type="number" inputmode="decimal" min="0" step="100" value="35000" />
+      </div>
+      <div class="field">
+        <label for="thp-region">Where you live</label>
+        <select id="thp-region" name="region">
+          <option value="ruk">England, Wales or Northern Ireland</option>
+          <option value="sco">Scotland</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="thp-pension">Pension</label>
+        <select id="thp-pension" name="pension">
+          <option value="none">No workplace pension</option>
+          <option value="sacrifice">Salary sacrifice</option>
+          <option value="netpay">Net pay arrangement</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="thp-pct">Pension contribution (% of salary)</label>
+        <input id="thp-pct" name="pensionPct" type="number" inputmode="decimal" min="0" max="100" step="0.5" value="5" />
+      </div>
+      <div class="field">
+        <label for="thp-plan">Student loan</label>
+        <select id="thp-plan" name="plan">
+          <option value="none">None</option>
+          <option value="plan1">Plan 1</option>
+          <option value="plan2">Plan 2</option>
+          <option value="plan4">Plan 4 (Scotland)</option>
+          <option value="plan5">Plan 5</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="thp-pg">Postgraduate loan</label>
+        <select id="thp-pg" name="pg">
+          <option value="">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+    </div>
+    <div class="calc-out" aria-live="polite">
+      <dl>
+        <dt>Salary</dt><dd data-out="salary">{gbp(r.salary)}</dd>
+        {rows.map(([label, key, v]) => <><dt>{label}</dt><dd data-out={key}>{gbp(v)}</dd></>)}
+        <dt class="total">Take-home a year</dt><dd class="total" data-out="net">{gbp(r.net)}</dd>
+        <dt>Take-home a month</dt><dd data-out="month">{gbp(r.net / 12)}</dd>
+      </dl>
+      <p class="calc-note">2026-27 tax year, 1257L tax code, category A National Insurance. A guide only: your payslip may differ.</p>
+    </div>
+  </form>
+</ToolPage>
+
+<script>
+  import { takeHome, gbp } from '../../lib/uk-tax.js';
+  const form = document.getElementById('thp') as HTMLFormElement;
+  const num = (name: string) => Math.max(0, parseFloat((form.elements.namedItem(name) as HTMLInputElement).value) || 0);
+  const val = (name: string) => (form.elements.namedItem(name) as HTMLSelectElement).value;
+  const set = (key: string, v: number) => { form.querySelector(`[data-out="${key}"]`)!.textContent = gbp(v); };
+  function run() {
+    const r = takeHome({ salary: num('salary'), region: val('region'), pension: val('pension'), pensionPct: Math.min(100, num('pensionPct')), plan: val('plan'), pg: !!val('pg') });
+    set('salary', r.salary); set('tax', r.tax); set('ni', r.ni); set('pension', r.pension); set('sl', r.sl + r.pgl);
+    set('net', r.net); set('month', r.net / 12);
+  }
+  form.addEventListener('input', run);
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+  run();
+</script>

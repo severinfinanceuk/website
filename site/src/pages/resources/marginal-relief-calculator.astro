@@ -1,0 +1,63 @@
+---
+// Corporation tax marginal relief calculator. Copy: src/data/tool-pages/marginal-relief-calculator.js. Maths: src/lib/uk-tax.js.
+import ToolPage from '../../layouts/ToolPage.astro';
+import tool from '../../data/tool-pages/marginal-relief-calculator.js';
+import { corporationTax, gbp } from '../../lib/uk-tax.js';
+
+const r = corporationTax({ profits: 100000 });
+---
+<ToolPage tool={tool}>
+  <form class="calc" id="mrc" novalidate>
+    <div class="calc-fields">
+      <div class="field">
+        <label for="mrc-profits">Taxable total profits (£)</label>
+        <input id="mrc-profits" name="profits" type="number" inputmode="decimal" min="0" step="100" value="100000" />
+      </div>
+      <div class="field">
+        <label for="mrc-exempt">Exempt distributions received (£)</label>
+        <input id="mrc-exempt" name="exempt" type="number" inputmode="decimal" min="0" step="100" value="0" />
+      </div>
+      <div class="field">
+        <label for="mrc-assoc">Associated companies</label>
+        <input id="mrc-assoc" name="associates" type="number" inputmode="numeric" min="0" step="1" value="0" />
+      </div>
+      <div class="field">
+        <label for="mrc-days">Days in the accounting period</label>
+        <input id="mrc-days" name="days" type="number" inputmode="numeric" min="1" max="366" step="1" value="365" />
+      </div>
+    </div>
+    <div class="calc-out" aria-live="polite">
+      <dl>
+        <dt>Lower limit</dt><dd data-out="lower">{gbp(r.lower)}</dd>
+        <dt>Upper limit</dt><dd data-out="upper">{gbp(r.upper)}</dd>
+        <dt>Augmented profits</dt><dd data-out="augmented">{gbp(r.augmented)}</dd>
+        <dt>Marginal Relief</dt><dd data-out="relief">{gbp(r.relief, 2)}</dd>
+        <dt class="total">Corporation tax</dt><dd class="total" data-out="tax">{gbp(r.tax, 2)}</dd>
+        <dt>Effective rate</dt><dd data-out="effective">{(r.effective * 100).toFixed(2)}%</dd>
+      </dl>
+      <p class="calc-note" data-out="band">Profits fall between the limits, so Marginal Relief applies.</p>
+    </div>
+  </form>
+</ToolPage>
+
+<script>
+  import { corporationTax, gbp } from '../../lib/uk-tax.js';
+  const form = document.getElementById('mrc') as HTMLFormElement;
+  const num = (name: string) => Math.max(0, parseFloat((form.elements.namedItem(name) as HTMLInputElement).value) || 0);
+  const out = (key: string) => form.querySelector(`[data-out="${key}"]`)!;
+  const bands: Record<string, string> = {
+    small: 'Augmented profits are at or below the lower limit, so the 19% small profits rate applies.',
+    marginal: 'Profits fall between the limits, so Marginal Relief applies.',
+    main: 'Augmented profits are at or above the upper limit, so the 25% main rate applies.',
+  };
+  function run() {
+    const days = Math.min(366, Math.max(1, num('days') || 365));
+    const r = corporationTax({ profits: num('profits'), exempt: num('exempt'), associates: Math.floor(num('associates')), days });
+    out('lower').textContent = gbp(r.lower); out('upper').textContent = gbp(r.upper); out('augmented').textContent = gbp(r.augmented);
+    out('relief').textContent = gbp(r.relief, 2); out('tax').textContent = gbp(r.tax, 2);
+    out('effective').textContent = (r.effective * 100).toFixed(2) + '%'; out('band').textContent = bands[r.band];
+  }
+  form.addEventListener('input', run);
+  form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+  run();
+</script>
