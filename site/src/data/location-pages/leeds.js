@@ -198,8 +198,8 @@ export default {
     { title: 'Nearby cities', links: [
       ['/uk/manchester/', 'Accountants in Manchester'],
       ['/uk/liverpool/', 'Accountants in Liverpool'],
-      ['/uk/birmingham/', 'Accountants in Birmingham'],
-      ['/uk/cambridge/', 'Accountants in Cambridge'],
+      ['/uk/newcastle/', 'Accountants in Newcastle'],
+      ['/uk/sheffield/', 'Accountants in Sheffield'],
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },

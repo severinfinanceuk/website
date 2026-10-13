@@ -197,7 +197,7 @@ export default {
     { title: 'Nearby locations', links: [
       ['/uk/london/croydon/', 'Accountants in Croydon'],
       ['/uk/london/wimbledon/', 'Accountants in Wimbledon'],
-      ['/uk/london/richmond/', 'Accountants in Richmond'],
+      ['/uk/southampton/', 'Accountants in Southampton'],
       ['/uk/reading/', 'Accountants in Reading'],
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],

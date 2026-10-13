@@ -4,7 +4,7 @@ Version 2.0 · 13 Oct 2026 (UK only: Severin is registered in the UK only, so lo
 
 The site will have one landing page for every city and area we target. All of them are reachable from the **Locations** menu in the header, the footer and a `/locations/` hub page. The single list of pages lives in `site/src/data/locations.js`. Change it there and the menu, footer and hub all update.
 
-## Page list (22 location pages + 1 country hub + 1 hub)
+## Page list (32 location pages + 1 country hub + 1 hub)
 
 UK only. People abroad are reached through the Clients abroad service pages (non-resident tax, UK company from abroad), not through location pages, and no other country gets a page.
 
@@ -12,8 +12,9 @@ UK only. People abroad are reached through the Clients abroad service pages (non
 | --- | --- | --- | --- |
 | 1 | United Kingdom | London, and 11 London areas: City of London, Canary Wharf, Westminster, Kensington, Camden, Islington, Shoreditch, Stratford, Croydon, Richmond, Wimbledon | 12 |
 | 1 | United Kingdom | Manchester, Birmingham, Leeds, Liverpool, Bristol, Brighton, Cambridge, Oxford, Reading, Milton Keynes | 10 |
+| 2 | United Kingdom | Edinburgh and Glasgow (Scotland), Cardiff (Wales), Belfast (Northern Ireland), Nottingham, Leicester, Sheffield, Newcastle, Southampton, Bath | 10 |
 
-**Status, 13 Oct 2026: all 24 pages are built** (`/uk/`, `/locations/`, London, 11 London areas, 10 cities). Copy lives in `site/src/data/location-pages/<slug>.js`, rendered by `site/src/layouts/LocationPage.astro`. Each page uses local elements 1, 2, 5, 6, 7 and 8 (no case studies yet), lists its sources, and marks the meeting place, fees and reviewer credentials as tbc.
+**Status, 13 Oct 2026: all 34 pages are built** (`/uk/`, `/locations/`, London, 11 London areas, 20 cities). Wave 2 pages outside England lead with that nation's own rules: Scottish income tax, LBTT and Scottish rates; Welsh rates, small business rates relief and Land Transaction Tax; Northern Ireland regional plus district rates. Copy lives in `site/src/data/location-pages/<slug>.js`, rendered by `site/src/layouts/LocationPage.astro`. Each page uses local elements 1, 2, 5, 6, 7 and 8 (no case studies yet), lists its sources, and marks the meeting place, fees and reviewer credentials as tbc.
 
 Later, **service × city pages** (e.g. "Self assessment accountant Manchester") are added only where keyword data shows real demand, starting with London.
 
@@ -65,7 +66,7 @@ Pages are written by people with local research, not generated from a template s
 ## Rules for launch
 
 - **The menu only lists pages that exist.** Every entry in `locations.js` is now built, so no `live` flag is needed yet. Add one before listing a page that is not built. Linking to missing pages wastes crawl budget and frustrates visitors.
-- **Dated facts to refresh:** BID ballot dates (Islington Angel BID 19 Nov 2026, Croydon BID 21 Oct 2026, Love Wimbledon 5 Nov 2026) and the rates, wages and charges tables each April.
+- **Dated facts to refresh:** BID ballot dates (Islington Angel BID 19 Nov 2026, Croydon BID 21 Oct 2026, Love Wimbledon 5 Nov 2026), visitor levies (Edinburgh from 24 Jul 2026, Glasgow from 25 Jan 2027, Cardiff from 1 Apr 2027), the GO! Southampton BID term ending 31 Mar 2027, the Belfast district rate, and the rates, wages and charges tables each April.
 - Publish in waves (London first), 5–10 pages a week, so each batch gets indexed and checked in Search Console before the next.
 - Track every location page in a rank sheet: target keyword, position, clicks and enquiries.
 

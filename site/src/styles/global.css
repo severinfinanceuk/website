@@ -177,7 +177,8 @@ a:hover { text-decoration-color: transparent; }
 }
 .mega-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 32px 24px; padding-block: 32px; }
 .mega-grid-svc { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.mega-uk { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; align-content: start; }
+.mega-uk { grid-column: span 3; display: grid; grid-template-columns: 1fr 2fr; gap: 0 24px; align-content: start; }
+.mega-uk .mega-group + .mega-group ul { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(10, auto); grid-auto-flow: column; column-gap: 24px; }
 .mega-uk .mega-country { grid-column: 1 / -1; }
 .mega-country {
   display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; padding-bottom: 12px;

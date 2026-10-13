@@ -1,6 +1,6 @@
 # Progress tracker
 
-Current phase: **3 · Build + content**. The site has 147 pages and passes `npm run check`; it now waits on Severin's inputs, design sign-off and the forms. Last updated: 13 Oct 2026.
+Current phase: **3 · Build + content**. The site has 157 pages and passes `npm run check`; it now waits on Severin's inputs, design sign-off and the forms. Last updated: 13 Oct 2026.
 
 Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-master-plan.md#roadmap-tracking-and-kpis).
 
@@ -43,7 +43,7 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 - [x] Schema (site-wide `@id` graph), sitemaps with images, robots.txt, llms.txt, 404, `vercel.json` redirects and headers (13 Oct 2026)
 - [ ] Forms and booking calendar (the user adds these later), then thank-you pages
 - [ ] CMS (only if Severin will edit pages themselves)
-- [x] 147 pages written (13 Oct 2026): 28 service, 24 location, 5 hubs, 12 core and legal, 71 guides, 7 tools and pillars
+- [x] 157 pages written (13 Oct 2026): 28 service, 34 location, 5 hubs, 12 core and legal, 71 guides, 7 tools and pillars
 - [ ] Expert review and sign-off of every page (`reviewed` date); legal drafts approved and `noindex` removed
 - [ ] Google Business Profile, citations, review program: all copy and steps are ready in [docs/04-off-page-and-local-seo.md](docs/04-off-page-and-local-seo.md); Severin needs to create the accounts
 
@@ -149,3 +149,4 @@ Phases and gates come from the roadmap in [docs/01-master-plan.md](docs/01-maste
 | 13 Oct 2026 | **Fact fixes on service pages** found while writing guides (bc16b0c, 2715b32, 70dc753): payrolling of benefits, IHT instalments, late payment interest, asset finance first-year allowance, EIS advance assurance timescale, EMI size limits; 84 tax years changed to the 2026-27 style |
 | 13 Oct 2026 | **Off-page and local SEO pack** (f049e7d): [docs/04-off-page-and-local-seo.md](docs/04-off-page-and-local-seo.md) with the NAP block, Google Business Profile copy (categories, 28 service descriptions, Q&A, 12 weekly posts), citation list, review request and reply templates (DMCC Act compliant), digital PR pitches built on the data study, guest post topics, competitor backlink and log file methods, monthly routine |
 | 13 Oct 2026 | **Lighthouse (phone)** on home, VAT accountant, Manchester, a guide, the tax hub and a calculator: 100 performance, 100 accessibility, 100 SEO, 96 best practices (only because the Vercel Analytics script returns 404 locally). Largest content 1.4 to 1.8 s, layout shift 0. No page is wider than 375 px. Checker: 147 pages, all checks passed |
+| 13 Oct 2026 | **Location pages wave 2**: 10 more UK cities at `/uk/<city>/`: Edinburgh and Glasgow (Scottish income tax, LBTT, Scottish rates, low emission zones, visitor levies), Cardiff (Welsh multiplier, small business rates relief, Land Transaction Tax, visitor levy from 1 Apr 2027), Belfast (regional plus district rate, 65.0288p for 2026-27), Nottingham, Leicester, Sheffield, Newcastle, Southampton and Bath. Each has 5 Unsplash photos (credits in `site/src/assets/locations/SOURCES.md`), official sources and tbc meeting place, fees and reviewer. Added to the Locations menu (20 cities in 2 columns), the `/uk/` hub and `/locations/`; nearby links on Bristol, Birmingham, Leeds, Manchester and Brighton now point to the new cities. Checker: 157 pages, all checks passed |

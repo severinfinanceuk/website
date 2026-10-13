@@ -197,8 +197,8 @@ export default {
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
     ] },
     { title: 'Nearby cities', links: [
-      ['/uk/oxford/', 'Accountants in Oxford'],
-      ['/uk/milton-keynes/', 'Accountants in Milton Keynes'],
+      ['/uk/leicester/', 'Accountants in Leicester'],
+      ['/uk/nottingham/', 'Accountants in Nottingham'],
       ['/uk/manchester/', 'Accountants in Manchester'],
       ['/uk/bristol/', 'Accountants in Bristol'],
       ['/uk/london/', 'Accountants in London'],

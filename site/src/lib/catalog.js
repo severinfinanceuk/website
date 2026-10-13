@@ -30,7 +30,7 @@ export const corePages = {
   '/contact/': ['Contact Severin Finance', 'Phone 020 4542 2488, email enquiries@severinfinance.com, book a free consultation.'],
   '/uk/pricing/': ['Pricing', 'Fixed fees for accounting, tax and company services, agreed in writing before work starts.'],
   '/resources/': ['UK tax and business guides', 'Plain-English guides to UK tax, accounts, payroll, company law and business finance, with the 2026-27 rates.'],
-  '/locations/': ['Our locations', 'London, 11 London areas, 10 UK cities and UK tax help for clients abroad.'],
+  '/locations/': ['Our locations', 'London, 11 London areas, 20 UK cities and UK tax help for clients abroad.'],
   '/reviews/': ['Client reviews', 'What clients say about Severin Finance.'],
 };
 

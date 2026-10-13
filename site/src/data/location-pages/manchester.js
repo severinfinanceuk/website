@@ -199,7 +199,7 @@ export default {
       ['/uk/liverpool/', 'Accountants in Liverpool'],
       ['/uk/leeds/', 'Accountants in Leeds'],
       ['/uk/birmingham/', 'Accountants in Birmingham'],
-      ['/uk/milton-keynes/', 'Accountants in Milton Keynes'],
+      ['/uk/sheffield/', 'Accountants in Sheffield'],
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },

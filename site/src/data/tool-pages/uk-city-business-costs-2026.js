@@ -133,7 +133,7 @@ export default {
     {
       id: 'method', h2: 'How we compiled this study',
       body: [
-        '<p>We gathered these figures for our pages on <a href="/locations/">22 places across the UK</a>, from GOV.UK, the billing councils, the Greater London Authority, TfL and each BID company, and checked them on 13 October 2026. The worked example is our own arithmetic on the published rates. BID levies change each year with inflation rises and new ballots, so check the latest rules with the BID before you rely on a figure.</p>',
+        '<p>We gathered these figures for our <a href="/locations/">location pages</a> on 22 places in England, from GOV.UK, the billing councils, the Greater London Authority, TfL and each BID company, and checked them on 13 October 2026. The worked example is our own arithmetic on the published rates. BID levies change each year with inflation rises and new ballots, so check the latest rules with the BID before you rely on a figure.</p>',
         '<p>Journalists and researchers may quote these figures with a link to this page. For local detail, see our pages for <a href="/uk/london/">London</a>, <a href="/uk/manchester/">Manchester</a>, <a href="/uk/birmingham/">Birmingham</a>, <a href="/uk/leeds/">Leeds</a>, <a href="/uk/bristol/">Bristol</a> and the <a href="/uk/london/city-of-london/">City of London</a>.</p>',
       ],
     },

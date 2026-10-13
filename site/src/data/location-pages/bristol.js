@@ -197,9 +197,9 @@ export default {
     ] },
     { title: 'Nearby cities', links: [
       ['/uk/reading/', 'Accountants in Reading'],
-      ['/uk/oxford/', 'Accountants in Oxford'],
+      ['/uk/cardiff/', 'Accountants in Cardiff'],
       ['/uk/birmingham/', 'Accountants in Birmingham'],
-      ['/uk/milton-keynes/', 'Accountants in Milton Keynes'],
+      ['/uk/bath/', 'Accountants in Bath'],
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },

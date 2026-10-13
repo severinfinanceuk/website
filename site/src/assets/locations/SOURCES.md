@@ -234,3 +234,103 @@ File names start with "accountants-{place}" so they also work for image search. 
 | accountants-milton-keynes-glass-office.jpg | 1000 × 625 | Magda Vrabetz | https://images.unsplash.com/photo-1591484222677-eb91797e696f |
 | accountants-milton-keynes-new-homes.jpg | 1000 × 625 | Frank Chan | https://images.unsplash.com/photo-1754015782879-85b3b3b8104d |
 | accountants-milton-keynes-grid-road.jpg | 1000 × 625 | Magda Vrabetz | https://images.unsplash.com/photo-1591484273471-5e687b55c119 |
+
+## edinburgh/ (page: /uk/edinburgh/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-edinburgh-hero.jpg | 1800 × 1200 | Connor Mollison | https://images.unsplash.com/photo-1595599014147-a419c147bdc0 |
+| accountants-edinburgh-royal-mile.jpg | 1000 × 625 | Vedanth Ravi | https://images.unsplash.com/photo-1789856827704-3fe81d1dcf66 |
+| accountants-edinburgh-tenement-rooftops.jpg | 1000 × 625 | Alex Azabache | https://images.unsplash.com/photo-1569668444050-b7bc2bfec0c7 |
+| accountants-edinburgh-the-mound.jpg | 1000 × 625 | K. Mitch Hodge | https://images.unsplash.com/photo-1636360496734-044ab4b9dcfc |
+| accountants-edinburgh-old-college.jpg | 1000 × 625 | Jacob Pretorius | https://images.unsplash.com/photo-1713713717218-0b7878830cc5 |
+
+## glasgow/ (page: /uk/glasgow/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-glasgow-hero.jpg | 1800 × 1200 | Phil Reid | https://images.unsplash.com/photo-1704322624412-84ca3103ecfa |
+| accountants-glasgow-broomielaw.jpg | 1000 × 625 | Adam Marikar | https://images.unsplash.com/photo-1571494146906-86de15d3817b |
+| accountants-glasgow-buchanan-street.jpg | 1000 × 625 | Anthony Camp | https://images.unsplash.com/photo-1674090021150-291d87c3be8a |
+| accountants-glasgow-sandstone-tenements.jpg | 1000 × 625 | Ross Sneddon | https://images.unsplash.com/photo-1573003094679-d8c0c7ace07c |
+| accountants-glasgow-university.jpg | 1000 × 625 | Paulina B | https://images.unsplash.com/photo-1621519604512-85ea63c15ca2 |
+
+## cardiff/ (page: /uk/cardiff/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-cardiff-hero.jpg | 1800 × 1200 | Grooveland Designs | https://images.unsplash.com/photo-1590166576181-6745636005bc |
+| accountants-cardiff-bay-marina.jpg | 1000 × 625 | D.K Ta | https://images.unsplash.com/photo-1724164107194-b419f3eb6f32 |
+| accountants-cardiff-restaurant-street.jpg | 1000 × 625 | Taylor Floyd Mews | https://images.unsplash.com/photo-1631125139003-a49377cea220 |
+| accountants-cardiff-rooftops.jpg | 1000 × 625 | Mike Erskine | https://images.unsplash.com/photo-1595273647789-54432cefc8e1 |
+| accountants-cardiff-millennium-centre.jpg | 1000 × 625 | Jonny Gios | https://images.unsplash.com/photo-1623493802068-af819642f12b |
+
+## belfast/ (page: /uk/belfast/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-belfast-hero.jpg | 1800 × 1200 | K. Mitch Hodge | https://images.unsplash.com/photo-1593255136145-da399169fadd |
+| accountants-belfast-commercial-court.jpg | 1000 × 625 | Korng Sok | https://images.unsplash.com/photo-1667018580636-30693696592c |
+| accountants-belfast-shopping-street.jpg | 1000 × 625 | Kaeli Hearn | https://images.unsplash.com/photo-1554169842-730a996aecf4 |
+| accountants-belfast-river-lagan-flats.jpg | 1000 × 625 | K. Mitch Hodge | https://images.unsplash.com/photo-1570808370686-e73cd6b8257d |
+| accountants-belfast-queens-university.jpg | 1000 × 625 | K. Mitch Hodge | https://images.unsplash.com/photo-1621440936352-e4d66287abdb |
+
+## newcastle/ (page: /uk/newcastle/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-newcastle-hero.jpg | 1800 × 1200 | Ian Ward | https://images.unsplash.com/photo-1660042866417-1963a3cf5ab6 |
+| accountants-newcastle-quayside.jpg | 1000 × 625 | Adam Marikar | https://images.unsplash.com/photo-1672572683689-42594e7a3036 |
+| accountants-newcastle-sandhill-van.jpg | 1000 × 625 | Adam Marikar | https://images.unsplash.com/photo-1672572673342-fefbb094c75f |
+| accountants-newcastle-quayside-flats.jpg | 1000 × 625 | Ryan Booth | https://images.unsplash.com/photo-1598964356102-dfb0a21898b1 |
+| accountants-newcastle-ouseburn.jpg | 1000 × 625 | Loujane Alasi | https://images.unsplash.com/photo-1648477857123-771e9b1c5d17 |
+
+## sheffield/ (page: /uk/sheffield/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-sheffield-town-hall.jpg | 1800 × 1200 | Raygar He | https://images.unsplash.com/photo-1604154315861-e1803bfcaf30 |
+| accountants-sheffield-kelham-island.jpg | 1000 × 625 | Ebun Oluwole | https://images.unsplash.com/photo-1630786573748-a76d9a2f540a |
+| accountants-sheffield-women-of-steel.jpg | 1000 × 625 | Gary Butterfield | https://images.unsplash.com/photo-1561203341-3010d648f304 |
+| accountants-sheffield-shop-street.jpg | 1000 × 625 | BEN ELLIOTT | https://images.unsplash.com/photo-1680276553511-ba211ae1527a |
+| accountants-sheffield-skyline.jpg | 1000 × 625 | BEN ELLIOTT | https://images.unsplash.com/photo-1642170007469-02d303f2425a |
+
+## nottingham/ (page: /uk/nottingham/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-nottingham-council-house.jpg | 1800 × 1200 | Korng Sok | https://images.unsplash.com/photo-1643841368344-b17f212732df |
+| accountants-nottingham-tram.jpg | 1000 × 625 | Eamonn Wang | https://images.unsplash.com/photo-1677942391857-42d078f3353e |
+| accountants-nottingham-university.jpg | 1000 × 625 | Alicja Ziajowska | https://images.unsplash.com/photo-1687012893875-2f02f7dc9843 |
+| accountants-nottingham-lace-market.jpg | 1000 × 625 | Nicola Nuttall | https://images.unsplash.com/photo-1530380672122-3d14fd83dfdc |
+| accountants-nottingham-canal-flats.jpg | 1000 × 625 | Mia Truong | https://images.unsplash.com/photo-1666364554348-06526c49241d |
+
+## leicester/ (page: /uk/leicester/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-leicester-city-street.jpg | 1800 × 1200 | Gonzalo Facello | https://images.unsplash.com/photo-1618660873189-188474bd1c0a |
+| accountants-leicester-rutland-street.jpg | 1000 × 625 | Matt Kirk | https://images.unsplash.com/photo-1699860801134-0f95532f0b3b |
+| accountants-leicester-corner-shops.jpg | 1000 × 625 | Benjamin Blyth | https://images.unsplash.com/photo-1613910258627-df126e3ebd88 |
+| accountants-leicester-terraced-street.jpg | 1000 × 625 | Matt Kirk | https://images.unsplash.com/photo-1699750311822-e21f20ad8313 |
+| accountants-leicester-cathedral-path.jpg | 1000 × 625 | Matt Kirk | https://images.unsplash.com/photo-1700963711618-c6f09203a833 |
+
+## southampton/ (page: /uk/southampton/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-southampton-hero.jpg | 1800 × 1200 | Russ White | https://images.unsplash.com/photo-1708274838706-e21e0f8db4ed |
+| accountants-southampton-container-port.jpg | 1000 × 625 | Ed Wingate | https://images.unsplash.com/photo-1723134091310-e6c6f5a65573 |
+| accountants-southampton-cruise-ship.jpg | 1000 × 625 | Frankie Lu | https://images.unsplash.com/photo-1617402637303-43c776248c76 |
+| accountants-southampton-westquay.jpg | 1000 × 625 | Annie Spratt | https://images.unsplash.com/photo-1707136154980-2b11dfa7c74a |
+| accountants-southampton-waterfront-flats.jpg | 1000 × 625 | Connor Holyday | https://images.unsplash.com/photo-1579045846018-9e5fbbb51c5f |
+
+## bath/ (page: /uk/bath/)
+
+| File | Size | Photographer | Source |
+|---|---|---|---|
+| accountants-bath-hero.jpg | 1800 × 1200 | James Shaw | https://images.unsplash.com/photo-1590739605350-da23691f9634 |
+| accountants-bath-cafe-street.jpg | 1000 × 625 | Will Ma | https://images.unsplash.com/photo-1665313939235-bcad66c1e92a |
+| accountants-bath-royal-crescent.jpg | 1000 × 625 | Matthew Waring | https://images.unsplash.com/photo-1586780264410-3c78d46bf8ba |
+| accountants-bath-shops-street.jpg | 1000 × 625 | Laura Barry | https://images.unsplash.com/photo-1706606992658-b7225196f1af |
+| accountants-bath-traffic-street.jpg | 1000 × 625 | Silviya Nenova | https://images.unsplash.com/photo-1611146479742-12b6cdacfbab |
