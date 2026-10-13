@@ -45,7 +45,7 @@ export default {
   hero: {
     eyebrow: 'UK accounting · Landlords',
     h1: 'Landlord accountants in London and across the UK',
-    answer: 'Our landlord accountants prepare your UK property tax return for a fixed fee, claim every allowable expense and work out your 20% tax credit on mortgage interest, whether you live in London, elsewhere in the UK or abroad. From 6 April 2027, Making Tax Digital applies to landlords with qualifying income over £30,000.',
+    answer: 'Our landlord accountants prepare your UK property tax return for a fixed fee, claim every allowable expense and work out your 20% tax credit on mortgage interest, whether you live in London, elsewhere in the UK or abroad. Making Tax Digital already covers landlords with qualifying income over £50,000, and those over £30,000 from 6 April 2027.',
     image: hero,
     imageAlt: 'Row of pastel-painted London terraced houses under a blue sky',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
