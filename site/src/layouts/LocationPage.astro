@@ -7,6 +7,7 @@
 // Every page needs real local content, never a template sentence with the place swapped
 // (docs/02-location-pages-plan.md). Shares its styles with the service pages (service.css).
 import Base from './Base.astro';
+import { orgRef, websiteRef } from '../data/site.js';
 import LeadForm from '../components/LeadForm.astro';
 import Testimonials from '../components/Testimonials.astro';
 import { Image, Picture, getImage } from 'astro:assets';
@@ -36,7 +37,8 @@ const ogImage = new URL(og.src, Astro.site).href;
 
 // Structured data: one @graph. No LocalBusiness address: Severin has no office in most of
 // these places, so the place goes in areaServed (with its Wikidata entry), not in an address.
-const org = { '@type': 'AccountingService', '@id': `${site}/#org`, name: 'Severin Finance', url: `${site}/`, telephone: '+44 20 4542 2488' };
+// The firm itself (full node printed once by Base.astro, src/data/site.js)
+const org = orgRef;
 const place = {
   '@type': p.place.type, name: p.place.name,
   ...(p.place.wikidata && { sameAs: `https://www.wikidata.org/wiki/${p.place.wikidata}` }),
@@ -45,13 +47,13 @@ const place = {
 const schema = [{
   '@context': 'https://schema.org',
   '@graph': [
-    org,
     {
       '@type': 'Service', '@id': `${pageUrl}#service`, name: p.service.name, serviceType: p.service.serviceType,
       description: p.hero.answer, url: pageUrl, provider: { '@id': org['@id'] }, areaServed: place,
     },
     {
       '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: p.title, description: p.description, inLanguage: 'en-GB',
+      isPartOf: websiteRef, publisher: orgRef,
       about: { '@id': `${pageUrl}#service` }, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       primaryImageOfPage: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
       dateModified: p.reviewed.date, lastReviewed: p.reviewed.date,

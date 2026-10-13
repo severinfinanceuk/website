@@ -1,0 +1,122 @@
+---
+// Utility page template: about, team, contact, pricing, reviews, legal pages and the 404.
+// Hero (breadcrumb, one H1, answer-first intro) + the page's own sections in the slot
+// + optional FAQ band + closing call to action.
+// draft: shows the "Draft for review" banner (legal pages until Severin approves them;
+// noindex comes from noindexPaths in src/data/site.js).
+import Base from './Base.astro';
+import { orgRef, websiteRef } from '../data/site.js';
+import '../styles/service.css';
+import '../styles/page.css';
+
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  breadcrumb?: [string, string][];
+  eyebrow: string;
+  h1: string;
+  answer: string;
+  pageType?: string;            // schema.org type: WebPage, AboutPage, ContactPage, CollectionPage
+  nodes?: object[];             // extra schema nodes for this page
+  faqs?: { q: string; a: string; tbc?: boolean }[];
+  faqTitle?: string;
+  draft?: boolean;
+  reviewed?: { date: string; label: string };
+  cta?: boolean;                // closing "book a free consultation" band
+  noindex?: boolean;
+  ogImage?: string;
+}
+const {
+  title, description, url, breadcrumb = [['Home', '/'], [Astro.props.eyebrow, url]], eyebrow, h1, answer,
+  pageType = 'WebPage', nodes = [], faqs = [], faqTitle = 'Questions', draft = false, reviewed, cta = true, noindex, ogImage,
+} = Astro.props;
+
+const site = Astro.site.href.replace(/\/$/, '');
+const pageUrl = site + url;
+const faqItems = faqs.filter((f) => !f.tbc);
+const schema = [{
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': pageType, '@id': pageUrl, url: pageUrl, name: title, description, inLanguage: 'en-GB',
+      isPartOf: websiteRef, publisher: orgRef, about: orgRef, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+      ...(reviewed && { dateModified: reviewed.date }),
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.sp-answer'] },
+    },
+    {
+      '@type': 'BreadcrumbList', '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: breadcrumb.map(([name, href], i) => ({ '@type': 'ListItem', position: i + 1, name, item: site + href })),
+    },
+    ...(faqItems.length ? [{
+      '@type': 'FAQPage', '@id': `${pageUrl}#faq`,
+      mainEntity: faqItems.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    }] : []),
+    ...nodes,
+  ],
+}];
+---
+<Base title={title} description={description} schema={schema} noindex={noindex} ogImage={ogImage}>
+<div class="sp tp">
+
+  <section class="sp-hero" aria-labelledby="sp-h1">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol role="list">
+          {breadcrumb.map(([name, href], i) => (
+            <li>{i === breadcrumb.length - 1 ? <span aria-current="page">{name}</span> : <a href={href}>{name}</a>}</li>
+          ))}
+        </ol>
+      </nav>
+      {draft && (
+        <p class="draft-banner" role="note"><strong>Draft for review by Severin Finance.</strong> This page is a working draft and is not yet in force. Text in yellow is still to be confirmed.</p>
+      )}
+      <h1 id="sp-h1">
+        <span class="eyebrow">{eyebrow}</span>
+        <span class="sp-title">{h1}</span>
+      </h1>
+      <p class="sp-answer">{answer}</p>
+      {reviewed && <p class="tp-updated">Last updated <time datetime={reviewed.date}>{reviewed.label}</time></p>}
+      <slot name="hero" />
+    </div>
+  </section>
+
+  <slot />
+
+  {faqs.length > 0 && (
+    <section id="faq" class="band section" aria-labelledby="faq-title">
+      <div class="container faq-wrap">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">{faqTitle}</h2>
+        </div>
+        <div class="faq">
+          {faqs.map((f) => (
+            <details>
+              <summary>{f.q}<span class="plus" aria-hidden="true"></span></summary>
+              <div class="faq-answer"><p>{f.tbc ? <span class="tbc">{f.a}</span> : f.a}</p></div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {cta && (
+    <section class="inverse section outro" aria-labelledby="cta-title">
+      <div class="container tp-cta">
+        <div>
+          <span class="eyebrow">Get started</span>
+          <h2 id="cta-title" class="outro-title" style="margin-top:16px">Talk to us. <em>The first consultation is free.</em></h2>
+        </div>
+        <div class="tp-cta-actions">
+          <a class="outro-phone" href="tel:+442045422488">020 4542 2488</a>
+          <p><a href="mailto:enquiries@severinfinance.com">enquiries@severinfinance.com</a></p>
+          <a class="btn btn-fill" href="/contact/">Book a free consultation</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+</div>
+</Base>

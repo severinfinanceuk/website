@@ -1,0 +1,57 @@
+---
+// Cookie banner + Google Analytics 4 in Consent Mode v2 (basic mode).
+// Rendered only when GA4_ID is set (src/data/analytics.js).
+// - Consent defaults to denied. gtag.js is not requested until the visitor clicks Accept.
+// - The choice lives in a first-party cookie (sf_consent = granted | denied) for 180 days.
+// - Any element with data-cookie-settings (footer, cookie policy) opens the banner again.
+//   Withdrawing consent deletes the _ga cookies.
+// - Ads signals stay denied: we use GA4 for measurement only.
+import { CONSENT_COOKIE, CONSENT_DAYS } from '../data/analytics.js';
+interface Props { id: string }
+const { id } = Astro.props;
+---
+<div class="cookie" id="cookie" role="region" aria-label="Cookie choices" hidden>
+  <p>We would like to use Google Analytics cookies to see how people use this site, so we can improve it. They are off unless you accept. <a href="/cookie-policy/">Cookie policy</a></p>
+  <div class="cookie-actions">
+    <button class="btn btn-sm" type="button" data-consent="denied">Reject</button>
+    <button class="btn btn-sm btn-fill" type="button" data-consent="granted">Accept analytics</button>
+  </div>
+</div>
+<script is:inline define:vars={{ id, name: CONSENT_COOKIE, days: CONSENT_DAYS }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+  var banner = document.getElementById('cookie');
+  var read = function () { var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)')); return m && m[1]; };
+  var loaded = false;
+  var load = function () {
+    if (loaded) return; loaded = true;
+    window.gtag = gtag;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', id, { anonymize_ip: true });
+  };
+  var save = function (v) {
+    document.cookie = name + '=' + v + '; Max-Age=' + days * 86400 + '; Path=/; SameSite=Lax; Secure';
+    banner.hidden = true;
+    if (v === 'granted') return load();
+    // Withdrawn: remove Google Analytics cookies on this domain and its parent
+    document.cookie.split('; ').forEach(function (c) {
+      var k = c.split('=')[0];
+      if (k === '_ga' || k.indexOf('_ga_') === 0) [location.hostname, '.' + location.hostname.replace(/^www\./, '')].forEach(function (d) {
+        document.cookie = k + '=; Max-Age=0; Path=/; Domain=' + d;
+      });
+    });
+    if (loaded) location.reload();
+  };
+  var choice = read();
+  if (choice === 'granted') load(); else if (!choice) banner.hidden = false;
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-consent], [data-cookie-settings]');
+    if (!b) return;
+    if (b.hasAttribute('data-cookie-settings')) { e.preventDefault(); banner.hidden = false; banner.querySelector('button').focus(); }
+    else save(b.getAttribute('data-consent'));
+  });
+</script>

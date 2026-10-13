@@ -5,6 +5,7 @@
 // → how it works (less friction, CTA) → comparison (objections) → reviews + reviewed by (proof)
 // → FAQ → form → related links. Full rules: docs/03-service-page-template.md.
 import Base from './Base.astro';
+import { orgRef, websiteRef } from '../data/site.js';
 import LeadForm from '../components/LeadForm.astro';
 import Testimonials from '../components/Testimonials.astro';
 import { Image, Picture, getImage } from 'astro:assets';
@@ -33,7 +34,8 @@ const ogImage = new URL(og.src, Astro.site).href;
 
 // Structured data: one @graph so the nodes reference each other by @id.
 // Placeholders (tbc) never go into schema.
-const org = { '@type': 'AccountingService', '@id': `${site}/#org`, name: 'Severin Finance', url: `${site}/`, telephone: '+44 20 4542 2488' };
+// The firm itself (full node printed once by Base.astro, src/data/site.js)
+const org = orgRef;
 // Offers only for real fixed fees (not tbc, not rates like "6.9%")
 const currency = p.currency ?? 'GBP';
 const offers = p.pricing.plans.filter((x) => !x.tbc && !x.price.includes('%')).map((x) => ({
@@ -48,7 +50,6 @@ const factTables = p.deadlines.tables ?? [p.deadlines.dates, p.deadlines.penalti
 const schema = [{
   '@context': 'https://schema.org',
   '@graph': [
-    org,
     {
       '@type': 'Service', '@id': `${pageUrl}#service`, name: p.service.name, serviceType: p.service.serviceType,
       description: p.hero.answer, url: pageUrl, provider: { '@id': org['@id'] },
@@ -57,6 +58,7 @@ const schema = [{
     },
     {
       '@type': 'WebPage', '@id': pageUrl, url: pageUrl, name: p.title, description: p.description, inLanguage: 'en-GB',
+      isPartOf: websiteRef, publisher: orgRef,
       about: { '@id': `${pageUrl}#service` }, breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       primaryImageOfPage: { '@type': 'ImageObject', url: ogImage, width: 1200, height: 630 },
       dateModified: p.reviewed.date, lastReviewed: p.reviewed.date,

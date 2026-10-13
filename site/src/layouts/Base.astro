@@ -2,6 +2,10 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+import { getImage } from 'astro:assets';
+import defaultOg from '../assets/places/london.jpg';
+import { orgNode, websiteNode, noindexPaths, verification } from '../data/site.js';
 
 interface Props {
   title: string;
@@ -9,11 +13,24 @@ interface Props {
   lang?: string;
   schema?: object[];
   ogImage?: string;                                  // absolute URL, 1200×630
+  ogType?: string;                                   // 'website' or 'article'
+  noindex?: boolean;                                 // also set by noindexPaths in src/data/site.js
   alternates?: { hreflang: string; href: string }[]; // language twins, if a page ever gets one
 }
 
-const { title, description, lang = 'en-GB', schema = [], ogImage, alternates = [] } = Astro.props;
+const { title, description, lang = 'en-GB', schema = [], ogType = 'website', alternates = [] } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const noindex = Astro.props.noindex || noindexPaths.includes(Astro.url.pathname);
+
+// Pages without their own share image use the London skyline
+let ogImage = Astro.props.ogImage;
+if (!ogImage) {
+  const og = await getImage({ src: defaultOg, width: 1200, height: 630, fit: 'cover', format: 'jpg', quality: 70 });
+  ogImage = new URL(og.src, Astro.site).href;
+}
+
+// The firm and the website, on every page. Page graphs refer to them by @id.
+const siteGraph = { '@context': 'https://schema.org', '@graph': [orgNode, websiteNode] };
 ---
 <!doctype html>
 <html lang={lang}>
@@ -22,19 +39,30 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#ffffff" />
     <link rel="preload" href="/fonts/inter-tight-500.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-tight-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta property="og:type" content="website" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    {verification.google && <meta name="google-site-verification" content={verification.google} />}
+    {verification.bing && <meta name="msvalidate.01" content={verification.bing} />}
+    <meta property="og:site_name" content="Severin Finance" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={lang.replace('-', '_')} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
-    {ogImage && <meta name="twitter:card" content="summary_large_image" />}
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={new URL(a.href, Astro.site)} />)}
+    <script type="application/ld+json" set:html={JSON.stringify(siteGraph)} />
     {schema.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
   </head>
   <body>
@@ -48,5 +76,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <a class="btn" href="tel:+442045422488">Call us</a>
       <a class="btn btn-fill" href="/contact/">Book a call</a>
     </nav>
+    <Analytics />
   </body>
 </html>

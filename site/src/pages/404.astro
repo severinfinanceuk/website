@@ -1,0 +1,54 @@
+---
+// /404.html: shown for any URL that does not exist (Vercel serves it with a 404 status).
+// Points people to the most used pages instead of a dead end. Not in the sitemaps, noindex.
+import TextPage from '../layouts/TextPage.astro';
+import { services } from '../data/services.js';
+import { locations } from '../data/locations.js';
+
+const top = [
+  ['/uk/tax/self-assessment-accountant/', 'Self assessment'],
+  ['/uk/accounting/limited-company-accountant/', 'Company accounts'],
+  ['/uk/tax/vat-accountant/', 'VAT returns'],
+  ['/uk/accounting/bookkeeping-services/', 'Bookkeeping'],
+  ['/uk/business-finance/business-loans/', 'Business loans'],
+  ['/cross-border/non-resident-uk-tax/', 'Non-resident UK tax'],
+];
+const places = [['/uk/london/', 'London'], ...locations[0].groups[1].items.slice(0, 5).map(([l, h]) => [h, l]), ['/locations/', 'All locations']];
+---
+<TextPage
+  title="Page not found | Severin Finance"
+  description="This page does not exist or has moved. Find our accounting, tax and business finance services, guides and locations, or book a free consultation."
+  url="/404/"
+  breadcrumb={[['Home', '/'], ['Page not found', '/404/']]}
+  eyebrow="Error 404"
+  h1="We can't find that page"
+  answer="The page may have moved when we rebuilt the site, or the link may have a typo. Try one of the pages below, read our guides, or call us on 020 4542 2488 and we will point you to the right person."
+  noindex
+>
+  <section class="section" style="padding-top:0" aria-labelledby="nf-title">
+    <div class="container">
+      <h2 id="nf-title" class="sr-only">Popular pages</h2>
+      <div class="info-grid info-grid-3">
+        <div class="info-card">
+          <h3>Popular services</h3>
+          <ul role="list" class="guide-list" style="grid-template-columns:1fr">
+            {top.map(([href, label]) => <li><a href={href}><strong>{label}</strong></a></li>)}
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Service areas</h3>
+          <ul role="list" class="guide-list" style="grid-template-columns:1fr">
+            {services.map((c) => <li><a href={c.href}><strong>{c.title}</strong></a></li>)}
+            <li><a href="/resources/"><strong>Guides</strong></a></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Locations</h3>
+          <ul role="list" class="guide-list" style="grid-template-columns:1fr">
+            {places.map(([href, label]) => <li><a href={href}><strong>{label}</strong></a></li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</TextPage>

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import crestWhite from '../assets/logos/sf-crest-white.png';
+import { GA4_ID } from '../data/analytics.js';
 
 const cols = [
   {
@@ -52,6 +53,7 @@ const cols = [
       ['/team/', 'Our team'],
       ['/resources/', 'Guides'],
       ['/uk/pricing/', 'Pricing'],
+      ['/reviews/', 'Reviews'],
       ['/contact/', 'Contact'],
     ],
   },
@@ -101,6 +103,8 @@ const year = new Date().getFullYear();
         <li><a href="/cookie-policy/">Cookies</a></li>
         <li><a href="/terms/">Terms</a></li>
         <li><a href="/complaints/">Complaints</a></li>
+        <li><a href="/accessibility/">Accessibility</a></li>
+        {GA4_ID && <li><button class="link-btn" type="button" data-cookie-settings>Cookie settings</button></li>}
       </ul>
     </div>
   </div>

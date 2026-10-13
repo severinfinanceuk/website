@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { orgRef, websiteRef } from '../data/site.js';
 import LeadForm from '../components/LeadForm.astro';
 import Testimonials from '../components/Testimonials.astro';
 import { rating } from '../data/reviews.js';
@@ -120,30 +121,27 @@ const faqs = [
   { q: 'How do I get started?', a: 'Book a free consultation online or call 020 4542 2488. We will tell you what we need, what it costs and when it will be done.' },
 ];
 
-const schema = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'AccountingService',
-    '@id': 'https://severinfinance.com/#org',
-    name: 'Severin Finance',
-    url: 'https://severinfinance.com/',
-    telephone: '+44 20 4542 2488',
-    email: 'enquiries@severinfinance.com',
-    logo: 'https://severinfinance.com/logo.png',
-    slogan: 'Simplifying the complex, so that everything is just black and white.',
-    address: { '@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB' },
-    areaServed: 'GB',
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.filter((f) => !f.tbc).map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  },
-];
+// The firm and website nodes come from Base.astro (src/data/site.js); this page adds its own.
+const site = Astro.site.href.replace(/\/$/, '');
+const schema = [{
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage', '@id': `${site}/`, url: `${site}/`, inLanguage: 'en-GB',
+      name: 'London Accountants for the UK & Abroad | Severin Finance',
+      isPartOf: websiteRef, about: orgRef, publisher: orgRef,
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.hero-text'] },
+    },
+    {
+      '@type': 'FAQPage', '@id': `${site}/#faq`,
+      mainEntity: faqs.filter((f) => !f.tbc).map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ],
+}];
 
 const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.3 2.3 8.2 3.4l3.8 3.8H1.5v1.6H12l-3.8 3.8 1.1 1.1L15 8z"/></svg>';
 ---

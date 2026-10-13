@@ -2,6 +2,7 @@
 // URL: /locations/ (every location page on one list: London areas, UK cities, clients abroad).
 // The card text comes from the two hub data files, so each place is described in one place only.
 import Base from '../layouts/Base.astro';
+import { orgRef, websiteRef } from '../data/site.js';
 import LeadForm from '../components/LeadForm.astro';
 import { getImage } from 'astro:assets';
 import london from '../data/location-pages/london.js';
@@ -35,6 +36,7 @@ const schema = [{
   '@graph': [
     {
       '@type': 'CollectionPage', '@id': site + url, url: site + url, name: title, description, inLanguage: 'en-GB',
+      isPartOf: websiteRef, publisher: orgRef,
       breadcrumb: { '@id': `${site + url}#breadcrumb` },
       mainEntity: { '@type': 'ItemList', itemListElement: all.map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.name, url: site + a.href })) },
     },

@@ -1,0 +1,27 @@
+---
+// Measurement, at the end of <body> on every page. Settings: src/data/analytics.js.
+// 1. Vercel Web Analytics (cookieless) on the built site.
+// 2. One delegated click listener: phone and email clicks go to both tools as events.
+// 3. GA4 only when GA4_ID is set, and then only after consent (CookieBanner).
+// This is the only JavaScript on most pages (about 1 KB without GA4, 2.5 KB with it):
+// an agreed exception to the zero-JS rule (PROGRESS.md, decisions).
+import CookieBanner from './CookieBanner.astro';
+import { GA4_ID } from '../data/analytics.js';
+const prod = import.meta.env.PROD;
+---
+{prod && (
+  <>
+    <script is:inline>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script is:inline defer src="/_vercel/insights/script.js"></script>
+  </>
+)}
+<script is:inline>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a) return;
+    var name = a.getAttribute('href').indexOf('tel:') === 0 ? 'phone_click' : 'email_click';
+    if (window.va) window.va('event', { name: name, data: { page: location.pathname } });
+    if (window.gtag) window.gtag('event', name, { link_url: a.href, page_path: location.pathname });
+  });
+</script>
+{GA4_ID && <CookieBanner id={GA4_ID} />}
