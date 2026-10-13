@@ -48,7 +48,7 @@ export default {
     image: hero,
     imageAlt: 'Red-haired woman writing code at a desk with two monitors',
     price: { from: '£XXX', note: 'a month', tbc: true },
-    deadline: { label: 'Dividend tax 2026/27', date: '10.75% / 35.75% / 39.35%', note: 'After a £500 dividend allowance' },
+    deadline: { label: 'Dividend tax 2026-27', date: '10.75% / 35.75% / 39.35%', note: 'After a £500 dividend allowance' },
     cta: 'Book a free call',
     trust: [
       { text: 'Fixed monthly fee' },
@@ -98,12 +98,12 @@ export default {
   // ---------- 4. Rates and IR35 (tables) ----------
   deadlines: {
     eyebrow: 'Rates & IR35',
-    h2: 'Contractor tax rates and IR35 rules for 2026/27',
+    h2: 'Contractor tax rates and IR35 rules for 2026-27',
     intro: 'Key figures for limited company contractors, and who decides your IR35 status.',
     tables: [
       {
         caption: 'Limited company contractor: key rates',
-        head: ['Rule', '2026/27'],
+        head: ['Rule', '2026-27'],
         rows: [
           ['Corporation tax, profits £50,000 or less', '19%'],
           ['Corporation tax, profits over £250,000', '25%, with marginal relief in between'],
@@ -182,7 +182,7 @@ export default {
     { q: 'What is IR35?', a: 'IR35, also called the off-payroll working rules, applies when you work through your own company but would be an employee if you were hired directly. If you are inside IR35, the client or agency deducts income tax and National Insurance from your fees, as if you were employed.' },
     { q: 'Who decides if my contract is inside IR35?', a: 'The client, if it is a public sector body or a medium or large business. It must give you a status determination statement with its reasons. If the client is small and in the private or voluntary sector, your own company decides.' },
     { q: 'Umbrella or limited company: which is better?', a: 'It depends on your IR35 status. Inside IR35, an umbrella is usually simpler, because most of the tax advantage of a company disappears. Outside IR35, a limited company usually leaves you more after tax, with more admin and responsibility. We compare both using your day rate.' },
-    { q: 'What dividend tax will I pay in 2026/27?', a: '10.75% at the basic rate, 35.75% at the higher rate and 39.35% at the additional rate, after a £500 tax-free dividend allowance. The basic and higher rates rose by 2 percentage points from 6 April 2026.' },
+    { q: 'What dividend tax will I pay in 2026-27?', a: '10.75% at the basic rate, 35.75% at the higher rate and 39.35% at the additional rate, after a £500 tax-free dividend allowance. The basic and higher rates rose by 2 percentage points from 6 April 2026.' },
     { q: 'What corporation tax does a contractor company pay?', a: '19% on profits of £50,000 or less and 25% on profits over £250,000, with marginal relief in between. The limits are shared between associated companies and reduced for short accounting periods.' },
     { q: 'Can a contractor use the Flat Rate VAT Scheme?', a: 'Yes, if your VAT taxable turnover is £150,000 or less. Many contractors spend little on goods, so they count as a limited cost business and pay 16.5% of gross turnover, which often leaves little benefit. You get 1% off in your first year of VAT registration. We check it for you.' },
     { q: 'What salary should a contractor director take?', a: 'Usually a small salary, often around the £12,570 personal allowance, with the rest taken as dividends. The right figure depends on National Insurance thresholds, your other income and your pension plans. We set it with you each tax year.' },
@@ -212,7 +212,7 @@ export default {
     { title: 'Guides', links: [
       ['/resources/ir35-explained/', 'IR35 explained'],
       ['/resources/umbrella-vs-limited-company/', 'Umbrella vs limited company'],
-      ['/resources/dividend-tax-rates/', 'Dividend tax rates 2026/27'],
+      ['/resources/dividend-tax-rates/', 'Dividend tax rates 2026-27'],
     ] },
   ],
 

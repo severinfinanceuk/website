@@ -49,7 +49,7 @@ export default {
     image: hero,
     imageAlt: 'Row of pastel-painted London terraced houses under a blue sky',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
-    deadline: { label: 'Next deadline', date: '31 January 2027', note: 'Online return and tax due for 2025/26' },
+    deadline: { label: 'Next deadline', date: '31 January 2027', note: 'Online return and tax due for 2025-26' },
     cta: 'Get a fixed quote',
     trust: [
       { text: 'Fixed fees agreed upfront' },
@@ -99,12 +99,12 @@ export default {
   // ---------- 4. Rates and rules (tables) ----------
   deadlines: {
     eyebrow: 'Rates & rules',
-    h2: 'Landlord tax rates and rules for 2026/27',
+    h2: 'Landlord tax rates and rules for 2026-27',
     intro: 'Key figures for UK landlords. Stamp duty rates are for England and Northern Ireland; Scotland and Wales have their own taxes.',
     tables: [
       {
         caption: 'Landlord tax: key figures',
-        head: ['Rule', '2026/27'],
+        head: ['Rule', '2026-27'],
         rows: [
           ['Property allowance (instead of expenses)', '£1,000 a year'],
           ['Mortgage interest for individual landlords (Section 24)', 'Tax credit of 20% of finance costs'],
@@ -119,9 +119,9 @@ export default {
         caption: 'Making Tax Digital for Income Tax',
         head: ['Qualifying income (rent and self-employment, before expenses)', 'Must use MTD from'],
         rows: [
-          ['Over £50,000 in 2024/25', '6 April 2026'],
-          ['Over £30,000 in 2025/26', '6 April 2027'],
-          ['Over £20,000 in 2026/27', '6 April 2028'],
+          ['Over £50,000 in 2024-25', '6 April 2026'],
+          ['Over £30,000 in 2025-26', '6 April 2027'],
+          ['Over £20,000 in 2026-27', '6 April 2028'],
         ],
         after: 'Quarterly updates are due by 7 August, 7 November, 7 February and 7 May.',
       },

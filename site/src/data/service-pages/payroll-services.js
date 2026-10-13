@@ -3,7 +3,7 @@
 // self-assessment-accountant.js. See docs/03-service-page-template.md.
 //
 // tbc: true = placeholder until Severin confirms it (shown in yellow, left out of schema).
-// Rates are for the 2026/27 tax year: update every April.
+// Rates are for the 2026-27 tax year: update every April.
 // Facts checked against GOV.UK (HMRC employer guidance) and The Pensions Regulator figures published on GOV.UK
 // on 13 October 2026 (sources at the bottom).
 
@@ -101,11 +101,11 @@ export default {
   deadlines: {
     eyebrow: 'Rates & deadlines',
     h2: 'Payroll rates, deadlines and penalties',
-    intro: 'Figures for the 2026/27 tax year (6 April 2026 to 5 April 2027). Checked on GOV.UK on 13 October 2026.',
+    intro: 'Figures for the 2026-27 tax year (6 April 2026 to 5 April 2027). Checked on GOV.UK on 13 October 2026.',
     tables: [
       {
-        caption: 'Employer rates and thresholds for 2026/27',
-        head: ['Rate or threshold', '2026/27'],
+        caption: 'Employer rates and thresholds for 2026-27',
+        head: ['Rate or threshold', '2026-27'],
         rows: [
           ['Employer National Insurance', '15% above the secondary threshold'],
           ['Secondary threshold', '£96 a week, £417 a month, £5,000 a year'],
@@ -181,21 +181,21 @@ export default {
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
     credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
-    text: 'This page was checked against HMRC employer guidance and the 2026/27 rates. Payroll rates change every April: we update it when they do.',
+    text: 'This page was checked against HMRC employer guidance and the 2026-27 rates. Payroll rates change every April: we update it when they do.',
   },
 
   // ---------- 8. FAQ (People Also Ask) ----------
   faqTitle: 'Payroll questions',
   faqs: [
     { q: 'How much do payroll services cost?', a: 'Our fixed fees start at £XXX per employee a month. Director-only payroll has its own lower fee, and P11Ds or payrolled benefits cost extra. You get the exact fee in writing after a free consultation.', tbc: true },
-    { q: 'What is the employer National Insurance rate for 2026/27?', a: '15% on earnings above the secondary threshold of £5,000 a year (£96 a week or £417 a month). Most small employers can claim the Employment Allowance, which takes up to £10,500 a year off the bill.' },
+    { q: 'What is the employer National Insurance rate for 2026-27?', a: '15% on earnings above the secondary threshold of £5,000 a year (£96 a week or £417 a month). Most small employers can claim the Employment Allowance, which takes up to £10,500 a year off the bill.' },
     { q: 'What is the National Minimum Wage from April 2026?', a: '£12.71 an hour for workers aged 21 and over, called the National Living Wage. The rate is £10.85 for 18 to 20 year olds and £8 for under-18s and apprentices. These rates apply from 1 April 2026.' },
     { q: 'Can a director-only company claim the Employment Allowance?', a: 'Not if the director is the only employee paid above the £5,000 secondary threshold. A company with two or more directors on the payroll above that threshold, or a director plus another employee, can usually claim.' },
     { q: 'When must I report payroll to HMRC?', a: 'On or before each payday. You send a Full Payment Submission (FPS) every time you pay employees, then pay HMRC what you owe by the 22nd of the next tax month, or the 19th if you pay by post.' },
     { q: 'What is the penalty for a late FPS?', a: '£100 to £400 a month, depending on how many employees you have. HMRC does not usually charge for the first late FPS in a tax year, or one that is no more than 3 days late. Penalties apply to each PAYE scheme.' },
     { q: 'Do I have to enrol staff into a workplace pension?', a: 'Yes, for workers aged 22 to State Pension age who earn at least £10,000 a year and usually work in the UK. The minimum total contribution is 8% of qualifying earnings, and you as the employer must pay at least 3%.' },
     { q: 'When are P60s and P11Ds due?', a: 'P60s must reach employees by 31 May. P11Ds, the P11D(b) and employees’ copies are due by 6 July, and Class 1A National Insurance on benefits must be paid by 22 July (19 July by cheque).' },
-    { q: 'Is payrolling benefits becoming mandatory?', a: 'Yes, from 6 April 2027 for company cars, vans, car and van fuel, and medical benefits. Most other benefits follow from April 2028. You will report them through payroll instead of on P11Ds, and we can set this up for you.' },
+    { q: 'Is payrolling benefits becoming mandatory?', a: 'It is due to be, subject to the legislation being finalised. HMRC plans to start from April 2027 for company cars, vans, car and van fuel, and medical benefits, with most other benefits following from April 2028. You will report them through payroll instead of on P11Ds, and we can set this up for you.' },
     { q: 'Can you run payroll for just one employee?', a: 'Yes. We run payroll for director-only companies and employers with one or two staff, as well as larger teams.' },
   ],
 
@@ -238,6 +238,6 @@ export default {
     ['https://www.gov.uk/running-payroll/reporting-to-hmrc', 'GOV.UK: Reporting payroll to HMRC'],
     ['https://www.gov.uk/guidance/what-happens-if-you-dont-report-payroll-information-on-time', 'HMRC: Late payroll reporting penalties'],
     ['https://www.gov.uk/employer-reporting-expenses-benefits/deadlines', 'GOV.UK: Expenses and benefits deadlines'],
-    ['https://www.gov.uk/government/publications/review-of-the-automatic-enrolment-earnings-trigger-and-qualifying-earnings-band-for-202627/review-of-the-automatic-enrolment-earnings-trigger-and-qualifying-earnings-band-for-202627', 'DWP: Auto-enrolment thresholds 2026/27'],
+    ['https://www.gov.uk/government/publications/review-of-the-automatic-enrolment-earnings-trigger-and-qualifying-earnings-band-for-202627/review-of-the-automatic-enrolment-earnings-trigger-and-qualifying-earnings-band-for-202627', 'DWP: Auto-enrolment thresholds 2026-27'],
   ],
 };

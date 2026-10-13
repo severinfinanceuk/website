@@ -3,7 +3,7 @@
 // uses the same keys. See docs/02-location-pages-plan.md (no doorway pages: real local facts only).
 //
 // tbc: true = placeholder until Severin confirms it (shown in yellow, left out of schema).
-// Facts checked on 13 October 2026: Richmond Council (BIDs, council tax and business rates guide 2026/27,
+// Facts checked on 13 October 2026: Richmond Council (BIDs, council tax and business rates guide 2026-27,
 // invest pages), ONS (house prices), GOV.UK (inheritance tax, capital gains on property). Sources at the bottom.
 
 import { rating } from '../reviews.js';
@@ -218,7 +218,7 @@ export default {
   // ---------- Sources (shown on the page, E-E-A-T) ----------
   sources: [
     ['https://www.richmond.gov.uk/services/business/business_improvement_district', 'Richmond Council: Business Improvement Districts'],
-    ['https://www.richmond.gov.uk/media/vxpihkqb/guide_to_council_tax_and_business_rates.pdf', 'Richmond Council: Guide to council tax and business rates 2026/27'],
+    ['https://www.richmond.gov.uk/media/vxpihkqb/guide_to_council_tax_and_business_rates.pdf', 'Richmond Council: Guide to council tax and business rates 2026-27'],
     ['https://www.richmond.gov.uk/services/business/local_information_for_businesses/why_invest/invest_infographic', 'Richmond Council: Why invest in Richmond upon Thames'],
     ['https://www.ons.gov.uk/visualisations/housingpriceslocal/E09000027/', 'ONS: Housing prices in Richmond upon Thames'],
     ['https://www.gov.uk/government/publications/rates-and-allowances-inheritance-tax-thresholds-and-interest-rates/inheritance-tax-thresholds-and-interest-rates', 'GOV.UK: Inheritance tax thresholds'],

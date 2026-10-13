@@ -25,7 +25,7 @@ export default {
   secondaryKeywords: [
     'CGT on property sale', 'capital gains tax accountant London', '60 day capital gains tax return',
     'crypto tax accountant', 'Business Asset Disposal Relief', 'private residence relief',
-    'capital gains tax rates 2026/27', 'non-resident capital gains tax',
+    'capital gains tax rates 2026-27', 'non-resident capital gains tax',
   ],
   title: 'Capital Gains Tax Accountants London & UK | Severin Finance',
   description: 'Capital gains tax accountants in London and across the UK: we work out your CGT on property, shares, crypto or a business sale and report it to HMRC.',
@@ -47,7 +47,7 @@ export default {
   hero: {
     eyebrow: 'UK tax · Capital gains tax',
     h1: 'Capital gains tax accountants in London and across the UK',
-    answer: 'Our capital gains tax accountants work out what you owe when you sell property, shares, crypto or a business, claim every relief and report the gain to HMRC, whether you live in London, elsewhere in the UK or abroad. For 2026/27, gains above the £3,000 allowance are taxed at 18% or 24%.',
+    answer: 'Our capital gains tax accountants work out what you owe when you sell property, shares, crypto or a business, claim every relief and report the gain to HMRC, whether you live in London, elsewhere in the UK or abroad. For 2026-27, gains above the £3,000 allowance are taxed at 18% or 24%.',
     image: hero,
     imageAlt: 'Excited couple reading a letter together in a bright blue kitchen at home',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
@@ -102,17 +102,17 @@ export default {
   deadlines: {
     eyebrow: 'Rates & deadlines',
     h2: 'Capital gains tax rates and deadlines',
-    intro: 'Figures for the 2026/27 tax year (6 April 2026 to 5 April 2027).',
+    intro: 'Figures for the 2026-27 tax year (6 April 2026 to 5 April 2027).',
     tables: [
       {
-        caption: 'Capital gains tax rates and allowance 2026/27',
-        head: ['What', '2026/27'],
+        caption: 'Capital gains tax rates and allowance 2026-27',
+        head: ['What', '2026-27'],
         rows: [
           ['Tax-free allowance (annual exempt amount)', '£3,000 (most trusts: £1,500)'],
           ['Gains within your basic rate band', '18%'],
           ['Gains above your basic rate band', '24%'],
           ['Trustees and personal representatives', '24%'],
-          ['Business Asset Disposal Relief', '18% (14% in 2025/26), up to £1 million lifetime'],
+          ['Business Asset Disposal Relief', '18% (14% in 2025-26), up to £1 million lifetime'],
         ],
         after: 'The same rates apply to property, shares and crypto. Gifts to a spouse, civil partner or charity are usually tax-free.',
       },
@@ -123,8 +123,8 @@ export default {
           ['UK residential property, with tax to pay (UK resident)', 'Report and pay within 60 days of completion'],
           ['Any UK property or land (non-resident)', 'Report within 60 days, even if no tax is due'],
           ['Other gains, real time CGT service', '31 December after the tax year'],
-          ['Other gains in 2025/26, self assessment', '31 January 2027'],
-          ['Business Asset Disposal Relief claim, 2025/26 sales', '31 January 2028'],
+          ['Other gains in 2025-26, self assessment', '31 January 2027'],
+          ['Business Asset Disposal Relief claim, 2025-26 sales', '31 January 2028'],
         ],
         after: 'Report or pay late and HMRC can charge interest and a penalty.',
       },
@@ -181,12 +181,12 @@ export default {
   // ---------- 8. FAQ (People Also Ask) ----------
   faqTitle: 'Capital gains tax questions',
   faqs: [
-    { q: 'What are the capital gains tax rates for 2026/27?', a: '18% or 24%. Gains that fall within your basic rate Income Tax band are taxed at 18%, and the rest at 24%. Trustees and personal representatives pay 24%. The same rates apply to property, shares and crypto.' },
+    { q: 'What are the capital gains tax rates for 2026-27?', a: '18% or 24%. Gains that fall within your basic rate Income Tax band are taxed at 18%, and the rest at 24%. Trustees and personal representatives pay 24%. The same rates apply to property, shares and crypto.' },
     { q: 'What is the capital gains tax allowance?', a: '£3,000 a year for individuals and £1,500 for most trusts. You only pay CGT on gains above it. An unused allowance cannot be carried forward to the next year.' },
     { q: 'Do I pay capital gains tax when I sell my home?', a: 'Usually not. Private residence relief makes the sale tax-free if it was your only or main home for the whole time you owned it, you did not let part of it out or use part only for business, and the grounds are under 5,000 square metres. The last 9 months of ownership always qualify if it was your main home at some point.' },
     { q: 'How long do I have to report capital gains tax on a property sale?', a: '60 days from completion. UK residents must report and pay within 60 days when they sell UK residential property with tax to pay. Non-residents must report every sale of UK property or land within 60 days, even if no tax is due.' },
     { q: 'Do I pay capital gains tax on crypto?', a: 'Yes, when you dispose of it and your total gains are above the £3,000 allowance. Selling, swapping one token for another, paying for goods with crypto and giving it away all count. Gifts to a spouse, civil partner or charity are exempt. Each token type sits in a pool with an average cost.' },
-    { q: 'What is the Business Asset Disposal Relief rate from April 2026?', a: '18%. Qualifying gains on sales from 6 April 2026 are taxed at 18%, up from 14% in 2025/26. The relief covers up to £1 million of gains over your lifetime. You usually need to have owned the business, or at least 5% of a trading company where you work, for 2 years before the sale.' },
+    { q: 'What is the Business Asset Disposal Relief rate from April 2026?', a: '18%. Qualifying gains on sales from 6 April 2026 are taxed at 18%, up from 14% in 2025-26. The relief covers up to £1 million of gains over your lifetime. You usually need to have owned the business, or at least 5% of a trading company where you work, for 2 years before the sale.' },
     { q: 'Do I need to file a self assessment return for capital gains?', a: 'Yes, if you have capital gains tax to pay and do not use HMRC’s real time CGT service. The real time service lets you report by 31 December after the tax year. UK property sales also need the separate 60-day return.' },
     { q: 'How can I reduce capital gains tax legally?', a: 'Use the £3,000 allowance each year, hold shares in an ISA, and check reliefs before you sell. Transfers to a spouse or civil partner are usually tax-free, so couples can use two allowances and two basic rate bands. Business owners may qualify for Business Asset Disposal Relief.' },
     { q: 'How much does a capital gains tax accountant cost?', a: 'Our fixed fees start at £XXX for a few share sales. A property sale with a 60-day return, crypto or a business sale costs more. You get the exact fee in writing after a free consultation, before any work starts.', tbc: true },

@@ -44,11 +44,11 @@ export default {
   hero: {
     eyebrow: 'UK tax · Self assessment',
     h1: 'Self assessment accountants in London and across the UK',
-    answer: 'Our self assessment accountants prepare and file your UK tax return with HMRC for a fixed fee, for clients in London, across the UK and abroad. We check every allowance and expense, work out your payments on account and deal with HMRC for you. For 2025/26, the online deadline is 31 January 2027.',
+    answer: 'Our self assessment accountants prepare and file your UK tax return with HMRC for a fixed fee, for clients in London, across the UK and abroad. We check every allowance and expense, work out your payments on account and deal with HMRC for you. For 2025-26, the online deadline is 31 January 2027.',
     image: hero,
     imageAlt: 'Self-employed woman in a colourful cardigan working on her laptop by a window',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
-    deadline: { label: 'Next deadline', date: '31 January 2027', note: 'Online return and tax due for 2025/26' },
+    deadline: { label: 'Next deadline', date: '31 January 2027', note: 'Online return and tax due for 2025-26' },
     cta: 'Get a fixed quote',
     trust: [
       { text: 'Chartered Management Accountant practice' },
@@ -99,17 +99,17 @@ export default {
   deadlines: {
     eyebrow: 'Deadlines & penalties',
     h2: 'Self assessment deadlines and HMRC penalties',
-    intro: 'Dates for the 2025/26 tax year (6 April 2025 to 5 April 2026).',
+    intro: 'Dates for the 2025-26 tax year (6 April 2025 to 5 April 2026).',
     dates: {
-      caption: 'Self assessment deadlines for 2025/26',
+      caption: 'Self assessment deadlines for 2025-26',
       head: ['What', 'Deadline'],
       rows: [
         ['Register for self assessment (first return)', '5 October 2026'],
         ['Paper tax return', '31 October 2026'],
         ['Online return, if you want tax under £3,000 collected through your tax code', '30 December 2026'],
         ['Online tax return', '31 January 2027'],
-        ['Pay the tax you owe, plus the first payment on account for 2026/27', '31 January 2027'],
-        ['Second payment on account for 2026/27', '31 July 2027'],
+        ['Pay the tax you owe, plus the first payment on account for 2026-27', '31 January 2027'],
+        ['Second payment on account for 2026-27', '31 July 2027'],
       ],
     },
     penalties: {
@@ -176,7 +176,7 @@ export default {
   faqTitle: 'Self assessment questions',
   faqs: [
     { q: 'Do I need to file a self assessment tax return?', a: 'You must file if, in the last tax year, you were self-employed and earned more than £1,000, were a partner in a business partnership, had capital gains tax to pay, had to pay the High Income Child Benefit Charge outside PAYE, or are an off-payroll worker repaying a student loan. You may also need to file for untaxed income such as rent, savings interest, dividends or foreign income.' },
-    { q: 'When is the self assessment deadline for 2025/26?', a: 'Paper returns are due by 31 October 2026 and online returns by 11:59pm on 31 January 2027. The tax you owe is also due on 31 January 2027. If you want tax under £3,000 collected through your tax code, file online by 30 December 2026.' },
+    { q: 'When is the self assessment deadline for 2025-26?', a: 'Paper returns are due by 31 October 2026 and online returns by 11:59pm on 31 January 2027. The tax you owe is also due on 31 January 2027. If you want tax under £3,000 collected through your tax code, file online by 30 December 2026.' },
     { q: 'What is the penalty for a late self assessment tax return?', a: 'HMRC charges £100 as soon as the return is late. After 3 months it adds £10 a day up to £900, after 6 months 5% of the tax due or £300 (whichever is more), and after 12 months another 5% or £300. Late payment adds 5% of the unpaid tax at 30 days, 6 months and 12 months, plus interest.' },
     { q: 'How much does a self assessment accountant cost?', a: 'Our fixed fees start at £XXX for a simple return. Returns with self-employment, rental income, capital gains or foreign income cost more. You get the exact fee in writing after a free consultation, before any work starts.', tbc: true },
     { q: 'Can you file my tax return if I missed the deadline?', a: 'Yes. File as soon as possible: the £100 penalty applies straight away, and daily penalties start after 3 months. We prepare the late return, tell you what to pay and appeal the penalties if you had a reasonable excuse.' },

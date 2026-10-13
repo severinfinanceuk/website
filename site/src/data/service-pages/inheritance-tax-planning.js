@@ -79,7 +79,7 @@ export default {
       { title: 'Homeowners & couples', img: homeowners, alt: 'Older couple laughing outside their brick townhouse covered in purple wisteria', tag: 'Estate over £500,000', text: 'Leave your home to children or grandchildren and the threshold can rise to £500,000 each. We make sure both of you use it.' },
       { title: 'Parents & grandparents', img: gifts, alt: 'Grandmother and young granddaughter in aprons hugging in their kitchen', tag: 'Gifts and the 7-year rule', text: 'Gifts are tax-free if you live 7 more years. Regular gifts from surplus income are exempt at once. We keep the records HMRC asks for.' },
       { title: 'Business owners', img: business, alt: 'Older craftsman in a leather apron lifting his magnifying visor in his workshop', tag: 'Business property relief', text: 'From 6 April 2026, 100% relief covers the first £2.5 million of business and farm property, then 50%. We check what qualifies.', link: ['/uk/company-services/succession-planning/', 'Succession planning'] },
-      { title: 'Farmers & landowners', img: farmer, alt: 'Young farming couple holding their toddler beside a wooden fence on their farm', tag: 'Agricultural property relief', text: 'Farms share the £2.5 million allowance. Tax on the rest can be paid in 10 yearly instalments, interest-free.' },
+      { title: 'Farmers & landowners', img: farmer, alt: 'Young farming couple holding their toddler beside a wooden fence on their farm', tag: 'Agricultural property relief', text: 'Farms share the £2.5 million allowance. Tax on the rest can be paid in 10 yearly instalments, interest-free for deaths from 6 April 2026.' },
       { title: 'Pension savers', img: pension, alt: 'Retired couple on a sofa going through bills and paperwork together', tag: 'From 6 April 2027', text: 'Unused pension funds and death benefits will count towards your estate. Death in service benefits stay outside. We review your plan now.' },
       { title: 'International families', img: international, alt: 'Woman with a backpack looking across the Thames towards Tower Bridge in London', tag: 'Long-term UK residents', text: 'Since 6 April 2025, residence decides your exposure, not domicile. After 10 of the last 20 years here, overseas assets are in scope.', link: ['/cross-border/non-resident-uk-tax/', 'Non-resident UK tax'] },
     ],
@@ -103,7 +103,7 @@ export default {
   deadlines: {
     eyebrow: 'Allowances & gifts',
     h2: 'Inheritance tax allowances and the 7-year rule',
-    intro: 'Figures for the 2026/27 tax year. The £325,000 threshold is fixed until 5 April 2031.',
+    intro: 'Figures for the 2026-27 tax year. The £325,000 threshold is fixed until 5 April 2031.',
     tables: [
       {
         caption: 'Inheritance tax thresholds, rates and reliefs',
@@ -184,13 +184,13 @@ export default {
   // ---------- 8. FAQ (People Also Ask) ----------
   faqTitle: 'Inheritance tax questions',
   faqs: [
-    { q: 'What is the inheritance tax threshold for 2026/27?', a: '£325,000 per person. It rises by up to £175,000 if you leave your home to children or grandchildren, so up to £500,000. A spouse or civil partner can inherit any unused threshold. The £325,000 figure is fixed until 5 April 2031.' },
+    { q: 'What is the inheritance tax threshold for 2026-27?', a: '£325,000 per person. It rises by up to £175,000 if you leave your home to children or grandchildren, so up to £500,000. A spouse or civil partner can inherit any unused threshold. The £325,000 figure is fixed until 5 April 2031.' },
     { q: 'How much is inheritance tax?', a: '40% on the part of the estate above the threshold. The rate falls to 36% on some assets if you leave 10% or more of the net estate to charity. Business and farm property above the £2.5 million allowance gets 50% relief, so an effective rate of up to 20%.' },
     { q: 'What is the 7-year rule for gifts?', a: 'Gifts are free of inheritance tax if you live for 7 years after making them. If you die within 7 years, the gift can be taxed. Taper relief lowers the tax on gifts made 3 to 7 years before death, but only when gifts in those 7 years total more than £325,000.' },
     { q: 'How much can I give away tax-free each year?', a: '£3,000 a year, plus last year’s £3,000 if you did not use it. You can also give up to £250 to as many people as you like, wedding gifts of up to £5,000 to a child, and regular gifts from surplus income with no set limit.' },
     { q: 'Will my pension be subject to inheritance tax?', a: 'Yes, from 6 April 2027. For deaths on or after that date, most unused pension funds and death benefits count towards the estate. Death in service benefits stay outside, and benefits left to a spouse, civil partner or charity stay exempt. Personal representatives report and pay the tax.' },
     { q: 'What changed for business and agricultural property relief in April 2026?', a: 'Full relief is now capped. From 6 April 2026, 100% relief covers the first £2.5 million of combined business and agricultural property, and 50% applies above that. Unused allowance can pass to a surviving spouse or civil partner. Shares on markets such as AIM get 50% relief.' },
-    { q: 'When does inheritance tax have to be paid?', a: 'By the end of the sixth month after the death. HMRC charges interest after that. Tax on business or agricultural property can be paid in 10 equal yearly instalments, interest-free.' },
+    { q: 'When does inheritance tax have to be paid?', a: 'By the end of the sixth month after the death. HMRC charges interest after that. Tax on business or agricultural property can be paid in 10 equal yearly instalments, interest-free where the death is on or after 6 April 2026.' },
     { q: 'Do non-doms pay UK inheritance tax?', a: 'It now depends on residence, not domicile. Since 6 April 2025, you are a long-term UK resident if you have been UK resident for 10 of the last 20 tax years. Your overseas assets are then in scope, and this can continue for up to 10 years after you leave.' },
     { q: 'How much does inheritance tax planning cost?', a: 'Our fixed fees start at £XXX for an estate review. Business, farm and international estates cost more. You get the exact fee in writing after a free consultation, before any work starts.', tbc: true },
     { q: 'Do you write wills and set up trusts?', a: 'No. We plan the tax and work out the figures. A solicitor drafts your will and any trust, and we brief them on the plan. We can introduce a solicitor we work with.', tbc: true },

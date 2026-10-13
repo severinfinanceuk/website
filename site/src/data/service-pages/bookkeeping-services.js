@@ -117,9 +117,9 @@ export default {
         caption: 'Making Tax Digital for Income Tax',
         head: ['Qualifying income', 'You must use MTD from'],
         rows: [
-          ['Over £50,000 (2024/25 tax year)', '6 April 2026'],
-          ['Over £30,000 (2025/26 tax year)', '6 April 2027'],
-          ['Over £20,000 (2026/27 tax year)', '6 April 2028'],
+          ['Over £50,000 (2024-25 tax year)', '6 April 2026'],
+          ['Over £30,000 (2025-26 tax year)', '6 April 2027'],
+          ['Over £20,000 (2026-27 tax year)', '6 April 2028'],
           ['Quarterly updates due', '7 August, 7 November, 7 February and 7 May'],
         ],
         after: 'Quarterly updates cover the periods to 5 July, 5 October, 5 January and 5 April.',

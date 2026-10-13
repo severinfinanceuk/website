@@ -48,7 +48,7 @@ export default {
     image: hero,
     imageAlt: 'Woman smiling on the phone next to a departures board at an airport terminal',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
-    deadline: { label: 'Next deadline', date: '31 January 2027', note: 'Online return and tax due for 2025/26' },
+    deadline: { label: 'Next deadline', date: '31 January 2027', note: 'Online return and tax due for 2025-26' },
     cta: 'Get a fixed quote',
     trust: [
       { text: 'Fixed fee agreed before we start' },
@@ -99,7 +99,7 @@ export default {
   deadlines: {
     eyebrow: 'Deadlines & residence test',
     h2: 'Non-resident UK tax deadlines and the residence test',
-    intro: 'Dates for the 2025/26 tax year (6 April 2025 to 5 April 2026), plus the day counts HMRC uses.',
+    intro: 'Dates for the 2025-26 tax year (6 April 2025 to 5 April 2026), plus the day counts HMRC uses.',
     tables: [
       {
         caption: 'Non-resident deadlines',
@@ -107,8 +107,8 @@ export default {
         rows: [
           ['Report and pay tax on UK property sold', 'Within 60 days of completion'],
           ['Letting agent’s annual NRL return and your NRL6 tax certificate', '5 July'],
-          ['Paper tax return for 2025/26', '31 October 2026'],
-          ['Online tax return and tax due for 2025/26', '31 January 2027'],
+          ['Paper tax return for 2025-26', '31 October 2026'],
+          ['Online tax return and tax due for 2025-26', '31 January 2027'],
         ],
         after: 'Late 60-day returns and late annual returns both lead to penalties and interest.',
       },
@@ -184,7 +184,7 @@ export default {
     { q: 'How do I know if I am non-resident for UK tax?', a: 'The Statutory Residence Test decides. You are automatically non-resident with fewer than 16 days in the UK, or fewer than 46 days if you were not resident in the last 3 tax years. You are automatically resident with 183 days or more. In between, it depends on your UK ties.' },
     { q: 'What is the Non-Resident Landlord Scheme?', a: 'It is how HMRC taxes UK rent paid to landlords who live abroad for more than 6 months a year. Your letting agent, or your tenant if they pay over £100 a week and there is no agent, deducts basic rate tax from the rent and pays it to HMRC.' },
     { q: 'How do I receive UK rent without tax deducted?', a: 'Apply to HMRC on form NRL1, online or by post. Once approved, your agent or tenant pays you the rent in full. HMRC can refuse if your UK tax affairs are not up to date, and you still file a tax return each year.' },
-    { q: 'Do non-residents pay capital gains tax on UK property?', a: 'Yes. You must report the sale and pay any tax within 60 days of completion, even if no tax is due or you made a loss. This covers homes and commercial property. For 2026/27 the rates are 18% within the basic rate band and 24% above it, after the £3,000 annual exempt amount.' },
+    { q: 'Do non-residents pay capital gains tax on UK property?', a: 'Yes. You must report the sale and pay any tax within 60 days of completion, even if no tax is due or you made a loss. This covers homes and commercial property. For 2026-27 the rates are 18% within the basic rate band and 24% above it, after the £3,000 annual exempt amount.' },
     { q: 'Can non-residents claim the UK personal allowance?', a: 'Yes, if you are a British or EEA citizen, worked for the UK government during the tax year, or a tax treaty gives you the right. You claim it on your tax return, or on form R43 if you do not file one.' },
     { q: 'What is split-year treatment?', a: 'It splits the tax year you leave or arrive into a UK part and an overseas part, so foreign income after you leave is not taxed as if you were resident. You must meet one of HMRC’s set cases, for example starting full-time work abroad. It does not apply if you leave for less than a full tax year.' },
     { q: 'What is the temporary non-residence rule?', a: 'If you are non-resident for 5 years or less, and were UK resident in at least 4 of the 7 tax years before you left, some income and gains from your time away are taxed when you return. This includes capital gains, dividends from your own close company and some pension lump sums.' },

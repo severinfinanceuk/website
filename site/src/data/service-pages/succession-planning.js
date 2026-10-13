@@ -107,7 +107,7 @@ export default {
         caption: 'Key reliefs for owners passing on a company',
         head: ['Relief', 'Rule now'],
         rows: [
-          ['Business Asset Disposal Relief rate', '18% on disposals from 6 April 2026 (14% in 2025/26)'],
+          ['Business Asset Disposal Relief rate', '18% on disposals from 6 April 2026 (14% in 2025-26)'],
           ['BADR lifetime limit', '£1 million of qualifying gains'],
           ['BADR conditions', 'Officer or employee with at least 5% of shares and votes, for 2 years before the sale'],
           ['Employee ownership trust sale', 'From 26 November 2025, 50% of the gain is relieved and 50% is taxed'],

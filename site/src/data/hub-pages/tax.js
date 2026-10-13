@@ -1,6 +1,6 @@
 // Tax hub (pillar page): /uk/tax/. Layout: src/layouts/HubPage.astro.
 // Fact tables are reused from the service pages, so each figure is checked in one place.
-// The income tax table is new here: rates for England, Wales and Northern Ireland, 2026/27
+// The income tax table is new here: rates for England, Wales and Northern Ireland, 2026-27
 // (bands frozen; dividend rates 10.75% / 35.75% / 39.35% from 6 April 2026).
 import sa from '../service-pages/self-assessment-accountant.js';
 import ct from '../service-pages/corporation-tax-accountant.js';
@@ -40,10 +40,10 @@ export default {
   facts: {
     eyebrow: 'Rates & deadlines',
     h2: 'UK tax rates and deadlines',
-    intro: 'The main rates for 2026/27 and the next filing dates. Checked on GOV.UK on 13 October 2026.',
+    intro: 'The main rates for 2026-27 and the next filing dates. Checked on GOV.UK on 13 October 2026.',
     tables: [
       {
-        caption: 'Income tax and dividend tax 2026/27 (England, Wales and Northern Ireland)',
+        caption: 'Income tax and dividend tax 2026-27 (England, Wales and Northern Ireland)',
         head: ['Band', 'Rate'],
         rows: [
           ['Personal allowance, up to £12,570', '0%'],
@@ -76,7 +76,7 @@ export default {
   guidesTitle: 'Tax guides',
   faqTitle: 'Tax questions',
   faqs: [
-    { q: 'When is the next self assessment deadline?', a: 'The online tax return for the 2025/26 tax year is due by 31 January 2027, and so is any tax you owe for that year. Paper returns are due by 31 October 2026.' },
+    { q: 'When is the next self assessment deadline?', a: 'The online tax return for the 2025-26 tax year is due by 31 January 2027, and so is any tax you owe for that year. Paper returns are due by 31 October 2026.' },
     { q: 'What are payments on account?', a: 'Advance payments towards next year’s tax bill. If your last bill was over £1,000 and less than 80% of your tax was taken at source, you pay 2 instalments, each half of last year’s bill, on 31 January and 31 July.' },
     { q: 'Can you deal with HMRC for me?', a: 'Yes. Once you authorise us as your tax agent, HMRC can talk to us about your affairs, and we handle the letters, calls and filings.' },
     { q: 'I am late with my tax return. Can you still help?', a: 'Yes. We file late and back-year returns, work out what you owe and ask HMRC to cancel penalties when there is a reasonable excuse. Filing as soon as possible stops daily penalties from growing.' },

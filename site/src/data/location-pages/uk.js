@@ -127,7 +127,7 @@ export default {
         caption: 'Key deadlines',
         head: ['Filing', 'Deadline'],
         rows: [
-          ['Self assessment online return, 2025/26', '31 January 2027'],
+          ['Self assessment online return, 2025-26', '31 January 2027'],
           ['Corporation tax payment (most companies)', '9 months and 1 day after the year end'],
           ['Company tax return', '12 months after the year end'],
           ['Private company accounts to Companies House', '9 months after the year end'],

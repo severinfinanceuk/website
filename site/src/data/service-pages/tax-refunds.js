@@ -6,7 +6,7 @@
 // Facts checked against GOV.UK on 13 October 2026 (sources at the bottom). Also checked:
 // gov.uk/tax-overpayments-and-underpayments (P800 letters June to March),
 // gov.uk/self-assessment-tax-returns/corrections (overpayment relief: 4 years after the tax year),
-// gov.uk/tax-relief-for-employees/working-at-home (no relief from 2026/27; earlier years still claimable),
+// gov.uk/tax-relief-for-employees/working-at-home (no relief from 2026-27; earlier years still claimable),
 // gov.uk/claim-pension-tax-refund.
 // Compliance: no "maximum refund" or "guaranteed" claims (see docs/01-master-plan.md, ASA note).
 
@@ -52,7 +52,7 @@ export default {
     image: hero,
     imageAlt: 'Smiling young woman checking her phone over a cup of coffee in a cafe',
     price: { from: '£XXX', note: 'fixed fee', tbc: true },
-    deadline: { label: 'Last chance for 2022/23', date: '5 April 2027', note: 'Claims for that tax year close after this date' },
+    deadline: { label: 'Last chance for 2022-23', date: '5 April 2027', note: 'Claims for that tax year close after this date' },
     cta: 'Check my refund',
     trust: [
       { text: 'Fixed fee, not a share of your refund', tbc: true },
@@ -79,7 +79,7 @@ export default {
       { title: 'New job or emergency tax', img: newJob, alt: 'Smiling woman in glasses shaking hands across a desk with a new colleague', tag: 'Code ending W1, M1 or X', text: 'An emergency tax code taxes each payslip on its own. If it was never put right, we work out the overpayment.' },
       { title: 'Left a job mid-year', img: leftJob, alt: 'Smiling woman carrying a box of her belongings and a plant out of an office', tag: 'Stopped work or left the UK', text: 'Leave part-way through the year and you may not use your full Personal Allowance. We claim back the excess.', link: ['/cross-border/non-resident-uk-tax/', 'Non-resident UK tax'] },
       { title: 'Uniform & work expenses', img: uniform, alt: 'Construction worker in hi-vis vest and hard hat cutting steel on a building site', tag: 'Tax rebate on job costs', text: 'Cleaning or replacing a uniform, tools, professional fees and work mileage can all bring a tax rebate.' },
-      { title: 'Married couples', img: couple, alt: 'Smiling couple cooking together at home in a bright kitchen', tag: 'Marriage Allowance', text: 'Transfer £1,260 of allowance to a basic rate partner and save up to £252 a year, backdated to 2022/23.' },
+      { title: 'Married couples', img: couple, alt: 'Smiling couple cooking together at home in a bright kitchen', tag: 'Marriage Allowance', text: 'Transfer £1,260 of allowance to a basic rate partner and save up to £252 a year, backdated to 2022-23.' },
       { title: 'Self-employed & landlords', img: selfEmployed, alt: 'Plumber in a red T-shirt fixing the pipes under a kitchen sink', tag: 'Overpaid self assessment', text: 'Payments on account too high, or a mistake on an old return? We amend it or claim overpayment relief.', link: ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'] },
       { title: 'Pension lump sums', img: pension, alt: 'Smiling retired couple sitting together on a sofa in a bright living room', tag: 'Flexible pension withdrawal', text: 'A first pension withdrawal is often taxed as if it were paid every month. We help you claim the excess back.' },
     ],
@@ -109,10 +109,10 @@ export default {
         caption: 'Tax refund claim deadlines',
         head: ['Tax year', 'Last day to claim'],
         rows: [
-          ['2022/23', '5 April 2027'],
-          ['2023/24', '5 April 2028'],
-          ['2024/25', '5 April 2029'],
-          ['2025/26', '5 April 2030'],
+          ['2022-23', '5 April 2027'],
+          ['2023-24', '5 April 2028'],
+          ['2024-25', '5 April 2029'],
+          ['2025-26', '5 April 2030'],
         ],
         after: 'Applies to overpaid PAYE, work expenses and overpayment relief on self assessment. Marriage Allowance can be backdated to 6 April 2022.',
       },
@@ -123,13 +123,13 @@ export default {
           ['Emergency tax code', 'Ends in W1, M1 or X. HMRC usually updates it within 35 days'],
           ['Marriage Allowance', '£1,260 transferred, up to £252 a year off your partner’s tax'],
           ['Uniform, tools and work clothing', 'Cleaning, repair or replacement, not the first purchase'],
-          ['Working from home', 'No relief from 2026/27; earlier years can still be claimed'],
+          ['Working from home', 'No relief from 2026-27; earlier years can still be claimed'],
           ['P800 tax calculation', 'Sent by HMRC between June and March after the tax year'],
         ],
       },
     ],
     urgent: {
-      title: 'Overpaid in 2022/23? Claim by 5 April 2027',
+      title: 'Overpaid in 2022-23? Claim by 5 April 2027',
       text: 'After that date the refund for that year cannot be claimed. Send us your payslips or P60s and we check every open year at once.',
       cta: 'Check my refund',
     },
@@ -180,11 +180,11 @@ export default {
   faqTitle: 'Tax refund questions',
   faqs: [
     { q: 'How do I know if I am due a tax refund?', a: 'Check your tax code and payslips. You may be owed money if you were on an emergency tax code, left a job part-way through the year, paid for work expenses yourself, took a pension lump sum or overpaid through self assessment. HMRC may also send a P800 tax calculation between June and March after the tax year.' },
-    { q: 'How far back can I claim a tax refund?', a: '4 years. You can usually claim for the current tax year and the 4 before it. Today that means back to 2022/23, and claims for that year close on 5 April 2027.' },
+    { q: 'How far back can I claim a tax refund?', a: '4 years. You can usually claim for the current tax year and the 4 before it. Today that means back to 2022-23, and claims for that year close on 5 April 2027.' },
     { q: 'What is an emergency tax code?', a: 'A code ending in W1, M1 or X. It taxes each payslip on its own, without the rest of the year. You often get one when you start a new job without a P45. HMRC usually updates it within 35 days. If you overpaid, you can claim a refund.' },
     { q: 'Can I claim a tax rebate for my uniform?', a: 'Yes, if you clean, repair or replace a uniform or specialist clothing yourself. You cannot claim for the first purchase. Many jobs have an agreed flat rate expense. You can claim for the current tax year and the 4 years before.' },
     { q: 'Can I backdate Marriage Allowance?', a: 'Yes, back to 6 April 2022. You can transfer £1,260 of your Personal Allowance to a husband, wife or civil partner who pays basic rate tax. It cuts their tax by up to £252 a year. Your income must usually be under £12,570.' },
-    { q: 'Can I still claim tax relief for working from home?', a: 'Not for 2026/27. Employees cannot claim working from home relief for the tax year that started on 6 April 2026. You can still claim for the 4 previous tax years if you had to work from home.' },
+    { q: 'Can I still claim tax relief for working from home?', a: 'Not for 2026-27. Employees cannot claim working from home relief for the tax year that started on 6 April 2026. You can still claim for the 4 previous tax years if you had to work from home.' },
     { q: 'Do I need a company to claim a tax refund?', a: 'No. You can claim directly from HMRC on GOV.UK for free. Some repayment agents charge a share of the refund, in some cases up to 50%, according to HMRC. If you use one, check the fee and the contract first. We agree our fee in writing before we start.' },
     { q: 'Is a tax refund text or email from HMRC genuine?', a: 'Be careful. HMRC never asks for personal or bank details by text, email or social media, and never threatens arrest. Check any message against the HMRC list of genuine contact before you reply. Forward suspicious emails to phishing@hmrc.gov.uk and texts to 60599.' },
     { q: 'How much do you charge for a tax refund claim?', a: 'Our fixed fees start at £XXX for a one-year check. Claims covering several years, self assessment or pension refunds cost more. You get the exact fee in writing after a free check, before any work starts.', tbc: true },
