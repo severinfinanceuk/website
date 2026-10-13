@@ -121,6 +121,7 @@ export default {
           ['How long an agreed EMI value lasts', '90 days from the agreement, if nothing changes the value'],
           ['Is HMRC agreement required?', 'No. It is voluntary, but it gives certainty'],
           ['EMI company limit (from 6 April 2026)', '£6 million of shares under option (£3 million for specified companies)'],
+          ['EMI company size (from 6 April 2026)', 'Gross assets up to £120 million and fewer than 500 employees (£30 million and 250 for specified companies)'],
           ['Capital gains check (form CG34)', 'After a disposal, at least 3 months before your tax return is due'],
           ['Other share schemes', 'SIP on form VAL230. CSOP and SAYE by letter to HMRC'],
         ],

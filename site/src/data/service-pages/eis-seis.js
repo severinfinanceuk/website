@@ -131,7 +131,7 @@ export default {
     ],
     urgent: {
       title: 'Raising in the next few months?',
-      text: 'HMRC does not give a timescale for advance assurance, and many investors will not commit without it. Apply before you start your round.',
+      text: 'HMRC aims to reply to advance assurance within 15 working days (40 for complex cases), and many investors will not commit without it. Apply before you start your round.',
       cta: 'Check if you qualify',
     },
   },
@@ -181,7 +181,7 @@ export default {
   faqs: [
     { q: 'What is the difference between EIS and SEIS?', a: 'Size and stage. SEIS is for very early companies raising up to £250,000 and gives investors 50% income tax relief. EIS is for larger raises, up to £10m a year from 6 April 2026, and gives 30% relief.' },
     { q: 'What is SEIS advance assurance?', a: 'It is HMRC’s view, before you raise, that your company and share issue are likely to qualify for SEIS. It is optional, but many investors will not invest without it. It does not confirm that each investor qualifies.' },
-    { q: 'How long does advance assurance take?', a: 'HMRC does not publish a timescale. Incomplete applications take longer, so we send the business plan, forecasts and documents HMRC asks for in one go.' },
+    { q: 'How long does advance assurance take?', a: 'HMRC aims to reply within 15 working days, or 40 for complex cases, and allows up to 2 rounds of questions. Incomplete applications take longer, so we send the business plan, forecasts and documents HMRC asks for in one go.' },
     { q: 'Can I use SEIS and EIS in the same company?', a: 'Yes. Most companies raise under SEIS first and then EIS. You cannot use SEIS once the company has received EIS or VCT investment.' },
     { q: 'When can I file the EIS1 or SEIS1?', a: 'After 4 months of trading or qualifying activity. For SEIS, you can also file once 70% of the money is spent. The EIS1 deadline is 2 years after the end of the tax year of the share issue, or 2 years after the 4-month point if later.' },
     { q: 'How long must investors hold EIS or SEIS shares?', a: '3 years. If they sell earlier, or the company stops qualifying in that time, the relief can be withdrawn.' },
@@ -229,5 +229,7 @@ export default {
     ['https://www.gov.uk/guidance/venture-capital-schemes-apply-to-use-the-seed-enterprise-investment-scheme', 'GOV.UK: Apply to use the Seed Enterprise Investment Scheme'],
     ['https://www.gov.uk/guidance/venture-capital-schemes-apply-for-advance-assurance', 'GOV.UK: Apply for advance assurance'],
     ['https://www.gov.uk/government/publications/enterprise-investment-scheme-eis-and-venture-capital-trusts-vct-changes/venture-capital-trusts-enterprise-investment-scheme-investment-limit-increase-and-restructure', 'HMRC: EIS and VCT limit increase from April 2026'],
+    ['https://www.legislation.gov.uk/ukpga/2026/11/section/14', 'Finance Act 2026, section 14: EIS limits'],
+    ['https://www.gov.uk/hmrc-internal-manuals/venture-capital-schemes-manual/vcm60270', 'HMRC manual VCM60270: advance assurance timescales'],
   ],
 };
