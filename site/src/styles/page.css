@@ -157,3 +157,36 @@
 .cal-jump a { text-decoration: underline; text-underline-offset: 3px; }
 .tp-body > * { min-width: 0; }
 .cal-card .stat { font-size: 1.5rem; font-weight: 500; line-height: 1.2; color: var(--black); }
+
+/* Booking calendar (contact page): dark panel like the consultation form */
+.book { display: grid; gap: 20px; padding: clamp(20px, 3vw, 40px); background: #111; color: var(--white); border-radius: var(--radius); }
+.book .form-row, .book form { display: grid; gap: 16px; }
+@media (min-width: 600px) { .book .form-row { grid-template-columns: 1fr 1fr; } }
+.book-step { display: grid; gap: 12px; }
+.book-step[hidden] { display: none; }
+.book-label { font-weight: 500; }
+.book-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.book-chip {
+  min-height: 44px; padding: 8px 16px; border: 1px solid #3a3a3a; border-radius: 999px; background: transparent;
+  color: var(--white); font: 500 .9375rem/1.2 var(--font); cursor: pointer;
+}
+.book-chip:hover { border-color: var(--white); }
+.book-chip:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.book-chip[aria-pressed="true"] { background: var(--white); color: var(--black); border-color: var(--white); }
+.book-days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; overscroll-behavior-x: contain; }
+.book-day { display: grid; flex: 0 0 auto; min-width: 76px; padding: 10px 12px; border-radius: var(--radius-sm); text-align: center; scroll-snap-align: start; }
+.book-dow { font-size: .8125rem; color: var(--muted-inv); }
+.book-day[aria-pressed="true"] .book-dow { color: #444; }
+.book-date { font-size: 1rem; }
+.book-times { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.book-times:empty { display: none; }
+.book-note, .book-status { font-size: .875rem; color: var(--muted-inv); line-height: 1.5; }
+.book-status[hidden] { display: none; }
+.book-status a, .book-done a { color: var(--white); }
+.book-picked { font-size: 1.125rem; font-weight: 500; }
+.book-link { margin-left: 8px; padding: 0; border: 0; background: none; color: var(--muted-inv); font: inherit; font-size: .9375rem; font-weight: 400; text-decoration: underline; cursor: pointer; }
+.book-link:hover { color: var(--white); }
+.book .btn { width: 100%; }
+.book-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.book-done h3 { font-size: 1.5rem; }
+.book-done:focus { outline: none; }

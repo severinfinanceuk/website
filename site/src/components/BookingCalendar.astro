@@ -1,0 +1,179 @@
+---
+// Free consultation booking on /contact/, live from the GoHighLevel calendar group.
+// Talks only to our own /api/booking/* functions (same origin), which hold the GHL token.
+// Steps: topic (only when the group has more than one calendar) → day → time → details → done.
+// Without JavaScript, or if the calendar cannot load, visitors see the phone number and email.
+import { PHONE, EMAIL } from '../data/site.js';
+---
+<div class="book" data-booking>
+  <div class="book-step" data-step="topic" hidden>
+    <p class="book-label" id="bk-topic-label">What would you like to talk about?</p>
+    <div class="book-chips" role="group" aria-labelledby="bk-topic-label" data-topics></div>
+  </div>
+
+  <div class="book-step" data-step="slots" hidden>
+    <p class="book-label" id="bk-day-label">Pick a day</p>
+    <div class="book-days" role="group" aria-labelledby="bk-day-label" data-days></div>
+    <p class="book-label" id="bk-time-label" data-time-label hidden>Pick a time</p>
+    <div class="book-times" role="group" aria-labelledby="bk-time-label" data-times></div>
+    <p class="book-note">Times are shown in your time zone: <span data-tz></span>.</p>
+  </div>
+
+  <form class="book-step" data-step="details" hidden novalidate>
+    <p class="book-picked"><span data-picked></span> <button type="button" class="book-link" data-back>Change</button></p>
+    <div class="form-row">
+      <div class="field">
+        <label for="bk-first">First name</label>
+        <input id="bk-first" name="firstName" type="text" autocomplete="given-name" required />
+      </div>
+      <div class="field">
+        <label for="bk-last">Last name</label>
+        <input id="bk-last" name="lastName" type="text" autocomplete="family-name" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="field">
+        <label for="bk-email">Email</label>
+        <input id="bk-email" name="email" type="email" autocomplete="email" required />
+      </div>
+      <div class="field">
+        <label for="bk-phone">Phone</label>
+        <input id="bk-phone" name="phone" type="tel" autocomplete="tel" />
+      </div>
+    </div>
+    <div class="field">
+      <label for="bk-msg">Anything we should know? (optional)</label>
+      <textarea id="bk-msg" name="message" rows="3"></textarea>
+    </div>
+    <div class="book-hp" aria-hidden="true">
+      <label for="bk-website">Website</label>
+      <input id="bk-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+    <button class="btn btn-fill" type="submit">Confirm booking</button>
+    <p class="form-small">By booking you agree we can contact you about your enquiry. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+  </form>
+
+  <div class="book-step book-done" data-step="done" hidden tabindex="-1">
+    <h3>You are booked in</h3>
+    <p data-done-text></p>
+    <p>A confirmation is on its way to your email. Need to change it? Call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a>.</p>
+  </div>
+
+  <p class="book-status" role="status" aria-live="polite" data-status>Loading free times...</p>
+  <noscript><p class="book-status">Online booking needs JavaScript. Call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> to book.</p></noscript>
+</div>
+
+<script define:vars={{ phone: PHONE, email: EMAIL }}>
+  const root = document.querySelector('[data-booking]');
+  const $ = (s) => root.querySelector(s);
+  const status = $('[data-status]');
+  const say = (text, html) => { status.hidden = !text && !html; if (html) status.innerHTML = html; else status.textContent = text || ''; };
+  const fallback = (lead) => say('', `${lead} Call <a href="tel:${phone.tel}">${phone.display}</a> or email <a href="mailto:${email}">${email}</a> and we will book you in.`);
+
+  let tz = 'Europe/London';
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch {}
+  $('[data-tz]').textContent = tz.replace(/_/g, ' ');
+  const fmt = (iso, o) => new Intl.DateTimeFormat('en-GB', { timeZone: tz, ...o }).format(new Date(iso));
+  const when = (iso) => `${fmt(iso, { weekday: 'long', day: 'numeric', month: 'long' })} at ${fmt(iso, { hour: 'numeric', minute: '2-digit', hour12: true })}`;
+
+  const state = { calendars: [], calendar: null, days: null, slot: null };
+
+  const chip = (label, onClick, cls = 'book-chip') => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = cls; b.setAttribute('aria-pressed', 'false');
+    if (typeof label === 'string') b.textContent = label; else b.append(...label);
+    b.addEventListener('click', () => {
+      b.parentElement.querySelectorAll('[aria-pressed]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      onClick();
+    });
+    return b;
+  };
+  const span = (cls, text) => { const s = document.createElement('span'); s.className = cls; s.textContent = text; return s; };
+
+  async function api(path, opts) {
+    const r = await fetch(`/api/booking/${path.replace(/^(\w+)/, '$1/')}`, opts);
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) throw Object.assign(new Error(d.error || 'Request failed'), { status: r.status });
+    return d;
+  }
+
+  async function loadSlots(cal) {
+    state.calendar = cal; state.days = null; state.slot = null;
+    $('[data-days]').replaceChildren(); $('[data-times]').replaceChildren(); $('[data-time-label]').hidden = true;
+    $('[data-step="slots"]').hidden = true;
+    say('Loading free times...');
+    try {
+      const { days } = await api(`slots?${new URLSearchParams({ calendarId: cal.id, tz })}`);
+      state.days = days;
+      if (!days.length) return fallback('There are no free times online in the next 30 days.');
+      say('');
+      $('[data-days]').replaceChildren(...days.map((d) => chip(
+        [span('book-dow', fmt(d.slots[0], { weekday: 'short' })), span('book-date', fmt(d.slots[0], { day: 'numeric', month: 'short' }))],
+        () => showTimes(d), 'book-chip book-day',
+      )));
+      $('[data-step="slots"]').hidden = false;
+    } catch { fallback('The calendar could not load.'); }
+  }
+
+  function showTimes(day) {
+    $('[data-time-label]').hidden = false;
+    $('[data-times]').replaceChildren(...day.slots.map((iso) => chip(fmt(iso, { hour: 'numeric', minute: '2-digit', hour12: true }), () => pick(iso))));
+  }
+
+  function pick(iso) {
+    state.slot = iso;
+    $('[data-picked]').textContent = `${state.calendars.length > 1 ? state.calendar.name + ', ' : ''}${when(iso)}`;
+    $('[data-step="topic"]').hidden = true; $('[data-step="slots"]').hidden = true;
+    $('[data-step="details"]').hidden = false;
+    $('#bk-first').focus();
+  }
+
+  $('[data-back]').addEventListener('click', () => {
+    $('[data-step="details"]').hidden = true;
+    $('[data-step="topic"]').hidden = state.calendars.length < 2;
+    $('[data-step="slots"]').hidden = false;
+    say('');
+  });
+
+  $('[data-step="details"]').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+    if (!data.firstName.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
+      say('Please add your first name and a valid email address.');
+      (data.firstName.trim() ? form.email : form.firstName).focus();
+      return;
+    }
+    const btn = form.querySelector('[type="submit"]');
+    btn.disabled = true; say('Booking...');
+    try {
+      await api('book', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, calendarId: state.calendar.id, slot: state.slot, tz, source: document.referrer || location.pathname }),
+      });
+      say('');
+      form.hidden = true;
+      $('[data-done-text]').textContent = `Your free consultation is booked for ${when(state.slot)}.`;
+      const done = $('[data-step="done"]'); done.hidden = false; done.focus();
+      if (window.va) window.va('event', { name: 'booking', data: { calendar: state.calendar.name } });
+      if (window.gtag) window.gtag('event', 'generate_lead', { method: 'booking', calendar: state.calendar.name });
+    } catch (err) {
+      btn.disabled = false;
+      if (err.status === 409) { form.hidden = true; $('[data-step="topic"]').hidden = state.calendars.length < 2; await loadSlots(state.calendar); if (state.days?.length) say(err.message); }
+      else fallback('Sorry, the booking did not go through.');
+    }
+  });
+
+  (async () => {
+    try {
+      const { calendars } = await api('calendars');
+      state.calendars = calendars;
+      if (!calendars.length) return fallback('Online booking is not available right now.');
+      if (calendars.length > 1) {
+        say('');
+        $('[data-topics]').replaceChildren(...calendars.map((c) => chip(c.name, () => loadSlots(c))));
+        $('[data-step="topic"]').hidden = false;
+      } else loadSlots(calendars[0]);
+    } catch { fallback('Online booking is not available right now.'); }
+  })();
+</script>

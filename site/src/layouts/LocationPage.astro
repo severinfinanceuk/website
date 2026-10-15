@@ -98,7 +98,7 @@ const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fil
           </h1>
           <p class="sp-answer">{p.hero.answer}</p>
           <div class="hero-actions">
-            <a class="btn btn-fill" href="#quote">{p.hero.cta}</a>
+            <a class="btn btn-fill" href="/contact/">{p.hero.cta}</a>
             <a class="btn" href="tel:+442045422488">Call 020 4542 2488</a>
           </div>
           <ul class="hero-trust" role="list">
@@ -130,7 +130,7 @@ const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fil
   <nav class="jump" aria-label="On this page">
     <ul class="container" role="list">
       {p.jump.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
-      <li class="jump-cta"><a class="btn btn-fill btn-sm" href="#quote">{p.hero.cta}</a></li>
+      <li class="jump-cta"><a class="btn btn-fill btn-sm" href="/contact/">{p.hero.cta}</a></li>
     </ul>
   </nav>
 
@@ -210,7 +210,7 @@ const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fil
           <h3>{p.facts.urgent.title}</h3>
           <p>{p.facts.urgent.text}</p>
         </div>
-        <a class="btn" href={p.facts.urgent.href ?? '#quote'}>{p.facts.urgent.cta}</a>
+        <a class="btn" href={p.facts.urgent.href ?? '/contact/'}>{p.facts.urgent.cta}</a>
       </div>
     </div>
   </section>
@@ -258,7 +258,7 @@ const check = '<svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path fil
           <ul class="ticks" role="list">
             {p.how.meet.items.map(txt).map((it) => <li><Fragment set:html={check} />{tbc(it) ? <span class="tbc">{it.text}</span> : it.text}</li>)}
           </ul>
-          <a class="more" href="#quote"><span class="more-icon" set:html={arrow} /><span class="more-label">Book your free consultation</span></a>
+          <a class="more" href="/contact/"><span class="more-icon" set:html={arrow} /><span class="more-label">Book your free consultation</span></a>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 ---
-// /contact/: phone, email and (later) the enquiry form and booking calendar.
-// The form and calendar are added by Severin later: they go in the two .slot-box placeholders.
-// When they arrive, add their origins to form-action / connect-src / frame-src in vercel.json.
+// /contact/: every "Book a free consultation" button on the site lands here.
+// The booking calendar comes first (live from GoHighLevel via /api/booking/*), then phone, email and visit.
 // Office address, opening hours and reply time stay yellow (tbc) and out of schema until confirmed.
 import TextPage from '../layouts/TextPage.astro';
+import BookingCalendar from '../components/BookingCalendar.astro';
 import { PHONE, EMAIL } from '../data/site.js';
 import { CORE_UPDATED } from '../lib/catalog.js';
 
@@ -15,47 +15,22 @@ const faqs = [
 ];
 ---
 <TextPage
-  title="Contact Severin Finance | London Accountants"
-  description="Call 020 4542 2488 or email enquiries@severinfinance.com to book a free consultation with our London accountants, for clients UK-wide and abroad."
+  title="Book a Free Consultation | Contact Severin Finance"
+  description="Book a free consultation with our London accountants online, or call 020 4542 2488. For clients across the UK and UK clients living abroad."
   url="/contact/"
   eyebrow="Contact"
-  h1="Contact Severin Finance"
-  answer="Call us on 020 4542 2488 or email enquiries@severinfinance.com to book a free consultation. We are based in London and work with clients across the UK and with UK clients living abroad, by phone, video call and email. Tell us what you need and we will reply with a fixed price in writing."
+  h1="Book a free consultation"
+  answer="Pick a time below and your free consultation goes straight into our diary. Prefer to talk now? Call 020 4542 2488 or email enquiries@severinfinance.com. We are based in London and work with clients across the UK and abroad by phone, video call and email, with a fixed price in writing."
   pageType="ContactPage"
   faqs={faqs}
   faqTitle="Before you get in touch"
   reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
 >
-  <section class="section" style="padding-top:0" aria-labelledby="ways-title">
-    <div class="container">
-      <h2 id="ways-title" class="sr-only">Ways to contact us</h2>
-      <div class="info-grid info-grid-3">
-        <div class="info-card">
-          <h3>Call</h3>
-          <a class="big" href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
-          <p>Opening hours: <span class="tbc">Monday to Friday, 9am to 5.30pm (to confirm)</span></p>
-        </div>
-        <div class="info-card">
-          <h3>Email</h3>
-          <a class="big" style="font-size:1.25rem;word-break:break-all" href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          <p>We reply within <span class="tbc">1 working day (to confirm)</span>.</p>
-        </div>
-        <div class="info-card">
-          <h3>Visit</h3>
-          <p>London, by appointment. Office address: <span class="tbc">to confirm</span>.</p>
-          <p>Working online with clients across the UK and abroad.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section sp-tint" aria-labelledby="book-title">
+  <section id="book" class="section" style="padding-top:0" aria-labelledby="book-title">
     <div class="container tp-body">
       <div>
-        <h2 id="book-title">Book a free consultation</h2>
-        <div class="slot-box" style="margin-top:20px">
-          <p><span class="tbc">Enquiry form and booking calendar go here (to be added).</span><br />Until then, call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</p>
-        </div>
+        <h2 id="book-title" class="sr-only">Choose a time</h2>
+        <BookingCalendar />
       </div>
       <aside class="tp-side" aria-label="What happens next">
         <div class="side-box">
@@ -77,4 +52,27 @@ const faqs = [
       </aside>
     </div>
   </section>
+  <section class="section sp-tint" aria-labelledby="ways-title">
+    <div class="container">
+      <h2 id="ways-title" style="margin-bottom:24px">Other ways to contact us</h2>
+      <div class="info-grid info-grid-3">
+        <div class="info-card">
+          <h3>Call</h3>
+          <a class="big" href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
+          <p>Opening hours: <span class="tbc">Monday to Friday, 9am to 5.30pm (to confirm)</span></p>
+        </div>
+        <div class="info-card">
+          <h3>Email</h3>
+          <a class="big" style="font-size:1.25rem;word-break:break-all" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <p>We reply within <span class="tbc">1 working day (to confirm)</span>.</p>
+        </div>
+        <div class="info-card">
+          <h3>Visit</h3>
+          <p>London, by appointment. Office address: <span class="tbc">to confirm</span>.</p>
+          <p>Working online with clients across the UK and abroad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </TextPage>
