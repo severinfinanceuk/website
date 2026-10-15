@@ -1,16 +1,12 @@
 ---
 // Free consultation booking on /contact/, live from the GoHighLevel calendar group.
 // Talks only to our own /api/booking/* functions (same origin), which hold the GHL token.
-// Steps: topic (only when the group has more than one calendar) → day → time → details → done.
+// Steps: day → time → details → done. Free times show as soon as the page opens (from the first,
+// default calendar); the topic is a dropdown in the details step that picks which calendar books it.
 // Without JavaScript, or if the calendar cannot load, visitors see the phone number and email.
 import { PHONE, EMAIL } from '../data/site.js';
 ---
 <div class="book" data-booking>
-  <div class="book-step" data-step="topic" hidden>
-    <p class="book-label" id="bk-topic-label">What would you like to talk about?</p>
-    <div class="book-chips" role="group" aria-labelledby="bk-topic-label" data-topics></div>
-  </div>
-
   <div class="book-step" data-step="slots" hidden>
     <p class="book-label" id="bk-day-label">Pick a day</p>
     <div class="book-days" role="group" aria-labelledby="bk-day-label" data-days></div>
@@ -40,6 +36,10 @@ import { PHONE, EMAIL } from '../data/site.js';
         <label for="bk-phone">Phone</label>
         <input id="bk-phone" name="phone" type="tel" autocomplete="tel" />
       </div>
+    </div>
+    <div class="field" data-topic-field hidden>
+      <label for="bk-topic">What would you like to talk about?</label>
+      <select id="bk-topic" name="calendarId" data-topics></select>
     </div>
     <div class="field">
       <label for="bk-msg">Anything we should know? (optional)</label>
@@ -97,13 +97,13 @@ import { PHONE, EMAIL } from '../data/site.js';
     return d;
   }
 
-  async function loadSlots(cal) {
+  async function loadSlots(cal, first) {
     state.calendar = cal; state.days = null; state.slot = null;
     $('[data-days]').replaceChildren(); $('[data-times]').replaceChildren(); $('[data-time-label]').hidden = true;
     $('[data-step="slots"]').hidden = true;
     say('Loading free times...');
     try {
-      const { days } = await api(`slots?${new URLSearchParams({ calendarId: cal.id, tz })}`);
+      const { days } = first?.calendarId === cal.id ? first : await api(`slots?${new URLSearchParams({ calendarId: cal.id, tz })}`);
       state.days = days;
       if (!days.length) return fallback('There are no free times online in the next 30 days.');
       say('');
@@ -122,15 +122,14 @@ import { PHONE, EMAIL } from '../data/site.js';
 
   function pick(iso) {
     state.slot = iso;
-    $('[data-picked]').textContent = `${state.calendars.length > 1 ? state.calendar.name + ', ' : ''}${when(iso)}`;
-    $('[data-step="topic"]').hidden = true; $('[data-step="slots"]').hidden = true;
+    $('[data-picked]').textContent = when(iso);
+    $('[data-step="slots"]').hidden = true;
     $('[data-step="details"]').hidden = false;
     $('#bk-first').focus();
   }
 
   $('[data-back]').addEventListener('click', () => {
     $('[data-step="details"]').hidden = true;
-    $('[data-step="topic"]').hidden = state.calendars.length < 2;
     $('[data-step="slots"]').hidden = false;
     say('');
   });
@@ -139,6 +138,7 @@ import { PHONE, EMAIL } from '../data/site.js';
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form));
+    const cal = state.calendars.find((c) => c.id === data.calendarId) || state.calendar;
     if (!data.firstName.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
       say('Please add your first name and a valid email address.');
       (data.firstName.trim() ? form.email : form.firstName).focus();
@@ -149,31 +149,32 @@ import { PHONE, EMAIL } from '../data/site.js';
     try {
       await api('book', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, calendarId: state.calendar.id, slot: state.slot, tz, source: document.referrer || location.pathname }),
+        body: JSON.stringify({ ...data, calendarId: cal.id, slot: state.slot, tz, source: document.referrer || location.pathname }),
       });
       say('');
       form.hidden = true;
       $('[data-done-text]').textContent = `Your free consultation is booked for ${when(state.slot)}.`;
       const done = $('[data-step="done"]'); done.hidden = false; done.focus();
-      if (window.va) window.va('event', { name: 'booking', data: { calendar: state.calendar.name } });
-      if (window.gtag) window.gtag('event', 'generate_lead', { method: 'booking', calendar: state.calendar.name });
+      if (window.va) window.va('event', { name: 'booking', data: { calendar: cal.name } });
+      if (window.gtag) window.gtag('event', 'generate_lead', { method: 'booking', calendar: cal.name });
     } catch (err) {
       btn.disabled = false;
-      if (err.status === 409) { form.hidden = true; $('[data-step="topic"]').hidden = state.calendars.length < 2; await loadSlots(state.calendar); if (state.days?.length) say(err.message); }
+      if (err.status === 409) { form.hidden = true; await loadSlots(state.calendar); if (state.days?.length) say(err.message); }
       else fallback('Sorry, the booking did not go through.');
     }
   });
 
   (async () => {
     try {
-      const { calendars } = await api('calendars');
+      // Ask for the calendars and the default calendar's free times together: one wait, not two.
+      const [{ calendars }, first] = await Promise.all([
+        api('calendars'), api(`slots?${new URLSearchParams({ tz })}`).catch(() => null),
+      ]);
       state.calendars = calendars;
       if (!calendars.length) return fallback('Online booking is not available right now.');
-      if (calendars.length > 1) {
-        say('');
-        $('[data-topics]').replaceChildren(...calendars.map((c) => chip(c.name, () => loadSlots(c))));
-        $('[data-step="topic"]').hidden = false;
-      } else loadSlots(calendars[0]);
+      $('[data-topics]').replaceChildren(...calendars.map((c) => new Option(c.name, c.id)));
+      $('[data-topic-field]').hidden = calendars.length < 2;
+      loadSlots(calendars[0], first);
     } catch { fallback('Online booking is not available right now.'); }
   })();
 </script>

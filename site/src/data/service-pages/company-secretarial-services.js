@@ -171,7 +171,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against Companies House guidance on GOV.UK. Company law is changing in stages: we update this page when it does.',
   },
 

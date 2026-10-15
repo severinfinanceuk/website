@@ -162,7 +162,7 @@ export default {
         'Early and late video calls on request',
         'Secure upload and Xero or QuickBooks access',
         'One named contact for your account',
-        { text: 'City of London meeting place to confirm', tbc: true },
+        'Meet us at 107-111 Fleet Street, EC4A 2AB, by appointment',
       ],
     },
   },
@@ -170,7 +170,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against City of London Corporation, Greater London Authority, GOV.UK and TfL sources. The City premium and supplements are set every year: we update the page when they change.',
   },
 

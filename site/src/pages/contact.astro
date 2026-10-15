@@ -2,14 +2,14 @@
 // /contact/: every "Book a free consultation" button on the site lands here.
 // The booking calendar sits straight under the H1 (live from GoHighLevel via /api/booking/*), so it is the
 // first thing visitors see; the intro, then phone, email and visit follow.
-// Office address, opening hours and reply time stay yellow (tbc) and out of schema until confirmed.
+// Office address and opening hours from the current severinfinance.com contact page.
 import TextPage from '../layouts/TextPage.astro';
 import BookingCalendar from '../components/BookingCalendar.astro';
 import { PHONE, EMAIL } from '../data/site.js';
 
 const faqs = [
   { q: 'Is the first consultation really free?', a: 'Yes. The first consultation is free and there is no obligation. We use it to understand what you need and give you a fixed price in writing.' },
-  { q: 'Do I need to visit your office?', a: 'No. Most clients work with us by phone, video call and email, and documents are shared and signed online. Meetings in London are available by appointment.' },
+  { q: 'Do I need to visit your office?', a: 'No. Most clients work with us by phone, video call and email, and documents are shared and signed online. Meetings at our Fleet Street office in London are available by appointment.' },
   { q: 'Can you help if I live outside the UK?', a: 'Yes. We look after UK tax returns, UK property and UK companies for clients who live abroad, working online across time zones.' },
   { q: 'What should I have ready for the first call?', a: 'A short summary of what you need, any letters from HMRC or Companies House, and your last tax return or accounts if you have them. If you have none of these, call anyway.' },
 ];
@@ -34,6 +34,7 @@ const faqs = [
         <li>We send a fixed price and a timetable in writing.</li>
         <li>You approve, and your point of contact gets started.</li>
       </ol>
+      <p style="margin-top:12px">New clients get 10% off their first year of filing, with no upfront fees.</p>
     </aside>
   </div>
 
@@ -44,16 +45,16 @@ const faqs = [
         <div class="info-card">
           <h3>Call</h3>
           <a class="big" href={`tel:${PHONE.tel}`}>{PHONE.display}</a>
-          <p>Opening hours: <span class="tbc">Monday to Friday, 9am to 5.30pm (to confirm)</span></p>
+          <p>Monday to Friday, 9am to 5pm. Closed at weekends.</p>
         </div>
         <div class="info-card">
           <h3>Email</h3>
           <a class="big" style="font-size:1.25rem;word-break:break-all" href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          <p>We reply within <span class="tbc">1 working day (to confirm)</span>.</p>
+          <p>We reply on working days, Monday to Friday.</p>
         </div>
         <div class="info-card">
           <h3>Visit</h3>
-          <p>London, by appointment. Office address: <span class="tbc">to confirm</span>.</p>
+          <p>107-111 Fleet Street, London, EC4A 2AB. By appointment.</p>
           <p>Working online with clients across the UK and abroad.</p>
         </div>
       </div>

@@ -4,7 +4,8 @@
 //
 // Company facts from Companies House (SEVERIN FINANCE LIMITED, 08501829). The registered office is
 // not used as the schema address: it is a legal address, not necessarily where clients visit.
-// tbc: facts only Severin can give stay out of schema until confirmed: office address, ICO number.
+// Office address and opening hours from the current severinfinance.com contact page.
+// tbc: facts only Severin can give stay out of schema until confirmed: ICO number.
 
 export const SITE = 'https://severinfinance.com';
 export const ORG_ID = `${SITE}/#org`;
@@ -48,12 +49,19 @@ export const orgNode = {
   email: EMAIL,
   slogan: 'Simplifying the complex, so that everything is just black and white.',
   description: 'UK accountancy firm in London: accounting, tax, payroll and company services for clients in London, across the UK and UK clients living abroad.',
-  address: { '@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB' },
+  address: {
+    '@type': 'PostalAddress', streetAddress: '107-111 Fleet Street', addressLocality: 'London',
+    postalCode: 'EC4A 2AB', addressCountry: 'GB',
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00', closes: '17:00',
+  },
   areaServed: { '@type': 'Country', name: 'United Kingdom', sameAs: 'https://www.wikidata.org/wiki/Q145' },
-  knowsLanguage: 'en-GB',
+  knowsLanguage: ['en-GB', 'fr', 'ro', 'ur', 'pa'],
   contactPoint: {
     '@type': 'ContactPoint', contactType: 'customer service', telephone: PHONE.schema, email: EMAIL,
-    areaServed: 'GB', availableLanguage: 'English',
+    areaServed: 'GB', availableLanguage: ['English', 'French', 'Romanian', 'Urdu', 'Punjabi'],
   },
   ...(sameAs.length && { sameAs }),
 };
@@ -73,5 +81,5 @@ export const websiteRef = { '@id': WEBSITE_ID };
 // The person who reviews pages (E-E-A-T). Same as on the service pages.
 export const reviewer = {
   name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-  credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+  credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
 };

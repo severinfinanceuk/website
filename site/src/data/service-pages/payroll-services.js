@@ -180,7 +180,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against HMRC employer guidance and the 2026-27 rates. Payroll rates change every April: we update it when they do.',
   },
 

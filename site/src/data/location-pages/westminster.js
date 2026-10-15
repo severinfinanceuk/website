@@ -161,7 +161,7 @@ export default {
         'Video calls before service or after close',
         'Till, card and bank feeds into Xero or QuickBooks',
         'One named contact for your account',
-        { text: 'Westminster meeting place to confirm', tbc: true },
+        'Meet us at 107-111 Fleet Street, EC4A 2AB, by appointment',
       ],
     },
   },
@@ -169,7 +169,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against Westminster City Council, Greater London Authority, GOV.UK and TfL sources. Rates, reliefs and BID rules change: we update the page when they do.',
   },
 

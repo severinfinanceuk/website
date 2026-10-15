@@ -161,7 +161,7 @@ export default {
         'Video calls at times that suit clients abroad',
         'Secure upload for rental and completion papers',
         'One named contact for your account',
-        { text: 'Kensington meeting place to confirm', tbc: true },
+        'Meet us at 107-111 Fleet Street, EC4A 2AB, by appointment',
       ],
     },
   },
@@ -169,7 +169,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against Royal Borough of Kensington and Chelsea and GOV.UK sources, including the UK House Price Index. Property taxes change often: we update the page when they do.',
   },
 

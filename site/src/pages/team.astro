@@ -1,27 +1,25 @@
 ---
-// /team/: the people behind Severin Finance (E-E-A-T). Only Alain Dastros is confirmed so far;
-// the other cards are yellow placeholders until Severin sends names, photos and qualifications.
-// When real people are added, give each a Person node below (only confirmed facts, never tbc).
+// /team/: the people behind Severin Finance (E-E-A-T). People and facts live in src/data/team.js
+// (from the current severinfinance.com team page); each gets a Person node below.
 import TextPage from '../layouts/TextPage.astro';
+import TeamCards from '../components/TeamCards.astro';
+import { TEAM } from '../data/team.js';
 import { orgRef, SITE } from '../data/site.js';
 import { CORE_UPDATED } from '../lib/catalog.js';
 
-const team = [
-  { initials: 'AD', name: 'Alain Dastros', role: 'Managing Director', bio: 'Leads the firm and reviews our tax and accounting pages. Qualifications, membership number and short bio to confirm.', tbcBio: true },
-  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications (for example ACCA, CIMA or CTA) and LinkedIn to confirm.', tbcAll: true },
-  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications and LinkedIn to confirm.', tbcAll: true },
-];
 
-const nodes = [{
-  '@type': 'Person', '@id': `${SITE}/team/#alain-dastros`, name: 'Alain Dastros',
-  jobTitle: 'Managing Director', worksFor: orgRef,
-}];
+const nodes = TEAM.map((t) => ({
+  '@type': 'Person', '@id': `${SITE}/team/#${t.id}`, name: t.name, jobTitle: t.role, worksFor: orgRef,
+  image: new URL(t.photo.src, SITE).href, description: t.bio, knowsLanguage: t.languages, knowsAbout: t.knowsAbout,
+  ...(t.memberOf && { memberOf: t.memberOf }), ...(t.alumniOf && { alumniOf: t.alumniOf }),
+}));
 
 const faqs = [
   { q: 'Will I always speak to the same person?', a: 'Yes. You have one named point of contact for your work, backed by the rest of the team when you need a specialist.' },
-  { q: 'Are your accountants qualified?', a: 'Our team includes qualified accountants and tax advisers. Each person’s qualifications and professional body are shown on their profile once confirmed.', tbc: true },
-  { q: 'Who regulates Severin Finance?', a: 'Severin Finance Ltd is regulated by the Chartered Institute of Management Accountants (CIMA).' },
-  { q: 'Can I meet the team in person?', a: 'Yes, by appointment in London. Most clients work with us by phone, video call and email, which suits clients across the UK and abroad.' },
+  { q: 'Are your accountants qualified?', a: 'Yes. Managing Director Alain Dastros is a CIMA member in practice with an MBA from Cass Business School and over 30 years in accountancy. Hassaan Asad has over 4 years in accounting and is studying for the ACCA Strategic Professional qualification.' },
+  { q: 'Who regulates Severin Finance?', a: 'Severin Finance Limited is regulated by the Chartered Institute of Management Accountants (CIMA), which is also our anti-money laundering supervisor.' },
+  { q: 'Which languages do you speak?', a: 'English, French, Romanian, Urdu and Punjabi. That helps clients who are new to the UK, or who live abroad, go through their accounts and tax in the language they are most comfortable with.' },
+  { q: 'Can I meet the team in person?', a: 'Yes, by appointment at our office at 107-111 Fleet Street, London EC4A 2AB. Most clients work with us by phone, video call and email, which suits clients across the UK and abroad.' },
 ];
 ---
 <TextPage
@@ -46,18 +44,7 @@ const faqs = [
         </div>
         <p>Qualified accountants who answer the phone themselves.</p>
       </div>
-      <ul class="cards cards-3" role="list">
-        {team.map((t) => (
-          <li class="person">
-            <div class="person-media" aria-hidden="true">{t.initials}</div>
-            <div class="person-body">
-              <span class="person-role">{t.tbcAll ? <span class="tbc">{t.role}</span> : t.role}</span>
-              <h3 class="person-name">{t.tbcAll ? <span class="tbc">{t.name}</span> : t.name}</h3>
-              <p class="person-bio">{(t.tbcAll || t.tbcBio) ? <span class="tbc">{t.bio}</span> : t.bio}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <TeamCards />
     </div>
   </section>
 

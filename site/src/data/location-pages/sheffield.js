@@ -163,7 +163,7 @@ export default {
         'Video or phone calls at a time that suits you',
         'Secure document upload and cloud bookkeeping access',
         'A named contact who knows your file',
-        { text: 'Sheffield meeting place to confirm', tbc: true },
+        'Or meet us at our Fleet Street office in London, by appointment',
       ],
     },
   },
@@ -171,7 +171,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'We checked this page against Sheffield City Council, Sheffield BID and GOV.UK sources. Clean air zone charges, the BID levy and wage rates can change, and we update the page when they do.',
   },
 

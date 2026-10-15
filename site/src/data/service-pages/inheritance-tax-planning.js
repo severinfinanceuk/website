@@ -177,7 +177,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against HMRC guidance and government policy papers on GOV.UK. Inheritance tax rules are changing fast: we update it when they do.',
   },
 
@@ -193,7 +193,7 @@ export default {
     { q: 'When does inheritance tax have to be paid?', a: 'By the end of the sixth month after the death. HMRC charges interest after that. Tax on business or agricultural property can be paid in 10 equal yearly instalments, interest-free where the death is on or after 6 April 2026.' },
     { q: 'Do non-doms pay UK inheritance tax?', a: 'It now depends on residence, not domicile. Since 6 April 2025, you are a long-term UK resident if you have been UK resident for 10 of the last 20 tax years. Your overseas assets are then in scope, and this can continue for up to 10 years after you leave.' },
     { q: 'How much does inheritance tax planning cost?', a: 'Our fixed fees start at £XXX for an estate review. Business, farm and international estates cost more. You get the exact fee in writing after a free consultation, before any work starts.', tbc: true },
-    { q: 'Do you write wills and set up trusts?', a: 'No. We plan the tax and work out the figures. A solicitor drafts your will and any trust, and we brief them on the plan. We can introduce a solicitor we work with.', tbc: true },
+    { q: 'Do you write wills and set up trusts?', a: 'No. We plan the tax and work out the figures. A solicitor drafts your will and any trust, and we brief them on the plan. We can introduce a solicitor we work with.' },
   ],
 
   // ---------- 9. Related links (internal linking) ----------

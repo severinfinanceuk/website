@@ -443,6 +443,11 @@ a.mega-sub:hover { color: var(--black); }
 .person-name { font-size: 1.5rem; font-weight: 500; line-height: 1.15; }
 .person-role { font-size: var(--fs-label); letter-spacing: .16em; text-transform: uppercase; color: color-mix(in srgb, var(--white) calc(var(--hl, 0) * 100%), var(--accent)); }
 .person-bio { color: var(--muted-inv); line-height: 1.55; }
+.person-media:has(img) { position: relative; overflow: hidden; }
+.person-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.person-meta { font-size: .875rem; color: var(--muted-inv); }
+.person-cta .person-body { align-content: start; }
+.person-cta .btn { justify-self: start; margin-top: 8px; }
 
 /* Guides list (on black) */
 .guides { display: grid; border-top: 1px solid var(--line-inv); }

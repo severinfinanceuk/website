@@ -56,7 +56,7 @@ for (const f of htmlFiles) {
   const text = decode(bodyHtml.replace(/<script.*?<\/script>|<style.*?<\/style>/gs, ' ').replace(/<[^>]+>/g, ' '));
   if (/\w \u2013 \w/.test(text)) flag(url, 'en dash in prose');
   if (/\bundefined\b|\bNaN\b|\[object Object\]/.test(text)) flag(url, 'undefined/NaN in output');
-  const words = new Set(text.replace(/Northern Ireland|EEA (citizen|national)s?/g, '').match(otherPlaces) || []);
+  const words = new Set(text.replace(/Northern Ireland|EEA (citizen|national)s?|\bFrench(?=, Romanian)/g, '').match(otherPlaces) || []);
   if (words.size) flag(url, `other country words: ${[...words].join(', ')}`);
   for (const [img] of bodyHtml.matchAll(/<img\b[^>]*>/g)) {
     if (!/\salt(=|[\s>/])/.test(img)) flag(url, `img without alt: ${img.slice(0, 80)}`);

@@ -162,7 +162,7 @@ export default {
         'Video or phone calls at a time that suits you',
         'Secure document upload and cloud bookkeeping access',
         'A named contact who knows your file',
-        { text: 'Manchester meeting place to confirm', tbc: true },
+        'Or meet us at our Fleet Street office in London, by appointment',
       ],
     },
   },
@@ -170,7 +170,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against GOV.UK, Clean Air Greater Manchester and CityCo sources. Rates, levies and wage rates change every year: we update the page when they do.',
   },
 

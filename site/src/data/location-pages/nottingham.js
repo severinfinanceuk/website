@@ -162,7 +162,7 @@ export default {
         'Video or phone calls at a time that suits you',
         'Secure document upload and cloud bookkeeping access',
         'A named contact who knows your file',
-        { text: 'Nottingham meeting place to confirm', tbc: true },
+        'Or meet us at our Fleet Street office in London, by appointment',
       ],
     },
   },
@@ -170,7 +170,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'We checked this page against Nottingham City Council, East Midlands Combined County Authority and GOV.UK sources. The parking levy, licence fees and rates change each April, and we update the page when they do.',
   },
 

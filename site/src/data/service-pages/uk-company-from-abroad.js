@@ -52,7 +52,7 @@ export default {
     deadline: { label: 'Rule in force', date: '18 November 2025', note: 'Directors must verify their identity with Companies House' },
     cta: 'Get a fixed quote',
     trust: [
-      { text: 'Companies House Authorised Corporate Service Provider', tbc: true },
+      { text: 'Companies House Authorised Corporate Service Provider' },
       { text: rating.short, tbc: rating.tbc },
       { text: 'Directors can live anywhere' },
     ],
@@ -171,7 +171,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against Companies House and HMRC guidance. Company rules changed in 2025 and keep changing: we update it when they do.',
   },
 

@@ -49,7 +49,7 @@ export default async function handler(req, res) {
     if (message || source) {
       await ghl(`/contacts/${contact.id}/notes`, {
         method: 'POST', version: '2021-07-28',
-        body: { body: [`Booked online: ${calendar.name}, ${slot} (${tz})`, source && `Page: ${source}`, message && `Message: ${message}`].filter(Boolean).join('\n') },
+        body: { body: [`Booked online: ${calendar.ghlName} (${calendar.name}), ${slot} (${tz})`, source && `Page: ${source}`, message && `Message: ${message}`].filter(Boolean).join('\n') },
       }).catch((e) => console.error('note failed', e));
     }
 

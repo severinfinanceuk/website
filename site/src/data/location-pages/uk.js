@@ -190,7 +190,7 @@ export default {
         'Video calls and phone meetings',
         'Secure upload and Xero or QuickBooks access',
         'One named contact for your account',
-        { text: 'In-person meetings in London to confirm', tbc: true },
+        'Or meet us at our Fleet Street office in London, by appointment',
       ],
     },
   },
@@ -198,7 +198,7 @@ export default {
   // ---------- 7. Proof ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against GOV.UK and HMRC guidance. Rates and thresholds change every tax year: we update it when they do.',
   },
 

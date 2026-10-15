@@ -164,7 +164,7 @@ export default {
         'Video or phone calls at a time that suits you',
         'Secure document upload and cloud bookkeeping access',
         'A named contact who knows your file',
-        { text: 'Leicester meeting place to confirm', tbc: true },
+        'Or meet us at our Fleet Street office in London, by appointment',
       ],
     },
   },
@@ -172,7 +172,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'We checked this page against BID Leicester, Leicester City Council and GOV.UK sources. Rates reliefs, licence fees and the plans for a Leicestershire mayoral authority can change, and we update the page when they do.',
   },
 

@@ -159,7 +159,7 @@ export default {
         'Video calls on the platform you already use',
         'Secure upload and Xero or QuickBooks access',
         'One named contact for your account',
-        { text: 'Brighton meeting place to confirm', tbc: true },
+        'Or meet us at our Fleet Street office in London, by appointment',
       ],
     },
   },
@@ -167,7 +167,7 @@ export default {
   // ---------- 7. Proof: reviews are shared (src/data/reviews.js); reviewed by is per page ----------
   reviewer: {
     name: 'Alain Dastros', initials: 'AD', role: 'Managing Director, Severin Finance',
-    credentials: { text: 'Qualifications to confirm (e.g. CIMA)', tbc: true },
+    credentials: { text: 'CIMA member in practice, MBA (Cass Business School)' },
     text: 'This page was checked against Brighton & Hove City Council, HMRC and GOV.UK sources. BID levies, rates and wages change, and we update the page when they do.',
   },
 

@@ -36,6 +36,20 @@ export async function ghl(path, { method = 'GET', body, version = '2021-04-15' }
   return data;
 }
 
+// Plain-English topic labels for the calendars in the booking group, in the order the topic list
+// shows them. The first one listed is the default. Calendars not listed keep their GHL name and
+// go last, so a new calendar added in GHL appears without a code change.
+const TOPICS = {
+  Z9cZrgAJcwSqGzi5DD3i: 'Tax advice or tax planning',
+  pOAh3FvIbP1UG6JlgCfK: 'Accounts and tax for my company or properties',
+  yCSInn3ISa0hNFfV8bEd: 'HMRC investigation, compliance check or disclosure',
+  LPTCyrtw7DM8KjPsq1sd: 'Another tax dispute',
+  ZGz7aghPrPwxJgabsFfb: 'I am an accountant or adviser looking to work together',
+};
+const order = Object.keys(TOPICS);
+const rank = (id) => (order.includes(id) ? order.indexOf(id) : order.length);
+const plain = (html) => String(html || '').replace(/<[^>]*>/g, ' ').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+
 // Active calendars in the configured group, cached for 5 minutes per warm instance.
 let cache = { at: 0, list: null };
 export async function groupCalendars() {
@@ -45,7 +59,8 @@ export async function groupCalendars() {
   const { calendars = [] } = await ghl(`/calendars/?${q}`);
   const list = calendars
     .filter((c) => c.isActive !== false && (!groupId || c.groupId === groupId))
-    .map((c) => ({ id: c.id, name: c.name, description: c.description || '' }));
+    .sort((a, b) => rank(a.id) - rank(b.id))
+    .map((c) => ({ id: c.id, name: TOPICS[c.id] || c.name, ghlName: c.name, description: plain(c.description) }));
   cache = { at: Date.now(), list };
   return list;
 }

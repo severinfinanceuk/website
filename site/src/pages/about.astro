@@ -1,12 +1,11 @@
 ---
 // /about/: who Severin Finance is, how we work and the facts that build trust (E-E-A-T).
 // Companies House facts confirmed by the client (company number, registered office,
-// incorporation date, SIC codes). Regulated by CIMA. Still yellow (tbc) and out of schema:
-// ICO number, AML supervisor, insurance.
+// incorporation date, SIC codes; CIMA as AML supervisor from the ACSP listing). Office, hours and
+// languages from the current severinfinance.com. Still yellow (tbc): ICO number, insurance.
 import TextPage from '../layouts/TextPage.astro';
 import { Image } from 'astro:assets';
 import cima from '../assets/logos/cima.png';
-import ciot from '../assets/logos/ciot.png';
 import icpa from '../assets/logos/icpa.png';
 import xero from '../assets/logos/xero.png';
 import intuit from '../assets/logos/intuit.png';
@@ -20,22 +19,25 @@ const promises = [
 ];
 
 const facts = [
-  ['Legal name', 'Severin Finance Ltd'],
+  ['Legal name', 'Severin Finance Limited'],
   ['Based in', 'London, working with clients across the UK and abroad'],
   ['Practice', 'Chartered Management Accountant practice'],
   ['Regulated by', 'Chartered Institute of Management Accountants (CIMA)'],
   ['Company number', '08501829, registered in England and Wales'],
+  ['Office', '107-111 Fleet Street, London, EC4A 2AB (by appointment)'],
+  ['Opening hours', 'Monday to Friday, 9am to 5pm'],
+  ['Languages', 'English, French, Romanian, Urdu and Punjabi'],
   ['Registered office', '23 Dorset Road, London, SW8 1EF'],
   ['Incorporated', '24 April 2013'],
   ['Nature of business', 'Accounting and auditing; tax consultancy (SIC 69201, 69203)'],
-  ['Anti-money laundering supervisor', 'To confirm', true],
+  ['Anti-money laundering supervisor', 'CIMA'],
+  ['Companies House', 'Authorised Corporate Service Provider (ACSP)'],
   ['Professional indemnity insurance', 'To confirm', true],
   ['ICO registration (data protection)', 'To confirm', true],
 ];
 
 const logos = [
   { img: cima, name: 'Regulated by CIMA, the Chartered Institute of Management Accountants', h: 48 },
-  { img: ciot, name: 'Chartered Institute of Taxation', h: 64 },
   { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 44 },
   { img: xero, name: 'Xero', h: 52 },
   { img: intuit, name: 'Intuit QuickBooks', h: 32 },
@@ -72,7 +74,7 @@ const faqs = [
         <h3>Regulated by CIMA</h3>
         <p>Severin Finance Ltd is an accountancy practice regulated by the Chartered Institute of Management Accountants (CIMA). The company was incorporated on 24 April 2013 and is registered in England and Wales, company number 08501829.</p>
         <h3>UK work only</h3>
-        <p>We are a UK firm and we do UK work: UK tax returns, UK accounts and UK companies. For clients abroad, we handle the UK side and work alongside your local adviser where you live.</p>
+        <p>We are a UK firm and we do UK work: UK tax returns, UK accounts and UK companies. For clients abroad, we handle the UK side and work alongside your local adviser where you live. We also work with trusted legal and accounting experts we know well, and can introduce you.</p>
       </div>
       <aside class="tp-side" aria-label="Company facts">
         <div class="side-box">
@@ -109,7 +111,7 @@ const faqs = [
       <ul class="logo-row" role="list">
         {logos.map((l) => <li><Image src={l.img} alt={l.name} title={l.name} height={l.h} style={`--h:${l.h}px`} densities={[1, 2]} quality={85} loading="lazy" decoding="async" /></li>)}
       </ul>
-      <p class="note" style="margin-top:20px"><span class="tbc">Membership numbers and which team members hold each qualification: to confirm.</span></p>
+      <p class="note" style="margin-top:20px">Alain Dastros is a CIMA member in practice. Hassaan Asad is studying for the ACCA Strategic Professional qualification.</p>
       <div class="hero-actions">
         <a class="btn btn-fill" href="/team/">Meet the team</a>
         <a class="btn" href="/reviews/">Client reviews</a>

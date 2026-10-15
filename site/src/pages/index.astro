@@ -10,19 +10,19 @@ import ukStreet from '../assets/services/company-formation/property-company-form
 import abroad from '../assets/services/non-resident/non-resident-uk-tax-woman-departure-board.jpg';
 import founders from '../assets/services/uk-company-from-abroad/uk-company-from-abroad-founders-team-table.jpg';
 import cima from '../assets/logos/cima.png';
-import ciot from '../assets/logos/ciot.png';
 import icpa from '../assets/logos/icpa.png';
 import xero from '../assets/logos/xero.png';
 import intuit from '../assets/logos/intuit.png';
+import TeamCards from '../components/TeamCards.astro';
 
 // Yellow-highlighted values (class "tbc") are placeholders until Severin confirms them.
 const stats = [
   { label: 'Coverage', value: 'UK', text: 'London, the whole UK, and UK clients living abroad' },
   { label: 'Services', value: '3', text: 'Accounting, tax and company services under one roof' },
   { label: 'Experience', value: String(new Date().getFullYear() - 2013), text: 'Years in business, since 2013' },
-  { label: 'Clients', value: 'XXX+', text: 'Individuals and companies served', tbc: true },
+  { label: 'Leadership', value: '30+', text: 'Years of accountancy experience, in international roles' },
   { label: 'Rating', value: rating.value, text: 'Average Google rating', tbc: rating.tbc },
-  { label: 'Response', value: 'XXh', text: 'Typical reply time on working days', tbc: true },
+  { label: 'Languages', value: '5', text: 'English, French, Romanian, Urdu and Punjabi' },
 ];
 
 const pillars = [
@@ -73,7 +73,6 @@ const pillars = [
 const logoGroups = [
   { title: 'Professional bodies', items: [
     { img: cima, name: 'CIMA, Chartered Institute of Management Accountants', h: 56 },
-    { img: ciot, name: 'Chartered Institute of Taxation', h: 76 },
     { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 52 },
   ] },
   { title: 'Software we work in', items: [
@@ -96,11 +95,6 @@ const steps = [
   { title: 'You approve, we file', text: 'You review and sign off online. We file with HMRC or the relevant authority and confirm when it is done.' },
 ];
 
-const team = [
-  { initials: 'AD', name: 'Alain Dastros', role: 'Managing Director', bio: 'Qualifications and short bio to confirm.', tbcBio: true },
-  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications (ACCA, CIMA, CTA) and LinkedIn.', tbcAll: true },
-  { initials: 'XX', name: 'Team member', role: 'Role', bio: 'Name, photo, qualifications and LinkedIn.', tbcAll: true },
-];
 
 const guides = [
   { tag: 'UK · Tax', title: 'Self assessment deadlines for 2026-27, and what happens if you miss one', href: '/resources/self-assessment-deadlines/', meta: '6 min read' },
@@ -326,18 +320,7 @@ const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentCo
         </div>
         <p>Qualified accountants who answer the phone themselves.</p>
       </div>
-      <ul class="cards cards-3 hl-group hl-3" role="list">
-        {team.map((t, i) => (
-          <li class="person hl-card" style={`--i:${i}`}>
-            <div class="person-media" aria-hidden="true">{t.initials}</div>
-            <div class="person-body">
-              <span class="person-role">{t.tbcAll ? <span class="tbc">{t.role}</span> : t.role}</span>
-              <h3 class="person-name">{t.tbcAll ? <span class="tbc">{t.name}</span> : t.name}</h3>
-              <p class="person-bio">{(t.tbcAll || t.tbcBio) ? <span class="tbc">{t.bio}</span> : t.bio}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <TeamCards highlight />
     </div>
   </section>
 

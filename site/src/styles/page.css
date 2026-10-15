@@ -163,9 +163,8 @@
 .book .form-row, .book form { display: grid; gap: 16px; }
 @media (min-width: 600px) { .book .form-row { grid-template-columns: 1fr 1fr; } }
 .book-step { display: grid; gap: 12px; }
-.book-step[hidden] { display: none; }
+.book-step[hidden], .book .field[hidden] { display: none; }
 .book-label { font-weight: 500; }
-.book-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .book-chip {
   min-height: 44px; padding: 8px 16px; border: 1px solid #3a3a3a; border-radius: 999px; background: transparent;
   color: var(--white); font: 500 .9375rem/1.2 var(--font); cursor: pointer;
