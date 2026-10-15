@@ -141,7 +141,7 @@
 .urgent h3 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem); line-height: 1.1; }
 .urgent p { max-width: 60ch; margin-top: 8px; color: #e1f2e9; }
 .urgent .btn { justify-self: start; color: var(--white); }
-.urgent .btn:hover { background: var(--white); color: var(--accent-ink); border-color: var(--white); }
+.urgent .btn:hover { background: var(--cta); color: var(--white); border-color: var(--cta); }
 @media (min-width: 1000px) { .urgent { grid-template-columns: 1fr auto; align-items: center; gap: 48px; } }
 
 .table-wrap { overflow-x: auto; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }

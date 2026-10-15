@@ -5,15 +5,16 @@
 // Environment variables (Vercel > Project > Settings > Environment Variables):
 //   GHL_TOKEN        Private Integration Token (pit-...). Scopes: calendars.readonly,
 //                    calendars/events.write, contacts.write
-//   GHL_LOCATION_ID  sub-account (location) ID
-//   GHL_GROUP_ID     calendar group whose calendars are offered on /contact/
+//   GHL_LOCATION_ID  sub-account (location) ID (optional, defaults below)
+//   GHL_GROUP_ID     calendar group offered on /contact/ (optional, defaults below)
 
 const API = 'https://services.leadconnectorhq.com';
 
 export const config = () => ({
   token: process.env.GHL_TOKEN,
-  locationId: process.env.GHL_LOCATION_ID,
-  groupId: process.env.GHL_GROUP_ID,
+  // Not secret, so they default to Severin's sub-account and booking group; only GHL_TOKEN is required.
+  locationId: process.env.GHL_LOCATION_ID || 'd8x2TU4QKJ29UDf2m5JQ',
+  groupId: process.env.GHL_GROUP_ID || 'T13QpjH0ZG8Vcz02K3qz',
 });
 
 export async function ghl(path, { method = 'GET', body, version = '2021-04-15' } = {}) {

@@ -41,6 +41,8 @@
   --accent: #33b47b;     /* on black only (7.4:1) */
   --accent-ink: #17734a; /* accent text on white (5.6:1) */
   --error: #eb4242;
+  --cta: #d71920;        /* call-to-action red, white text on it 5.2:1 */
+  --cta-hover: #b3141a;
 
   --font: "Inter Tight", "Inter Tight Fallback", system-ui, sans-serif;
 
@@ -129,13 +131,13 @@ a:hover { text-decoration-color: transparent; }
   font: 500 1.0625rem/1 var(--font); letter-spacing: .01em; text-decoration: none;
   color: var(--black); background: transparent; cursor: pointer; white-space: nowrap;
 }
-.btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
-.btn-fill { background: var(--black); color: var(--white); border-color: var(--black); }
-.btn-fill:hover { background: #333; border-color: #333; }
+/* Every call to action is red: filled buttons solid red, outline buttons red-edged and red on hover. */
+.btn { border-color: var(--cta); }
+.btn:hover { background: var(--cta); color: var(--white); border-color: var(--cta); }
+.btn-fill, .inverse .btn-fill, .band .btn-fill { background: var(--cta); color: var(--white); border-color: var(--cta); }
+.btn-fill:hover, .inverse .btn-fill:hover, .band .btn-fill:hover { background: var(--cta-hover); color: var(--white); border-color: var(--cta-hover); }
 .inverse .btn, .band .btn { color: var(--white); }
-.inverse .btn:hover, .band .btn:hover { background: var(--white); color: var(--black); border-color: var(--white); }
-.inverse .btn-fill, .band .btn-fill { background: var(--white); color: var(--black); border-color: var(--white); }
-.inverse .btn-fill:hover, .band .btn-fill:hover { background: #d9d9d9; border-color: #d9d9d9; }
+.inverse .btn:hover, .band .btn:hover { background: var(--cta); color: var(--white); border-color: var(--cta); }
 .btn-sm { min-height: 44px; padding: 0 20px; font-size: .9375rem; }
 
 .more { display: inline-flex; align-items: center; gap: 14px; font-weight: 500; font-size: 1.125rem; text-decoration: none; letter-spacing: .02em; }

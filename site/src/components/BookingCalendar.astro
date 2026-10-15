@@ -3,8 +3,11 @@
 // Talks only to our own /api/booking/* functions (same origin), which hold the GHL token.
 // Steps: day → time → details → done. Free times show as soon as the page opens (from the first,
 // default calendar); the topic is a dropdown in the details step that picks which calendar books it.
-// Without JavaScript, or if the calendar cannot load, visitors see the phone number and email.
+// If our booking API cannot load (for example GHL_TOKEN is not set in Vercel) or JavaScript is off,
+// the same GHL calendar group shows instead as GoHighLevel's own booking widget.
 import { PHONE, EMAIL } from '../data/site.js';
+
+const widget = 'https://api.leadconnectorhq.com/widget/group/T13QpjH0ZG8Vcz02K3qz';
 ---
 <div class="book" data-booking>
   <div class="book-step" data-step="slots" hidden>
@@ -60,15 +63,26 @@ import { PHONE, EMAIL } from '../data/site.js';
   </div>
 
   <p class="book-status" role="status" aria-live="polite" data-status>Loading free times...</p>
-  <noscript><p class="book-status">Online booking needs JavaScript. Call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> to book.</p></noscript>
+  <noscript><iframe class="book-embed" src={widget} title="Book a free consultation"></iframe><p class="book-status">Or call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> to book.</p></noscript>
 </div>
 
-<script define:vars={{ phone: PHONE, email: EMAIL }}>
+<script define:vars={{ phone: PHONE, email: EMAIL, widget }}>
   const root = document.querySelector('[data-booking]');
   const $ = (s) => root.querySelector(s);
   const status = $('[data-status]');
   const say = (text, html) => { status.hidden = !text && !html; if (html) status.innerHTML = html; else status.textContent = text || ''; };
   const fallback = (lead) => say('', `${lead} Call <a href="tel:${phone.tel}">${phone.display}</a> or email <a href="mailto:${email}">${email}</a> and we will book you in.`);
+
+  // Fallback: GoHighLevel's own booking widget for the same calendar group.
+  const embed = () => {
+    root.querySelectorAll('.book-step').forEach((s) => { s.hidden = true; });
+    if (!root.querySelector('.book-embed')) {
+      const f = document.createElement('iframe');
+      f.className = 'book-embed'; f.src = widget; f.title = 'Book a free consultation';
+      root.prepend(f);
+    }
+    say('', `Prefer to talk? Call <a href="tel:${phone.tel}">${phone.display}</a> or email <a href="mailto:${email}">${email}</a>.`);
+  };
 
   let tz = 'Europe/London';
   try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch {}
@@ -105,14 +119,14 @@ import { PHONE, EMAIL } from '../data/site.js';
     try {
       const { days } = first?.calendarId === cal.id ? first : await api(`slots?${new URLSearchParams({ calendarId: cal.id, tz })}`);
       state.days = days;
-      if (!days.length) return fallback('There are no free times online in the next 30 days.');
+      if (!days.length) return embed();
       say('');
       $('[data-days]').replaceChildren(...days.map((d) => chip(
         [span('book-dow', fmt(d.slots[0], { weekday: 'short' })), span('book-date', fmt(d.slots[0], { day: 'numeric', month: 'short' }))],
         () => showTimes(d), 'book-chip book-day',
       )));
       $('[data-step="slots"]').hidden = false;
-    } catch { fallback('The calendar could not load.'); }
+    } catch { embed(); }
   }
 
   function showTimes(day) {
@@ -171,10 +185,10 @@ import { PHONE, EMAIL } from '../data/site.js';
         api('calendars'), api(`slots?${new URLSearchParams({ tz })}`).catch(() => null),
       ]);
       state.calendars = calendars;
-      if (!calendars.length) return fallback('Online booking is not available right now.');
+      if (!calendars.length) return embed();
       $('[data-topics]').replaceChildren(...calendars.map((c) => new Option(c.name, c.id)));
       $('[data-topic-field]').hidden = calendars.length < 2;
       loadSlots(calendars[0], first);
-    } catch { fallback('Online booking is not available right now.'); }
+    } catch { embed(); }
   })();
 </script>

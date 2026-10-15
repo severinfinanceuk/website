@@ -164,6 +164,7 @@
 @media (min-width: 600px) { .book .form-row { grid-template-columns: 1fr 1fr; } }
 .book-step { display: grid; gap: 12px; }
 .book-step[hidden], .book .field[hidden] { display: none; }
+.book-embed { display: block; width: 100%; height: 860px; border: 0; border-radius: var(--radius); background: var(--white); }
 .book-label { font-weight: 500; }
 .book-chip {
   min-height: 44px; padding: 8px 16px; border: 1px solid #3a3a3a; border-radius: 999px; background: transparent;
