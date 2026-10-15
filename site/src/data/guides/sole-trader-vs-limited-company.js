@@ -77,7 +77,7 @@ export default {
       id: 'liability', h2: 'Does a limited company protect your personal assets?', toc: 'Liability',
       body: [
         '<p>Yes, in most cases. As a shareholder you can lose what you put into the company, but its debts are not your personal debts. As a sole trader, there is no separation: a supplier or lender can pursue your savings and home.</p>',
-        '<p>The protection has limits. Banks and landlords often ask directors for a personal guarantee, which puts you back on the hook for that debt (see our guide to <a href="/resources/personal-guarantees-explained/">personal guarantees</a>). Directors also have legal duties, and can be made personally liable if they keep trading when they know the company cannot pay its debts. Insurance still matters under either structure.</p>',
+        '<p>The protection has limits. Banks and landlords often ask directors for a personal guarantee, which puts you back on the hook for that debt, so take legal advice before you sign one. Directors also have legal duties, and can be made personally liable if they keep trading when they know the company cannot pay its debts. Insurance still matters under either structure.</p>',
       ],
     },
     {

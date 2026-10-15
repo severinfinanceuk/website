@@ -3,7 +3,7 @@
 // on 13 October 2026. Re-check each April and after each Budget (UK, Scottish and Welsh).
 export default {
   url: '/resources/stamp-duty-commercial-property/',
-  section: 'business-finance',
+  section: 'tax',
   title: 'Stamp Duty on Commercial Property 2026-27 | Severin Finance',
   description: 'Commercial and mixed-use SDLT: 0% to £150,000, 2% to £250,000, 5% above. Leases, mixed use, the 14-day return, Scotland and Wales. Free consultation.',
   h1: 'Stamp duty on commercial property',
@@ -11,8 +11,8 @@ export default {
   topic: 'Stamp Duty Land Tax on non-residential and mixed-use property',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   service: {
-    href: '/uk/business-finance/commercial-mortgages/', label: 'Our commercial mortgage service',
-    boxTitle: 'Buying commercial property?', text: 'We arrange commercial mortgages with lenders and build the stamp duty and other purchase costs into your funding plan from the start.',
+    href: '/uk/accounting/landlord-accountant/', label: 'Our property accountants',
+    boxTitle: 'Buying commercial property?', text: 'We check the stamp duty, VAT and capital allowances on the purchase before you exchange, then keep the books and tax returns for the property.',
   },
 
   hero: {
@@ -31,7 +31,7 @@ export default {
     {
       id: 'rates', h2: 'How much stamp duty do you pay on commercial property?', toc: 'The rates',
       body: [
-        '<p>You pay Stamp Duty Land Tax (SDLT) in slices: each rate applies only to the part of the price inside its band. The same bands apply to freehold purchases, transfers of existing leases and the premium on a new lease. If you are funding the purchase, our <a href="/uk/business-finance/commercial-mortgages/">commercial mortgage</a> team builds the tax into your budget, because lenders usually expect it to come from your own funds.</p>',
+        '<p>You pay Stamp Duty Land Tax (SDLT) in slices: each rate applies only to the part of the price inside its band. The same bands apply to freehold purchases, transfers of existing leases and the premium on a new lease. Our <a href="/uk/accounting/landlord-accountant/">property accountants</a> check the SDLT, VAT and other tax on a purchase before you exchange, so there are no surprises at completion.</p>',
         { caption: 'SDLT on non-residential and mixed-use property (England and Northern Ireland)', head: ['Part of the price or premium', 'SDLT rate'], rows: [
           ['Up to £150,000', '0%'],
           ['£150,001 to £250,000', '2%'],
@@ -116,7 +116,7 @@ export default {
       id: 'buying-through-a-company', h2: 'Does buying through a company change the stamp duty?', toc: 'Buying via a company',
       body: [
         '<p>Not for commercial property. A company pays the same non-residential rates as an individual, so the choice of buyer usually turns on income tax, corporation tax and how you will take money out. Our guide to <a href="/resources/buying-property-limited-company/">buying property through a limited company</a> compares the options, and our guide to <a href="/resources/buy-to-let-limited-company/">buy-to-let through a limited company</a> covers homes, where different SDLT rules apply.</p>',
-        '<p>Stamp duty is a cost on top of your deposit, and lenders usually expect you to pay it from your own money. Our guide to <a href="/resources/commercial-mortgage-deposit/">commercial mortgage deposits</a> explains how much cash to plan for. Stamp duty is not tax-deductible as a running cost: it is added to the cost of the property, which reduces the taxable gain when you sell.</p>',
+        '<p>Stamp duty is a cost on top of the price, so plan the cash for it at completion, along with any VAT, legal fees and survey costs. Stamp duty is not tax-deductible as a running cost: it is added to the cost of the property, which reduces the taxable gain when you sell.</p>',
       ],
     },
   ],
@@ -141,7 +141,7 @@ export default {
 
   related: [
     '/resources/buying-property-limited-company/',
-    '/resources/commercial-mortgage-deposit/',
+    '/resources/capital-gains-tax-on-property/',
     '/resources/vat-on-property-development/',
     '/resources/capital-allowances-explained/',
   ],

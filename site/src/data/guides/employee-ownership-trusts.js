@@ -100,7 +100,7 @@ export default {
       body: [
         '<p>Usually by the company, over time. The company makes contributions to the trust out of its profits, and the trustees use them to pay you. Since 30 October 2024, contributions to repay the seller and meet set-up costs are not taxed as distributions, if the conditions are met.</p>',
         '<ul><li><strong>Deferred payments:</strong> an upfront amount from the company\'s cash or a bank loan, with the rest paid over several years. Interest on the deferred amount must be at a reasonable commercial rate.</li><li><strong>Tax by instalments:</strong> capital gains tax is due for the tax year of the sale, even though you are paid later. If payments are spread over more than 18 months, you can apply to HMRC to pay the tax in instalments under section 280 of the Taxation of Chargeable Gains Act 1992.</li><li><strong>Cash flow risk:</strong> if profits fall, payments to you slow down. A forecast showing the company can afford the payments, its tax and investment is essential.</li></ul>',
-        '<p>If your managers want to own the company directly instead, our <a href="/resources/management-buy-out-guide/">management buy-out guide</a> covers that route, and our <a href="/uk/business-finance/business-loans/">business loans</a> team can look at bank funding for either.</p>',
+        '<p>If your managers want to own the company directly instead, our <a href="/resources/management-buy-out-guide/">management buy-out guide</a> covers that route, and our <a href="/uk/company-services/succession-planning/">succession planning</a> team can compare the tax and cash flow of each.</p>',
       ],
     },
   ],

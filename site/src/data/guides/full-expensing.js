@@ -13,8 +13,8 @@ export default {
   topic: 'Full expensing and the 50% first-year allowance for companies',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   service: {
-    href: '/uk/business-finance/asset-finance/', label: 'Our asset finance service',
-    boxTitle: 'Funding new equipment?', text: 'We arrange asset finance with lenders, and our accountants check which allowance you can claim before you sign.',
+    href: '/uk/tax/corporation-tax-accountant/', label: 'Our corporation tax service',
+    boxTitle: 'Buying new equipment?', text: 'We check which allowance you can claim before you buy, then make the claim on your company tax return.',
   },
 
   hero: {
@@ -33,7 +33,7 @@ export default {
     {
       id: 'what-it-is', h2: 'What is full expensing?', toc: 'What it is',
       body: [
-        '<p>Full expensing is a 100% first-year capital allowance for companies buying new plant and machinery. A company that spends £200,000 on a qualifying machine deducts the full £200,000 from its taxable profits for that year, instead of spreading the relief over many years. If you are funding the purchase, we <a href="/uk/business-finance/asset-finance/">arrange asset finance with lenders</a>, and our accountants confirm which allowance applies before you sign.</p>',
+        '<p>Full expensing is a 100% first-year capital allowance for companies buying new plant and machinery. A company that spends £200,000 on a qualifying machine deducts the full £200,000 from its taxable profits for that year, instead of spreading the relief over many years. Our <a href="/uk/tax/corporation-tax-accountant/">corporation tax accountants</a> confirm which allowance applies before you buy, and make the claim on your return.</p>',
         '<p>It sits alongside a 50% first-year allowance for new special rate assets. The rest of a special rate cost goes into the special rate pool and gets 6% a year from the next period. Both reliefs began on 1 April 2023 and were made permanent at the Autumn Statement 2023, so there is no closing date.</p>',
         '<p>This guide covers full expensing in detail. For the full set of allowances, including pools, cars and buildings, see <a href="/resources/capital-allowances-explained/">capital allowances explained</a>.</p>',
       ],
@@ -102,7 +102,7 @@ export default {
       id: 'claiming', h2: 'How do you claim full expensing?', toc: 'Making the claim',
       body: [
         '<p>You claim on the company tax return (CT600) for the accounting period in which the cost is incurred. That is usually the date the contract becomes unconditional, or the date payment is due if that is more than 4 months later. Keep invoices showing the asset is new, and a fixed asset register so disposals are caught later.</p>',
-        '<p>The CT600 has no separate boxes yet for the 40% allowance: HMRC says to use the existing first-year allowance boxes until it adds new ones in April 2027. Anti-avoidance rules deny all of these allowances where a purchase is part of arrangements mainly aimed at getting them. Our <a href="/uk/tax/corporation-tax-accountant/">corporation tax accountants</a> make the claim as part of your return.</p>',
+        '<p>The CT600 has no separate boxes yet for the 40% allowance: HMRC says to use the existing first-year allowance boxes until it adds new ones in April 2027. Anti-avoidance rules deny all of these allowances where a purchase is part of arrangements mainly aimed at getting them. We make the claim as part of your company tax return, and keep the asset register up to date for later disposals.</p>',
       ],
     },
   ],

@@ -34,14 +34,14 @@ export default {
     ['Edinburgh', '/uk/edinburgh/'],
   ],
   place: { type: 'City', name: 'Edinburgh', wikidata: 'Q23436', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Edinburgh', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Edinburgh', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Edinburgh · Scotland',
     h1: 'Accountants in Edinburgh',
-    answer: 'Our accountants in Edinburgh handle company accounts, Scottish tax returns, VAT, payroll and business finance for fixed fees. We work to Scottish rules: six income tax bands, LBTT instead of Stamp Duty, and the Small Business Bonus Scheme. Since 24 July 2026, Edinburgh hotels and short-term lets also charge a 5% visitor levy.',
+    answer: 'Our accountants in Edinburgh handle company accounts, Scottish tax returns, VAT, payroll and bookkeeping for fixed fees. We work to Scottish rules: six income tax bands, LBTT instead of Stamp Duty, and the Small Business Bonus Scheme. Since 24 July 2026, Edinburgh hotels and short-term lets also charge a 5% visitor levy.',
     image: hero,
     imageAlt: 'Dugald Stewart Monument on Calton Hill at sunrise, looking over Edinburgh to the castle and the Balmoral clock tower',
     chip: 'Scotland',
@@ -106,7 +106,7 @@ export default {
       { title: 'VAT returns', text: 'Registration, scheme choice and Making Tax Digital returns for hotels, venues and festival traders, with visitor levy amounts recorded on their own.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Monthly payroll, RTI and pensions for hotels, bars and seasonal festival staff, with Scottish income tax applied to each Scottish employee.', href: '/uk/accounting/payroll-services/' },
       { title: 'Landlord accounts', text: 'Rental accounts for tenement flats and licensed short-term lets, plus LBTT and the Additional Dwelling Supplement when you buy.', href: '/uk/accounting/landlord-accountant/' },
-      { title: 'Virtual finance director', text: 'Forecasts, board packs and funding rounds for growing Edinburgh tech and data firms, part time, without a full-time hire.', href: '/uk/accounting/virtual-finance-director/' },
+      { title: 'Virtual finance director', text: 'Forecasts, board packs and investor reporting for growing Edinburgh tech and data firms, part time, without a full-time hire.', href: '/uk/accounting/virtual-finance-director/' },
     ],
   },
 

@@ -25,7 +25,7 @@ export default {
     'accountants Leicestershire', 'BID Leicester levy',
   ],
   title: 'Accountants in Leicester | Severin Finance',
-  description: 'Accountants in Leicester for company accounts, VAT, payroll, landlord tax and business finance across Leicestershire. Book a free consultation.',
+  description: 'Accountants in Leicester for company accounts, VAT, payroll, landlord tax and bookkeeping across Leicestershire. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -33,7 +33,7 @@ export default {
     ['Leicester', '/uk/leicester/'],
   ],
   place: { type: 'City', name: 'Leicester', wikidata: 'Q83065', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Leicester', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Leicester', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'VAT or bookkeeping',
 
   // ---------- 1. Hero ----------
@@ -70,7 +70,7 @@ export default {
       {
         img: makers, alt: 'Red-brick building on the corner of Rutland Street in Leicester city centre',
         tag: 'Makers', title: 'Textile, clothing and food manufacturers',
-        text: 'Bookkeeping, VAT and payroll for makers and wholesalers, with stock, shift pay at the £12.71 National Living Wage and machinery costs set out clearly for lenders and HMRC.',
+        text: 'Bookkeeping, VAT and payroll for makers and wholesalers, with stock, shift pay at the £12.71 National Living Wage and machinery costs set out clearly for capital allowances and HMRC.',
         link: ['/uk/accounting/bookkeeping-services/', 'Bookkeeping'],
       },
       {
@@ -104,7 +104,7 @@ export default {
       { title: 'Limited company accounts', text: 'Year-end accounts, corporation tax and Companies House filings for Leicester companies, from city centre firms to workshops on the industrial estates.', href: '/uk/accounting/limited-company-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and pensions for factories, shops and restaurants with shift and part-time staff.', href: '/uk/accounting/payroll-services/' },
       { title: 'Landlord accounts', text: 'Rental accounts and tax returns for Leicester landlords, with selective licence fees and repairs claimed correctly.', href: '/uk/accounting/landlord-accountant/' },
-      { title: 'Invoice finance', text: 'Cash flow funding for makers and wholesalers who wait weeks for retail customers to pay.', href: '/uk/business-finance/invoice-finance/' },
+      { title: 'Bookkeeping', text: 'Monthly bookkeeping, debtor reports and cash flow forecasts for makers and wholesalers who wait weeks for retail customers to pay.', href: '/uk/accounting/bookkeeping-services/' },
       { title: 'EIS and SEIS', text: 'Advance assurance and investor paperwork for space, engineering and health start-ups raising their first funds.', href: '/uk/company-services/eis-seis/' },
     ],
   },
@@ -194,7 +194,7 @@ export default {
       ['/uk/tax/vat-accountant/', 'VAT accountant'],
       ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
-      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+      ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
       ['/uk/company-services/eis-seis/', 'EIS and SEIS'],
       ['/resources/making-tax-digital-for-landlords/', 'Making Tax Digital for landlords'],
     ] },

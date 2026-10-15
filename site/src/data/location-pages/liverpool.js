@@ -23,7 +23,7 @@ export default {
     'Liverpool Freeport tax site', 'landlord accountant Liverpool',
   ],
   title: 'Accountants in Liverpool | Severin Finance',
-  description: 'Accountants in Liverpool for company accounts, tax returns, VAT, payroll and business finance across the city region. Book a free consultation.',
+  description: 'Accountants in Liverpool for company accounts, tax returns, VAT, payroll and bookkeeping across the city region. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -31,14 +31,14 @@ export default {
     ['Liverpool', '/uk/liverpool/'],
   ],
   place: { type: 'City', name: 'Liverpool', wikidata: 'Q24826', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Liverpool', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Liverpool', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Liverpool · Liverpool City Region',
     h1: 'Accountants in Liverpool',
-    answer: 'Our accountants in Liverpool provide company accounts, tax returns, VAT, payroll and business finance for fixed fees. We know the region’s tax sites: the Liverpool City Region Freeport has three, at Wirral Waters, Parkside in St Helens and 3MG in Widnes, and the life sciences Investment Zone adds three more.',
+    answer: 'Our accountants in Liverpool provide company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We know the region’s tax sites: the Liverpool City Region Freeport has three, at Wirral Waters, Parkside in St Helens and 3MG in Widnes, and the life sciences Investment Zone adds three more.',
     image: hero,
     imageAlt: 'The Royal Liver Building and the Pier Head waterfront in Liverpool under a blue sky',
     chip: 'Liverpool City Region',

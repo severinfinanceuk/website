@@ -24,12 +24,12 @@ for (const g of guides) byUrl.set(g.url, g);
 
 // Core pages: one-line summaries for /llms.txt (their copy lives in the .astro file)
 export const corePages = {
-  '/': ['Severin Finance home', 'UK accountancy firm in London: accounting, tax, company services and business finance for clients across the UK and UK clients living abroad.'],
+  '/': ['Severin Finance home', 'UK accountancy firm in London: accounting, tax, payroll and company services for clients across the UK and UK clients living abroad.'],
   '/about/': ['About Severin Finance', 'Who we are, how we work and the professional bodies we belong to.'],
   '/team/': ['Our team', 'The accountants and advisers who look after Severin Finance clients.'],
   '/contact/': ['Contact Severin Finance', 'Phone 020 4542 2488, email enquiries@severinfinance.com, book a free consultation.'],
   '/uk/pricing/': ['Pricing', 'Fixed fees for accounting, tax and company services, agreed in writing before work starts.'],
-  '/resources/': ['UK tax and business guides', 'Plain-English guides to UK tax, accounts, payroll, company law and business finance, with the 2026-27 rates.'],
+  '/resources/': ['UK tax and business guides', 'Plain-English guides to UK tax, accounts, payroll, company law and payroll, with the 2026-27 rates.'],
   '/locations/': ['Our locations', 'London, 11 London areas, 20 UK cities and UK tax help for clients abroad.'],
   '/reviews/': ['Client reviews', 'What clients say about Severin Finance.'],
 };

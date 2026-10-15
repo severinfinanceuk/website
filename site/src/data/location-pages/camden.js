@@ -32,14 +32,14 @@ export default {
     ['Camden', '/uk/london/camden/'],
   ],
   place: { type: 'AdministrativeArea', name: 'London Borough of Camden', wikidata: 'Q202088', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Camden', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Camden', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'London · Camden Town, King’s Cross, Holborn',
     h1: 'Accountants in Camden',
-    answer: 'Our accountants in Camden handle tax returns, company accounts, VAT, payroll and funding for businesses billed by the London Borough of Camden, from Camden Market traders to King’s Cross start-ups. We also check BID levies: five Camden BIDs add a charge on top of rates, starting at £40,000 rateable value in Hatton Garden.',
+    answer: 'Our accountants in Camden handle tax returns, company accounts, VAT, payroll and bookkeeping for businesses billed by the London Borough of Camden, from Camden Market traders to King’s Cross start-ups. We also check BID levies: five Camden BIDs add a charge on top of rates, starting at £40,000 rateable value in Hatton Garden.',
     image: hero,
     imageAlt: 'Blue Camden Lock railway bridge over a busy street in Camden Town, north London',
     chip: 'London Borough of Camden',

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import crestWhite from '../assets/logos/sf-crest-white.png';
 import { GA4_ID } from '../data/analytics.js';
+import { COMPANY } from '../data/site.js';
 
 const cols = [
   {
@@ -15,12 +16,12 @@ const cols = [
     ],
   },
   {
-    title: 'Business finance',
+    title: 'Company services',
     links: [
-      ['/uk/business-finance/business-loans/', 'Business loans'],
-      ['/uk/business-finance/tax-bill-funding/', 'Tax bill funding'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
-      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+      ['/uk/company-services/company-formation/', 'Company formation'],
+      ['/uk/company-services/company-secretarial-services/', 'Company secretarial'],
+      ['/uk/accounting/payroll-services/', 'Payroll'],
+      ['/uk/accounting/virtual-finance-director/', 'Management accounts'],
     ],
   },
   {
@@ -63,12 +64,12 @@ const year = new Date().getFullYear();
 <footer class="inverse">
   <div class="container legal">
     <p>
-      Severin Finance Ltd is a company registered in England and Wales, company number <span class="tbc">XXXXXXXX</span>.
-      Registered office: <span class="tbc">registered address</span>.
-      Severin Finance is a Chartered Management Accountant practice.
+      {COMPANY.legalName} is a company registered in {COMPANY.registeredIn}, company number <a href={COMPANY.companiesHouse} rel="noopener">{COMPANY.number}</a>.
+      Registered office: {COMPANY.registeredOffice}.
+      Severin Finance is a Chartered Management Accountant practice, regulated by {COMPANY.regulator}.
     </p>
     <p>
-      <span class="tbc">FCA wording for business finance: authorised/regulated status, FRN, and whether Severin is a lender or a credit broker. Finance is subject to status. Your assets may be at risk if you do not keep up repayments on a secured loan.</span>
+      We are accountants. We do not lend, arrange or broker finance or mortgages, and we do not hold client money.
     </p>
   </div>
   <div class="container footer">
@@ -78,7 +79,7 @@ const year = new Date().getFullYear();
           <Image class="logo-crest" src={crestWhite} alt="" width={96} densities={[1, 2]} quality={90} loading="lazy" />
           <span>Severin Finance</span>
         </a>
-        <p class="footer-about">Accounting, tax and business finance from London, for clients in London, across the UK and UK clients living abroad.</p>
+        <p class="footer-about">Accounting, tax and company services from London, for clients in London, across the UK and UK clients living abroad.</p>
         <address class="footer-contact">
           <span>London, United Kingdom</span>
           <a href="tel:+442045422488">020 4542 2488</a>

@@ -51,8 +51,8 @@ export default {
           ['Deferred consideration', 'You are paid part of the price in instalments after completion', 'You carry the risk if the business struggles. Taxed up front unless relief applies'],
           ['Vendor loan notes', 'Newco owes you part of the price as a formal debt', 'Ranks behind the bank. Interest may be paid'],
           ['Private equity or other investors', 'An investor buys shares in Newco alongside the managers', 'The investor takes a stake and board rights'],
-        ], after: 'General description only. Lenders set their own terms. We arrange finance with lenders but cannot promise approval.' },
-        '<p>Managers asked to guarantee Newco\'s borrowing should read our guide to <a href="/resources/personal-guarantees-explained/">personal guarantees</a> and take their own legal advice. Our <a href="/uk/business-finance/business-loans/">business loans</a> team can approach lenders on Newco\'s behalf.</p>',
+        ], after: 'General description only. Each lender or investor sets its own terms.' },
+        '<p>Managers asked to guarantee Newco\'s borrowing should take their own legal advice before they sign. We do not arrange finance, but we can build the forecasts and management accounts that banks and investors ask to see, and advise on the tax of each part of the deal.</p>',
       ],
     },
     {
@@ -143,6 +143,6 @@ export default {
     '/resources/business-asset-disposal-relief/',
     '/resources/employee-ownership-trusts/',
     '/resources/how-to-value-a-business/',
-    '/resources/personal-guarantees-explained/',
+    '/resources/cash-flow-forecasting/',
   ],
 };

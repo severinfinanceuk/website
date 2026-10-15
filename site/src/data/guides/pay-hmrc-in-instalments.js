@@ -12,8 +12,8 @@ export default {
   topic: 'HMRC payment plans and Time to Pay arrangements',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   service: {
-    href: '/uk/business-finance/tax-bill-funding/', label: 'Our tax bill funding service',
-    boxTitle: 'Tax bill you cannot pay?', text: 'We check the bill, compare an HMRC payment plan with funding, and help you pick the cheaper, safer route.',
+    href: '/uk/tax/hmrc-tax-investigation/', label: 'Our HMRC disputes service',
+    boxTitle: 'Tax bill you cannot pay?', text: 'We check the bill is right, prepare the figures HMRC asks for, and speak to HMRC to agree a plan you can afford.',
   },
 
   hero: {
@@ -32,7 +32,7 @@ export default {
     {
       id: 'can-you-pay-in-instalments', h2: 'Can you pay HMRC in instalments?', toc: 'Can you?',
       body: [
-        '<p>Yes. If you cannot pay a tax bill in full, HMRC may agree a payment plan, often called a Time to Pay arrangement, so you clear the debt in monthly instalments by Direct Debit. HMRC first checks that the plan is affordable for you. If you cannot agree one, HMRC will ask for the full amount. Our <a href="/uk/business-finance/tax-bill-funding/">tax bill funding</a> team compares an HMRC plan with a short-term loan, so you can see which costs less and which HMRC is likely to accept.</p>',
+        '<p>Yes. If you cannot pay a tax bill in full, HMRC may agree a payment plan, often called a Time to Pay arrangement, so you clear the debt in monthly instalments by Direct Debit. HMRC first checks that the plan is affordable for you. If you cannot agree one, HMRC will ask for the full amount. Our <a href="/uk/tax/hmrc-tax-investigation/">HMRC disputes team</a> can check the bill is right and help you put an affordable plan to HMRC.</p>',
         '<p>Plans cover overdue Self Assessment, VAT, PAYE, corporation tax and other taxes. The route depends on the tax and the amount.</p>',
         { caption: 'Which route applies to your debt', head: ['Your situation', 'How to set up a plan'], rows: [
           ['Self Assessment, £30,000 or less, returns filed', 'Online, through HMRC\'s payment plan service'],
@@ -61,7 +61,7 @@ export default {
           ['16 to 30 days late', '3% of the VAT owed on day 15', 'Ask by day 30 to avoid the higher penalties'],
           ['31 days or more late', 'A further 3% of the VAT owed on day 30, plus a daily penalty at 10% a year', 'Ask now to stop the daily penalty growing'],
         ], after: 'Source: GOV.UK, How late payment penalties work if you pay VAT late. If you break an agreed plan, HMRC can charge the penalties as if the plan never existed.' },
-        '<p>Our guide to <a href="/resources/vat-penalties/">VAT penalties</a> covers late returns as well as late payment. If the business needs cash to meet the bill, a <a href="/resources/cash-flow-forecasting/">cash flow forecast</a> is usually the first thing HMRC or a lender wants to see.</p>',
+        '<p>Our guide to <a href="/resources/vat-penalties/">VAT penalties</a> covers late returns as well as late payment. If the business needs cash to meet the bill, a <a href="/resources/cash-flow-forecasting/">cash flow forecast</a> is usually the first thing HMRC wants to see.</p>',
       ],
     },
     {
@@ -110,10 +110,11 @@ export default {
       ],
     },
     {
-      id: 'loan-or-time-to-pay', h2: 'Is a loan better than an HMRC payment plan?', toc: 'Loan or Time to Pay',
+      id: 'getting-help', h2: 'How can an accountant help with a Time to Pay request?', toc: 'Getting help',
       body: [
-        '<p>Sometimes. An HMRC plan costs interest at 7.75% a year with no arrangement fees, but HMRC must agree it and may ask a business to sell assets first. A loan pays HMRC on time and gives you a fixed repayment schedule, but it has its own interest and fees, and the lender decides whether to lend.</p>',
-        '<p>Compare the total cost of each, and what happens if trading dips. We arrange finance with lenders where it fits, and we always check the tax bill and the HMRC route first. Finance is subject to status and lender approval. To talk it through, <a href="/contact/">contact us</a>.</p>',
+        '<p>The first step is to check the bill is right. A surprising number of tax debts are bigger than they need to be, because a return was never filed, an estimate was used, or a relief was missed. Common fixes include:</p>',
+        '<ul><li><strong>Unfiled returns:</strong> if HMRC has issued an estimated assessment or determination, filing the real return replaces it, and the figure is often lower.</li><li><strong>Payments on account:</strong> if your income has fallen, you can ask HMRC to reduce your Self Assessment payments on account for the current year.</li><li><strong>Company losses:</strong> a trading loss can usually be carried back against the previous 12 months\' profits, which can cut or repay corporation tax already due.</li><li><strong>Errors and missed claims:</strong> allowances, expenses and reliefs that were left out can be claimed or corrected.</li></ul>',
+        '<p>Next, we prepare the figures HMRC asks for: your income and essential spending, or for a business, a short <a href="/resources/cash-flow-forecasting/">cash flow forecast</a> showing what it can pay each month. With your authority as your agent, we can speak to HMRC for you and put forward a plan that is realistic. Once a plan is agreed, set money aside for the next bill as you go, so you do not need a second plan. To talk it through, <a href="/contact/">contact us</a>.</p>',
       ],
     },
   ],

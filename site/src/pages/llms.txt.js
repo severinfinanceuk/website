@@ -15,7 +15,7 @@ export const GET = ({ site }) => {
   const out = [
     '# Severin Finance',
     '',
-    '> Severin Finance is a UK accountancy firm based in London. We do accounting, tax, payroll, company services and business finance for individuals and companies in London, across the UK, and for people abroad with UK tax affairs or a UK company. We are registered in the UK and advise on UK tax only.',
+    '> Severin Finance is a UK accountancy firm based in London. We are accountants, regulated by the Chartered Institute of Management Accountants (CIMA). We do accounting, tax, payroll and company services for individuals and companies in London, across the UK, and for people abroad with UK tax affairs or a UK company. We are registered in the UK and advise on UK tax only. We do not lend, arrange or broker finance or mortgages, and we do not hold client money.',
     '',
     `Contact: phone ${PHONE.display} (+44 20 4542 2488), email ${EMAIL}. Free first consultation.`,
     '',

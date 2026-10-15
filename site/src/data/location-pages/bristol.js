@@ -24,7 +24,7 @@ export default {
     'Bristol BID levy', 'accountants West of England',
   ],
   title: 'Accountants in Bristol | Severin Finance',
-  description: 'Accountants in Bristol for company accounts, tax returns, VAT, payroll and finance, with Clean Air Zone costs planned in. Book a free consultation.',
+  description: 'Accountants in Bristol for company accounts, tax returns, VAT, payroll and bookkeeping, with Clean Air Zone costs planned in. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -32,14 +32,14 @@ export default {
     ['Bristol', '/uk/bristol/'],
   ],
   place: { type: 'City', name: 'Bristol', wikidata: 'Q23154', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Bristol', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Bristol', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Bristol · West of England',
     h1: 'Accountants in Bristol',
-    answer: 'Our accountants in Bristol handle company accounts, tax returns, VAT, payroll and business finance for fixed fees. We plan for the costs of trading here: cars, taxis and vans that do not meet the standard pay £9 a day in the Clean Air Zone, and HGVs, buses and coaches pay £100.',
+    answer: 'Our accountants in Bristol handle company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We plan for the costs of trading here: cars, taxis and vans that do not meet the standard pay £9 a day in the Clean Air Zone, and HGVs, buses and coaches pay £100.',
     image: hero,
     imageAlt: 'Narrowboat moored in Bristol harbour with rows of colourful houses on the hill behind',
     chip: 'West of England',
@@ -104,7 +104,7 @@ export default {
       { title: 'VAT returns', text: 'Registration, schemes and Making Tax Digital returns for hospitality, retail and creative businesses.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and pensions for venues and growing teams, set up for the April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
       { title: 'EIS and SEIS', text: 'Advance assurance and investor paperwork for Bristol start-ups and university spin-outs.', href: '/uk/company-services/eis-seis/' },
-      { title: 'Asset finance', text: 'Funding for compliant vans and equipment, so the Clean Air Zone charge stops being a daily cost.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Landlord accounts', text: 'Rental accounts, Section 24 planning and capital gains tax for Bristol landlords with flats, student lets or family homes.', href: '/uk/accounting/landlord-accountant/' },
     ],
   },
 
@@ -182,7 +182,7 @@ export default {
     { q: 'What is the Bristol BID?', a: 'It is a single Business Improvement District that joins the City Centre, Broadmead and Redcliffe & Temple BIDs. It runs from 1 November 2025 to 31 October 2030. Premises with a rateable value of £30,000 or more pay a levy, with no cap, and registered charities get a 50% discount.' },
     { q: 'Is there an Investment Zone in Bristol?', a: 'No. The West of England is not one of the Investment Zones in England, so there are no Investment Zone tax sites in Bristol. There is other support, such as the West of England Combined Authority’s £25m Creative Places Growth Fund from 2026.' },
     { q: 'Who sends business rates bills in Bristol?', a: 'Bristol City Council, for premises inside the city. Some large employers nearby, such as the aerospace sites at Filton, are in South Gloucestershire, which has its own council and rates bills. Check which council your premises are in before you apply for relief.' },
-    { q: 'Do I need an accountant based in Bristol?', a: 'No. Tax rules are the same in Bristol as across England, and we work online. It does help to use an accountant who knows the local costs, such as the Clean Air Zone, the Bristol BID levy and West of England funding.' },
+    { q: 'Do I need an accountant based in Bristol?', a: 'No. Tax rules are the same in Bristol as across England, and we work online. It does help to use an accountant who knows the local costs, such as the Clean Air Zone, the Bristol BID levy and West of England support schemes.' },
     { q: 'How much does an accountant cost in Bristol?', a: 'Our fixed fees start at £XXX a month for a small limited company and £XXX for a self assessment return. The fee depends on your turnover and records, and we confirm it in writing after a free consultation.', tbc: true },
   ],
 
@@ -203,10 +203,10 @@ export default {
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },
-    { title: 'Business finance', links: [
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
-      ['/uk/business-finance/business-loans/', 'Business loans'],
-      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+    { title: 'Tax and planning', links: [
+      ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
+      ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
+      ['/resources/capital-allowances-explained/', 'Capital allowances explained'],
     ] },
   ],
 

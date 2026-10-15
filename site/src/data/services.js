@@ -41,18 +41,6 @@ export const services = [
     ],
   },
   {
-    title: 'Business finance', href: '/uk/business-finance/',
-    items: [
-      ['Business loans', '/uk/business-finance/business-loans/'],
-      ['Tax bill funding', '/uk/business-finance/tax-bill-funding/'],
-      ['Asset finance', '/uk/business-finance/asset-finance/'],
-      ['Invoice finance', '/uk/business-finance/invoice-finance/'],
-      ['Commercial mortgages', '/uk/business-finance/commercial-mortgages/'],
-      ['Bridging loans', '/uk/business-finance/bridging-loans/'],
-      ['Development finance', '/uk/business-finance/development-finance/'],
-    ],
-  },
-  {
     title: 'Clients abroad', href: '/cross-border/',
     items: [
       ['Non-resident UK tax', '/cross-border/non-resident-uk-tax/'],

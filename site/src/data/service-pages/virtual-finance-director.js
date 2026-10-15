@@ -77,7 +77,7 @@ export default {
       { title: 'Start-ups raising investment', img: startup, alt: 'Three colleagues discussing pie charts printed on paper', tag: 'Seed and early stage', text: 'Investors want a model and clean numbers. We build the financial model, budget and board reporting, and support due diligence.', link: ['/uk/company-services/eis-seis/', 'EIS and SEIS'] },
       { title: 'Retail & e-commerce', img: ecommerce, alt: 'Smiling shop owner holding a tablet in her clothing boutique', tag: 'Stock, margins and cash', text: 'Stock ties up cash. We track gross margin by channel, stock levels and cash runway so you can plan buying and promotions.' },
       { title: 'Restaurants, cafés & hospitality', img: hospitality, alt: 'Two bakers shaping bread in front of a brick oven', tag: 'Tight margins, seasonal cash', text: 'We report food and staff costs against sales every month and forecast the quieter months before they arrive.', link: ['/uk/accounting/payroll-services/', 'Payroll services'] },
-      { title: 'Businesses seeking finance', img: funding, alt: 'Three business people reviewing figures on a tablet and laptop', tag: 'Loans, refinancing, investment', text: 'Lenders ask for management accounts and a cash flow forecast. We prepare them and present the numbers with you.', link: ['/uk/business-finance/business-loans/', 'Business loans'] },
+      { title: 'Businesses asked for figures', img: funding, alt: 'Three business people reviewing figures on a tablet and laptop', tag: 'Bank, investor or buyer review', text: 'A bank, investor or buyer will want management accounts and a cash flow forecast. We prepare them and explain the numbers with you.', link: ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'] },
       { title: 'Overseas groups with a UK company', img: overseas, alt: 'Man with a backpack and laptop reading a departures board at a station', tag: 'UK subsidiary, parent abroad', text: 'We report the UK company’s results to your group each month and keep its UK filings on time.', link: ['/cross-border/uk-company-from-abroad/', 'UK company from abroad'] },
     ],
   },
@@ -89,7 +89,7 @@ export default {
     intro: 'One fixed monthly fee, agreed upfront. Change the level as your business changes.',
     plans: [
       { name: 'Management accounts', for: 'Monthly figures and a short review', price: '£XXX a month', tbc: true, items: ['Monthly profit and loss, balance sheet and cash position', 'KPIs against budget and last year', 'Review call each month'] },
-      { name: 'Virtual finance director', for: 'Growing businesses with a bookkeeper', price: '£XXX a month', tbc: true, featured: true, badge: 'Most chosen', items: ['Everything in Management accounts', '13-week and 12-month cash flow forecasts', 'Annual budget and rolling forecast', 'Monthly board meeting with your finance director', 'Support with lenders and your bank'] },
+      { name: 'Virtual finance director', for: 'Growing businesses with a bookkeeper', price: '£XXX a month', tbc: true, featured: true, badge: 'Most chosen', items: ['Everything in Management accounts', '13-week and 12-month cash flow forecasts', 'Annual budget and rolling forecast', 'Monthly board meeting with your finance director', 'Figures ready for your bank or investors'] },
       { name: 'Fractional CFO', for: 'Fundraising, scale-ups and groups', price: '£XXX a month', tbc: true, items: ['Financial model for investors', 'Investor reporting and due diligence', 'Group reporting across several companies', 'Pricing, hiring and growth plans costed'] },
     ],
     included: ['Fixed monthly fee in writing', 'Works with Xero, QuickBooks or Sage', 'Your bookkeeper or ours', 'Year-end accounts from the same numbers', 'No long-term employment cost'],
@@ -178,7 +178,7 @@ export default {
   // ---------- 8. FAQ (People Also Ask) ----------
   faqTitle: 'Virtual finance director questions',
   faqs: [
-    { q: 'What does a virtual finance director do?', a: 'A virtual finance director runs your finance function part time and mostly remotely. They prepare or review monthly management accounts, build cash flow forecasts and budgets, report to the board, lenders and investors, and advise on pricing, funding and growth. They work alongside your bookkeeper, not instead of them.' },
+    { q: 'What does a virtual finance director do?', a: 'A virtual finance director runs your finance function part time and mostly remotely. They prepare or review monthly management accounts, build cash flow forecasts and budgets, report to the board, lenders and investors, and advise on pricing, cash and growth. They work alongside your bookkeeper, not instead of them.' },
     { q: 'How much does a virtual finance director cost?', a: 'Our virtual finance director service starts at £XXX a month. The fee depends on how often we meet, how complex your business is and whether we also keep your books. You get a fixed monthly fee in writing before we start.', tbc: true },
     { q: 'What is the difference between a virtual FD and a fractional CFO?', a: 'Very little. Both are senior finance leaders who work part time. Finance director is the usual UK title. CFO is more common with investors and start-ups. We agree the scope of the work, not the title.' },
     { q: 'What are management accounts?', a: 'Management accounts are monthly or quarterly reports on how your business is doing: profit and loss, balance sheet, cash flow and key numbers. Unlike annual accounts, they are not filed at Companies House. They are for you, your board and your lenders.' },
@@ -186,7 +186,7 @@ export default {
     { q: 'What is a cash flow forecast?', a: 'A cash flow forecast shows the cash you expect in and out each week or month, so you see a shortfall before it happens. We build a 13-week forecast for short-term cash and a 12-month forecast for planning, and update both every month.' },
     { q: 'When does a business need a finance director?', a: 'When decisions are being made without timely numbers. Common triggers are raising investment or a loan, fast growth, cash pressure, new investors on the board, or planning a sale. A part-time finance director often makes sense long before a full-time one is affordable.' },
     { q: 'Is a virtual finance director the same as an accountant?', a: 'No. An accountant mostly looks back: year-end accounts and tax returns. A virtual finance director looks forward: forecasts, budgets and decisions. Our team does both, so your year-end accounts and corporation tax return come from the same numbers.' },
-    { q: 'Can a virtual finance director help me raise finance?', a: 'Yes. Lenders and investors usually ask for management accounts, a cash flow forecast and a financial model. We prepare them, check the business can afford the repayments and join meetings with you. No one can promise a lender or investor will say yes.' },
+    { q: 'Can you help if my bank or an investor asks for figures?', a: 'Yes. Banks and investors usually ask for management accounts, a cash flow forecast and a financial model. We prepare them, check what the business can afford and explain the numbers with you. We are accountants: we do not lend, arrange or broker finance.' },
     { q: 'Do you work with companies outside London?', a: 'Yes. Our team is based in London and works online with companies across the UK and abroad, and with overseas groups that own a UK company.' },
   ],
 
@@ -196,8 +196,8 @@ export default {
       ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
       ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
       ['/uk/accounting/payroll-services/', 'Payroll services'],
-      ['/uk/business-finance/business-loans/', 'Business loans'],
-      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
+      ['/uk/company-services/succession-planning/', 'Succession planning'],
       ['/uk/company-services/business-valuation/', 'Business valuation'],
     ] },
     { title: 'Where we work', links: [

@@ -1,7 +1,8 @@
 ---
 // /about/: who Severin Finance is, how we work and the facts that build trust (E-E-A-T).
-// Facts only Severin can give stay yellow (tbc) and out of schema: company number,
-// registered office, years in practice, ICO number, AML supervisor, insurance.
+// Companies House facts confirmed by the client (company number, registered office,
+// incorporation date, SIC codes). Regulated by CIMA. Still yellow (tbc) and out of schema:
+// ICO number, AML supervisor, insurance.
 import TextPage from '../layouts/TextPage.astro';
 import { Image } from 'astro:assets';
 import cima from '../assets/logos/cima.png';
@@ -22,16 +23,18 @@ const facts = [
   ['Legal name', 'Severin Finance Ltd'],
   ['Based in', 'London, working with clients across the UK and abroad'],
   ['Practice', 'Chartered Management Accountant practice'],
-  ['Company number', 'To confirm', true],
-  ['Registered office', 'To confirm', true],
-  ['Years in practice', 'To confirm', true],
+  ['Regulated by', 'Chartered Institute of Management Accountants (CIMA)'],
+  ['Company number', '08501829, registered in England and Wales'],
+  ['Registered office', '23 Dorset Road, London, SW8 1EF'],
+  ['Incorporated', '24 April 2013'],
+  ['Nature of business', 'Accounting and auditing; tax consultancy (SIC 69201, 69203)'],
   ['Anti-money laundering supervisor', 'To confirm', true],
   ['Professional indemnity insurance', 'To confirm', true],
   ['ICO registration (data protection)', 'To confirm', true],
 ];
 
 const logos = [
-  { img: cima, name: 'CIMA, Chartered Institute of Management Accountants', h: 48 },
+  { img: cima, name: 'Regulated by CIMA, the Chartered Institute of Management Accountants', h: 48 },
   { img: ciot, name: 'Chartered Institute of Taxation', h: 64 },
   { img: icpa, name: 'ICPA, Institute of Certified Practising Accountants', h: 44 },
   { img: xero, name: 'Xero', h: 52 },
@@ -40,7 +43,8 @@ const logos = [
 
 const faqs = [
   { q: 'Where is Severin Finance based?', a: 'We are based in London. We work online with clients across the UK, and with UK clients who live abroad, so most clients never need to visit the office.' },
-  { q: 'What does Severin Finance do?', a: 'We are an independent accountancy firm. We prepare accounts and tax returns, run bookkeeping and payroll, look after UK companies from formation to sale, and arrange business finance.' },
+  { q: 'What does Severin Finance do?', a: 'We are an independent accountancy firm. We prepare accounts and tax returns, run bookkeeping and payroll, look after UK companies from formation to sale, and provide management accounts and virtual finance director support.' },
+  { q: 'Who regulates Severin Finance?', a: 'We are regulated by the Chartered Institute of Management Accountants (CIMA). We are an accountancy practice: we do not lend, arrange or broker finance, and we do not hold client money.' },
   { q: 'Who will look after my work?', a: 'One named person is your point of contact, supported by the rest of the team. You will always know who to call.' },
   { q: 'How do I get started?', a: 'Book a free consultation or call 020 4542 2488. We tell you what we need, what it costs and when it will be done.' },
 ];
@@ -51,7 +55,7 @@ const faqs = [
   url="/about/"
   eyebrow="About us"
   h1="About Severin Finance"
-  answer="Severin Finance is an independent Chartered Management Accountant practice in London. We look after accounts, tax, UK companies and business finance for individuals and businesses across the UK, and for UK clients living abroad. Every client has one point of contact, a fixed price agreed in writing, and a team that explains things in plain English."
+  answer="Severin Finance is an independent Chartered Management Accountant practice in London, regulated by CIMA. We look after accounts, tax and UK companies for individuals and businesses across the UK, and for UK clients living abroad. Every client has one point of contact, a fixed price agreed in writing, and a team that explains things in plain English."
   pageType="AboutPage"
   faqs={faqs}
   faqTitle="About us: questions"
@@ -64,7 +68,9 @@ const faqs = [
         <h2 id="story-title" style="margin-top:12px">Simplifying the complex, so that everything is just black and white</h2>
         <p>Tax and accounts are complicated. Your experience of them should not be. That idea has shaped Severin Finance from the start: we take on the detail, so you get a clear answer, a clear price and a clear deadline.</p>
         <p>We work with sole traders, landlords, contractors, owner-managed companies and growing businesses. Some clients need one tax return a year. Others want us to run their whole finance function: <a href="/uk/accounting/bookkeeping-services/">bookkeeping</a>, <a href="/uk/accounting/payroll-services/">payroll</a>, <a href="/uk/accounting/limited-company-accountant/">year-end accounts</a> and a <a href="/uk/accounting/virtual-finance-director/">virtual finance director</a>.</p>
-        <p>Because we also <a href="/uk/business-finance/">arrange business finance</a>, the people preparing your numbers are the people presenting them to lenders. And because we work online, it makes no difference whether you are in <a href="/uk/london/">London</a>, elsewhere in the UK or <a href="/cross-border/">living abroad</a> with UK income or a UK company.</p>
+        <p>The people preparing your accounts are the people who explain them to you, so the figures a bank, investor or buyer asks for come from someone who knows your business. We are accountants, not a lender or broker: we do not arrange finance or hold client money. And because we work online, it makes no difference whether you are in <a href="/uk/london/">London</a>, elsewhere in the UK or <a href="/cross-border/">living abroad</a> with UK income or a UK company.</p>
+        <h3>Regulated by CIMA</h3>
+        <p>Severin Finance Ltd is an accountancy practice regulated by the Chartered Institute of Management Accountants (CIMA). The company was incorporated on 24 April 2013 and is registered in England and Wales, company number 08501829.</p>
         <h3>UK work only</h3>
         <p>We are a UK firm and we do UK work: UK tax returns, UK accounts and UK companies. For clients abroad, we handle the UK side and work alongside your local adviser where you live.</p>
       </div>

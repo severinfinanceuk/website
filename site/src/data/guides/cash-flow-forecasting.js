@@ -24,7 +24,7 @@ export default {
     'Forecast <strong>cash</strong>, not profit: when customers actually pay and when bills actually leave the bank.',
     'Put in PAYE (<strong>22nd</strong> of each month), VAT (<strong>1 month and 7 days</strong> after each period) and corporation tax (<strong>9 months and 1 day</strong> after the year end).',
     'Update the 13-week forecast <strong>weekly</strong> and compare forecast with actual.',
-    'If you see a gap, act early: chase debtors, move payments, talk to HMRC before the deadline, or arrange finance.',
+    'If you see a gap, act early: chase debtors, move payments, talk to HMRC before the deadline, or speak to your bank early.',
   ],
 
   sections: [
@@ -98,8 +98,8 @@ export default {
         '<ul><li>Chase overdue invoices, and invoice promptly when work is done.</li><li>Ask for deposits or stage payments on larger jobs.</li><li>Charge statutory interest on late business payments: 8% plus the Bank of England base rate, which is 3.75% today. See our guide to <a href="/resources/late-payment-interest/">claiming late payment interest</a>.</li><li>Sell slow-moving stock.</li></ul>',
         '<h3>Move payments later</h3>',
         '<ul><li>Agree longer terms with key suppliers before the bill is due, not after.</li><li>Delay spending that can wait, such as non-urgent equipment.</li><li>If you cannot pay HMRC in full, contact it before the deadline. You may be able to agree a payment plan. HMRC will ask about your income, spending and savings, and expects a company to reduce the debt as far as it can first. Read our guide to <a href="/resources/pay-hmrc-in-instalments/">paying HMRC in instalments</a>.</li></ul>',
-        '<h3>Arrange finance</h3>',
-        '<p>An overdraft, invoice finance or a short-term loan can cover a timing gap, but each has a cost, and a lender will want to see your forecast. Our guide to <a href="/resources/invoice-finance-vs-overdraft/">invoice finance vs overdraft</a> compares two common options, and we arrange finance with lenders through our <a href="/uk/business-finance/invoice-finance/">invoice finance</a> and <a href="/uk/business-finance/tax-bill-funding/">tax bill funding</a> services. No lender approval is guaranteed.</p>',
+        '<h3>Borrowing to cover a gap</h3>',
+        '<p>An overdraft or a short-term loan can cover a timing gap, but each has a cost, and a lender will want to see your forecast and recent <a href="/resources/management-accounts-explained/">management accounts</a>. We do not arrange or introduce finance, but we can prepare the forecast and accounts a lender asks for, so you can approach your bank with clear numbers.</p>',
         '<p>Paying HMRC late costs money: interest on late tax is charged at the base rate plus 4 percentage points, which was 7.75% a year from 9 January 2026, and penalties can apply on top.</p>',
       ],
     },
@@ -127,7 +127,7 @@ export default {
   related: [
     '/resources/management-accounts-explained/',
     '/resources/pay-hmrc-in-instalments/',
-    '/resources/invoice-finance-vs-overdraft/',
+    '/resources/when-to-hire-a-finance-director/',
     '/resources/late-payment-interest/',
   ],
 };

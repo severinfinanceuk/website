@@ -23,7 +23,7 @@ export default {
     'business rates London', 'Crossrail business rate supplement',
   ],
   title: 'Accountants in London | Severin Finance',
-  description: 'Accountants in London for tax returns, company accounts, VAT, payroll and business finance across all 32 boroughs. Book a free consultation.',
+  description: 'Accountants in London for tax returns, company accounts, VAT, payroll and bookkeeping across all 32 boroughs. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -31,14 +31,14 @@ export default {
     ['London', '/uk/london/'],
   ],
   place: { type: 'City', name: 'London', wikidata: 'Q84', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in London', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in London', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'London · All 32 boroughs and the City',
     h1: 'Accountants in London',
-    answer: 'Our accountants in London handle tax returns, company accounts, VAT, payroll and business finance for fixed fees, across all 32 boroughs and the City. We plan for the costs that only apply here, from the Crossrail rates supplement above £92,000 rateable value to ULEZ charges and the London Living Wage.',
+    answer: 'Our accountants in London handle tax returns, company accounts, VAT, payroll and bookkeeping for fixed fees, across all 32 boroughs and the City. We plan for the costs that only apply here, from the Crossrail rates supplement above £92,000 rateable value to ULEZ charges and the London Living Wage.',
     image: hero,
     imageAlt: 'Red double-decker bus passing Piccadilly Circus in central London on a sunny day',
     chip: '32 boroughs + the City',
@@ -104,7 +104,7 @@ export default {
       { title: 'VAT returns', text: 'VAT registration, scheme choice and quarterly returns under Making Tax Digital for London traders.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Monthly payroll, RTI filings and pensions, set up for the April 2026 wage rates and London Living Wage employers.', href: '/uk/accounting/payroll-services/' },
       { title: 'Landlords and property', text: 'Rental accounts, Making Tax Digital for landlords and tax planning for London buy-to-let portfolios.', href: '/uk/accounting/landlord-accountant/' },
-      { title: 'Business loans', text: 'Loans, overdrafts and cash flow funding for London businesses, with the forecasts lenders ask for.', href: '/uk/business-finance/business-loans/' },
+      { title: 'Management accounts', text: 'Monthly management accounts, cash flow forecasts and board packs for growing London businesses, without a full-time finance director.', href: '/uk/accounting/virtual-finance-director/' },
     ],
   },
 

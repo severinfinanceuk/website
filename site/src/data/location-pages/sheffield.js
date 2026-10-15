@@ -24,7 +24,7 @@ export default {
     'landlord accountant Sheffield', 'Sheffield clean air zone charge',
   ],
   title: 'Accountants in Sheffield | Severin Finance',
-  description: 'Accountants in Sheffield for company accounts, tax returns, VAT, payroll and van and equipment finance in South Yorkshire. Book a free consultation.',
+  description: 'Accountants in Sheffield for company accounts, tax returns, VAT, payroll and capital allowances in South Yorkshire. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -32,14 +32,14 @@ export default {
     ['Sheffield', '/uk/sheffield/'],
   ],
   place: { type: 'City', name: 'Sheffield', wikidata: 'Q42448', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Sheffield', serviceType: 'Accounting, tax and business finance services' },
-  formTopic: 'Business finance',
+  service: { name: 'Accountants in Sheffield', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
+  formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Sheffield · South Yorkshire',
     h1: 'Accountants in Sheffield',
-    answer: 'Our accountants in Sheffield handle company accounts, tax returns, VAT, payroll and business finance for fixed fees. We build in the local costs: vans and taxis that miss the emission standards pay £10 a day inside the clean air zone, and city centre premises with a rateable value of £40,000 or more pay a 1.75% BID levy.',
+    answer: 'Our accountants in Sheffield handle company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We build in the local costs: vans and taxis that miss the emission standards pay £10 a day inside the clean air zone, and city centre premises with a rateable value of £40,000 or more pay a 1.75% BID levy.',
     image: hero,
     imageAlt: 'Sheffield Town Hall clock tower behind the fountains of the Peace Gardens in autumn',
     chip: 'South Yorkshire',
@@ -81,8 +81,8 @@ export default {
       {
         img: shops, alt: 'A Sheffield shopping street of terraced shops with parked cars and vans',
         tag: 'Trades and vans', title: 'Trades, shops and van operators',
-        text: 'Vehicle costs, VAT and van finance for trades and retailers. A non-compliant van pays £10 for each day it drives inside the clean air zone, so we check when replacing it pays off.',
-        link: ['/uk/business-finance/asset-finance/', 'Asset finance'],
+        text: 'Vehicle costs, VAT and capital allowances for trades and retailers. A non-compliant van pays £10 for each day it drives inside the clean air zone, so we check when replacing it pays off.',
+        link: ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       },
       {
         img: skyline, alt: 'Sheffield city centre skyline above the railway station on a clear day',
@@ -100,7 +100,7 @@ export default {
     intro: 'We work online and charge the same fixed fees anywhere in South Yorkshire. Each card links to the full service page.',
     items: [
       { title: 'Limited company accounts', text: 'Year-end accounts, corporation tax and Companies House filings for Sheffield companies, from Kelham Island to the Lower Don Valley.', href: '/uk/accounting/limited-company-accountant/' },
-      { title: 'Asset finance', text: 'Funding for machine tools, vans and equipment, including replacing vans that would pay the clean air zone charge.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Corporation tax', text: 'Corporation tax returns and capital allowances on machine tools, vans and equipment, including vans replaced to avoid the clean air zone charge.', href: '/uk/tax/corporation-tax-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and pensions for workshops, venues and shops, set up for the £12.71 National Living Wage from April 2026.', href: '/uk/accounting/payroll-services/' },
       { title: 'VAT returns', text: 'Registration and Making Tax Digital returns for makers, venues and online sellers across the city.', href: '/uk/tax/vat-accountant/' },
       { title: 'Self assessment', text: 'Tax returns for directors, sole traders and student-let landlords, filed before the 31 January deadline.', href: '/uk/tax/self-assessment-accountant/' },
@@ -142,7 +142,7 @@ export default {
     ],
     urgent: {
       title: 'Driving an older van into the city centre?',
-      text: 'A non-compliant van pays £10 for each day inside the clean air zone. Five days a week, that is about £2,600 a year. We compare it with the cost of a compliant van and arrange the funding.',
+      text: 'A non-compliant van pays £10 for each day inside the clean air zone. Five days a week, that is about £2,600 a year. We compare it with the cost of a compliant van, after capital allowances.',
       cta: 'Compare van costs',
     },
   },
@@ -191,7 +191,7 @@ export default {
   related: [
     { title: 'Services for Sheffield clients', links: [
       ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       ['/uk/accounting/payroll-services/', 'Payroll services'],
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
       ['/uk/company-services/eis-seis/', 'EIS and SEIS'],

@@ -32,7 +32,7 @@ export default {
     ['Reading', '/uk/reading/'],
   ],
   place: { type: 'City', name: 'Reading', wikidata: 'Q161491', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Reading', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Reading', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------

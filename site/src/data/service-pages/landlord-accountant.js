@@ -199,7 +199,7 @@ export default {
       ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
       ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
       ['/cross-border/non-resident-uk-tax/', 'Non-resident UK tax'],
-      ['/uk/business-finance/commercial-mortgages/', 'Commercial mortgages'],
+      ['/uk/tax/inheritance-tax-planning/', 'Inheritance tax planning'],
     ] },
     { title: 'Where we work', links: [
       ['/uk/london/', 'Accountants in London'],

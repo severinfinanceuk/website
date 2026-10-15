@@ -23,7 +23,7 @@ export default {
     'LeedsBID levy', 'accountants West Yorkshire',
   ],
   title: 'Accountants in Leeds | Severin Finance',
-  description: 'Accountants in Leeds for company accounts, self assessment, VAT, payroll and business finance across West Yorkshire. Book a free consultation.',
+  description: 'Accountants in Leeds for company accounts, self assessment, VAT, payroll and bookkeeping across West Yorkshire. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -31,14 +31,14 @@ export default {
     ['Leeds', '/uk/leeds/'],
   ],
   place: { type: 'City', name: 'Leeds', wikidata: 'Q39121', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Leeds', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Leeds', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Leeds · West Yorkshire',
     h1: 'Accountants in Leeds',
-    answer: 'Our accountants in Leeds look after company accounts, tax returns, VAT, payroll and business finance for fixed fees. We include the local costs in your figures: city centre premises with a rateable value of £60,000 or more pay the LeedsBID levy, set at 1.94% of rateable value for 2026-27.',
+    answer: 'Our accountants in Leeds look after company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We include the local costs in your figures: city centre premises with a rateable value of £60,000 or more pay the LeedsBID levy, set at 1.94% of rateable value for 2026-27.',
     image: hero,
     imageAlt: 'Leeds Town Hall clock tower at sunset with the city centre behind it',
     chip: 'West Yorkshire',
@@ -103,7 +103,7 @@ export default {
       { title: 'VAT returns', text: 'VAT registration, scheme choice and quarterly Making Tax Digital returns for city centre traders.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and pensions for shops, bars and offices, set up for the April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
       { title: 'EIS and SEIS', text: 'Advance assurance and compliance statements so investors in your Leeds start-up can claim their tax relief.', href: '/uk/company-services/eis-seis/' },
-      { title: 'Virtual finance director', text: 'Board packs, forecasts and funding support for growing firms that are not ready for a full-time finance director.', href: '/uk/accounting/virtual-finance-director/' },
+      { title: 'Virtual finance director', text: 'Board packs, forecasts and cash flow planning for growing firms that are not ready for a full-time finance director.', href: '/uk/accounting/virtual-finance-director/' },
     ],
   },
 
@@ -182,7 +182,7 @@ export default {
     { q: 'What is the West Yorkshire Investment Zone?', a: 'It is a government-backed zone focused on HealthTech, with sites in Bradford, Kirklees and the Innovation Arc in Leeds. West Yorkshire has no tax sites, so there is no rates or National Insurance relief. Over 7,000 jobs are expected, and the funding goes to sites, research and skills.' },
     { q: 'Do I need an accountant based in Leeds?', a: 'Not necessarily. UK tax rules are the same in Leeds as across England, and we work online. A good accountant should still know the local costs, such as the LeedsBID levy, and which West Yorkshire schemes apply to you.' },
     { q: 'Why did my Leeds business rates bill change?', a: 'A new rating list took effect on 1 April 2026, with new multipliers of 43.2p for smaller properties and 48.0p standard, and lower rates for retail, hospitality and leisure. Leeds City Council sends the bill. Check your new rateable value, because small business rate relief depends on it.' },
-    { q: 'Can you help my health tech start-up raise investment?', a: 'Yes. We apply to HMRC for SEIS or EIS advance assurance, so investors know they should get tax relief, and we file the compliance statements once the shares are issued. We also prepare the forecasts that investors and lenders ask for.' },
+    { q: 'Can you help my health tech start-up with SEIS or EIS?', a: 'Yes. We apply to HMRC for SEIS or EIS advance assurance, so investors know they should get tax relief, and we file the compliance statements once the shares are issued. We also prepare the forecasts and accounts that investors ask for.' },
     { q: 'How much does an accountant cost in Leeds?', a: 'Our fixed fees start at £XXX a month for a small limited company and £XXX for a self assessment return. The exact figure depends on your turnover and records, and we put it in writing after a free consultation.', tbc: true },
   ],
 

@@ -103,7 +103,7 @@ export default {
       body: [
         '<p>Yes. Many buy-to-let lenders lend to companies, especially SPVs whose only business is letting property. Expect the following, though terms vary by lender and change often:</p>',
         '<ul><li>the directors, and often the shareholders, give a personal guarantee for the loan</li><li>fewer products to choose from than for personal buy-to-let, with rates and fees that can be higher</li><li>the lender tests whether the rent covers the interest by a set margin, using the company\'s figures rather than your personal tax band</li><li>a new valuation and legal work for each purchase or transfer</li></ul>',
-        '<p>Our guide to <a href="/resources/personal-guarantees-explained/">personal guarantees</a> explains what you are signing.</p>',
+        '<p>A personal guarantee puts your own assets at risk if the company cannot pay, so take independent legal advice before you sign one. Lenders will also want to see the company\'s accounts, so keep the books up to date from the first purchase.</p>',
       ],
     },
     {

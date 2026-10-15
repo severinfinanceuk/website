@@ -6,17 +6,17 @@
 // Scope: business premises and commercial investment. Residential buy-to-let is in buy-to-let-limited-company.js.
 export default {
   url: '/resources/buying-property-limited-company/',
-  section: 'business-finance',
+  section: 'accounting',
   title: 'Buying Property Through a Limited Company | Severin Finance',
   description: 'Buying premises or commercial property through a company: SDLT at 0%, 2% and 5%, capital allowances on fixtures and holding companies. Free consultation.',
   h1: 'Buying commercial property through a limited company',
   crumb: 'Buying property via a company',
-  summary: 'Owner-occupied or investment, deposits, stamp duty, capital allowances and which company should own it.',
+  summary: 'Owner-occupied or investment, funding the company, stamp duty, capital allowances and which company should own it.',
   topic: 'Buying business premises and commercial property through a limited company',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   service: {
-    href: '/uk/business-finance/commercial-mortgages/', label: 'Our commercial mortgage service',
-    boxTitle: 'Buying your premises?', text: 'We arrange commercial mortgages with lenders and our accountants advise which company should own the property.',
+    href: '/uk/accounting/limited-company-accountant/', label: 'Our limited company accountants',
+    boxTitle: 'Buying your premises?', text: 'We advise which company should own the property, check the tax before you exchange, and keep the company\'s books and returns.',
   },
 
   hero: {
@@ -35,22 +35,28 @@ export default {
     {
       id: 'can-a-company-buy', h2: 'Can a limited company buy commercial property?', toc: 'Can a company buy?',
       body: [
-        '<p>Yes. A trading company can buy the shop, office, surgery or unit it works from, and a company can also buy commercial property to let to other businesses. We <a href="/uk/business-finance/commercial-mortgages/">arrange commercial mortgages</a> with lenders for both, and our accountants advise which company should own the property before you exchange contracts.</p>',
+        '<p>Yes. A trading company can buy the shop, office, surgery or unit it works from, and a company can also buy commercial property to let to other businesses. Our <a href="/uk/accounting/limited-company-accountant/">limited company accountants</a> advise which company should own the property before you exchange contracts, and check the stamp duty, VAT and capital allowances.</p>',
         { caption: 'Owner-occupied and investment purchases compared', head: ['Point', 'Owner-occupied', 'Investment'], rows: [
           ['Who uses the property', 'Your own business', 'Business tenants paying rent'],
-          ['What lenders mainly assess', 'Your trading profits and accounts', 'The rent, lease length and tenant'],
+          ['Tax on income', 'No rent coming in; the company saves the rent it would pay a landlord', 'Corporation tax on the rent, less interest, running costs and allowances'],
           ['Main benefit', 'No rent to a landlord, control of your premises', 'Rental income and capital growth'],
           ['Main risk', 'Business and property tied together', 'Empty periods between tenants'],
-        ], after: 'General points. Each lender sets its own criteria.' },
+        ], after: 'General points only.' },
         '<p>Buying a home or flats to let is different: stamp duty surcharges and other rules apply. See our guide to <a href="/resources/buy-to-let-limited-company/">buy-to-let through a limited company</a>.</p>',
       ],
     },
     {
-      id: 'deposit-and-finance', h2: 'How much deposit do you need to buy premises through a company?', toc: 'Deposit and finance',
+      id: 'funding-the-company', h2: 'How can you put money into the company to buy the property?', toc: 'Funding the company',
       body: [
-        '<p>Usually more than for a home loan, but the exact figure depends on the lender, the property and your business. Lenders set their own limits and do not publish one standard figure, so we do not quote one here. What usually changes the deposit:</p>',
-        '<ul><li><strong>Owner-occupied or investment:</strong> owner-occupied loans depend on your trading profits; investment loans on the rent and the tenant.</li><li><strong>Trading history:</strong> two or more years of filed accounts give a lender more to assess than projections alone.</li><li><strong>Property type:</strong> specialist buildings, such as a pub or a care home, can be harder to finance than an office or a unit.</li><li><strong>Other security:</strong> a charge over another property can sometimes replace part of the cash deposit.</li></ul>',
-        '<p>Lenders usually ask the directors for personal guarantees when lending to a company. Budget for stamp duty, valuation, legal fees and any VAT on top of the deposit. Our guide to <a href="/resources/commercial-mortgage-deposit/">commercial mortgage deposits</a> goes into more detail. Finance is subject to status and lender approval, and your property may be repossessed if you do not keep up repayments.</p>',
+        '<p>The tax effect depends on where the money comes from. Most purchases use a mix of the company\'s own cash, money you put in, and sometimes bank borrowing.</p>',
+        { caption: 'Ways to fund a company property purchase: the tax points', head: ['Source', 'How it works', 'Tax points'], rows: [
+          ['Retained profits', 'The company uses cash it has built up', 'Already taxed at 19% to 25%; no further tax to spend it on property'],
+          ['Director\'s loan to the company', 'You lend money; it shows as a credit on your director\'s loan account', 'The company can repay it with no tax. Any interest is deductible for the company and taxable on you'],
+          ['New shares', 'You invest in return for shares', 'No tax on the way in, but harder to take back out than a loan'],
+          ['Bank borrowing', 'A loan secured on the property', 'Interest is deductible for the company; capital repayments are not'],
+        ], after: 'General tax points only. The right mix depends on your cash, your plans and the company\'s profits.' },
+        '<p>Many owners lend money to the company rather than buying more shares, because a loan can be repaid later without tax. If the company pays you interest on that loan, it usually deducts 20% income tax first and reports it to HMRC on form CT61 each quarter. You then declare the interest on your tax return.</p>',
+        '<p>Budget for stamp duty, valuation, legal fees and any VAT on top of the price. These costs are added to the cost of the property for capital gains, not deducted from profits each year. If a bank is involved, it will usually ask for recent filed accounts and current management accounts, which we can prepare for you.</p>',
       ],
     },
     {
@@ -98,8 +104,8 @@ export default {
     {
       id: 'steps', h2: 'What are the steps to buy premises through your company?', toc: 'The steps',
       body: [
-        '<ol><li>Decide which company will own the property, and form it first if it is new. The lender and solicitor need the buyer\'s name.</li><li>Check your deposit and what lenders are likely to need, using your latest accounts and current management accounts.</li><li>Make an offer, then instruct a solicitor and raise VAT, fixtures and lease questions in pre-contract enquiries.</li><li>Apply for the mortgage. The lender values the property and reviews the business.</li><li>Exchange and complete. File the SDLT return and pay within 14 days.</li><li>Record the fixtures value and claim capital allowances in the company tax return.</li></ol>',
-        '<p>If you have to complete faster than a commercial lender can work, for example at auction, a <a href="/uk/business-finance/bridging-loans/">bridging loan</a> can fill the gap until the term loan is in place.</p>',
+        '<ol><li>Decide which company will own the property, and form it first if it is new. The lender and solicitor need the buyer\'s name.</li><li>Plan how the company will pay: its own cash, a director\'s loan, new shares or borrowing, and the tax effect of each.</li><li>Make an offer, then instruct a solicitor and raise VAT, fixtures and lease questions in pre-contract enquiries.</li><li>If the company is borrowing, the lender values the property and reviews the company\'s accounts, so keep the books up to date.</li><li>Exchange and complete. File the SDLT return and pay within 14 days.</li><li>Record the fixtures value and claim capital allowances in the company tax return.</li></ol>',
+        '<p>After completion, record the property in the company\'s fixed asset register at cost, including stamp duty and legal fees. If a property company lets to your trading company, put a written lease in place at a market rent, so both sets of accounts and tax returns reflect it properly.</p>',
       ],
     },
   ],
@@ -108,7 +114,7 @@ export default {
     { q: 'Is there a stamp duty surcharge when a company buys commercial property?', a: 'No. The 5% higher rates and the 17% company rate apply only to residential property. A company buying a shop, office or warehouse in England or Northern Ireland pays the non-residential rates: 0%, 2% and 5%.' },
     { q: 'Should I buy my business premises personally or through my company?', a: 'It depends on your plans. Company ownership means the purchase is funded from profits taxed at 19% to 25%. Personal ownership means you pay income tax on rent from your company, and it affects Business Asset Disposal Relief when you sell. We compare both on your figures.' },
     { q: 'Can I claim capital allowances when my company buys a building?', a: 'Not on the land or the cost of the building itself, but you can on fixtures such as heating, lighting and electrics. For a used building, agree the fixtures value with the seller, usually by a section 198 election within 2 years.' },
-    { q: 'Do I need a personal guarantee for a company commercial mortgage?', a: 'Usually, yes. Lenders lending to a company, especially a new or small one, normally ask the directors to guarantee the loan personally. Read the guarantee carefully and take independent legal advice before you sign.' },
+    { q: 'Can I lend my company the money to buy the property?', a: 'Yes. Many owners lend money to the company rather than buying more shares. The loan shows on your director\'s loan account and the company can repay it later with no tax. If it pays you interest, that is deductible for the company and taxable on you.' },
     { q: 'Can my property company let to my trading company?', a: 'Yes, but the structure matters. If the two companies are sisters owned directly by you, the property company can be taxed at 25% on all its profit. Under a holding company, letting to a group trading company normally keeps the 19% small profits rate available.' },
   ],
 
@@ -124,7 +130,7 @@ export default {
 
   related: [
     '/resources/buy-to-let-limited-company/',
-    '/resources/commercial-mortgage-deposit/',
+    '/resources/business-asset-disposal-relief/',
     '/resources/stamp-duty-commercial-property/',
     '/resources/capital-allowances-explained/',
   ],

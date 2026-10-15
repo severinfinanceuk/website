@@ -34,14 +34,14 @@ export default {
     ['Glasgow', '/uk/glasgow/'],
   ],
   place: { type: 'City', name: 'Glasgow', wikidata: 'Q4093', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Glasgow', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Glasgow', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'VAT or bookkeeping',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Glasgow · Scotland',
     h1: 'Accountants in Glasgow',
-    answer: 'Our accountants in Glasgow handle company accounts, Scottish tax returns, VAT, payroll and business finance for fixed fees. We plan for local changes: from 25 January 2027 Glasgow adds a 5% visitor levy to every night of a stay, and Investment Zone tax sites now run at AMIDS and Glasgow Airport.',
+    answer: 'Our accountants in Glasgow handle company accounts, Scottish tax returns, VAT, payroll and bookkeeping for fixed fees. We plan for local changes: from 25 January 2027 Glasgow adds a 5% visitor levy to every night of a stay, and Investment Zone tax sites now run at AMIDS and Glasgow Airport.',
     image: hero,
     imageAlt: 'The SEC Armadillo, the Hydro arena and the Finnieston Crane reflected in the River Clyde in Glasgow',
     chip: 'Scotland',
@@ -89,7 +89,7 @@ export default {
       {
         img: university, alt: 'The University of Glasgow main building and tower behind pink rhododendrons',
         tag: 'Innovation and manufacturing', title: 'Founders, spin-outs and manufacturers',
-        text: 'SEIS and EIS, R&D records and company set-up for founders in the Glasgow Riverside Innovation District, and capital allowance and funding work for manufacturers looking at the AMIDS Investment Zone site.',
+        text: 'SEIS and EIS, R&D records and company set-up for founders in the Glasgow Riverside Innovation District, and capital allowance and tax relief work for manufacturers looking at the AMIDS Investment Zone site.',
         link: ['/uk/company-services/eis-seis/', 'EIS and SEIS'],
       },
     ],
@@ -105,7 +105,7 @@ export default {
       { title: 'Self assessment', text: 'Tax returns for Scottish taxpayers. The 21% intermediate rate starts at £29,527 and the 42% higher rate at £43,663, so every pound of income counts.', href: '/uk/tax/self-assessment-accountant/' },
       { title: 'Bookkeeping', text: 'Monthly bookkeeping for Buchanan Street and Merchant City traders, with visitor levy and VAT kept apart in the ledger once the levy starts.', href: '/uk/accounting/bookkeeping-services/' },
       { title: 'Payroll', text: 'Monthly payroll, RTI and pensions for Glasgow shops, bars and event teams, with Scottish income tax applied to each Scottish employee.', href: '/uk/accounting/payroll-services/' },
-      { title: 'Asset finance', text: 'Funding for machinery, vehicles and equipment for Glasgow manufacturers and trades, including vans that meet the Low Emission Zone standard.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Corporation tax', text: 'Corporation tax returns and capital allowances on machinery, vehicles and equipment for Glasgow manufacturers and trades, including Low Emission Zone compliant vans.', href: '/uk/tax/corporation-tax-accountant/' },
       { title: 'Landlord accounts', text: 'Rental accounts for tenement flats and student lets, Section 24 planning and LBTT on buy-to-let purchases.', href: '/uk/accounting/landlord-accountant/' },
     ],
   },
@@ -197,7 +197,7 @@ export default {
       ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
       ['/uk/accounting/payroll-services/', 'Payroll services'],
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
     ] },
     { title: 'Nearby cities', links: [
       ['/uk/edinburgh/', 'Accountants in Edinburgh'],

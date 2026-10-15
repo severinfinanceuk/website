@@ -32,14 +32,14 @@ export default {
     ['Oxford', '/uk/oxford/'],
   ],
   place: { type: 'City', name: 'Oxford', wikidata: 'Q34217', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Oxford', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Oxford', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Oxford · Oxfordshire',
     h1: 'Accountants in Oxford',
-    answer: 'Our accountants in Oxford help spin-outs, landlords, shops and trades with tax, accounts, payroll and funding for fixed fees. Local rules add costs: a new citywide HMO licensing scheme started on 25 June 2026, and cars without a permit crossing the traffic filters since 28 September 2026 face a £70 fine.',
+    answer: 'Our accountants in Oxford help spin-outs, landlords, shops and trades with tax, accounts, payroll and bookkeeping for fixed fees. Local rules add costs: a new citywide HMO licensing scheme started on 25 June 2026, and cars without a permit crossing the traffic filters since 28 September 2026 face a £70 fine.',
     image: hero,
     imageAlt: 'The Radcliffe Camera and surrounding college buildings in central Oxford',
     chip: 'Oxford City Council',
@@ -87,8 +87,8 @@ export default {
       {
         img: street, alt: 'Quiet Oxford street of stone buildings with parked cars',
         tag: 'Trades', title: 'Trades, drivers and delivery firms',
-        text: 'Accounts and vehicle funding for people who drive into Oxford for work. A zero-emission van pays no ZEZ charge, and we can help you finance the switch.',
-        link: ['/uk/business-finance/asset-finance/', 'Asset finance'],
+        text: 'Accounts, vehicle costs and capital allowances for people who drive into Oxford for work. A zero-emission van pays no ZEZ charge, and we work out the tax relief on making the switch.',
+        link: ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
       },
     ],
   },
@@ -104,7 +104,7 @@ export default {
       { title: 'EIS and SEIS', text: 'Advance assurance and compliance statements for Oxford spin-outs raising money from investors.', href: '/uk/company-services/eis-seis/' },
       { title: 'Limited company accounts', text: 'Annual accounts, corporation tax and R&D claims for Oxford start-ups and owner-managed firms.', href: '/uk/accounting/limited-company-accountant/' },
       { title: 'Capital gains tax', text: 'Gains on the sale of Oxford rental homes, reported and paid within the 60-day deadline.', href: '/uk/tax/capital-gains-tax-accountant/' },
-      { title: 'Asset finance', text: 'Funding for zero-emission vans and equipment for trades working in central Oxford.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Bookkeeping', text: 'Monthly bookkeeping for trades working in central Oxford, with ZEZ charges, vehicle costs and zero-emission van allowances recorded correctly.', href: '/uk/accounting/bookkeeping-services/' },
     ],
   },
 
@@ -151,7 +151,7 @@ export default {
     h2: 'How we work with Oxford clients',
     steps: [
       { title: 'Free consultation', text: 'A call or video meeting about your lets, your company or your tax return. You hear what we would do and when.' },
-      { title: 'Fixed fee in writing', text: 'We send the scope and the fee before work starts. Extra properties or a funding round are priced upfront too.' },
+      { title: 'Fixed fee in writing', text: 'We send the scope and the fee before work starts. Extra properties or an investment round are priced upfront too.' },
       { title: 'We do the work', text: 'You upload records or connect Xero or QuickBooks. We prepare and file, and track your licence, tax and Companies House dates.' },
     ],
     meet: {
@@ -181,7 +181,7 @@ export default {
     { q: 'Do the Oxford traffic filters apply to my van?', a: 'No. Since 28 September 2026 the six traffic filters stop cars without a permit at set times. Vans and HGVs are exempt. Cars that pass without a permit get a £70 fine, or £35 if paid within 21 days, with a warning for a first offence in the first six months.' },
     { q: 'Can my business claim ZEZ charges as an expense?', a: 'Usually yes, when you pay the charge for a business journey in a business vehicle. Penalty charges and traffic filter fines are not allowable. Charges on trips between home and your normal workplace are commuting costs, so they do not count either.' },
     { q: 'Who sends the business rates bill in Oxford?', a: 'Oxford City Council bills premises within the city. Many research sites sit outside it: Harwell, for example, is in the Vale of White Horse, so that district council sends the bill. The 2026-27 multipliers are the same across England.' },
-    { q: 'Can you help an Oxford spin-out raise investment?', a: 'Yes. We set up the company, apply for SEIS or EIS advance assurance and keep the records investors check. From 6 April 2026 a company can raise up to £10m a year under EIS, or £20m if it is knowledge-intensive. We can also set up EMI share options for early staff.' },
+    { q: 'Can you help an Oxford spin-out with SEIS and EIS?', a: 'Yes. We set up the company, apply for SEIS or EIS advance assurance and keep the records investors check. From 6 April 2026 a company can raise up to £10m a year under EIS, or £20m if it is knowledge-intensive. We can also set up EMI share options for early staff.' },
     { q: 'How much does an accountant cost in Oxford?', a: 'Our fixed fees start at £XXX a month for a small limited company and £XXX for a personal tax return. The exact fee depends on your turnover and records, and you get it in writing after a free consultation.', tbc: true },
   ],
 
@@ -192,7 +192,7 @@ export default {
       ['/uk/tax/self-assessment-accountant/', 'Self assessment accountant'],
       ['/uk/company-services/eis-seis/', 'EIS and SEIS'],
       ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
     ] },
     { title: 'Nearby locations', links: [
       ['/uk/reading/', 'Accountants in Reading'],

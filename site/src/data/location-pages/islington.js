@@ -32,7 +32,7 @@ export default {
     ['Islington', '/uk/london/islington/'],
   ],
   place: { type: 'AdministrativeArea', name: 'London Borough of Islington', wikidata: 'Q205817', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Islington', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Islington', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------

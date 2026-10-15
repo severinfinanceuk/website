@@ -32,7 +32,7 @@ export default {
     ['Shoreditch', '/uk/london/shoreditch/'],
   ],
   place: { type: 'Place', name: 'Shoreditch', wikidata: 'Q1027127', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Shoreditch', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Shoreditch', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
@@ -100,7 +100,7 @@ export default {
     intro: 'We work online, so founders, studios and venues get the same fixed-fee service on either side of the Hackney and Tower Hamlets line. Each card goes to the full service page.',
     items: [
       { title: 'Company formation', text: 'New companies set up with the right share structure from day one, ready for angel and seed investors.', href: '/uk/company-services/company-formation/' },
-      { title: 'Virtual finance director', text: 'Board packs, cash runway and fundraising models for funded Shoreditch start-ups, without a full-time hire.', href: '/uk/accounting/virtual-finance-director/' },
+      { title: 'Virtual finance director', text: 'Board packs, cash runway forecasts and investor reporting for funded Shoreditch start-ups, without a full-time hire.', href: '/uk/accounting/virtual-finance-director/' },
       { title: 'Limited company accounts', text: 'Annual accounts, corporation tax and Companies House filings for studios and agencies.', href: '/uk/accounting/limited-company-accountant/' },
       { title: 'VAT returns', text: 'Registration, scheme choice and quarterly returns for bars, restaurants and digital businesses selling online.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll for bar and kitchen teams and for start-ups with share options, set up for April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
@@ -150,7 +150,7 @@ export default {
     eyebrow: 'How we work',
     h2: 'How we work with Shoreditch clients',
     steps: [
-      { title: 'Free consultation', text: 'A call or video meeting about your company, your funding plans and your deadlines. No charge and no obligation.' },
+      { title: 'Free consultation', text: 'A call or video meeting about your company, your investor plans and your deadlines. No charge and no obligation.' },
       { title: 'Fixed fee in writing', text: 'You get the scope and the exact fee before we start, so it fits your runway or your venue budget.' },
       { title: 'We do the work', text: 'Connect Xero or QuickBooks and upload records online. We prepare, file and keep investors and HMRC up to date.' },
     ],

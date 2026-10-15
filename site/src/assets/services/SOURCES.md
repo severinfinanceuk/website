@@ -18,19 +18,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | foreign-income-expat-tax-return.jpg | 1000 × 625 (cropped to the 16:10 card shape) | mana5280 | https://images.unsplash.com/photo-1581656702382-9ae90e68e7b7 |
 | tax-adviser-consultation-london.jpg | 1400 × 788 | Vitaly Gariev | https://images.unsplash.com/photo-1714974528703-e5ad41abc259 |
 
-## asset-finance/ (page: /uk/business-finance/asset-finance/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| asset-finance-machinery-operator.jpg | 1800 × 1200 | Sam Moghadam | https://images.unsplash.com/photo-1598299803204-b73796f43289 |
-| asset-finance-van-driver.jpg | 1000 × 625 | Polina Kuzovkova | https://images.unsplash.com/photo-1762095996527-126e49ef9d72 |
-| asset-finance-excavator.jpg | 1000 × 625 | John Esperancilla | https://images.unsplash.com/photo-1628645419184-26a1f2757340 |
-| asset-finance-welder-workshop.jpg | 1000 × 625 | Rizky Nuriman | https://images.unsplash.com/photo-1683470157197-ee1eb03d67cc |
-| asset-finance-commercial-kitchen.jpg | 1000 × 625 | Louis Hansel | https://images.unsplash.com/photo-1577219491135-ce391730fb2c |
-| asset-finance-tractor-field.jpg | 1000 × 625 | Ethereal Optics | https://images.unsplash.com/photo-1606739211185-2c846d734a6d |
-| asset-finance-dental-chair.jpg | 1000 × 625 | Atikah Akhtar | https://images.unsplash.com/photo-1598256989800-fe5f95da9787 |
-| asset-finance-reviewing-documents.jpg | 1400 × 788 | Olena Kholina | https://images.unsplash.com/photo-1775163024488-e88e4a71179f |
-
 ## bookkeeping/ (page: /uk/accounting/bookkeeping-services/)
 
 | File | Size | Photographer | Source |
@@ -43,32 +30,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | vat-bookkeeping-bakery-owner.jpg | 1000 × 625 | Ekaterina Tyapkina | https://images.unsplash.com/photo-1579005007697-75b2fe2c88e7 |
 | catch-up-bookkeeping-reviewing-documents.jpg | 1000 × 625 | Cuong Duyen Ceramics | https://images.unsplash.com/photo-1752718066137-3f118f10dcc1 |
 | bookkeeper-client-review-cafe.jpg | 1400 × 788 | LinkedIn Sales Solutions | https://images.unsplash.com/photo-1616587224026-668840f26916 |
-
-## bridging-loans/ (page: /uk/business-finance/bridging-loans/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| bridging-loans-london-terraced-houses.jpg | 1800 × 1200 | Anthony Delanoix | https://images.unsplash.com/photo-1442181530688-d812138618b3 |
-| auction-bridging-loan-sold-sign.jpg | 1000 × 625 | Richard Bell | https://images.unsplash.com/photo-1725379448228-f87690661bfc |
-| chain-break-bridging-loan-couple-moving.jpg | 1000 × 625 | Vitaly Gariev | https://images.unsplash.com/photo-1758523671413-cd178a883d6a |
-| refurbishment-bridging-loan-derelict-room.jpg | 1000 × 625 | Nolan Issac | https://images.unsplash.com/photo-1444419988131-046ed4e5ffd6 |
-| landlord-bridging-loan-house-keys.jpg | 1000 × 625 | Jakub Żerdzicki | https://images.unsplash.com/photo-1722487631997-cf1e0f92c2c4 |
-| business-bridging-loan-directors.jpg | 1000 × 625 | Muhammad Faiz Zulkeflee | https://images.unsplash.com/photo-1577415124269-fc1140a69e91 |
-| development-exit-bridging-new-homes.jpg | 1000 × 625 | Modunite Ltd | https://images.unsplash.com/photo-1710883727427-59d1ccc368fa |
-| bridging-loan-application-meeting.jpg | 1400 × 788 | Vitaly Gariev | https://images.unsplash.com/photo-1714974528718-b3b52f91c334 |
-
-## business-loans/ (page: /uk/business-finance/business-loans/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| business-loans-garden-centre-owner.jpg | 1800 × 1200 | Vitaly Gariev | https://images.unsplash.com/photo-1758524056233-9e2dfb03a473 |
-| business-loans-start-up-founders.jpg | 1000 × 625 | Chase Chappell | https://images.unsplash.com/photo-1704652070521-25391cdbbe79 |
-| business-loans-retail-counter.jpg | 1000 × 625 | Omar Lopez | https://images.unsplash.com/photo-1687293233211-6b0cc3beba70 |
-| business-loans-restaurant-chef.jpg | 1000 × 625 | Johnathan Macedo | https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf |
-| business-loans-tradesperson-power-tool.jpg | 1000 × 625 | Jeriden Villegas | https://images.unsplash.com/photo-1589939705384-5185137a7f0f |
-| business-loans-dental-clinic.jpg | 1000 × 625 | Jonathan Borba | https://images.unsplash.com/photo-1588776814546-daab30f310ce |
-| business-loans-growing-team.jpg | 1000 × 625 | Jud Mackrill | https://images.unsplash.com/photo-1572021335469-31706a17aaef |
-| business-loans-adviser-meeting.jpg | 1400 × 788 | Amy Hirschi | https://images.unsplash.com/photo-1551836022-aadb801c60ae |
 
 ## business-valuation/ (page: /uk/company-services/business-valuation/)
 
@@ -95,19 +56,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | business-owner-sale-badr.jpg | 1000 × 625 | Ali Mkumbwa | https://images.unsplash.com/photo-1687422808191-93810cd07ab0 |
 | non-resident-uk-property-cgt.jpg | 1000 × 625 | Bruno Martins | https://images.unsplash.com/photo-1510265236892-329bfd7de7a1 |
 | cgt-adviser-consultation.jpg | 1400 × 788 | Vitaly Gariev | https://images.unsplash.com/photo-1714974528232-f62051870736 |
-
-## commercial-mortgages/ (page: /uk/business-finance/commercial-mortgages/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| commercial-mortgage-bakery-owner-premises.jpg | 1800 × 1200 | Yasin Onus | https://images.unsplash.com/photo-1772758631947-b430b61551e3 |
-| owner-occupied-commercial-mortgage-shop-owner.jpg | 1000 × 625 | Vitaly Gariev | https://images.unsplash.com/photo-1753351056544-7446ea89311c |
-| commercial-property-investment-london-offices.jpg | 1000 × 625 | Ed Robertson | https://images.unsplash.com/photo-1514557718210-26e452f8fab0 |
-| semi-commercial-mortgage-shop-with-flat-above.jpg | 1000 × 625 | Krisztina Papp | https://images.unsplash.com/photo-1559076312-8c598e17844b |
-| dental-practice-commercial-mortgage.jpg | 1000 × 625 | Harold Hisona | https://images.unsplash.com/photo-1777331903190-341a3dd0441b |
-| warehouse-industrial-commercial-mortgage.jpg | 1000 × 625 | Centre for Ageing Better | https://images.unsplash.com/photo-1664382953403-fc1ac77073a0 |
-| commercial-remortgage-refinance-signing.jpg | 1000 × 625 | Amina Atar | https://images.unsplash.com/photo-1681505531034-8d67054e07f6 |
-| commercial-mortgage-adviser-meeting.jpg | 1400 × 788 | Vitaly Gariev | https://images.unsplash.com/photo-1758518730037-a16581a040e8 |
 
 ## company-formation/ (page: /uk/company-services/company-formation/)
 
@@ -161,19 +109,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | corporation-tax-accountant-contractor-laptop.jpg | 1000 × 625 | Luke Southern | https://images.unsplash.com/photo-1602016736566-7ed6a58894bd |
 | corporation-tax-accountant-review-meeting.jpg | 1400 × 788 | Amy Hirschi | https://images.unsplash.com/photo-1551836022-d5d88e9218df |
 
-## development-finance/ (page: /uk/business-finance/development-finance/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| development-finance-construction-site-workers.jpg | 1800 × 1200 | Wasif Ali | https://images.unsplash.com/photo-1768926968986-a88590ce5025 |
-| ground-up-development-finance-site.jpg | 1000 × 625 | Glenov Brankovic | https://images.unsplash.com/photo-1694521787162-5373b598945c |
-| heavy-refurbishment-finance-structural-works.jpg | 1000 × 625 | Stefan Lehner | https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90 |
-| light-refurbishment-finance-decorator.jpg | 1000 × 625 | Callum Hill | https://images.unsplash.com/photo-1652829069834-2c05031199c5 |
-| conversion-development-finance-warehouse.jpg | 1000 × 625 | Nathan Baessi | https://images.unsplash.com/photo-1786831769641-f0f196528cde |
-| first-time-developer-plans-development-finance.jpg | 1000 × 625 | Pedro Miranda | https://images.unsplash.com/photo-1608303588026-884930af2559 |
-| housing-scheme-development-finance-new-homes.jpg | 1000 × 625 | James Feaver | https://images.unsplash.com/photo-1621983209348-7b5a63f23866 |
-| monitoring-surveyor-site-visit-development-finance.jpg | 1400 × 788 | SMKN 1 Gantar | https://images.unsplash.com/photo-1760963301666-582b92218a19 |
-
 ## eis-seis/ (page: /uk/company-services/eis-seis/)
 
 | File | Size | Photographer | Source |
@@ -212,19 +147,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | pension-savings-inheritance-tax.jpg | 1000 × 625 | Vitaly Gariev | https://images.unsplash.com/photo-1758686254550-c5d8f4de1b3a |
 | non-dom-long-term-resident-iht.jpg | 1000 × 625 | Raymond Okoro | https://images.unsplash.com/photo-1742646802658-532d06487dcd |
 | inheritance-tax-adviser-meeting.jpg | 1400 × 788 | Md Ishak Rahman | https://images.unsplash.com/photo-1780733066519-df99b3123d30 |
-
-## invoice-finance/ (page: /uk/business-finance/invoice-finance/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| invoice-finance-wholesale-boxes.jpg | 1800 × 1200 | Remy Gieling | https://images.unsplash.com/photo-1589792923962-537704632910 |
-| invoice-finance-recruitment-interview.jpg | 1000 × 625 | Christina @ wocintechchat.com M | https://images.unsplash.com/photo-1573497491208-6b1acb260507 |
-| invoice-finance-warehouse-forklift.jpg | 1000 × 625 | Kseniia Ilinykh | https://images.unsplash.com/photo-1740914994657-f1cdffdc418e |
-| invoice-finance-haulage-truck.jpg | 1000 × 625 | Mitchell Luo | https://images.unsplash.com/photo-1574757974346-45bae947d89a |
-| invoice-finance-creative-agency.jpg | 1000 × 625 | S O C I A L . C U T | https://images.unsplash.com/photo-1582005450386-52b25f82d9bb |
-| invoice-finance-construction-site.jpg | 1000 × 625 | Etienne Girardet | https://images.unsplash.com/photo-1504307651254-35680f356dfd |
-| invoice-finance-shipping-containers-port.jpg | 1000 × 625 | CHUTTERSNAP | https://images.unsplash.com/photo-1494412519320-aa613dfb7738 |
-| invoice-finance-writing-invoice.jpg | 1400 × 788 | Romain Dancre | https://images.unsplash.com/photo-1603796846097-bee99e4a601f |
 
 ## landlords/ (page: /uk/accounting/landlord-accountant/)
 
@@ -303,19 +225,6 @@ File names describe the photo and include the page keyword, so they also work fo
 | business-sale-exit-handshake-deal.jpg | 1000 × 625 | Mina Rad | https://images.unsplash.com/photo-1686771416282-3888ddaf249b |
 | exit-planning-business-owner-notebook-laptop.jpg | 1000 × 625 | Vitaly Gariev | https://images.unsplash.com/photo-1758519291945-889a9c13b6a5 |
 | succession-planning-advisers-reviewing-documents.jpg | 1400 × 788 | Sebastian Herrmann | https://images.unsplash.com/photo-1551135049-8a33b5883817 |
-
-## tax-bill-funding/ (page: /uk/business-finance/tax-bill-funding/)
-
-| File | Size | Photographer | Source |
-|---|---|---|---|
-| tax-bill-funding-director-documents.jpg | 1800 × 1200 | Vitaly Gariev | https://images.unsplash.com/photo-1758876201660-103984519266 |
-| tax-bill-funding-florist-shop.jpg | 1000 × 625 | Xin Qu | https://images.unsplash.com/photo-1687831958087-30a2130c968f |
-| tax-bill-funding-corporation-tax-paperwork.jpg | 1000 × 625 | Dimitri Karastelev | https://images.unsplash.com/photo-1635859890085-ec8cb5466806 |
-| tax-bill-funding-construction-workers.jpg | 1000 × 625 | Arron Choi | https://images.unsplash.com/photo-1558227691-41ea78d1f631 |
-| tax-bill-funding-coffee-shop.jpg | 1000 × 625 | Brooke Cagle | https://images.unsplash.com/photo-1507914372368-b2b085b925a1 |
-| tax-bill-funding-director-tablet.jpg | 1000 × 625 | Brooke Cagle | https://images.unsplash.com/photo-1543269664-56d93c1b41a6 |
-| tax-bill-funding-salon-reception.jpg | 1000 × 625 | Blake Wisz | https://images.unsplash.com/photo-1556740758-90de374c12ad |
-| tax-bill-funding-agreement-handshake.jpg | 1400 × 788 | Vitaly Gariev | https://images.unsplash.com/photo-1758518729240-7162d07427b8 |
 
 ## tax-refunds/ (page: /uk/tax/tax-refunds/)
 

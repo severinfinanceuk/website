@@ -4,7 +4,7 @@
 // page converts (the form handler is still to build).
 interface Props { title?: string; button?: string; topic?: string; source?: string }
 const { title = 'Book a free consultation', button = 'Send request', topic = '', source = '' } = Astro.props;
-const topics = ['Personal tax / self assessment', 'Company accounts', 'VAT or bookkeeping', 'Business finance', 'UK tax while living abroad', 'Something else'];
+const topics = ['Personal tax / self assessment', 'Company accounts', 'VAT or bookkeeping', 'Payroll or company services', 'UK tax while living abroad', 'Something else'];
 const options = topics.includes(topic) ? topics : topic ? [topic, ...topics] : topics;
 ---
 <form class="form" action="#" method="post" aria-labelledby="form-title">

@@ -6,7 +6,7 @@
 // and the Commercial Payments Bill (introduced May 2026, not yet law).
 export default {
   url: '/resources/late-payment-interest/',
-  section: 'business-finance',
+  section: 'accounting',
   title: 'Late Payment Interest on Invoices | Severin Finance',
   description: 'Claim 11.75% statutory interest (8% plus 3.75% Bank Rate) and £40 to £100 compensation when a business customer pays late. Free consultation.',
   h1: 'How to claim late payment interest on unpaid invoices',
@@ -15,8 +15,8 @@ export default {
   topic: 'Statutory interest on late commercial payments',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   service: {
-    href: '/uk/business-finance/invoice-finance/', label: 'Our invoice finance service',
-    boxTitle: 'Slow payers hurting cash?', text: 'We check what late payers owe you and arrange invoice finance with lenders, so you are not waiting on customers to pay wages and suppliers.',
+    href: '/uk/accounting/bookkeeping-services/', label: 'Our bookkeeping service',
+    boxTitle: 'Slow payers hurting cash?', text: 'We keep your sales ledger up to date, flag overdue invoices and work out the interest and compensation each late payer owes.',
   },
 
   hero: {
@@ -35,7 +35,7 @@ export default {
     {
       id: 'can-you-charge', h2: 'Can you charge interest on a late invoice?', toc: 'Can you charge it',
       body: [
-        '<p>Yes. The Late Payment of Commercial Debts (Interest) Act 1998 gives every business supplier a right to interest and compensation when a business or public sector customer pays late, even if your terms say nothing about it. Interest helps, but it does not put cash in the bank today; that is where our <a href="/uk/business-finance/invoice-finance/">invoice finance</a> service comes in, and we cover it below.</p>',
+        '<p>Yes. The Late Payment of Commercial Debts (Interest) Act 1998 gives every business supplier a right to interest and compensation when a business or public sector customer pays late, even if your terms say nothing about it. Our <a href="/uk/accounting/bookkeeping-services/">bookkeeping team</a> can track overdue invoices in your sales ledger and work out what each late payer owes.</p>',
         '<p>The Act applies when both you and your customer are acting in the course of a business, including professions, government departments and local or public authorities. It does not apply to sales to consumers, to employment contracts, or to consumer credit agreements and mortgages. This guide is about customers who owe you money. If HMRC is charging you interest, see our guide to <a href="/resources/pay-hmrc-in-instalments/">paying HMRC in instalments</a>.</p>',
       ],
     },
@@ -100,11 +100,11 @@ export default {
       ],
     },
     {
-      id: 'invoice-finance', h2: 'When does invoice finance help with late payers?', toc: 'Invoice finance',
+      id: 'accounts-and-tax', h2: 'How do late payment interest and bad debts affect your accounts and tax?', toc: 'Accounts and tax',
       body: [
-        '<p>Invoice finance helps when the problem is waiting for cash, not getting paid at all. A provider advances most of an invoice\'s value soon after you raise it and pays you the rest, less fees, when your customer pays. Interest compensates you after the event; invoice finance keeps wages, suppliers and HMRC paid while you wait.</p>',
-        '<ul><li><strong>Factoring:</strong> the provider also runs your credit control and chases customers.</li><li><strong>Invoice discounting:</strong> you keep chasing customers yourself, usually without them knowing.</li><li><strong>Recourse:</strong> you repay the advance if a customer does not pay, so it does not remove bad debt risk unless you pay for non-recourse cover.</li></ul>',
-        '<p>Our guide to <a href="/resources/factoring-vs-invoice-discounting/">factoring vs invoice discounting</a> compares the two, and our <a href="/resources/cash-flow-forecasting/">cash flow forecasting</a> guide shows how to spot the gap early. Finance is subject to the lender\'s approval.</p>',
+        '<p>Interest and fixed compensation you collect are business income, so they are taxed with the rest of your profits. Most businesses record them when the customer pays, because until then it is uncertain whether the money will come in. Statutory interest and the fixed sum are compensation for late payment, not payment for goods or services, so you do not add VAT to them.</p>',
+        '<ul><li><strong>Aged debtors:</strong> run an aged debtors report from your sales ledger each month, so you can see who is late and by how much.</li><li><strong>Bad debts and corporation tax:</strong> a company can deduct a specific debt it has written off or provided for as unlikely to be paid. A general percentage provision is not deductible.</li><li><strong>VAT bad debt relief:</strong> if you have paid VAT on an invoice that is still unpaid 6 months after the due date, and you have written it off in your accounts, you can usually reclaim that VAT. The claim must be made within 4 years and 6 months of the later of the due date and the date of supply.</li><li><strong>Cash basis:</strong> sole traders on the cash basis pay tax only on money received, so an unpaid invoice is not taxed until it is paid.</li></ul>',
+        '<p>Simple habits cut late payment before it starts: credit checks on new customers, deposits or stage payments on large jobs, prompt invoicing and a firm reminder routine. Our <a href="/resources/cash-flow-forecasting/">cash flow forecasting</a> guide shows how to spot a gap early, and our <a href="/resources/monthly-bookkeeping-checklist/">monthly bookkeeping checklist</a> covers keeping the sales ledger up to date.</p>',
       ],
     },
     {
@@ -133,11 +133,12 @@ export default {
     ['https://www.gov.uk/government/publications/commercial-payments-bill-factsheets/commercial-payments-bill-overview', 'GOV.UK: Commercial Payments Bill overview'],
     ['https://www.smallbusinesscommissioner.gov.uk/', 'Small Business Commissioner'],
     ['https://www.gov.uk/make-court-claim-for-money', 'GOV.UK: Make a court claim for money'],
+    ['https://www.gov.uk/guidance/vat-relief-on-bad-debts-notice-70018', 'GOV.UK: VAT Notice 700/18 Relief from VAT on bad debts'],
   ],
 
   related: [
-    '/resources/factoring-vs-invoice-discounting/',
-    '/resources/invoice-finance-vs-overdraft/',
+    '/resources/monthly-bookkeeping-checklist/',
+    '/resources/management-accounts-explained/',
     '/resources/cash-flow-forecasting/',
   ],
 };

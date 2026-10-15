@@ -32,7 +32,7 @@ export default {
     ['Kensington', '/uk/london/kensington/'],
   ],
   place: { type: 'AdministrativeArea', name: 'Royal Borough of Kensington and Chelsea', wikidata: 'Q188801', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Kensington', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Kensington', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'UK tax while living abroad',
 
   // ---------- 1. Hero ----------

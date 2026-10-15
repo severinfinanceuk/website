@@ -110,7 +110,7 @@ export default {
       body: [
         '<p>Get the numbers right, then make them useful. In the first three months, a finance director typically:</p>',
         '<ol><li>reviews the books, bank reconciliations, VAT and payroll, and fixes errors</li><li>sets a month-end timetable so reports arrive within days, not weeks</li><li>agrees a short monthly pack and a handful of KPIs with you</li><li>builds a 13-week cash forecast and a 12-month budget</li><li>lists the decisions ahead (funding, hiring, pricing, a sale) and what each needs from finance</li></ol>',
-        '<p>Our guides to <a href="/resources/management-accounts-explained/">management accounts</a> and <a href="/resources/cash-flow-forecasting/">cash flow forecasting</a> cover those two reports in detail. If funding is the trigger, we can also help you prepare for <a href="/uk/business-finance/business-loans/">business loans</a> with lenders; no lender approval is guaranteed.</p>',
+        '<p>Our guides to <a href="/resources/management-accounts-explained/">management accounts</a> and <a href="/resources/cash-flow-forecasting/">cash flow forecasting</a> cover those two reports in detail. If funding is the trigger, we can prepare the forecasts and financial model a lender or investor will ask to see. We do not arrange or introduce the finance itself.</p>',
       ],
     },
   ],

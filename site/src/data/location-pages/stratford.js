@@ -20,10 +20,10 @@ export default {
   secondaryKeywords: [
     'accountant Stratford London', 'accountants Newham', 'accountants E15',
     'small business accountant Stratford', 'tax accountant Stratford', 'Newham business rates',
-    'Stratford Original BID levy', 'development finance east London',
+    'Stratford Original BID levy', 'landlord accountant Stratford',
   ],
   title: 'Accountants in Stratford | Severin Finance',
-  description: 'Accountants in Stratford, east London, for company accounts, VAT, payroll and development finance across Newham. Book a free consultation.',
+  description: 'Accountants in Stratford, east London, for company accounts, VAT, payroll and property tax across Newham. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -32,14 +32,14 @@ export default {
     ['Stratford', '/uk/london/stratford/'],
   ],
   place: { type: 'Place', name: 'Stratford', wikidata: 'Q676136', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Stratford', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Stratford', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'London · Stratford, Olympic Park, East Village',
     h1: 'Accountants in Stratford',
-    answer: 'Our accountants in Stratford handle company accounts, tax, payroll and funding for businesses billed by Newham Council, from town centre retailers to builders around the Olympic Park. Inside the Stratford Original BID area, firms with a rateable value of £12,000 or more pay a 1.5% levy on top of business rates.',
+    answer: 'Our accountants in Stratford handle company accounts, tax, payroll and bookkeeping for businesses billed by Newham Council, from town centre retailers to builders around the Olympic Park. Inside the Stratford Original BID area, firms with a rateable value of £12,000 or more pay a 1.5% levy on top of business rates.',
     image: hero,
     imageAlt: 'ArcelorMittal Orbit and London Stadium above the trees and waterways of Queen Elizabeth Olympic Park, Stratford',
     chip: 'London Borough of Newham',
@@ -75,8 +75,8 @@ export default {
       {
         img: building, alt: 'New apartment towers and a tower crane rising above trees in Stratford',
         tag: 'Construction', title: 'Builders and developers',
-        text: 'Development finance, VAT on new builds and conversions, and company accounts for trades and developers working on the new homes around Stratford and the Park.',
-        link: ['/uk/business-finance/development-finance/', 'Development finance'],
+        text: 'VAT on new builds and conversions, corporation tax and company accounts for trades and developers working on the new homes around Stratford and the Park.',
+        link: ['/uk/tax/vat-accountant/', 'VAT accountant'],
       },
       {
         img: eastBank, alt: 'New East Bank buildings beside the railway lines at Stratford, with towers behind',
@@ -100,8 +100,8 @@ export default {
     intro: 'We work online, so a shop in Stratford Broadway and a developer in Sugar House Island get the same fixed-fee service. Each card goes to the full service page.',
     items: [
       { title: 'Company formation', text: 'New companies set up correctly for founders starting out in Stratford, with your first deadlines in the diary.', href: '/uk/company-services/company-formation/' },
-      { title: 'Development finance', text: 'Funding for residential and mixed-use schemes in Newham, with the cost plans and cash flows lenders ask for.', href: '/uk/business-finance/development-finance/' },
-      { title: 'Commercial mortgages', text: 'Finance to buy shops, workshops or offices in Stratford instead of renting them.', href: '/uk/business-finance/commercial-mortgages/' },
+      { title: 'Landlord accounts', text: 'Rental accounts, Making Tax Digital and capital gains planning for owners of new-build flats in Stratford and East Village.', href: '/uk/accounting/landlord-accountant/' },
+      { title: 'Corporation tax', text: 'Corporation tax returns and capital allowances on fit-outs, plant and equipment for Stratford companies, from shops to building firms.', href: '/uk/tax/corporation-tax-accountant/' },
       { title: 'VAT returns', text: 'VAT registration and returns for retailers and for builders dealing with new-build and conversion rates.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll for shop, café and site teams, set up for the £12.71 National Living Wage from April 2026.', href: '/uk/accounting/payroll-services/' },
       { title: 'Limited company accounts', text: 'Annual accounts, corporation tax and Companies House filings for Stratford companies of every size.', href: '/uk/accounting/limited-company-accountant/' },
@@ -141,8 +141,8 @@ export default {
     ],
     urgent: {
       title: 'Building or fitting out in Stratford?',
-      text: 'Development finance, VAT on construction and planning costs need to be in your numbers before you commit. We model the project and talk to lenders with you.',
-      cta: 'Talk about project finance',
+      text: 'VAT on construction, capital allowances on fit-out costs and planning costs need to be in your numbers before you commit. We model the tax position of the project with you.',
+      cta: 'Talk about project tax',
     },
   },
 
@@ -152,7 +152,7 @@ export default {
     h2: 'How we work with Stratford clients',
     steps: [
       { title: 'Free consultation', text: 'A call or video meeting about your business, your plans and your deadlines. No charge and no obligation.' },
-      { title: 'Fixed fee in writing', text: 'You get the scope and the exact fee before we start, from a first company return to a funding application.' },
+      { title: 'Fixed fee in writing', text: 'You get the scope and the exact fee before we start, from a first company return to a project cash flow forecast.' },
       { title: 'We do the work', text: 'Upload records online or connect Xero or QuickBooks. We prepare, file and remind you of every date.' },
     ],
     meet: {
@@ -180,7 +180,7 @@ export default {
     { q: 'Who sends the business rates bill in Stratford?', a: 'Newham Council sends business rates bills in Stratford, including the town centre, Westfield and the Newham side of the Olympic Park. If your premises are in the Stratford Original BID area, the BID levy is billed on top. So is the Crossrail supplement if your rateable value is over £92,000.' },
     { q: 'What is the Stratford Original BID levy?', a: 'It is a compulsory charge of 1.5% on top of business rates for businesses in the BID area with a rateable value of £12,000 or more. It pays for BID projects in the town centre. The BID began its third term in 2025 and runs to 2030.' },
     { q: 'Who decides planning applications in Stratford now?', a: 'Newham Council. The London Legacy Development Corporation handed its planning powers back to the boroughs on 1 December 2024. Its Local Plan 2020-2036 still applies in the old LLDC area until Newham adopts its new Local Plan.' },
-    { q: 'Can you help fund a development in Stratford?', a: 'Yes. We prepare the cost plan, cash flow and exit figures that development lenders want, and help you compare offers for residential or mixed-use schemes. We also look at VAT on new builds and conversions before you start on site.' },
+    { q: 'Can you help with the tax on a development in Stratford?', a: 'Yes. We look at VAT on new builds and conversions before you start on site, and at whether the profit is taxed as trading income or as a capital gain. We also prepare the accounts and cash flow forecasts for the company running the scheme.' },
     { q: 'Is Stratford in the ULEZ or the Congestion Charge zone?', a: 'Stratford is inside the ULEZ, which covers every London borough and costs £12.50 a day for vehicles that do not meet the standards. It is outside the central Congestion Charge zone. Business journeys in a business vehicle are usually an allowable cost.' },
     { q: 'Do I need to meet my accountant in person?', a: 'No. Our Stratford clients work with us by video call, phone and secure upload, with Xero or QuickBooks access where you use them. You get one named contact who knows your business.' },
     { q: 'How much does an accountant cost in Stratford?', a: 'Our fixed fees start at £XXX a month for a small limited company and £XXX for a personal tax return. The exact fee depends on your turnover and records, and you get it in writing after a free consultation.', tbc: true },
@@ -190,8 +190,8 @@ export default {
   related: [
     { title: 'Popular services in Stratford', links: [
       ['/uk/company-services/company-formation/', 'Company formation'],
-      ['/uk/business-finance/development-finance/', 'Development finance'],
-      ['/uk/business-finance/commercial-mortgages/', 'Commercial mortgages'],
+      ['/resources/vat-on-property-development/', 'VAT on property development'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       ['/uk/tax/vat-accountant/', 'VAT accountant'],
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
     ] },

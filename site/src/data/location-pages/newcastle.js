@@ -33,7 +33,7 @@ export default {
     ['Newcastle', '/uk/newcastle/'],
   ],
   place: { type: 'City', name: 'Newcastle upon Tyne', wikidata: 'Q1425428', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Newcastle', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Newcastle', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
@@ -105,7 +105,7 @@ export default {
       { title: 'Self assessment', text: 'Returns for directors, landlords and drivers, with Clean Air Zone charges on business trips claimed correctly.', href: '/uk/tax/self-assessment-accountant/' },
       { title: 'VAT returns', text: 'Registration, schemes and Making Tax Digital returns for city centre hospitality and retail.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and pensions for venues and shops, set up for the National Living Wage of £12.71 from April 2026.', href: '/uk/accounting/payroll-services/' },
-      { title: 'Asset finance', text: 'Funding for a compliant van now that the Clean Air Zone upgrade grants have closed.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Bookkeeping', text: 'Monthly bookkeeping in Xero or QuickBooks for Newcastle traders, with Clean Air Zone charges and vehicle costs recorded correctly.', href: '/uk/accounting/bookkeeping-services/' },
     ],
   },
 
@@ -142,7 +142,7 @@ export default {
     ],
     urgent: {
       title: 'Clean Air Zone grants have closed',
-      text: 'The Tyneside vehicle upgrade grants closed on 30 January 2026. Replacing an older van now comes out of your own cash or finance. We compare the daily charge with the cost of a compliant van so you can decide.',
+      text: 'The Tyneside vehicle upgrade grants closed on 30 January 2026. Replacing an older van now comes without grant support. We compare the daily charge with the cost of a compliant van after capital allowances, so you can decide.',
       cta: 'Get a van cost review',
     },
   },
@@ -207,7 +207,7 @@ export default {
     { title: 'Investing in plant and vans', links: [
       ['/resources/capital-allowances-explained/', 'Capital allowances explained'],
       ['/resources/full-expensing/', 'Full expensing'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/resources/hire-purchase-vs-leasing/', 'Hire purchase vs leasing'],
     ] },
   ],
 

@@ -21,14 +21,14 @@ export default {
     'UK accountant for non-residents',
   ],
   title: 'Accountants in the UK | Severin Finance',
-  description: 'Accountants in the UK for company accounts, tax returns, VAT, payroll and business finance, in London, every UK city and abroad. Book a free consultation.',
+  description: 'Accountants in the UK for company accounts, tax returns, VAT, payroll and bookkeeping, in London, every UK city and abroad. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
     ['United Kingdom', '/uk/'],
   ],
   place: { type: 'Country', name: 'United Kingdom', wikidata: 'Q145' },
-  service: { name: 'Accountants in the UK', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in the UK', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
@@ -101,7 +101,7 @@ export default {
       { title: 'Making Tax Digital', text: 'Software set-up and quarterly updates for sole traders and landlords joining MTD for Income Tax.', href: '/uk/tax/making-tax-digital-accountant/' },
       { title: 'VAT returns', text: 'VAT registration, scheme choice and quarterly returns through MTD-compatible software.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Monthly payroll, RTI submissions, auto-enrolment pensions and P60s for employers of any size.', href: '/uk/accounting/payroll-services/' },
-      { title: 'Business finance', text: 'Business loans, asset finance and invoice finance, with the accounts and forecasts lenders want.', href: '/uk/business-finance/business-loans/' },
+      { title: 'Landlord accounts', text: 'Rental accounts, Section 24 planning and capital gains tax for landlords with one property or a whole portfolio.', href: '/uk/accounting/landlord-accountant/' },
     ],
   },
 

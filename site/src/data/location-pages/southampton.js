@@ -32,7 +32,7 @@ export default {
     ['Southampton', '/uk/southampton/'],
   ],
   place: { type: 'City', name: 'Southampton', wikidata: 'Q79848', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Southampton', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Southampton', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'VAT or bookkeeping',
 
   // ---------- 1. Hero ----------
@@ -102,7 +102,7 @@ export default {
       { title: 'Limited company accounts', text: 'Accounts, corporation tax and Companies House filings for port suppliers, marine firms and city centre businesses.', href: '/uk/accounting/limited-company-accountant/' },
       { title: 'VAT returns', text: 'Registration, postponed VAT accounting for importers and Making Tax Digital returns for goods moving through the port.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and pensions for shops, hotels and cruise season staff, set up for the April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
-      { title: 'Invoice finance', text: 'Cash against unpaid invoices for hauliers and logistics firms who wait weeks for customers to pay.', href: '/uk/business-finance/invoice-finance/' },
+      { title: 'Bookkeeping', text: 'Monthly bookkeeping, debtor reports and cash flow forecasts for hauliers and logistics firms who wait weeks for customers to pay.', href: '/uk/accounting/bookkeeping-services/' },
       { title: 'EIS and SEIS', text: 'Advance assurance and investor paperwork for start-ups and spin-outs at Southampton Science Park in Chilworth.', href: '/uk/company-services/eis-seis/' },
       { title: 'Self assessment', text: 'Returns for directors, landlords and self-employed contractors working in the docks and the city.', href: '/uk/tax/self-assessment-accountant/' },
     ],
@@ -203,10 +203,10 @@ export default {
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },
-    { title: 'Business finance', links: [
-      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
-      ['/uk/business-finance/commercial-mortgages/', 'Commercial mortgages'],
+    { title: 'Cash flow and planning', links: [
+      ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
+      ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
+      ['/resources/late-payment-interest/', 'Late payment interest'],
     ] },
   ],
 

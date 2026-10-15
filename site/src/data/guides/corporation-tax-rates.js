@@ -89,7 +89,7 @@ export default {
           ['Over £20 million (very large companies)', 'Instalments under separate, earlier rules'],
         ], after: 'The £1.5 million and £20 million thresholds are also divided by associated companies plus one. A large company need not pay by instalments if its tax for the period is under £10,000, or in its first large year if profits are no more than £10 million.' },
         '<p>Interest runs on late payments at the Bank of England base rate plus 4 percentage points: 7.75% a year from 9 January 2026. HMRC pays a lower rate of interest if you pay early. You need your 17-character payment reference, and you cannot pay by post.</p>',
-        '<p>If you cannot pay in full, contact HMRC before the deadline about a Time to Pay arrangement, or see how we arrange <a href="/uk/business-finance/tax-bill-funding/">tax bill funding</a> with lenders.</p>',
+        '<p>If you cannot pay in full, contact HMRC before the deadline about a Time to Pay arrangement. Our guide to <a href="/resources/pay-hmrc-in-instalments/">paying HMRC in instalments</a> explains what HMRC asks for.</p>',
       ],
     },
     {

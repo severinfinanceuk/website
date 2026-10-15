@@ -15,7 +15,7 @@ export default {
   hero: {
     eyebrow: 'UK company services',
     h1: 'Company services from formation to sale',
-    answer: 'We look after a UK company through its whole life. We register it with Companies House, keep its filings and statutory registers up to date, and help it raise money through EIS and SEIS. When the time comes, we value the business and plan a sale, buy-out or handover. Directors can live in the UK or abroad.',
+    answer: 'We look after a UK company through its whole life. We register it with Companies House, keep its filings and statutory registers up to date, and handle EIS and SEIS tax relief when it issues shares. When the time comes, we value the business and plan a sale, buy-out or handover. Directors can live in the UK or abroad.',
   },
 
   services: {

@@ -95,7 +95,7 @@ export default {
       body: [
         '<p>File the return on time anyway, then contact HMRC as early as you can about a Time to Pay arrangement. The timing matters:</p>',
         '<ul><li>ask by day 15 to avoid any late payment penalty</li><li>ask by day 30 to avoid the second 3% and the daily penalty</li><li>after day 30, an agreed plan stops the daily penalty growing</li></ul>',
-        '<p>Interest is still charged while you pay. If you break the plan, HMRC can cancel it and charge the penalties as if it never existed. Our guide to <a href="/resources/pay-hmrc-in-instalments/">paying HMRC in instalments</a> explains what HMRC asks for. Some businesses fund a large VAT bill instead; we arrange <a href="/uk/business-finance/tax-bill-funding/">tax bill funding</a> with lenders.</p>',
+        '<p>Interest is still charged while you pay. If you break the plan, HMRC can cancel it and charge the penalties as if it never existed. Our guide to <a href="/resources/pay-hmrc-in-instalments/">paying HMRC in instalments</a> explains what HMRC asks for. If the bill is hard to pay because customers pay you slowly, our guide to <a href="/resources/late-payment-interest/">late payment interest</a> explains what you can charge them.</p>',
       ],
     },
     {

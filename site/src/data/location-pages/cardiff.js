@@ -34,14 +34,14 @@ export default {
     ['Cardiff', '/uk/cardiff/'],
   ],
   place: { type: 'City', name: 'Cardiff', wikidata: 'Q10690', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Cardiff', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Cardiff', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Cardiff · Wales',
     h1: 'Accountants in Cardiff',
-    answer: 'Our accountants in Cardiff handle company accounts, tax returns, VAT, payroll and business finance for fixed fees, under Welsh rules. Business rates here use the Welsh standard multiplier of 50.2p in the pound for 2026-27, property buyers pay Land Transaction Tax instead of Stamp Duty, and a visitor levy starts on 1 April 2027.',
+    answer: 'Our accountants in Cardiff handle company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees, under Welsh rules. Business rates here use the Welsh standard multiplier of 50.2p in the pound for 2026-27, property buyers pay Land Transaction Tax instead of Stamp Duty, and a visitor levy starts on 1 April 2027.',
     image: hero,
     imageAlt: 'Principality Stadium in Cardiff reflected in the River Taff on a sunny day',
     chip: 'Wales',
@@ -207,11 +207,11 @@ export default {
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },
-    { title: 'Property and finance', links: [
+    { title: 'Property and tax', links: [
       ['/resources/stamp-duty-commercial-property/', 'Stamp Duty and LTT on commercial property'],
-      ['/uk/business-finance/commercial-mortgages/', 'Commercial mortgages'],
-      ['/uk/business-finance/business-loans/', 'Business loans'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
+      ['/resources/capital-gains-tax-on-property/', 'Capital gains tax on property'],
+      ['/resources/buy-to-let-limited-company/', 'Buy-to-let through a limited company'],
     ] },
   ],
 

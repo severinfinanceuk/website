@@ -100,10 +100,10 @@ export default {
       ],
     },
     {
-      id: 'finance', h2: 'How does VAT affect your development finance?', toc: 'VAT and finance',
+      id: 'finance', h2: 'How does VAT affect your development cash flow?', toc: 'VAT and cash flow',
       body: [
         '<p>VAT is a cash flow cost even when you get it all back. You pay VAT to your builder and consultants first and reclaim it on your next return, so a large scheme can have tens of thousands of pounds tied up at any time. Lenders look at this when they size a loan.</p>',
-        '<p>Build the VAT on each cost line into your appraisal, at the right rate, and show the timing of repayments in your cash flow. Our <a href="/resources/development-appraisal-checklist/">development appraisal checklist</a> covers the other costs, and our team can arrange <a href="/uk/business-finance/development-finance/">development finance</a> with lenders once the numbers are tested. Our guide to <a href="/resources/development-finance-ltgdv-explained/">LTGDV and LTC</a> explains how lenders work out the loan.</p>',
+        '<p>Build the VAT on each cost line into your appraisal, at the right rate, and show the timing of repayments in your cash flow. If you expect regular repayments, you can ask HMRC to let you file monthly VAT returns, so the money comes back sooner. Our guide to <a href="/resources/cash-flow-forecasting/">cash flow forecasting</a> shows how to plan the timing, and our VAT accountants can check the rate on each contract before work starts.</p>',
       ],
     },
   ],
@@ -129,8 +129,8 @@ export default {
 
   related: [
     '/resources/vat-registration/',
-    '/resources/development-appraisal-checklist/',
-    '/resources/development-finance-ltgdv-explained/',
+    '/resources/cash-flow-forecasting/',
+    '/resources/capital-gains-tax-on-property/',
     '/resources/stamp-duty-commercial-property/',
   ],
 };

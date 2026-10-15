@@ -33,7 +33,7 @@ export default {
     ['Bath', '/uk/bath/'],
   ],
   place: { type: 'City', name: 'Bath', wikidata: 'Q22889', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Bath', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Bath', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------

@@ -32,7 +32,7 @@ export default {
     ['Canary Wharf', '/uk/london/canary-wharf/'],
   ],
   place: { type: 'Place', name: 'Canary Wharf', wikidata: 'Q124377', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Canary Wharf', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Canary Wharf', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------

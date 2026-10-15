@@ -24,7 +24,7 @@ export default {
     'business rates Birmingham', 'landlord accountant Birmingham',
   ],
   title: 'Accountants in Birmingham | Severin Finance',
-  description: 'Accountants in Birmingham for company accounts, tax returns, VAT, payroll and finance, with Clean Air Zone costs planned in. Book a free consultation.',
+  description: 'Accountants in Birmingham for company accounts, tax returns, VAT, payroll and bookkeeping, with Clean Air Zone costs planned in. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -32,14 +32,14 @@ export default {
     ['Birmingham', '/uk/birmingham/'],
   ],
   place: { type: 'City', name: 'Birmingham', wikidata: 'Q2256', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Birmingham', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Birmingham', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Birmingham · West Midlands',
     h1: 'Accountants in Birmingham',
-    answer: 'Our accountants in Birmingham prepare company accounts, tax returns, VAT and payroll for fixed fees, and arrange business finance. We plan for local costs as well: cars and vans that do not meet the standard pay £8 a day to drive inside the A4540 Middleway, and coaches and HGVs pay £50.',
+    answer: 'Our accountants in Birmingham prepare company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We plan for local costs as well: cars and vans that do not meet the standard pay £8 a day to drive inside the A4540 Middleway, and coaches and HGVs pay £50.',
     image: hero,
     imageAlt: 'The Library of Birmingham with its gold and metal lattice front in Centenary Square',
     chip: 'West Midlands',
@@ -70,7 +70,7 @@ export default {
         img: makers, alt: 'Red-brick Victorian factory buildings with tall windows in Birmingham',
         tag: 'Makers', title: 'Workshops and small manufacturers',
         text: 'Stock records, VAT and capital allowances for jewellers, makers and small manufacturers in the Jewellery Quarter and across the city, where tools and machinery matter at year end.',
-        link: ['/uk/business-finance/asset-finance/', 'Asset finance'],
+        link: ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       },
       {
         img: offices, alt: 'Glass office tower behind a Victorian building with a domed clock tower in Birmingham',
@@ -103,8 +103,8 @@ export default {
       { title: 'Self assessment', text: 'Returns for sole traders, directors and landlords, with Clean Air Zone charges and travel costs claimed correctly.', href: '/uk/tax/self-assessment-accountant/' },
       { title: 'VAT returns', text: 'Registration, schemes and Making Tax Digital returns for Jewellery Quarter traders, wholesalers and online sellers.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Payroll, RTI and auto-enrolment for venues, shops and workshops, set up for the April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
-      { title: 'Asset finance', text: 'Funding for compliant vans, machinery and equipment, with the cost spread over the working life of the asset.', href: '/uk/business-finance/asset-finance/' },
-      { title: 'Business loans', text: 'Loans and cash flow funding for Birmingham firms, with forecasts built on the new 2026 rates bill.', href: '/uk/business-finance/business-loans/' },
+      { title: 'Corporation tax', text: 'Corporation tax returns and capital allowances on vans, machinery and equipment, including full expensing for companies.', href: '/uk/tax/corporation-tax-accountant/' },
+      { title: 'Management accounts', text: 'Monthly management accounts and cash flow forecasts for Birmingham firms, built on the new 2026 rates bill.', href: '/uk/accounting/virtual-finance-director/' },
     ],
   },
 
@@ -142,7 +142,7 @@ export default {
     ],
     urgent: {
       title: 'A non-compliant van costs £8 every day it enters',
-      text: 'A van that drives into the zone on 250 working days pays £2,000 a year in charges. We compare that with replacing it, including asset finance and the capital allowances on a new vehicle.',
+      text: 'A van that drives into the zone on 250 working days pays £2,000 a year in charges. We compare that with the cost of replacing it, including the capital allowances on a new vehicle.',
       cta: 'Talk to us about vehicle costs',
     },
   },
@@ -204,10 +204,10 @@ export default {
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },
-    { title: 'Business finance', links: [
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
-      ['/uk/business-finance/business-loans/', 'Business loans'],
-      ['/uk/business-finance/invoice-finance/', 'Invoice finance'],
+    { title: 'Tax and planning', links: [
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
+      ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
+      ['/resources/capital-allowances-explained/', 'Capital allowances explained'],
     ] },
   ],
 

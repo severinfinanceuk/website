@@ -75,7 +75,7 @@ export default {
     intro: 'Any owner who will one day step back. These are the situations we see most.',
     cards: [
       { title: 'Family businesses', img: family, alt: 'Grandfather, son and young grandson working together at a table of clay pots in the family pottery', tag: 'Passing to the next generation', text: 'Hand shares to your children in stages, and plan for inheritance tax under the Business Relief cap.', link: ['/uk/tax/inheritance-tax-planning/', 'Inheritance tax planning'] },
-      { title: 'Management buy-outs', img: mbo, alt: 'Management team in a bright meeting room, one colleague standing at the head of the table', tag: 'MBO', text: 'Your managers buy the company. We model the price, the funding and the tax for you and for them.', link: ['/uk/business-finance/business-loans/', 'Business loans'] },
+      { title: 'Management buy-outs', img: mbo, alt: 'Management team in a bright meeting room, one colleague standing at the head of the table', tag: 'MBO', text: 'Your managers buy the company. We model the price, the funding and the tax for you and for them.', link: ['/resources/management-buy-out-guide/', 'Management buy-out guide'] },
       { title: 'Retiring shareholders', img: retiring, alt: 'Smiling older business owner with glasses and grey beard in a checked shirt standing in his workshop', tag: 'Company buys back shares', text: 'The company can buy your shares back. We check whether the payment can be taxed as a capital gain.' },
       { title: 'Employee ownership', img: eot, alt: 'Four smiling staff members standing together in their office in front of a chalkboard wall', tag: 'Employee ownership trust', text: 'Sell a controlling stake to a trust for your staff. We explain the relief, which changed in November 2025.' },
       { title: 'Selling to a buyer', img: sale, alt: 'Two business people shaking hands across a desk with a clipboard and laptop', tag: 'Trade sale', text: 'Know what your company is worth and get its accounts in shape before buyers look closely.', link: ['/uk/company-services/business-valuation/', 'Business valuation'] },
@@ -198,7 +198,7 @@ export default {
       ['/uk/company-services/business-valuation/', 'Business valuation'],
       ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
       ['/uk/tax/inheritance-tax-planning/', 'Inheritance tax planning'],
-      ['/uk/business-finance/business-loans/', 'Business loans for buy-outs'],
+      ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
       ['/uk/company-services/company-secretarial-services/', 'Company secretarial services'],
       ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
     ] },

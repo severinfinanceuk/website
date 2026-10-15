@@ -32,7 +32,7 @@ export default {
     ['Richmond', '/uk/london/richmond/'],
   ],
   place: { type: 'AdministrativeArea', name: 'London Borough of Richmond upon Thames', wikidata: 'Q32515', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Richmond', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Richmond', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------

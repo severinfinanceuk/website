@@ -32,7 +32,7 @@ export default {
     ['City of London', '/uk/london/city-of-london/'],
   ],
   place: { type: 'City', name: 'City of London', wikidata: 'Q23311', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in the City of London', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in the City of London', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
@@ -69,7 +69,7 @@ export default {
       {
         img: offices, alt: 'The Gherkin and lit office windows in the City of London at night',
         tag: 'Financial services', title: 'Brokers, advisers and boutique firms',
-        text: 'Management accounts, corporation tax and board reporting for small insurance brokers, wealth managers and advisory firms that need finance support without a full-time finance director.',
+        text: 'Management accounts, corporation tax and board reporting for small insurance brokers, wealth managers and advisory firms that want senior finance input without a full-time finance director.',
         link: ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
       },
       {

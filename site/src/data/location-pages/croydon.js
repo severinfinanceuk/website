@@ -32,7 +32,7 @@ export default {
     ['Croydon', '/uk/london/croydon/'],
   ],
   place: { type: 'AdministrativeArea', name: 'London Borough of Croydon', wikidata: 'Q26888', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Croydon', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Croydon', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
@@ -75,8 +75,8 @@ export default {
       {
         img: trades, alt: 'Tradesperson cutting metal with sparks flying from the tool',
         tag: 'Trades and logistics', title: 'Trades, builders and Purley Way firms',
-        text: 'Construction, engineering and logistics businesses around the Purley Way, where the council says industrial rents have nearly doubled in ten years. We help fund vans, plant and fit-outs, and keep VAT and payroll on track.',
-        link: ['/uk/business-finance/asset-finance/', 'Asset finance'],
+        text: 'Construction, engineering and logistics businesses around the Purley Way, where the council says industrial rents have nearly doubled in ten years. We claim capital allowances on vans, plant and fit-outs, and keep VAT and payroll on track.',
+        link: ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       },
       {
         img: flats, alt: 'Modern apartment block with balconies near a traffic light in Croydon',
@@ -104,7 +104,7 @@ export default {
       { title: 'Payroll', text: 'Monthly payroll, RTI and pensions for Croydon employers, set up for the £12.71 National Living Wage from April 2026.', href: '/uk/accounting/payroll-services/' },
       { title: 'Self assessment', text: 'Tax returns for sole traders, directors and landlords in the borough, filed well before 31 January.', href: '/uk/tax/self-assessment-accountant/' },
       { title: 'Landlord accounts', text: 'Rental profit, allowable costs and capital gains on sales for Croydon buy-to-let owners.', href: '/uk/accounting/landlord-accountant/' },
-      { title: 'Asset finance', text: 'Funding for vans, machinery and equipment for Purley Way and trade businesses, with the figures lenders want.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Bookkeeping', text: 'Monthly bookkeeping in Xero or QuickBooks for Purley Way and trade businesses, with vans and equipment recorded for capital allowances.', href: '/uk/accounting/bookkeeping-services/' },
     ],
   },
 
@@ -180,7 +180,7 @@ export default {
     { q: 'Who collects business rates in Croydon?', a: 'Croydon Council bills and collects business rates across the borough, from the town centre to Purley, Thornton Heath and New Addington. It also collects the Croydon BID levy. Premises below £12,000 rateable value can get 100% small business rates relief, tapering to nil at £15,000.' },
     { q: 'What is the Croydon BID levy?', a: 'Croydon BID is the business improvement district for the town centre. The current levy is 1% of rateable value on premises worth £40,000 or more, until 31 March 2027. A ballot closing on 21 October 2026 asks businesses to approve a new five-year term at 1.3%.' },
     { q: 'Does Croydon Council’s financial position affect my business?', a: 'Not your business rates, which use national multipliers. The government has agreed £119.0m of Exceptional Financial Support in principle for 2026-27. For 2026-27 the council did not raise council tax above the 4.99% cap.' },
-    { q: 'I run a business on the Purley Way. Can you help?', a: 'Yes. The council’s growth plan names the Purley Way as Croydon’s main industrial and logistics area, where industrial rents have nearly doubled in ten years. We do the accounts, VAT and payroll, and help fund vans, machinery and fit-outs through asset finance.' },
+    { q: 'I run a business on the Purley Way. Can you help?', a: 'Yes. The council’s growth plan names the Purley Way as Croydon’s main industrial and logistics area, where industrial rents have nearly doubled in ten years. We do the accounts, VAT and payroll, and claim capital allowances on vans, machinery and fit-outs.' },
     { q: 'Can I claim travel from Croydon to a contract in central London?', a: 'Ordinary commuting to a permanent workplace is not tax deductible. If you contract through your own limited company, travel to a temporary workplace can be, unless the contract falls inside IR35. We review the contract and your working pattern before you claim.' },
     { q: 'Do I need an accountant based in Croydon?', a: 'No. Tax rules are the same across England and we work online. What matters is knowing the local costs: Croydon Council rates relief, the BID levies in the town centre and Purley, and London-wide charges such as the £12.50 daily ULEZ charge.' },
     { q: 'How much does an accountant cost in Croydon?', a: 'Fixed fees start at £XXX a month for a Croydon limited company and £XXX for a self assessment tax return. The fee depends on your turnover, payroll and records. You get the figure in writing after a free consultation.', tbc: true },
@@ -203,11 +203,11 @@ export default {
       ['/uk/london/', 'Accountants in London'],
       ['/locations/', 'All locations'],
     ] },
-    { title: 'Business finance', links: [
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
-      ['/uk/business-finance/business-loans/', 'Business loans'],
-      ['/uk/business-finance/tax-bill-funding/', 'Tax bill funding'],
-      ['/uk/business-finance/commercial-mortgages/', 'Commercial mortgages'],
+    { title: 'Tax and planning', links: [
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
+      ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
+      ['/resources/capital-allowances-explained/', 'Capital allowances explained'],
+      ['/resources/pay-hmrc-in-instalments/', 'Paying HMRC in instalments'],
     ] },
   ],
 

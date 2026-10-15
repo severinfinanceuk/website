@@ -7,7 +7,7 @@ import { guides, CORE_UPDATED } from '../../lib/catalog.js';
 import { SITE } from '../../data/site.js';
 
 const hubs = Object.values(import.meta.glob('../../data/hub-pages/*.js', { eager: true })).map((m) => m.default);
-const order = [['tax', 'Tax'], ['accounting', 'Accounting'], ['company-services', 'Companies'], ['business-finance', 'Business finance'], ['cross-border', 'Clients abroad']];
+const order = [['tax', 'Tax'], ['accounting', 'Accounting'], ['company-services', 'Companies'], ['cross-border', 'Clients abroad']];
 const sections = order.map(([key, label]) => {
   const hub = hubs.find((h) => h.section === key);
   return { key, label, hub, title: hub.guidesTitle, items: guides.filter((g) => g.section === key) };
@@ -22,11 +22,11 @@ const nodes = guides.length ? [{
 ---
 <TextPage
   title="UK Tax & Business Guides 2026-27 | Severin Finance"
-  description="Plain-English guides to UK tax, accounts, payroll, VAT, company law and business finance, with 2026-27 rates and GOV.UK sources. Free consultation."
+  description="Plain-English guides to UK tax, accounts, payroll, VAT, company law and payroll, with 2026-27 rates and GOV.UK sources. Free consultation."
   url="/resources/"
   eyebrow="Guides"
   h1="UK tax and business guides"
-  answer="Our guides explain UK tax, accounts, payroll, VAT, company law and business finance in plain English. Each one gives the short answer first, shows the 2026-27 rates and deadlines, links to the GOV.UK source and is reviewed by our team. They cover individuals, landlords, limited companies and UK clients living abroad."
+  answer="Our guides explain UK tax, accounts, payroll, VAT, company law and payroll in plain English. Each one gives the short answer first, shows the 2026-27 rates and deadlines, links to the GOV.UK source and is reviewed by our team. They cover individuals, landlords, limited companies and UK clients living abroad."
   pageType="CollectionPage"
   nodes={nodes}
   reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}

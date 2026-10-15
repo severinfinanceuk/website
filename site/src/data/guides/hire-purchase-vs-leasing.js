@@ -7,7 +7,7 @@
 // Allowances are covered in depth by capital-allowances-explained and full-expensing: link, do not repeat.
 export default {
   url: '/resources/hire-purchase-vs-leasing/',
-  section: 'business-finance',
+  section: 'tax',
   title: 'Hire Purchase vs Leasing for Business | Severin Finance',
   description: 'Hire purchase vs leasing: ownership, VAT up front or on each rental, who claims capital allowances, and the 2026 balance sheet changes. Free consultation.',
   h1: 'Hire purchase vs leasing: which is better for business equipment?',
@@ -16,8 +16,8 @@ export default {
   topic: 'Hire purchase compared with finance leases, operating leases and contract hire',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   service: {
-    href: '/uk/business-finance/asset-finance/', label: 'Our asset finance service',
-    boxTitle: 'Buy or lease?', text: 'We arrange asset finance with lenders, and our accountants check the VAT and tax relief on each option before you sign.',
+    href: '/uk/tax/corporation-tax-accountant/', label: 'Our corporation tax service',
+    boxTitle: 'Buy or lease?', text: 'We check the VAT, capital allowances and accounts treatment of each option before you sign, then claim the relief on your return.',
   },
 
   hero: {
@@ -36,13 +36,13 @@ export default {
     {
       id: 'difference', h2: 'What is the difference between hire purchase and leasing?', toc: 'The difference',
       body: [
-        '<p>Ownership. Hire purchase is a way of buying an asset in instalments, so it becomes yours at the end. A lease is a way of renting it, so the finance company keeps ownership and you pay to use it. Our <a href="/uk/business-finance/asset-finance/">asset finance</a> team compares both for the equipment you want, and our accountants check the VAT and tax before you sign.</p>',
-        { caption: 'The main types of asset finance compared', head: ['Type', 'Who owns it', 'At the end', 'Usually suits'], rows: [
+        '<p>Ownership. Hire purchase is a way of buying an asset in instalments, so it becomes yours at the end. A lease is a way of renting it, so the finance company keeps ownership and you pay to use it. Our <a href="/uk/tax/corporation-tax-accountant/">corporation tax accountants</a> check the VAT, tax relief and accounts treatment of the agreement you have been offered before you sign. We are accountants, not lenders or brokers, so we do not arrange the agreement itself.</p>',
+        { caption: 'The main types of agreement compared', head: ['Type', 'Who owns it', 'At the end', 'Usually suits'], rows: [
           ['Hire purchase', 'You, after the final payment', 'You keep it, often after a small option-to-purchase fee', 'Assets you will keep for most of their life'],
           ['Finance lease', 'The finance company', 'Set by the agreement: often a further rental period, or a sale with a share of the proceeds to you', 'Assets you want to use for their whole life without owning'],
           ['Operating lease', 'The finance company', 'You hand it back; the lender takes the risk on its resale value', 'Equipment that dates quickly or that you replace often'],
           ['Contract hire', 'The finance company', 'You hand the vehicle back, subject to mileage and condition terms', 'Cars and vans, often with maintenance included'],
-        ], after: 'General features only. Each lender sets its own terms, and finance is subject to status and lender approval.' },
+        ], after: 'General features only. Each finance company sets its own terms, so read the agreement you are offered.' },
       ],
     },
     {
@@ -105,8 +105,8 @@ export default {
       id: 'before-signing', h2: 'What should you check before signing?', toc: 'Before signing',
       body: [
         '<p>Check the total amount payable, not just the monthly figure, and what happens at the end of the term. These are the points that cause most problems later:</p>',
-        '<ul><li><strong>End-of-term terms:</strong> balloon payments, option fees, return conditions and any further rental period.</li><li><strong>Mileage and condition:</strong> on contract hire, the excess mileage rate and what counts as fair wear and tear.</li><li><strong>Ending early:</strong> how settlement is worked out, and whether you can sell or swap the asset.</li><li><strong>Insurance and maintenance:</strong> who pays, and what the agreement requires.</li><li><strong>Security:</strong> the asset can be repossessed if you fall behind, and you may still owe money after it is sold. Lenders often ask directors for a <a href="/resources/personal-guarantees-explained/">personal guarantee</a>.</li><li><strong>Timing:</strong> under hire purchase, allowances depend on when you start using the asset, so delivery before your year end can matter.</li></ul>',
-        '<p>Build the payments into your <a href="/resources/cash-flow-forecasting/">cash flow forecast</a> before you commit. We arrange finance with lenders and show you each offer in writing; approval is always subject to the lender\'s checks.</p>',
+        '<ul><li><strong>End-of-term terms:</strong> balloon payments, option fees, return conditions and any further rental period.</li><li><strong>Mileage and condition:</strong> on contract hire, the excess mileage rate and what counts as fair wear and tear.</li><li><strong>Ending early:</strong> how settlement is worked out, and whether you can sell or swap the asset.</li><li><strong>Insurance and maintenance:</strong> who pays, and what the agreement requires.</li><li><strong>Security:</strong> the asset can be repossessed if you fall behind, and you may still owe money after it is sold. Finance companies often ask directors for a personal guarantee, so take legal advice before you sign one.</li><li><strong>Timing:</strong> under hire purchase, allowances depend on when you start using the asset, so delivery before your year end can matter.</li></ul>',
+        '<p>Build the payments into your <a href="/resources/cash-flow-forecasting/">cash flow forecast</a> before you commit. Before you sign, we can check the VAT and tax relief on the agreement, show how it will look in your accounts, and work out the effect on your corporation tax bill for the year.</p>',
       ],
     },
   ],
@@ -133,7 +133,7 @@ export default {
   related: [
     '/resources/capital-allowances-explained/',
     '/resources/full-expensing/',
-    '/resources/personal-guarantees-explained/',
+    '/resources/corporation-tax-rates/',
     '/resources/cash-flow-forecasting/',
   ],
 };

@@ -22,7 +22,7 @@ export default {
   secondaryKeywords: [
     'VAT return services', 'VAT return preparation', 'VAT return filing', 'VAT registration',
     'VAT threshold UK', 'flat rate VAT scheme', 'VAT for e-commerce', 'VAT accounting services',
-    'Making Tax Digital VAT', 'VAT loan', 'VAT accountant Birmingham',
+    'Making Tax Digital VAT', 'VAT Time to Pay', 'VAT accountant Birmingham',
   ],
   title: 'VAT Accountant London & UK-wide | Severin Finance',
   description: 'UK VAT accountant in London and across the UK: we register you, file your VAT returns through Making Tax Digital and pick the right scheme. Fixed fee.',
@@ -77,7 +77,7 @@ export default {
       { title: 'Builders & trades', img: builder, alt: 'Builder in a hard hat hammering a timber frame against a blue sky', tag: 'Construction VAT', text: 'We check when the construction reverse charge applies, which jobs carry which rate and how CIS fits with your VAT return.', link: ['/uk/accounting/payroll-services/', 'Payroll services'] },
       { title: 'Restaurants, cafés & takeaways', img: hospitality, alt: 'Chef chopping fresh vegetables in a restaurant kitchen', tag: 'Standard, reduced and zero rates', text: 'Hot and cold food, eat-in and takeaway can carry different rates. We set up your till reports so each sale is recorded right.' },
       { title: 'Consultants & creatives', img: creative, alt: 'Designer drawing on a graphics tablet next to a laptop and colour swatches', tag: 'Flat Rate Scheme', text: 'We check whether the Flat Rate Scheme saves you money, including the 16.5% rate for limited cost businesses.', link: ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'] },
-      { title: 'Importers & wholesalers', img: importer, alt: 'Warehouse staff in blue uniforms walking through a large storage aisle', tag: 'Imports and cash flow', text: 'We handle import VAT and check whether cash accounting would help cash flow. If a VAT bill is due before you are paid, we can help fund it.', link: ['/uk/business-finance/tax-bill-funding/', 'VAT bill funding'] },
+      { title: 'Importers & wholesalers', img: importer, alt: 'Warehouse staff in blue uniforms walking through a large storage aisle', tag: 'Imports and cash flow', text: 'We handle import VAT and check whether cash accounting would help cash flow. If a VAT bill is due before you are paid, we can help you ask HMRC for time to pay.', link: ['/resources/pay-hmrc-in-instalments/', 'Paying HMRC in instalments'] },
     ],
   },
 
@@ -203,7 +203,7 @@ export default {
       ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
       ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
-      ['/uk/business-finance/tax-bill-funding/', 'VAT loan'],
+      ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
       ['/uk/tax/hmrc-tax-investigation/', 'HMRC tax investigation'],
     ] },
     { title: 'Where we work', links: [

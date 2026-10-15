@@ -34,14 +34,14 @@ export default {
     ['Belfast', '/uk/belfast/'],
   ],
   place: { type: 'City', name: 'Belfast', wikidata: 'Q10686', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Belfast', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Belfast', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Belfast · Northern Ireland',
     h1: 'Accountants in Belfast',
-    answer: 'Our accountants in Belfast handle company accounts, tax returns, VAT, payroll and business finance for fixed fees. We work to the Northern Ireland rating system: in 2026-27, Belfast business premises pay 65.03p for every £1 of net annual value, the regional rate plus Belfast City Council’s district rate, billed by Land & Property Services.',
+    answer: 'Our accountants in Belfast handle company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We work to the Northern Ireland rating system: in 2026-27, Belfast business premises pay 65.03p for every £1 of net annual value, the regional rate plus Belfast City Council’s district rate, billed by Land & Property Services.',
     image: hero,
     imageAlt: 'Belfast City Hall with its green copper domes, seen across the lawn of Donegall Square',
     chip: 'Northern Ireland',

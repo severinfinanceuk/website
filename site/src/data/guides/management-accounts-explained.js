@@ -95,7 +95,7 @@ export default {
     {
       id: 'who-uses-them', h2: 'Who asks to see management accounts?', toc: 'Who asks for them',
       body: [
-        '<p>Your board and shareholders are the main users, but lenders and investors often ask for recent management accounts as well as the last filed accounts, because filed accounts can be well over a year out of date. A lender will usually want to see current trading, debts and cash before agreeing a loan or overdraft. Our guide on <a href="/resources/how-to-get-a-business-loan/">how to get a business loan</a> lists what lenders typically ask for, and we arrange finance with lenders through our <a href="/uk/business-finance/business-loans/">business loans</a> service.</p>',
+        '<p>Your board and shareholders are the main users, but lenders and investors often ask for recent management accounts as well as the last filed accounts, because filed accounts can be well over a year out of date. A lender will usually want to see current trading, debts and cash before agreeing a loan or overdraft. We do not arrange or introduce finance, but our <a href="/uk/accounting/virtual-finance-director/">virtual finance director</a> service prepares the management accounts and <a href="/resources/cash-flow-forecasting/">cash flow forecast</a> a lender or investor asks for.</p>',
         '<p>If you ask HMRC for time to pay a tax bill, it will ask about your income, regular spending and savings. Up to date management accounts and a forecast make that conversation much easier.</p>',
       ],
     },

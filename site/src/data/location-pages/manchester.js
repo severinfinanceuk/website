@@ -24,7 +24,7 @@ export default {
     'contractor accountant Manchester', 'Manchester BID levy',
   ],
   title: 'Accountants in Manchester | Severin Finance',
-  description: 'Accountants in Manchester for tax returns, company accounts, VAT, payroll and business finance across Greater Manchester. Book a free consultation.',
+  description: 'Accountants in Manchester for tax returns, company accounts, VAT, payroll and bookkeeping across Greater Manchester. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -32,14 +32,14 @@ export default {
     ['Manchester', '/uk/manchester/'],
   ],
   place: { type: 'City', name: 'Manchester', wikidata: 'Q18125', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Manchester', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Manchester', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Manchester · Greater Manchester',
     h1: 'Accountants in Manchester',
-    answer: 'Our accountants in Manchester handle company accounts, tax returns, VAT, payroll and business finance for fixed fees. We know the local picture: city centre premises with a rateable value of £40,000 or more pay the CityCo BID levy on top of business rates, and Greater Manchester has no clean air charge.',
+    answer: 'Our accountants in Manchester handle company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We know the local picture: city centre premises with a rateable value of £40,000 or more pay the CityCo BID levy on top of business rates, and Greater Manchester has no clean air charge.',
     image: hero,
     imageAlt: 'Aerial view of Manchester city centre with tram lines curving between red-brick and modern buildings',
     chip: 'Greater Manchester',
@@ -104,7 +104,7 @@ export default {
       { title: 'VAT returns', text: 'Registration, scheme choice and quarterly Making Tax Digital returns for city centre traders and online sellers.', href: '/uk/tax/vat-accountant/' },
       { title: 'Payroll', text: 'Monthly payroll, RTI and pensions for venues and shops with large part-time teams, set up for the April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
       { title: 'Contractor accounts', text: 'IR35 checks, expenses and salary and dividend planning for Manchester contractors who work through their own company.', href: '/uk/accounting/contractor-accountant/' },
-      { title: 'Business loans', text: 'Loans and cash flow funding for growing Manchester firms, backed by the forecasts lenders expect to see.', href: '/uk/business-finance/business-loans/' },
+      { title: 'Management accounts', text: 'Monthly management accounts and cash flow forecasts for growing Manchester firms that are not ready for a full-time finance director.', href: '/uk/accounting/virtual-finance-director/' },
     ],
   },
 

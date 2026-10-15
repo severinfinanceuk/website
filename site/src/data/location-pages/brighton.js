@@ -32,7 +32,7 @@ export default {
     ['Brighton', '/uk/brighton/'],
   ],
   place: { type: 'City', name: 'Brighton', wikidata: 'Q131491', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Brighton', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Brighton', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'VAT or bookkeeping',
 
   // ---------- 1. Hero ----------

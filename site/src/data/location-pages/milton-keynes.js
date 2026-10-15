@@ -24,7 +24,7 @@ export default {
     'Central Milton Keynes BID levy',
   ],
   title: 'Accountants in Milton Keynes | Severin Finance',
-  description: 'Accountants in Milton Keynes for logistics firms, start-ups and landlords: company accounts, VAT, payroll and finance. Book a free consultation.',
+  description: 'Accountants in Milton Keynes for logistics firms, start-ups and landlords: company accounts, VAT, payroll and tax. Book a free consultation.',
   reviewed: { date: '2026-10-13', label: '13 October 2026' },
   breadcrumb: [
     ['Home', '/'],
@@ -32,14 +32,14 @@ export default {
     ['Milton Keynes', '/uk/milton-keynes/'],
   ],
   place: { type: 'City', name: 'Milton Keynes', wikidata: 'Q204234', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Milton Keynes', serviceType: 'Accounting, tax and business finance services' },
-  formTopic: 'Business finance',
+  service: { name: 'Accountants in Milton Keynes', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
+  formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Milton Keynes · Milton Keynes City Council',
     h1: 'Accountants in Milton Keynes',
-    answer: 'Our accountants in Milton Keynes support logistics firms, start-ups, landlords and commuters with tax, accounts, payroll and funding for fixed fees. Central MK businesses with a rateable value of £50,000 or more pay a BID levy until May 2027, and the city may grow by around 40,000 homes under the new towns plans.',
+    answer: 'Our accountants in Milton Keynes support logistics firms, start-ups, landlords and commuters with tax, accounts, payroll and bookkeeping for fixed fees. Central MK businesses with a rateable value of £50,000 or more pay a BID levy until May 2027, and the city may grow by around 40,000 homes under the new towns plans.',
     image: hero,
     imageAlt: 'Aerial view of a lake, parkland and housing in Milton Keynes',
     chip: 'City status since 2022',
@@ -69,8 +69,8 @@ export default {
       {
         img: depot, alt: 'Aerial view of lorry trailers parked at a distribution depot',
         tag: 'Logistics', title: 'Logistics and transport firms',
-        text: 'VAT, payroll for shift teams and funding for vans, trailers and equipment. Warehouse wages start at the £12.71 National Living Wage from April 2026.',
-        link: ['/uk/business-finance/asset-finance/', 'Asset finance'],
+        text: 'VAT, payroll for shift teams and capital allowances on vans, trailers and equipment. Warehouse wages start at the £12.71 National Living Wage from April 2026.',
+        link: ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       },
       {
         img: office, alt: 'Modern glass and white steel office building on a tree-lined street in Milton Keynes',
@@ -81,8 +81,8 @@ export default {
       {
         img: homes, alt: 'New brick houses with solar panels on their roofs',
         tag: 'Property', title: 'Landlords and developers',
-        text: 'Rental accounts, buy-to-let companies and development funding as Milton Keynes keeps building. The new towns draft programme proposes around 40,000 more homes.',
-        link: ['/uk/business-finance/development-finance/', 'Development finance'],
+        text: 'Rental accounts, buy-to-let companies and the tax on new builds and land sales as Milton Keynes keeps building. The new towns draft programme proposes around 40,000 more homes.',
+        link: ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
       },
       {
         img: road, alt: 'Straight tree-lined grid road in Milton Keynes under a cloudy sky',
@@ -102,8 +102,8 @@ export default {
       { title: 'Limited company accounts', text: 'Annual accounts, corporation tax and Companies House filings for Milton Keynes owner-managed firms.', href: '/uk/accounting/limited-company-accountant/' },
       { title: 'Payroll', text: 'Weekly or monthly payroll for warehouse and shift staff, set up for the April 2026 wage rates.', href: '/uk/accounting/payroll-services/' },
       { title: 'VAT returns', text: 'VAT registration and Making Tax Digital returns for logistics, trade and online businesses.', href: '/uk/tax/vat-accountant/' },
-      { title: 'Asset finance', text: 'Funding for vans, lorries, forklifts and warehouse equipment, with the forecasts lenders ask for.', href: '/uk/business-finance/asset-finance/' },
-      { title: 'Development finance', text: 'Funding for small housing schemes and conversions as Milton Keynes grows.', href: '/uk/business-finance/development-finance/' },
+      { title: 'Corporation tax', text: 'Corporation tax returns and capital allowances on vans, lorries, forklifts and warehouse equipment.', href: '/uk/tax/corporation-tax-accountant/' },
+      { title: 'Capital gains tax', text: 'Capital gains tax on land and property sales as Milton Keynes grows, with the 60-day return filed on time.', href: '/uk/tax/capital-gains-tax-accountant/' },
       { title: 'Landlords and property', text: 'Rental accounts and tax planning for Milton Keynes houses, flats and new-build lets.', href: '/uk/accounting/landlord-accountant/' },
     ],
   },
@@ -135,7 +135,7 @@ export default {
           ['Renewed town proposal (March 2026)', 'Around 40,000 more homes and a new local transport system'],
           ['National Living Wage (21 and over)', '£12.71 an hour from 1 April 2026'],
         ],
-        after: 'The new towns programme is still a draft. If you own land or plan to sell property, we look at the capital gains tax and funding effects early.',
+        after: 'The new towns programme is still a draft. If you own land or plan to sell property, we look at the capital gains tax, VAT and Stamp Duty effects early.',
       },
     ],
     urgent: {
@@ -150,8 +150,8 @@ export default {
     eyebrow: 'How we work',
     h2: 'How we work with Milton Keynes clients',
     steps: [
-      { title: 'Free consultation', text: 'A call or video meeting about your company, your property or your funding needs. We explain what we would do and when.' },
-      { title: 'Fixed fee in writing', text: 'You get the scope and the fee before work starts. A finance application or new property is priced upfront.' },
+      { title: 'Free consultation', text: 'A call or video meeting about your company, your property or your tax deadlines. We explain what we would do and when.' },
+      { title: 'Fixed fee in writing', text: 'You get the scope and the fee before work starts. A new property or an extra company is priced upfront.' },
       { title: 'We do the work', text: 'You upload records or connect Xero or QuickBooks. We prepare and file, and keep you ahead of every deadline.' },
     ],
     meet: {
@@ -179,8 +179,8 @@ export default {
     { q: 'Who sends the business rates bill in Milton Keynes?', a: 'Milton Keynes City Council bills business premises across the city. From 1 April 2026 the small business multiplier is 43.2p per £1 of rateable value and the standard multiplier is 48.0p. Retail, hospitality and leisure premises pay lower rates, so check your bill uses the right one.' },
     { q: 'What is the Central Milton Keynes BID levy?', a: 'It is an extra charge for premises in Central Milton Keynes with a rateable value of £50,000 or more. The levy started at 1.25% of rateable value and rises 3% a year from 2023. Tenants in centre:mk, Midsummer Place and some other centres pay a discounted 1%. The term ends on 31 May 2027.' },
     { q: 'Is Milton Keynes a city now?', a: 'Yes. Milton Keynes was granted city status in 2022 as part of the Platinum Jubilee civic honours, and the council is now Milton Keynes City Council. City status does not change tax rules: rates, income tax and corporation tax work the same as anywhere else in England.' },
-    { q: 'What do the new towns plans mean for Milton Keynes landlords?', a: 'The government’s draft new towns programme, published in March 2026, proposes Milton Keynes as a renewed town with around 40,000 more homes and a new local transport system. It is not final. If you own land or plan to build or sell, we can model the tax and funding options.' },
-    { q: 'Can you help my logistics business fund new vans?', a: 'Yes. We prepare the accounts and forecasts lenders ask for and arrange asset finance or hire purchase for vans, trailers and equipment. We also check the VAT on each agreement and how capital allowances apply, so the tax relief is claimed in the right year.' },
+    { q: 'What do the new towns plans mean for Milton Keynes landlords?', a: 'The government’s draft new towns programme, published in March 2026, proposes Milton Keynes as a renewed town with around 40,000 more homes and a new local transport system. It is not final. If you own land or plan to build or sell, we can model the capital gains tax, VAT and Stamp Duty position.' },
+    { q: 'Can you help with the tax on new vans for my logistics business?', a: 'Yes. We check the VAT on each purchase, lease or hire purchase agreement and how capital allowances apply, so the tax relief is claimed in the right year. We also update your cash flow forecast so you can see the effect before you commit.' },
     { q: 'Do I need an accountant based in Milton Keynes?', a: 'No. Tax rules are the same across England and we do most work online. What helps is an accountant who knows the local costs, such as the CMK BID levy and the April 2026 wage and rates changes. We meet by video and you upload records securely.' },
     { q: 'How much does an accountant cost in Milton Keynes?', a: 'Our fixed fees start at £XXX a month for a small limited company and £XXX for a personal tax return. The exact fee depends on your turnover and records, and you get it in writing after a free consultation.', tbc: true },
   ],
@@ -188,10 +188,10 @@ export default {
   // ---------- 9. Related links (internal linking) ----------
   related: [
     { title: 'Popular services', links: [
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       ['/uk/accounting/limited-company-accountant/', 'Limited company accountant'],
       ['/uk/accounting/payroll-services/', 'Payroll services'],
-      ['/uk/business-finance/development-finance/', 'Development finance'],
+      ['/uk/tax/capital-gains-tax-accountant/', 'Capital gains tax accountant'],
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
     ] },
     { title: 'Nearby locations', links: [

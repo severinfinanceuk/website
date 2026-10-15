@@ -32,7 +32,7 @@ export default {
     ['Westminster', '/uk/london/westminster/'],
   ],
   place: { type: 'AdministrativeArea', name: 'City of Westminster', wikidata: 'Q179351', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Westminster', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Westminster', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'VAT or bookkeeping',
 
   // ---------- 1. Hero ----------
@@ -104,7 +104,7 @@ export default {
       { title: 'Bookkeeping', text: 'Daily takings, card settlements and supplier bills reconciled in Xero or QuickBooks for busy West End businesses.', href: '/uk/accounting/bookkeeping-services/' },
       { title: 'Limited company accounts', text: 'Year-end accounts and corporation tax for Soho agencies, Mayfair firms and owner-run restaurants.', href: '/uk/accounting/limited-company-accountant/' },
       { title: 'Inheritance tax planning', text: 'Planning for families with property and business assets in Westminster, before values and rules change again.', href: '/uk/tax/inheritance-tax-planning/' },
-      { title: 'Commercial mortgages', text: 'Funding to buy freehold or long leasehold premises in the West End, with the accounts lenders ask for.', href: '/uk/business-finance/commercial-mortgages/' },
+      { title: 'Capital gains tax', text: 'Capital gains tax on the sale of West End flats, freeholds and long leaseholds, with any 60-day return filed on time.', href: '/uk/tax/capital-gains-tax-accountant/' },
     ],
   },
 

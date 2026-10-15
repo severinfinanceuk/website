@@ -213,6 +213,191 @@
       "source": "/consultation/",
       "destination": "/contact/",
       "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/business-loans",
+      "destination": "/uk/accounting/virtual-finance-director/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/business-loans/",
+      "destination": "/uk/accounting/virtual-finance-director/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/tax-bill-funding",
+      "destination": "/resources/pay-hmrc-in-instalments/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/tax-bill-funding/",
+      "destination": "/resources/pay-hmrc-in-instalments/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/asset-finance",
+      "destination": "/resources/hire-purchase-vs-leasing/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/asset-finance/",
+      "destination": "/resources/hire-purchase-vs-leasing/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/invoice-finance",
+      "destination": "/uk/accounting/bookkeeping-services/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/invoice-finance/",
+      "destination": "/uk/accounting/bookkeeping-services/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/commercial-mortgages",
+      "destination": "/uk/accounting/landlord-accountant/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/commercial-mortgages/",
+      "destination": "/uk/accounting/landlord-accountant/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/bridging-loans",
+      "destination": "/uk/accounting/landlord-accountant/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/bridging-loans/",
+      "destination": "/uk/accounting/landlord-accountant/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/development-finance",
+      "destination": "/uk/accounting/landlord-accountant/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/development-finance/",
+      "destination": "/uk/accounting/landlord-accountant/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/how-to-get-a-business-loan",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/how-to-get-a-business-loan/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/regulated-vs-unregulated-bridging",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/regulated-vs-unregulated-bridging/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/bridging-loan-exit-strategy",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/bridging-loan-exit-strategy/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/development-finance-ltgdv-explained",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/development-finance-ltgdv-explained/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/commercial-mortgage-deposit",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/commercial-mortgage-deposit/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/invoice-finance-vs-overdraft",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/invoice-finance-vs-overdraft/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/business-loan-interest-rates-uk",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/business-loan-interest-rates-uk/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/personal-guarantees-explained",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/personal-guarantees-explained/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/factoring-vs-invoice-discounting",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/factoring-vs-invoice-discounting/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/buying-property-at-auction",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/buying-property-at-auction/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/development-appraisal-checklist",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/development-appraisal-checklist/",
+      "destination": "/resources/",
+      "permanent": true
+    },
+    {
+      "source": "/uk/business-finance/:path*",
+      "destination": "/uk/accounting/",
+      "permanent": true
     }
   ],
   "headers": [

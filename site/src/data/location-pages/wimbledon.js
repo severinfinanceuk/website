@@ -32,7 +32,7 @@ export default {
     ['Wimbledon', '/uk/london/wimbledon/'],
   ],
   place: { type: 'Place', name: 'Wimbledon', wikidata: 'Q736742', containedIn: ['City', 'London'] },
-  service: { name: 'Accountants in Wimbledon', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Wimbledon', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Personal tax / self assessment',
 
   // ---------- 1. Hero ----------

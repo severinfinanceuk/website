@@ -32,14 +32,14 @@ export default {
     ['Nottingham', '/uk/nottingham/'],
   ],
   place: { type: 'City', name: 'Nottingham', wikidata: 'Q41262', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Nottingham', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Nottingham', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
   hero: {
     eyebrow: 'Nottingham · East Midlands',
     h1: 'Accountants in Nottingham',
-    answer: 'Our accountants in Nottingham look after company accounts, tax returns, VAT, payroll and business finance for fixed fees. We plan for the costs only this city has: employers inside the city boundary with 11 or more liable staff parking places pay the Workplace Parking Levy, £592 a place in 2026/27.',
+    answer: 'Our accountants in Nottingham look after company accounts, tax returns, VAT, payroll and bookkeeping for fixed fees. We plan for the costs only this city has: employers inside the city boundary with 11 or more liable staff parking places pay the Workplace Parking Levy, £592 a place in 2026/27.',
     image: hero,
     imageAlt: 'The Council House dome above Old Market Square in Nottingham city centre',
     chip: 'East Midlands',
@@ -104,7 +104,7 @@ export default {
       { title: 'Self assessment', text: 'Tax returns for directors, sole traders and student-let landlords, filed before the 31 January deadline.', href: '/uk/tax/self-assessment-accountant/' },
       { title: 'VAT returns', text: 'Registration, scheme choice and Making Tax Digital returns for Nottingham retailers, makers and online sellers.', href: '/uk/tax/vat-accountant/' },
       { title: 'EIS and SEIS', text: 'Advance assurance and investor paperwork for university spinouts and young tech firms raising their first round.', href: '/uk/company-services/eis-seis/' },
-      { title: 'Asset finance', text: 'Funding for machinery, vehicles and equipment for manufacturers and engineering firms in the East Midlands supply chain.', href: '/uk/business-finance/asset-finance/' },
+      { title: 'Corporation tax', text: 'Corporation tax returns and capital allowances on machinery, vehicles and equipment for manufacturers and engineering firms in the East Midlands supply chain.', href: '/uk/tax/corporation-tax-accountant/' },
     ],
   },
 
@@ -193,7 +193,7 @@ export default {
       ['/uk/accounting/payroll-services/', 'Payroll services'],
       ['/uk/accounting/landlord-accountant/', 'Landlord accountant'],
       ['/uk/company-services/eis-seis/', 'EIS and SEIS'],
-      ['/uk/business-finance/asset-finance/', 'Asset finance'],
+      ['/uk/tax/corporation-tax-accountant/', 'Corporation tax accountant'],
       ['/resources/employer-payroll-deadlines/', 'Employer payroll deadlines'],
     ] },
     { title: 'Nearby cities', links: [

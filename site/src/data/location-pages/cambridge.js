@@ -32,7 +32,7 @@ export default {
     ['Cambridge', '/uk/cambridge/'],
   ],
   place: { type: 'City', name: 'Cambridge', wikidata: 'Q350', containedIn: ['Country', 'United Kingdom'] },
-  service: { name: 'Accountants in Cambridge', serviceType: 'Accounting, tax and business finance services' },
+  service: { name: 'Accountants in Cambridge', serviceType: 'Accounting, bookkeeping, payroll and tax services' },
   formTopic: 'Company accounts',
 
   // ---------- 1. Hero ----------
@@ -151,7 +151,7 @@ export default {
     eyebrow: 'How we work',
     h2: 'How we work with Cambridge clients',
     steps: [
-      { title: 'Free consultation', text: 'A call about your company, your funding plans and your deadlines. We explain what we would take on and when.' },
+      { title: 'Free consultation', text: 'A call about your company, your investor plans and your deadlines. We explain what we would take on and when.' },
       { title: 'Fixed fee in writing', text: 'You get the scope and the fee before work starts, including any EIS or R&D work, so there is no surprise invoice after a funding round.' },
       { title: 'We do the work', text: 'You connect Xero or QuickBooks and upload records. We prepare, check and file, and keep your investor and HMRC dates in one calendar.' },
     ],
@@ -182,7 +182,7 @@ export default {
     { q: 'Can you help my Cambridge spin-out get SEIS or EIS advance assurance?', a: 'Yes. We check that your company and share issue qualify, prepare the advance assurance application and, after the round, file the compliance statement so investors get their certificates. From 6 April 2026 a company can raise up to £10m a year under EIS, or £20m if knowledge-intensive.' },
     { q: 'What changed for EMI share options in 2026?', a: 'From 6 April 2026 the EMI limits rose. A company can grant options over shares worth up to £6m, up from £3m. It can have gross assets up to £120m and up to 500 employees. Options can now be exercised within 15 years. More Cambridge scale-ups now qualify.' },
     { q: 'Can my Cambridge biotech claim R&D tax relief?', a: 'Often yes, if the company works to resolve scientific or technological uncertainty. We work out which costs qualify, prepare the claim with your corporation tax return and file the additional information form HMRC needs first. Loss-making companies may get a payable credit.' },
-    { q: 'What business support does the Combined Authority offer?', a: 'The Cambridgeshire and Peterborough Combined Authority, led by Mayor Paul Bristow, runs business growth support for firms across the area, including Cambridge. We can prepare the forecasts and accounts that funding and support schemes usually ask for.' },
+    { q: 'What business support does the Combined Authority offer?', a: 'The Cambridgeshire and Peterborough Combined Authority, led by Mayor Paul Bristow, runs business growth support for firms across the area, including Cambridge. We can prepare the forecasts and accounts that grant and support schemes usually ask for.' },
     { q: 'How much does an accountant cost in Cambridge?', a: 'Our fixed fees start at £XXX a month for a small limited company and £XXX for a personal tax return. The exact fee depends on your turnover and records, and you get it in writing after a free consultation.', tbc: true },
   ],
 

@@ -22,7 +22,7 @@ export default {
   secondaryKeywords: [
     'corporation tax return CT600', 'company tax return preparation', 'corporation tax planning',
     'corporate tax accountant', 'corporate tax services', 'corporation tax rates',
-    'R&D tax credits accountant', 'R&D tax relief accountant', 'corporation tax loan',
+    'R&D tax credits accountant', 'R&D tax relief accountant', 'corporation tax time to pay',
   ],
   title: 'Corporation Tax Accountant London & UK | Severin Finance',
   description: 'Corporation tax accountant in London and across the UK: we prepare and file your CT600, plan your tax and claim every relief. Fixed fee, free consultation.',
@@ -197,7 +197,7 @@ export default {
       ['/uk/accounting/bookkeeping-services/', 'Bookkeeping services'],
       ['/uk/tax/vat-accountant/', 'VAT accountant'],
       ['/uk/accounting/payroll-services/', 'Payroll services'],
-      ['/uk/business-finance/tax-bill-funding/', 'Corporation tax loan'],
+      ['/uk/accounting/virtual-finance-director/', 'Virtual finance director'],
       ['/uk/tax/hmrc-tax-investigation/', 'HMRC tax investigation'],
     ] },
     { title: 'Where we work', links: [
