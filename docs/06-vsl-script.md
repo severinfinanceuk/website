@@ -2,34 +2,24 @@
 
 Hey, welcome to Severin Finance. I'm Alain Dastros.
 
-For over thirty years, I worked inside big businesses like Philips, Anheuser-Busch and DTZ. And in every one of them, finance worked the same way. The numbers were clear. Problems were spotted months before they arrived. Nobody was ever surprised by a tax bill.
+For over thirty years, I worked inside businesses like Philips, Anheuser-Busch and DTZ. There, finance was clear. Problems were spotted early, and nobody was surprised by a tax bill.
 
-But outside those big companies, I kept seeing something very different.
+Outside, I saw something different. Business owners doing the books at midnight. Landlords hit by tax bills they never saw coming. People abroad with a UK tax return still waiting. And clients who only heard from their accountant when the invoice arrived.
 
-A business owner doing the books at midnight, worried they had missed something. A landlord who had just found out about a tax bill they never saw coming. Someone who had moved abroad and still had a UK tax return waiting for them. And people who already had an accountant, but only heard from them when the invoice arrived.
+They needed what the big companies had: someone on their side, telling them clearly what to do next. That's why Severin Finance exists. We make the complex black and white.
 
-They didn't need more forms. They needed what the big companies had. Someone on their side, reading their numbers properly, and telling them clearly what to do next.
+Here's what changes when you come to us.
 
-That's why Severin Finance exists. We take the complex, and we make it black and white.
+Your tax is done properly. Self assessment, corporation tax, VAT, capital gains and inheritance tax planning, filed on time, with every relief checked and explained in plain English.
 
-So when you come to us, here's what changes.
+Your company's numbers make sense. Accounts, bookkeeping, payroll and Making Tax Digital, in Xero, QuickBooks or whatever you use, read the way a finance director would.
 
-Your tax gets done properly. Self assessment, corporation tax, VAT, capital gains, even planning for inheritance tax. Filed on time, with every relief you're entitled to checked, and explained in plain English.
+We form your company and keep it right with Companies House, and if you live abroad, we handle the whole UK side. If HMRC writes, you send us the letter and we deal with them.
 
-Your company's numbers finally make sense. Accounts, bookkeeping, payroll and Making Tax Digital, in Xero, QuickBooks or whatever you already use. Not just filed, but read the way a finance director would read them, so you can see what's coming and decide early.
+And you know the cost before we start: a fixed price in writing, with no clock ticking every time you call.
 
-If you're setting up a company, we form it and keep it right with Companies House. And if you live abroad, we take care of the whole UK side for you.
+We're on Fleet Street in London, working with clients across the UK and abroad, in English, French, Romanian, Urdu and Punjabi. Most never need to visit.
 
-And if a letter from HMRC ever lands on your mat, you don't face it alone. You send it to us, and we deal with HMRC for you.
-
-You'll also know exactly what it costs before we start. After your first call, you get a fixed price in writing. No clock ticking every time you pick up the phone.
-
-We work from Fleet Street in London, with clients across the UK and abroad, in English, French, Romanian, Urdu and Punjabi. Most of our clients never need to visit the office.
-
-Every month you put this off is another month of guessing. So let's make it black and white.
-
-Book your free thirty-minute call now. Click the button below, pick a day and time that suits you, and you're booked in under a minute. Tell us what's going on, and we'll tell you exactly what we'd do, and exactly what it costs. No obligation, nothing to lose.
-
-Prefer to talk straight away? Call us on 020 4542 2488.
+Every month you wait is another month of guessing. So book your free thirty-minute call now. Click the button below, pick a time, and you're booked in under a minute. No obligation. Or call us on 020 4542 2488.
 
 Severin Finance. Simplifying the complex. Speak soon.
