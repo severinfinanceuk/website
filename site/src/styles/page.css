@@ -164,7 +164,6 @@
 @media (min-width: 600px) { .book .form-row { grid-template-columns: 1fr 1fr; } }
 .book-step { display: grid; gap: 12px; }
 .book-step[hidden], .book .field[hidden] { display: none; }
-.book-embed { display: block; width: 100%; height: 860px; border: 0; border-radius: var(--radius); background: var(--white); }
 .book-label { font-weight: 500; }
 .book-chip {
   min-height: 44px; padding: 8px 16px; border: 1px solid #3a3a3a; border-radius: 999px; background: transparent;
@@ -173,11 +172,28 @@
 .book-chip:hover { border-color: var(--white); }
 .book-chip:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
 .book-chip[aria-pressed="true"] { background: var(--white); color: var(--black); border-color: var(--white); }
-.book-days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; overscroll-behavior-x: contain; }
-.book-day { display: grid; flex: 0 0 auto; min-width: 76px; padding: 10px 12px; border-radius: var(--radius-sm); text-align: center; scroll-snap-align: start; }
-.book-dow { font-size: .8125rem; color: var(--muted-inv); }
-.book-day[aria-pressed="true"] .book-dow { color: #444; }
-.book-date { font-size: 1rem; }
+.book-pick { gap: 24px; }
+@media (min-width: 760px) { .book-pick { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; gap: 32px; } }
+.cal-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.cal-month { font-size: 1.125rem; font-weight: 500; }
+.cal-nav {
+  display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid #3a3a3a; border-radius: 50%;
+  background: none; color: var(--white); cursor: pointer;
+}
+.cal-nav:hover:not(:disabled) { border-color: var(--white); }
+.cal-nav:disabled { opacity: .3; cursor: default; }
+.cal-nav:focus-visible, .cal-day:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.cal-dow, .cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; text-align: center; }
+.cal-dow span { padding: 6px 0; font-size: .75rem; letter-spacing: .04em; color: var(--muted-inv); }
+.cal-day {
+  display: grid; place-items: center; aspect-ratio: 1; min-height: 40px; padding: 0; border: 0; border-radius: 50%;
+  background: none; color: #5a5a5a; font: 500 .9375rem/1 var(--font);
+}
+.cal-day.is-free { background: #232323; color: var(--white); cursor: pointer; }
+.cal-day.is-free:hover { background: #343434; }
+.cal-day.is-today { box-shadow: inset 0 0 0 1px #666; }
+.cal-day[aria-pressed="true"], .cal-day[aria-pressed="true"]:hover { background: var(--cta); color: var(--white); box-shadow: none; }
+.book-slots { display: grid; gap: 12px; align-content: start; }
 .book-times { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
 .book-times:empty { display: none; }
 .book-note, .book-status { font-size: .875rem; color: var(--muted-inv); line-height: 1.5; }

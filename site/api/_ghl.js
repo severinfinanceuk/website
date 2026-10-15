@@ -52,8 +52,10 @@ const rank = (id) => (order.includes(id) ? order.indexOf(id) : order.length);
 const plain = (html) => String(html || '').replace(/<[^>]*>/g, ' ').replace(/&gt;/g, '>').replace(/&lt;/g, '<').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 
 // Active calendars in the configured group, cached for 5 minutes per warm instance.
+// Without a token the list comes from TOPICS, so the calendar still shows free times.
 let cache = { at: 0, list: null };
 export async function groupCalendars() {
+  if (!config().token) return order.map((id) => ({ id, name: TOPICS[id], ghlName: TOPICS[id], description: '' }));
   if (cache.list && Date.now() - cache.at < 300_000) return cache.list;
   const { locationId, groupId } = config();
   const q = new URLSearchParams({ locationId, ...(groupId && { groupId }) });
@@ -64,6 +66,17 @@ export async function groupCalendars() {
     .map((c) => ({ id: c.id, name: TOPICS[c.id] || c.name, ghlName: c.name, description: plain(c.description) }));
   cache = { at: Date.now(), list };
   return list;
+}
+
+// Free times for one calendar: { 'YYYY-MM-DD': { slots: [iso, ...] }, ... } in the given time zone.
+// With a token it uses the official API; without one, the public feed GHL's own booking widget reads.
+export async function freeSlots(calendarId, startMs, endMs, timezone) {
+  const q = new URLSearchParams({ startDate: String(startMs), endDate: String(endMs), timezone });
+  const path = `/calendars/${encodeURIComponent(calendarId)}/free-slots?${q}`;
+  if (config().token) return ghl(path);
+  const res = await fetch(`https://backend.leadconnectorhq.com${path}`, { headers: { Accept: 'application/json' } });
+  if (!res.ok) throw Object.assign(new Error(`GHL public free-slots ${res.status}`), { status: res.status });
+  return res.json();
 }
 
 export const validTz = (tz) => {

@@ -1,21 +1,32 @@
 ---
-// Free consultation booking on /contact/, live from the GoHighLevel calendar group.
-// Talks only to our own /api/booking/* functions (same origin), which hold the GHL token.
-// Steps: day → time → details → done. Free times show as soon as the page opens (from the first,
-// default calendar); the topic is a dropdown in the details step that picks which calendar books it.
-// If our booking API cannot load (for example GHL_TOKEN is not set in Vercel) or JavaScript is off,
-// the same GHL calendar group shows instead as GoHighLevel's own booking widget.
+// Free consultation booking on /contact/: our own month calendar, live from the GoHighLevel calendar group.
+// Talks only to our own /api/booking/* functions (same origin). Free times load without a token
+// (GHL's public free-slots feed); confirming a booking needs GHL_TOKEN set in Vercel.
+// Steps: day + time (month view, first free day already open) → details → done.
+// The topic is a dropdown in the details step that picks which calendar books it.
+// Without JavaScript, or if the calendar cannot load, visitors see the phone number and email.
 import { PHONE, EMAIL } from '../data/site.js';
-
-const widget = 'https://api.leadconnectorhq.com/widget/group/T13QpjH0ZG8Vcz02K3qz';
 ---
 <div class="book" data-booking>
-  <div class="book-step" data-step="slots" hidden>
-    <p class="book-label" id="bk-day-label">Pick a day</p>
-    <div class="book-days" role="group" aria-labelledby="bk-day-label" data-days></div>
-    <p class="book-label" id="bk-time-label" data-time-label hidden>Pick a time</p>
-    <div class="book-times" role="group" aria-labelledby="bk-time-label" data-times></div>
-    <p class="book-note">Times are shown in your time zone: <span data-tz></span>.</p>
+  <div class="book-step book-pick" data-step="slots" hidden>
+    <div class="cal">
+      <div class="cal-head">
+        <button type="button" class="cal-nav" data-prev aria-label="Previous month">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="cal-month" data-month aria-live="polite"></p>
+        <button type="button" class="cal-nav" data-next aria-label="Next month">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="cal-dow" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+      <div class="cal-grid" role="group" aria-label="Days with free times" data-grid></div>
+    </div>
+    <div class="book-slots">
+      <p class="book-label" data-day-label></p>
+      <div class="book-times" role="group" aria-label="Free times" data-times></div>
+      <p class="book-note">30-minute call by video or phone. Times in your time zone: <span data-tz></span>.</p>
+    </div>
   </div>
 
   <form class="book-step" data-step="details" hidden novalidate>
@@ -63,46 +74,29 @@ const widget = 'https://api.leadconnectorhq.com/widget/group/T13QpjH0ZG8Vcz02K3q
   </div>
 
   <p class="book-status" role="status" aria-live="polite" data-status>Loading free times...</p>
-  <noscript><iframe class="book-embed" src={widget} title="Book a free consultation"></iframe><p class="book-status">Or call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> to book.</p></noscript>
+  <noscript><p class="book-status">Online booking needs JavaScript. Call <a href={`tel:${PHONE.tel}`}>{PHONE.display}</a> or email <a href={`mailto:${EMAIL}`}>{EMAIL}</a> to book.</p></noscript>
 </div>
 
-<script define:vars={{ phone: PHONE, email: EMAIL, widget }}>
+<script define:vars={{ phone: PHONE, email: EMAIL }}>
   const root = document.querySelector('[data-booking]');
   const $ = (s) => root.querySelector(s);
   const status = $('[data-status]');
   const say = (text, html) => { status.hidden = !text && !html; if (html) status.innerHTML = html; else status.textContent = text || ''; };
   const fallback = (lead) => say('', `${lead} Call <a href="tel:${phone.tel}">${phone.display}</a> or email <a href="mailto:${email}">${email}</a> and we will book you in.`);
 
-  // Fallback: GoHighLevel's own booking widget for the same calendar group.
-  const embed = () => {
-    root.querySelectorAll('.book-step').forEach((s) => { s.hidden = true; });
-    if (!root.querySelector('.book-embed')) {
-      const f = document.createElement('iframe');
-      f.className = 'book-embed'; f.src = widget; f.title = 'Book a free consultation';
-      root.prepend(f);
-    }
-    say('', `Prefer to talk? Call <a href="tel:${phone.tel}">${phone.display}</a> or email <a href="mailto:${email}">${email}</a>.`);
-  };
-
   let tz = 'Europe/London';
   try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch {}
   $('[data-tz]').textContent = tz.replace(/_/g, ' ');
   const fmt = (iso, o) => new Intl.DateTimeFormat('en-GB', { timeZone: tz, ...o }).format(new Date(iso));
-  const when = (iso) => `${fmt(iso, { weekday: 'long', day: 'numeric', month: 'long' })} at ${fmt(iso, { hour: 'numeric', minute: '2-digit', hour12: true })}`;
+  const time = (iso) => fmt(iso, { hour: 'numeric', minute: '2-digit', hour12: true });
+  const dayName = (iso) => fmt(iso, { weekday: 'long', day: 'numeric', month: 'long' });
+  const when = (iso) => `${dayName(iso)} at ${time(iso)}`;
+  // Calendar maths on plain 'YYYY-MM-DD' keys (already in the visitor's time zone), in UTC so DST never shifts a day.
+  const key = (y, m, d) => new Date(Date.UTC(y, m, d)).toISOString().slice(0, 10);
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+  const monthName = (y, m) => new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m, 1)));
 
-  const state = { calendars: [], calendar: null, days: null, slot: null };
-
-  const chip = (label, onClick, cls = 'book-chip') => {
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = cls; b.setAttribute('aria-pressed', 'false');
-    if (typeof label === 'string') b.textContent = label; else b.append(...label);
-    b.addEventListener('click', () => {
-      b.parentElement.querySelectorAll('[aria-pressed]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
-      onClick();
-    });
-    return b;
-  };
-  const span = (cls, text) => { const s = document.createElement('span'); s.className = cls; s.textContent = text; return s; };
+  const state = { calendars: [], calendar: null, byDate: new Map(), months: [], month: 0, day: null, slot: null };
 
   async function api(path, opts) {
     const r = await fetch(`/api/booking/${path.replace(/^(\w+)/, '$1/')}`, opts);
@@ -111,34 +105,76 @@ const widget = 'https://api.leadconnectorhq.com/widget/group/T13QpjH0ZG8Vcz02K3q
     return d;
   }
 
+  function drawMonth() {
+    const [y, m] = state.months[state.month];
+    $('[data-month]').textContent = monthName(y, m);
+    $('[data-prev]').disabled = state.month === 0;
+    $('[data-next]').disabled = state.month === state.months.length - 1;
+    const lead = (new Date(Date.UTC(y, m, 1)).getUTCDay() + 6) % 7;   // weeks start on Monday
+    const total = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
+    const cells = Array.from({ length: lead }, () => Object.assign(document.createElement('span'), { className: 'cal-day' }));
+    for (let d = 1; d <= total; d++) {
+      const k = key(y, m, d);
+      const slots = state.byDate.get(k);
+      const el = document.createElement(slots ? 'button' : 'span');
+      if (slots) {
+        el.type = 'button'; el.dataset.key = k;
+        el.setAttribute('aria-pressed', String(k === state.day));
+        el.setAttribute('aria-label', `${dayName(slots[0])}, ${slots.length} free times`);
+        el.addEventListener('click', () => selectDay(k));
+      } else el.setAttribute('aria-hidden', 'true');
+      el.className = `cal-day${slots ? ' is-free' : ''}${k === today ? ' is-today' : ''}`;
+      el.textContent = d;
+      cells.push(el);
+    }
+    $('[data-grid]').replaceChildren(...cells);
+  }
+
+  function selectDay(k) {
+    state.day = k;
+    $('[data-grid]').querySelectorAll('[data-key]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.key === k)));
+    const slots = state.byDate.get(k);
+    $('[data-day-label]').textContent = dayName(slots[0]);
+    $('[data-times]').replaceChildren(...slots.map((iso) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'book-chip'; b.textContent = time(iso);
+      b.addEventListener('click', () => pick(iso));
+      return b;
+    }));
+  }
+
   async function loadSlots(cal, first) {
-    state.calendar = cal; state.days = null; state.slot = null;
-    $('[data-days]').replaceChildren(); $('[data-times]').replaceChildren(); $('[data-time-label]').hidden = true;
+    state.calendar = cal; state.slot = null;
     $('[data-step="slots"]').hidden = true;
     say('Loading free times...');
     try {
       const { days } = first?.calendarId === cal.id ? first : await api(`slots?${new URLSearchParams({ calendarId: cal.id, tz })}`);
-      state.days = days;
-      if (!days.length) return embed();
+      if (!days.length) return fallback('There are no free times online in the next 30 days.');
+      state.byDate = new Map(days.map((d) => [d.date, d.slots]));
+      // The months the free days span (usually this month and next).
+      const ym = (k) => [+k.slice(0, 4), +k.slice(5, 7) - 1];
+      const [fy, fm] = ym(days[0].date);
+      const [ly, lm] = ym(days[days.length - 1].date);
+      state.months = [];
+      for (let y = fy, m = fm; y < ly || (y === ly && m <= lm); m === 11 ? (y++, m = 0) : m++) state.months.push([y, m]);
+      state.month = 0;
+      state.day = days[0].date;
+      drawMonth();
+      selectDay(state.day);
       say('');
-      $('[data-days]').replaceChildren(...days.map((d) => chip(
-        [span('book-dow', fmt(d.slots[0], { weekday: 'short' })), span('book-date', fmt(d.slots[0], { day: 'numeric', month: 'short' }))],
-        () => showTimes(d), 'book-chip book-day',
-      )));
       $('[data-step="slots"]').hidden = false;
-    } catch { embed(); }
+    } catch { fallback('The calendar could not load.'); }
   }
 
-  function showTimes(day) {
-    $('[data-time-label]').hidden = false;
-    $('[data-times]').replaceChildren(...day.slots.map((iso) => chip(fmt(iso, { hour: 'numeric', minute: '2-digit', hour12: true }), () => pick(iso))));
-  }
+  $('[data-prev]').addEventListener('click', () => { if (state.month > 0) { state.month--; drawMonth(); } });
+  $('[data-next]').addEventListener('click', () => { if (state.month < state.months.length - 1) { state.month++; drawMonth(); } });
 
   function pick(iso) {
     state.slot = iso;
     $('[data-picked]').textContent = when(iso);
     $('[data-step="slots"]').hidden = true;
     $('[data-step="details"]').hidden = false;
+    say('');
     $('#bk-first').focus();
   }
 
@@ -173,8 +209,8 @@ const widget = 'https://api.leadconnectorhq.com/widget/group/T13QpjH0ZG8Vcz02K3q
       if (window.gtag) window.gtag('event', 'generate_lead', { method: 'booking', calendar: cal.name });
     } catch (err) {
       btn.disabled = false;
-      if (err.status === 409) { form.hidden = true; await loadSlots(state.calendar); if (state.days?.length) say(err.message); }
-      else fallback('Sorry, the booking did not go through.');
+      if (err.status === 409) { form.hidden = true; await loadSlots(state.calendar); if (state.byDate.size) say(err.message); }
+      else fallback(`We could not confirm ${when(state.slot)} online.`);
     }
   });
 
@@ -185,10 +221,10 @@ const widget = 'https://api.leadconnectorhq.com/widget/group/T13QpjH0ZG8Vcz02K3q
         api('calendars'), api(`slots?${new URLSearchParams({ tz })}`).catch(() => null),
       ]);
       state.calendars = calendars;
-      if (!calendars.length) return embed();
+      if (!calendars.length) return fallback('Online booking is not available right now.');
       $('[data-topics]').replaceChildren(...calendars.map((c) => new Option(c.name, c.id)));
       $('[data-topic-field]').hidden = calendars.length < 2;
       loadSlots(calendars[0], first);
-    } catch { embed(); }
+    } catch { fallback('Online booking is not available right now.'); }
   })();
 </script>
