@@ -1,11 +1,11 @@
 ---
 // /contact/: every "Book a free consultation" button on the site lands here.
-// The booking calendar comes first (live from GoHighLevel via /api/booking/*), then phone, email and visit.
+// The booking calendar sits straight under the H1 (live from GoHighLevel via /api/booking/*), so it is the
+// first thing visitors see; the intro, then phone, email and visit follow.
 // Office address, opening hours and reply time stay yellow (tbc) and out of schema until confirmed.
 import TextPage from '../layouts/TextPage.astro';
 import BookingCalendar from '../components/BookingCalendar.astro';
 import { PHONE, EMAIL } from '../data/site.js';
-import { CORE_UPDATED } from '../lib/catalog.js';
 
 const faqs = [
   { q: 'Is the first consultation really free?', a: 'Yes. The first consultation is free and there is no obligation. We use it to understand what you need and give you a fixed price in writing.' },
@@ -20,38 +20,23 @@ const faqs = [
   url="/contact/"
   eyebrow="Contact"
   h1="Book a free consultation"
-  answer="Pick a time below and your free consultation goes straight into our diary. Prefer to talk now? Call 020 4542 2488 or email enquiries@severinfinance.com. We are based in London and work with clients across the UK and abroad by phone, video call and email, with a fixed price in writing."
+  answer="Pick a time and your free consultation goes straight into our diary. Prefer to talk now? Call 020 4542 2488 or email enquiries@severinfinance.com. We are based in London and work with clients across the UK and abroad by phone, video call and email, with a fixed price in writing."
   pageType="ContactPage"
   faqs={faqs}
   faqTitle="Before you get in touch"
-  reviewed={{ date: CORE_UPDATED, label: '13 October 2026' }}
 >
-  <section id="book" class="section" style="padding-top:0" aria-labelledby="book-title">
-    <div class="container tp-body">
-      <div>
-        <h2 id="book-title" class="sr-only">Choose a time</h2>
-        <BookingCalendar />
-      </div>
-      <aside class="tp-side" aria-label="What happens next">
-        <div class="side-box">
-          <h2>What happens next</h2>
-          <ol style="display:grid;gap:8px;padding-left:1.2em">
-            <li>We talk through what you need, free of charge.</li>
-            <li>We send a fixed price and a timetable in writing.</li>
-            <li>You approve, and your point of contact gets started.</li>
-          </ol>
-        </div>
-        <div class="side-box">
-          <h2>Looking for something?</h2>
-          <ul>
-            <li><a href="/uk/pricing/">Pricing</a></li>
-            <li><a href="/resources/">Guides</a></li>
-            <li><a href="/complaints/">Complaints</a></li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-  </section>
+  <div slot="top" class="tp-body contact-book">
+    <BookingCalendar />
+    <aside class="side-box" aria-label="What happens next">
+      <h2>What happens next</h2>
+      <ol style="display:grid;gap:8px;padding-left:1.2em">
+        <li>We talk through what you need, free of charge.</li>
+        <li>We send a fixed price and a timetable in writing.</li>
+        <li>You approve, and your point of contact gets started.</li>
+      </ol>
+    </aside>
+  </div>
+
   <section class="section sp-tint" aria-labelledby="ways-title">
     <div class="container">
       <h2 id="ways-title" style="margin-bottom:24px">Other ways to contact us</h2>

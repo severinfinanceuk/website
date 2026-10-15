@@ -190,3 +190,5 @@
 .book-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .book-done h3 { font-size: 1.5rem; }
 .book-done:focus { outline: none; }
+.contact-book { margin-block: clamp(20px, 2.5vw, 32px) clamp(28px, 3vw, 40px); }
+@media (min-width: 1000px) { .contact-book .side-box { position: sticky; top: 104px; } }
