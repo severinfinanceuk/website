@@ -270,6 +270,19 @@ a.mega-sub:hover { color: var(--black); }
   .hero-title { font-size: clamp(2.75rem, .8rem + 3.2vw, 4.75rem); }   /* 44 → 76, sized for the narrower column */
 }
 .media.hero-media { aspect-ratio: 16 / 9; }
+/* Hero video (YouTube): black behind the player; the sound button sits bottom left, over the video */
+.hero-video { background: var(--black); }
+.hero-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-sound {
+  position: absolute; left: 16px; bottom: 64px; z-index: 1;   /* above YouTube's control bar */
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px;
+  border: 0; border-radius: 999px; background: var(--cta); color: var(--white);
+  font: inherit; font-size: .9375rem; font-weight: 500; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.video-sound:hover { background: var(--cta-hover); }
+.video-sound[hidden] { display: none; }
+.video-link { position: absolute; inset: 0; display: grid; place-items: center; color: var(--white); }
 .media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: var(--black); }
 .play {
   display: block; width: 64px; height: 64px; margin: 0 auto 14px; border-radius: 50%; background: var(--black);

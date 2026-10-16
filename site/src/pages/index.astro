@@ -14,6 +14,8 @@ import icpa from '../assets/logos/icpa.png';
 import xero from '../assets/logos/xero.png';
 import intuit from '../assets/logos/intuit.png';
 import TeamCards from '../components/TeamCards.astro';
+import HeroVideo from '../components/HeroVideo.astro';
+import { VIDEO } from '../data/video.js';
 
 // Yellow-highlighted values (class "tbc") are placeholders until Severin confirms them.
 const stats = [
@@ -126,6 +128,16 @@ const schema = [{
       name: 'London Accountants for the UK & Abroad | Severin Finance',
       isPartOf: websiteRef, about: orgRef, publisher: orgRef,
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.hero-text'] },
+      video: { '@id': `${site}/#video` },
+    },
+    {
+      '@type': 'VideoObject', '@id': `${site}/#video`,
+      name: VIDEO.title, description: VIDEO.description,
+      thumbnailUrl: `https://i.ytimg.com/vi/${VIDEO.id}/maxresdefault.jpg`,
+      uploadDate: VIDEO.uploadDate, duration: VIDEO.duration,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${VIDEO.id}`,
+      contentUrl: `https://www.youtube.com/watch?v=${VIDEO.id}`,
+      inLanguage: 'en-GB', publisher: orgRef,
     },
     {
       '@type': 'FAQPage', '@id': `${site}/#faq`,
@@ -164,14 +176,7 @@ const arrow = '<svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentCo
           <li>Fixed price agreed before work starts</li>
         </ul>
       </div>
-      <figure class="media hero-media">
-        <!-- When the video is ready, replace .media-ph with:
-        <video controls preload="none" playsinline poster="/media/hero-poster.webp" width="1920" height="1080">
-          <source src="/media/hero.mp4" type="video/mp4" />
-        </video>
-        preload="none": nothing downloads until the visitor presses play. -->
-        <div class="media-ph"><span><span class="play" aria-hidden="true"></span>16:9 video goes here<br /><small>Loads only when the visitor presses play</small></span></div>
-      </figure>
+      <HeroVideo />
     </div>
   </section>
 
