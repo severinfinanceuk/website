@@ -47,6 +47,8 @@ import { VIDEO } from '../data/video.js';
       if (!muted) return;
       muted = false;
       cmd('unMute'); cmd('setVolume', [100]); cmd('seekTo', [0, true]); cmd('playVideo');
+      // The player brings its own captions back on unmute, sometimes a moment later.
+      [300, 1000, 2000].forEach((ms) => setTimeout(() => cmd('unloadModule', ['captions']), ms));
       btn.hidden = true;
       removeEventListener('pointerdown', soundOn, true);
       removeEventListener('keydown', soundOn, true);
@@ -68,13 +70,12 @@ import { VIDEO } from '../data/video.js';
       const info = d.info || {};
       if (d.event === 'onReady' || d.event === 'initialDelivery') ready = true;
       const s = d.event === 'onStateChange' ? d.info : info.playerState;
+      // Captions are burned into the video, so hide YouTube's own each time it starts playing
+      // (it switches them on for muted play, and again after the sound comes on).
+      if (s === 1 && state !== 1) cmd('unloadModule', ['captions']);
       if (typeof s === 'number') state = s;
       if (info.muted === true) seenMuted = true;
-      if (s === 1 && !playing) {
-        playing = true; decided = true;
-        // Captions are burned into the video, so hide YouTube's own (it switches them on for muted play).
-        cmd('unloadModule', ['captions']);
-      }
+      if (s === 1 && !playing) { playing = true; decided = true; }
       if (!ready || decided) {
         // The visitor turned the sound on with the player's own controls.
         if (muted && seenMuted && info.muted === false) { muted = false; btn.hidden = true; }
