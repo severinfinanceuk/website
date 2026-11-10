@@ -1,0 +1,29 @@
+---
+// /instant-quote/: the instant quote form on its own page. On every other page, links here open the
+// same form as a pop-up (QuoteForm in Base.astro), so this page is mainly for search, sharing and visitors
+// without JavaScript. Prices and rules: src/data/quote.js.
+import TextPage from '../layouts/TextPage.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+
+const faqs = [
+  { q: 'Is the instant quote the price I will pay?', a: 'It is an estimate from your answers. On your free call we check the details and confirm your fixed fee in writing before any work starts.' },
+  { q: 'Do your prices include VAT?', a: 'No. The prices in the quote exclude VAT.' },
+  { q: 'What if I have accounts or tax returns from earlier years to catch up on?', a: 'We can help. Outstanding work from previous years is priced separately, and we agree that fee with you up front.' },
+  { q: 'Can I change my mind about the services later?', a: 'Yes. You can add services such as payroll, VAT returns or bookkeeping as the business grows, and your monthly fee is updated to match.' },
+];
+---
+<TextPage
+  title="Instant Accountancy Quote | Severin Finance"
+  description="Get an instant monthly quote for your accounts, tax returns, VAT, payroll and bookkeeping. Answer a few questions, see your fee, then book a free call."
+  url="/instant-quote/"
+  breadcrumb={[['Home', '/'], ['Pricing', '/uk/pricing/'], ['Instant quote', '/instant-quote/']]}
+  eyebrow="Instant quote"
+  h1="Get an instant quote"
+  answer="Tell us about your business and see your monthly fee straight away, with a full breakdown. Sole traders start from £24.50 a month and limited companies from £39.50 a month, plus VAT. Then book a free call and we confirm your fixed fee in writing."
+  faqs={faqs}
+  faqTitle="Questions about the quote"
+>
+  <div slot="top" class="tp-body qf-page">
+    <QuoteForm />
+  </div>
+</TextPage>

@@ -1,0 +1,462 @@
+---
+// "Get an instant quote": the visitor answers a few questions about their business and sees a monthly
+// estimate at once, with the breakdown. Then "One last step" takes them to the booking calendar on
+// /contact/ with their name, email, phone and the estimate already filled in (sessionStorage).
+//
+// modal: Base.astro puts one copy on every page as a pop-up. Any link to /instant-quote/ opens it, so
+//        without JavaScript the link still works and goes to the page.
+// inline: the /instant-quote/ page (the pop-up is left off there).
+//
+// Prices and rules: src/data/quote.js. Each quote is also sent to /api/quote, which saves the visitor
+// as a GoHighLevel contact with every answer in a note (needs GHL_TOKEN; the estimate shows either way).
+import { BUSINESS, BANDS, PAYROLL_LTD, FREQ } from '../data/quote.js';
+import { PHONE } from '../data/site.js';
+
+interface Props { modal?: boolean }
+const { modal = false } = Astro.props;
+const Wrap = modal ? 'dialog' : 'div';
+const yesNo = [['NO', 'No'], ['YES', 'Yes']];
+---
+<Wrap class={modal ? 'qf-dialog' : 'qf-inline'} data-quote-dialog={modal ? '' : undefined} aria-labelledby={modal ? 'q-title' : undefined}>
+  <div class="qf" data-quote data-tel={PHONE.tel} data-phone={PHONE.display}>
+    <div class="qf-head">
+      <div class="qf-ring" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="64" height="64"><circle cx="32" cy="32" r="28" /><circle cx="32" cy="32" r="28" class="bar" pathLength="100" stroke-dasharray="50 100" data-ring /></svg>
+        <span data-pct>50%</span>
+      </div>
+      <div>
+        <h2 id="q-title">Get an instant quote</h2>
+        <p data-sub>We charge a monthly fee based on your business type.</p>
+      </div>
+      {modal && (
+        <button type="button" class="qf-close" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        </button>
+      )}
+    </div>
+
+    <form class="qf-form" data-step="form">
+      <div class="qf-hp" aria-hidden="true">
+        <label for="q-website">Website (leave blank)</label>
+        <input id="q-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+      <div class="qf-grid">
+        <div class="field">
+          <label for="q-name">Name</label>
+          <input id="q-name" name="name" type="text" autocomplete="name" required maxlength="120" />
+        </div>
+        <div class="field">
+          <label for="q-email">Email</label>
+          <input id="q-email" name="email" type="email" autocomplete="email" required maxlength="120" />
+        </div>
+        <div class="field">
+          <label for="q-phone">Phone</label>
+          <input id="q-phone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="30" pattern="[0-9 +()\-]{7,30}" />
+        </div>
+        <div class="field">
+          <label for="q-type">Business type</label>
+          <select id="q-type" name="type" required>
+            <option value="">Select your business type</option>
+            {BUSINESS.map((b) => <option value={b.id}>{b.label}</option>)}
+          </select>
+        </div>
+
+        <div class="field" data-show="sa" hidden>
+          <label for="q-sa" data-sa-label>No. of directors needing a self assessment</label>
+          <input id="q-sa" name="selfAssessments" type="number" inputmode="numeric" min="0" max="10" step="1" value="0" required />
+        </div>
+
+        <div class="qf-checks" data-show="checks" hidden>
+          <label class="qf-check" data-show="dormant">
+            <input type="checkbox" name="dormant" />
+            <span>My company will be <strong>dormant</strong> <small>(it has never traded)</small></span>
+          </label>
+          <label class="qf-check" data-show="notTrading">
+            <input type="checkbox" name="notTrading" />
+            <span>My company will <strong>not be trading</strong> <small>(no income, only bank charges or accountancy fees)</small></span>
+          </label>
+          <label class="qf-check" data-show="formation">
+            <input type="checkbox" name="formation" />
+            <span>Please <strong>form my limited company</strong> free of charge</span>
+          </label>
+        </div>
+
+        <div class="field" data-show="band">
+          <label for="q-band">Annual turnover</label>
+          <select id="q-band" name="band" required>
+            <option value="">Select turnover</option>
+            {BANDS.map((b, i) => <option value={i}>{b.label}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="mtd" hidden>
+          <label for="q-mtd">Need quarterly MTD Income Tax updates?</label>
+          <select id="q-mtd" name="mtd" required>
+            <option value="">Select</option>
+            {yesNo.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="vat">
+          <label for="q-vat">Need VAT returns completing?</label>
+          <select id="q-vat" name="vat" required>
+            <option value="">Select</option>
+            {yesNo.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+
+        <div class="field" data-show="payrollLtd" hidden>
+          <label for="q-payroll-ltd">Need payroll managing?</label>
+          <select id="q-payroll-ltd" name="payrollLtd" required>
+            <option value="">Select</option>
+            {PAYROLL_LTD.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="payroll">
+          <label for="q-payroll">Need payroll managing?</label>
+          <select id="q-payroll" name="payroll" required>
+            <option value="">Select</option>
+            <option value="NO">No</option>
+            {FREQ.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="directors" hidden>
+          <label for="q-directors">Number of directors on the payroll</label>
+          <input id="q-directors" name="directors" type="number" inputmode="numeric" min="1" max="50" step="1" required />
+        </div>
+        <div class="field" data-show="payFreq" hidden>
+          <label for="q-freq">How often are employees paid?</label>
+          <select id="q-freq" name="payFreq" required>
+            <option value="">Select</option>
+            {FREQ.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="employees" hidden>
+          <label for="q-employees">Number of employees</label>
+          <input id="q-employees" name="employees" type="number" inputmode="numeric" min="1" max="500" step="1" required />
+        </div>
+        <div class="field" data-show="pension" hidden>
+          <label for="q-pension">Need us to manage your pension scheme?</label>
+          <select id="q-pension" name="pension" required>
+            <option value="">Select</option>
+            {yesNo.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="enrolled" hidden>
+          <label for="q-enrolled">Employees enrolled or needing enrolling</label>
+          <input id="q-enrolled" name="enrolled" type="number" inputmode="numeric" min="1" max="500" step="1" required />
+        </div>
+
+        <div class="field" data-show="bookkeeping">
+          <label for="q-book">Need us to do your bookkeeping?</label>
+          <select id="q-book" name="bookkeeping" required>
+            <option value="">Select</option>
+            {yesNo.map(([v, l]) => <option value={v}>{l}</option>)}
+          </select>
+        </div>
+        <div class="field" data-show="transactions" hidden>
+          <label for="q-tx">Transactions a month</label>
+          <input id="q-tx" name="transactions" type="number" inputmode="numeric" min="1" max="500" step="1" required />
+        </div>
+      </div>
+
+      <button class="btn btn-fill qf-submit" type="submit">Get my instant quote</button>
+      <p class="qf-small">Prices exclude VAT. If there is outstanding work from previous years, we agree that fee with you up front. We never share your details. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+    </form>
+
+    <div class="qf-result" data-step="result" hidden tabindex="-1" aria-live="polite"></div>
+
+    <dialog class="qf-pop" data-pop aria-labelledby="q-pop-title">
+      <h3 id="q-pop-title" data-pop-title></h3>
+      <div class="qf-pop-body" data-pop-body></div>
+      <div class="qf-pop-actions">
+        <button type="button" class="btn btn-fill btn-sm" data-pop-a></button>
+        <button type="button" class="btn btn-sm" data-pop-b></button>
+      </div>
+    </dialog>
+  </div>
+</Wrap>
+
+<script>
+  import { BUSINESS, BANDS, PRICES, DISCOUNT, TX_WARN, estimate, money } from '../data/quote.js';
+
+  const root = document.querySelector<HTMLElement>('[data-quote]');
+  const dialog = document.querySelector<HTMLDialogElement>('dialog[data-quote-dialog]');
+  if (root) init(root);
+
+  function init(root: HTMLElement) {
+    const $ = <T extends Element = HTMLElement>(s: string) => root.querySelector<T>(s)!;
+    const form = $<HTMLFormElement>('form');
+    const el = (n: string) => form.elements.namedItem(n) as HTMLInputElement & HTMLSelectElement;
+    const result = $('[data-step="result"]');
+    const phone = { display: root.dataset.phone, tel: root.dataset.tel };
+
+    // ----- Pop-up questions (same moments as the comparator: MTD, bookkeeping, VAT at low turnover, many transactions)
+    const pop = $<HTMLDialogElement>('[data-pop]');
+    const POPS: Record<string, [string, string, string, string]> = {
+      mtd: ['MTD quarterly updates',
+        `<p>Your final end of year Making Tax Digital submission is already included in your fee.</p><p>You can send the quarterly updates yourself from your bookkeeping software, or we can send them for you for ${money(PRICES.mtd)} a month.</p>`,
+        'I will send the quarterly updates', 'Please send them for me'],
+      bookkeeping: ['Bookkeeping',
+        `<p>Many clients keep their own books in software such as Xero or QuickBooks, which keeps the fee down.</p><p>Or we can do your bookkeeping for you, from ${money(PRICES.bookkeeping)} a month.</p>`,
+        'I will do my own bookkeeping', 'Please do my bookkeeping'],
+      vat: ['VAT returns',
+        '<p>At this turnover it is unlikely you need VAT returns, unless the business is voluntarily registered for VAT.</p><p>Is this correct?</p>',
+        'Yes, the business is VAT registered', 'No, let me change it'],
+      transactions: ['Check your transactions',
+        '<p>That number of monthly transactions seems high for your turnover. A transaction is one bookkeeping entry, such as a sale, purchase, payment or receipt.</p><p>Is it correct?</p>',
+        'Yes, get my quote', 'No, let me change it'],
+    };
+    const asked = new Set<string>();
+    const ask = (kind: string) => new Promise<'a' | 'b'>((resolve) => {
+      const [title, body, a, b] = POPS[kind];
+      $('[data-pop-title]').textContent = title;
+      $('[data-pop-body]').innerHTML = body;
+      $('[data-pop-a]').textContent = a;
+      $('[data-pop-b]').textContent = b;
+      let answer: 'a' | 'b' = 'b';
+      const done = () => { pop.removeEventListener('close', done); resolve(answer); };
+      $('[data-pop-a]').onclick = () => { answer = 'a'; pop.close(); };
+      $('[data-pop-b]').onclick = () => { answer = 'b'; pop.close(); };
+      pop.addEventListener('close', done);
+      pop.showModal();
+    });
+
+    // ----- Which questions show, from the answers so far
+    function sync() {
+      const type = el('type').value;
+      const ltd = type === 'LIMITED_COMPANY';
+      const company = ltd || type === 'LLP';
+      const quiet = company && (el('dormant').checked || el('notTrading').checked);
+      const band = el('band').value;
+      const pay = ltd ? el('payrollLtd').value : el('payroll').value;
+      const staff = ltd ? pay === 'EMPLOYEES' || pay === 'BOTH' : !!pay && pay !== 'NO';
+      const show: Record<string, boolean> = {
+        sa: !!BUSINESS.find((b) => b.id === type)?.people && !quiet,
+        checks: company, dormant: company, notTrading: company, formation: ltd,
+        band: !quiet,
+        mtd: type === 'SOLE_TRADER' && band !== '' && band !== '0',
+        vat: !quiet,
+        payrollLtd: ltd && !quiet, payroll: !ltd && !quiet,
+        directors: ltd && !quiet && (pay === 'DIRECTORS' || pay === 'BOTH'),
+        payFreq: ltd && !quiet && staff,
+        employees: !quiet && staff, pension: !quiet && staff,
+        enrolled: !quiet && staff && el('pension').value === 'YES',
+        bookkeeping: !quiet,
+        transactions: !quiet && el('bookkeeping').value === 'YES',
+      };
+      root.querySelectorAll<HTMLElement>('[data-show]').forEach((w) => {
+        const on = !!show[w.dataset.show!];
+        w.hidden = !on;
+        // Hidden questions are left out of the check and the answers.
+        if (w.matches('.field')) w.querySelectorAll<HTMLInputElement>('input, select').forEach((i) => { i.disabled = !on; });
+      });
+      const who = BUSINESS.find((b) => b.id === type)?.people || 'director';
+      $('[data-sa-label]').textContent = `No. of ${who}s needing a self assessment`;
+    }
+
+    form.addEventListener('change', async (e) => {
+      const t = e.target as HTMLInputElement;
+      // Dormant, not trading and company formation: only one at a time.
+      if (t.type === 'checkbox' && t.checked) ['dormant', 'notTrading', 'formation'].forEach((n) => { if (n !== t.name) el(n).checked = false; });
+      sync();
+      const bandLow = ['0', '1'].includes(el('band').value);
+      if (t.name === 'mtd' && t.value === 'YES' && !asked.has('mtd')) {
+        asked.add('mtd');
+        if (await ask('mtd') === 'a') { t.value = 'NO'; sync(); }
+      }
+      if (t.name === 'bookkeeping' && t.value === 'YES' && !asked.has('bookkeeping')) {
+        asked.add('bookkeeping');
+        if (await ask('bookkeeping') === 'a') { t.value = 'NO'; sync(); }
+      }
+      if ((t.name === 'vat' || t.name === 'band') && el('vat').value === 'YES' && bandLow && !asked.has('vat')) {
+        asked.add('vat');
+        if (await ask('vat') === 'b') { el('vat').value = 'NO'; }
+      }
+    });
+
+    const collect = () => {
+      const v = (n: string) => (el(n) && !el(n).disabled ? el(n).value : '');
+      const type = v('type');
+      const ltd = type === 'LIMITED_COMPANY';
+      const pay = ltd ? v('payrollLtd') : v('payroll');
+      return {
+        name: v('name').trim(), email: v('email').trim(), phone: v('phone').trim(), type,
+        selfAssessments: +v('selfAssessments') || 0,
+        dormant: el('dormant').checked && !el('dormant').closest<HTMLElement>('[data-show]')!.hidden,
+        notTrading: el('notTrading').checked && !el('notTrading').closest<HTMLElement>('[data-show]')!.hidden,
+        formation: el('formation').checked && !el('formation').closest<HTMLElement>('[data-show]')!.hidden,
+        band: v('band') === '' ? -1 : +v('band'),
+        mtd: v('mtd') === 'YES', vat: v('vat') === 'YES',
+        payroll: pay || 'NO', payFreq: ltd ? v('payFreq') : pay,
+        directors: +v('directors') || 0, employees: +v('employees') || 0,
+        pension: v('pension') === 'YES', enrolled: +v('enrolled') || 0,
+        bookkeeping: v('bookkeeping') === 'YES', transactions: +v('transactions') || 0,
+      };
+    };
+
+    const ring = (pct: number) => {
+      $('[data-ring]').setAttribute('stroke-dasharray', `${pct} 100`);
+      $('[data-pct]').textContent = `${pct}%`;
+    };
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      sync();
+      if (!form.reportValidity()) return;
+      const a = collect();
+      const limit = TX_WARN[a.band];
+      if (a.bookkeeping && limit && a.transactions > limit && await ask('transactions') === 'b') { el('transactions').focus(); return; }
+      const est = estimate(a);
+      if (!est) return;
+      show(a, est);
+      send(a, est);
+    });
+
+    function show(a: ReturnType<typeof collect>, est: NonNullable<ReturnType<typeof estimate>>) {
+      const [firstName, ...rest] = a.name.split(/\s+/);
+      const type = BUSINESS.find((b) => b.id === a.type)!;
+      const summary = est.tailored
+        ? `Instant quote: tailored quote needed (${type.label}, ${BANDS[a.band].label} turnover).`
+        : `Instant quote: ${money(est.total)} a month (${type.label}${est.lines.map((l) => `; ${l.label}${l.detail ? ` ${l.detail}` : ''}`).join('')}).`;
+      try {
+        sessionStorage.setItem('sf-quote', JSON.stringify({ firstName, lastName: rest.join(' '), email: a.email, phone: a.phone, message: summary, total: est.tailored ? null : est.total }));
+      } catch {}
+      const next = `
+        <a class="btn btn-fill qf-next" href="/contact/?from=quote">One last step: book your free call<span aria-hidden="true">→</span></a>
+        <p class="qf-next-note">Pick a time that suits you. We go through your answers on the call and confirm your fixed fee in writing.</p>`;
+      const edit = '<button type="button" class="qf-edit" data-edit><span aria-hidden="true">←</span> Change your details</button>';
+      if (est.tailored) {
+        result.innerHTML = `
+          <p class="qf-eyebrow">Thanks, ${esc(firstName)}</p>
+          <p class="qf-lead">With a turnover over £2,000,000 we prepare a tailored quote, so we understand the business fully before we price it.</p>
+          ${next}
+          <p class="qf-small">Rather talk now? Call <a href="tel:${phone.tel}">${phone.display}</a>.</p>
+          ${edit}`;
+      } else {
+        const row = (l: string, d: string, amt: string, cls = '') => `<tr${cls ? ` class="${cls}"` : ''}><th scope="row">${l}${d ? ` <small>${esc(d)}</small>` : ''}</th><td>${amt}</td></tr>`;
+        const rows = est.lines.map((l) => row(esc(l.label), l.detail, l.amount ? money(l.amount) : 'Free')).join('')
+          + (est.discount ? row('Subtotal', '', money(est.subtotal), 'sub') + row(DISCOUNT.label, '', `-${money(est.discount)}`) : '')
+          + row('Total monthly fee', '', money(est.total), 'total');
+        result.innerHTML = `
+          <p class="qf-eyebrow">Your estimate</p>
+          <p class="qf-price"><strong>${money(est.total)}</strong> a month</p>
+          <p class="qf-year">That is ${money(est.total * 12)} a year, plus VAT.</p>
+          ${next}
+          <details class="qf-break" open>
+            <summary>How my fee is calculated</summary>
+            <table><tbody>${rows}</tbody></table>
+          </details>
+          ${edit}
+          <p class="qf-small">This is an estimate from your answers. Prices exclude VAT. If there is outstanding work from previous years, we agree that fee with you up front.</p>`;
+      }
+      result.querySelector('[data-edit]')!.addEventListener('click', () => {
+        result.hidden = true; form.hidden = false; ring(50);
+        $('[data-sub]').hidden = false;
+        el('name').focus();
+      });
+      form.hidden = true; result.hidden = false; ring(100);
+      $('[data-sub]').hidden = true;
+      root.scrollTop = 0; dialog?.scrollTo(0, 0);
+      result.focus({ preventScroll: true });
+      const w = window as any;
+      if (w.va) w.va('event', { name: 'quote', data: { type: a.type, total: est.total } });
+      if (w.gtag) w.gtag('event', 'generate_lead', { method: 'instant_quote', value: est.total * 12, currency: 'GBP' });
+    }
+
+    // Save the lead in GoHighLevel. Does not hold up the estimate, and a failure is silent.
+    function send(a: ReturnType<typeof collect>, est: NonNullable<ReturnType<typeof estimate>>) {
+      fetch('/api/quote/', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, keepalive: true,
+        body: JSON.stringify({ ...a, website: el('website').value, source: location.pathname, total: est.total }),
+      }).catch(() => {});
+    }
+
+    ring(50);
+    sync();
+
+    // ----- Pop-up version: any link to /instant-quote/ opens it
+    if (dialog) {
+      const open = () => {
+        document.querySelectorAll<HTMLDetailsElement>('header details[open]').forEach((d) => { d.open = false; });
+        dialog.showModal();
+        dialog.scrollTo(0, 0);
+        (form.hidden ? result : el('name')).focus();
+      };
+      document.addEventListener('click', (e) => {
+        const a = (e.target as Element).closest?.('a[href="/instant-quote/"]');
+        if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        open();
+      });
+      $('[data-close]').addEventListener('click', () => dialog.close());
+      // A click on the dark backdrop closes it.
+      dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+      if (location.hash === '#instant-quote') open();
+    }
+  }
+</script>
+
+<style is:global>
+  .qf-dialog {
+    width: min(760px, calc(100% - 24px)); max-height: calc(100dvh - 24px); margin: auto; padding: 0;
+    border: 0; border-radius: var(--radius); background: var(--white); color: var(--black); overflow: auto; overscroll-behavior: contain;
+  }
+  .tp-body.qf-page { grid-template-columns: minmax(0, 860px); margin-block: clamp(20px, 2.5vw, 32px) clamp(28px, 3vw, 40px); }
+  .qf-cta { display: grid; gap: 16px; align-items: center; margin-bottom: clamp(32px, 4vw, 56px); padding: clamp(20px, 3vw, 36px); background: var(--panel); border-radius: var(--radius); }
+  .qf-cta h2 { font-size: var(--fs-h3); }
+  .qf-cta p { margin-top: 8px; color: var(--muted); }
+  @media (min-width: 800px) { .qf-cta { grid-template-columns: 1fr auto; gap: 32px; } }
+  .qf-dialog::backdrop { background: rgba(0, 0, 0, .6); }
+  html:has(.qf-dialog[open]) { overflow: hidden; }
+  .qf { display: grid; gap: 24px; padding: clamp(20px, 4vw, 40px); }
+  .qf-inline .qf { padding: clamp(20px, 3vw, 40px); background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); }
+  .qf-head { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; }
+  .qf-head h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem); letter-spacing: -.01em; }
+  .qf-head p { margin-top: 6px; color: var(--muted); }
+  .qf-ring { position: relative; width: 52px; height: 52px; }
+  .qf-ring svg { width: 100%; height: 100%; }
+  @media (min-width: 640px) { .qf-ring { width: 64px; height: 64px; } }
+  .qf-ring svg { transform: rotate(-90deg); }
+  .qf-ring circle { fill: none; stroke: var(--grey); stroke-width: 6; }
+  .qf-ring .bar { stroke: var(--cta); stroke-linecap: round; }
+  .qf-ring span { position: absolute; inset: 0; display: grid; place-items: center; font-size: .875rem; font-weight: 500; }
+  .qf-close { align-self: start; display: grid; place-items: center; width: 44px; height: 44px; margin: -8px -8px 0 0; border: 0; border-radius: 999px; background: none; color: var(--black); cursor: pointer; }
+  .qf-close:hover { background: var(--panel); }
+  .qf-form, .qf-result { display: grid; gap: 20px; }
+  .qf-form[hidden], .qf-result[hidden], .qf [hidden] { display: none; }
+  .qf-grid { display: grid; gap: 16px; }
+  @media (min-width: 640px) { .qf-grid { grid-template-columns: 1fr 1fr; gap: 16px 20px; } }
+  .qf .field label { font-size: .9375rem; }
+  .qf .field input, .qf .field select { min-height: 50px; background: var(--white); color: var(--black); border-color: #c9ccd6; border-radius: 999px; padding-inline: 20px; }
+  .qf .field input:focus, .qf .field select:focus { outline: 2px solid var(--black); border-color: var(--black); }
+  .qf-checks { display: grid; gap: 10px; grid-column: 1 / -1; }
+  .qf-check { display: flex; gap: 12px; align-items: flex-start; padding: 12px 16px; background: var(--panel); border-radius: var(--radius-sm); cursor: pointer; line-height: 1.4; }
+  .qf-check input { flex: none; width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--cta); }
+  .qf-check small { color: var(--muted); font-size: .875rem; }
+  .qf-submit, .qf-next { width: 100%; }
+  .qf-small { font-size: .8125rem; line-height: 1.5; color: var(--muted); }
+  .qf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .qf-result:focus { outline: none; }
+  .qf-eyebrow { font-size: var(--fs-label); font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .qf-price { font-size: 1.25rem; }
+  .qf-price strong { font-size: clamp(2.5rem, 2rem + 2.5vw, 3.75rem); font-weight: 500; letter-spacing: -.02em; line-height: 1; }
+  .qf-year { margin-top: -12px; color: var(--muted); }
+  .qf-lead { font-size: var(--fs-lead); line-height: 1.4; }
+  .qf-break { border: 1px solid var(--line); border-radius: var(--radius-sm); }
+  .qf-break summary { padding: 14px 18px; font-weight: 500; cursor: pointer; }
+  .qf-break table { width: 100%; border-collapse: collapse; font-size: .9375rem; }
+  .qf-break th, .qf-break td { padding: 10px 18px; border-top: 1px solid var(--line); text-align: left; font-weight: 400; vertical-align: top; }
+  .qf-break td { text-align: right; white-space: nowrap; }
+  .qf-break th small { display: block; color: var(--muted); font-size: .8125rem; }
+  .qf-break .sub th, .qf-break .sub td { color: var(--muted); }
+  .qf-break .total th, .qf-break .total td { font-weight: 500; font-size: 1.0625rem; background: var(--panel); }
+  .qf-next { min-height: 60px; font-size: 1.125rem; white-space: normal; text-align: center; }
+  .qf-next-note { margin-top: -8px; text-align: center; color: var(--muted); font-size: .9375rem; }
+  .qf-edit { justify-self: center; padding: 8px 12px; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: underline; text-underline-offset: .25em; cursor: pointer; color: var(--black); }
+  .qf-pop { width: min(480px, calc(100% - 32px)); padding: clamp(20px, 4vw, 32px); border: 0; border-radius: var(--radius); color: var(--black); }
+  .qf-pop::backdrop { background: rgba(0, 0, 0, .45); }
+  .qf-pop h3 { font-size: 1.5rem; }
+  .qf-pop-body { display: grid; gap: 10px; margin-top: 12px; line-height: 1.5; }
+  .qf-pop-actions { display: grid; gap: 10px; margin-top: 20px; }
+  .qf-pop-actions .btn { white-space: normal; text-align: center; min-height: 48px; }
+</style>

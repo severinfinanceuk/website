@@ -8,6 +8,7 @@
 import { PHONE, EMAIL } from '../data/site.js';
 ---
 <div class="book" data-booking>
+  <p class="book-quote" data-quote-note hidden></p>
   <div class="book-step book-pick" data-step="slots" hidden>
     <div class="cal">
       <div class="cal-head">
@@ -97,6 +98,19 @@ import { PHONE, EMAIL } from '../data/site.js';
   const monthName = (y, m) => new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m, 1)));
 
   const state = { calendars: [], calendar: null, byDate: new Map(), months: [], month: 0, day: null, slot: null };
+
+  // Coming from the instant quote ("One last step"): fill in the details they already gave us.
+  try {
+    const q = JSON.parse(sessionStorage.getItem('sf-quote') || 'null');
+    if (q) {
+      [['#bk-first', q.firstName], ['#bk-last', q.lastName], ['#bk-email', q.email], ['#bk-phone', q.phone], ['#bk-msg', q.message]]
+        .forEach(([s, v]) => { const i = $(s); if (i && v && !i.value) i.value = v; });
+      const note = $('[data-quote-note]');
+      const gbp = (n) => `£${n.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      note.textContent = `One last step${q.firstName ? `, ${q.firstName}` : ''}: pick a time for your free call.${typeof q.total === 'number' ? ` Your estimate is ${gbp(q.total)} a month plus VAT, and we confirm your fixed fee on the call.` : ' We will talk through your tailored quote.'}`;
+      note.hidden = false;
+    }
+  } catch {}
 
   async function api(path, opts) {
     const r = await fetch(`/api/booking/${path.replace(/^(\w+)/, '$1/')}`, opts);
